@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Speaker — SummitSpeak Bureau</title>
+  <meta name="description" content="Dedicated multi-step corporate booking request engine for keynote speakers, conferences, and executive summits.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <script src="../assets/js/theme.js"></script>
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl ssb-navbar">
+      <div class="container-fluid px-3 px-xl-4 px-xxl-5">
+        <a class="ssb-brand" href="../index.html">
+          <div class="ssb-brand-logo">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z"/></svg>
+          </div>
+          <div class="ssb-brand-text">
+            <span class="ssb-brand-name">SummitSpeak</span>
+            <span class="ssb-brand-tagline">Bureau</span>
+          </div>
+        </a>
+
+        <!-- Header Actions: On Mobile (Wishlist, Theme, Login Icon beside Toggler). On Desktop (Wishlist, Theme, RTL, Login "Login", Client Portal) -->
+        <!-- Header Actions: On Mobile (Theme Converter, RTL Toggle, Menu Toggle). On Desktop (Wishlist, Theme Converter, RTL Toggle, Login, Client Portal) -->
+        <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
+          <!-- Wishlist Jump (Desktop Only) -->
+          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-md-inline-flex" title="View Saved Wishlist" aria-label="View Saved Wishlist">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            </svg>
+            <span class="shortlist-count-badge">0</span>
+          </a>
+
+          <!-- Theme Toggle (Dark/Light Converter) - Visible on Mobile & Desktop -->
+          <button type="button" class="toggle-btn theme-toggle-btn" onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle theme"></button>
+
+          <!-- RTL/LTR Toggle - Visible on Mobile & Desktop -->
+          <button type="button" class="toggle-btn rtl-toggle-btn" onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle direction">RTL</button>
+
+          <!-- Login Button: Desktop view only (on mobile it's in the bottom bar) -->
+          <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-md-inline-flex" title="Client & Speaker Login" aria-label="Login">
+            <span class="login-text">Login</span>
+          </a>
+
+          <!-- Client Portal CTA (Desktop view only - on mobile it's in the bottom bar) -->
+          <a href="../dashboard/index.html" class="btn btn-gold btn-sm d-none d-md-inline-flex">Client Portal</a>
+
+          <!-- Responsive Mobile Toggle -->
+          <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#ssbNavbarContent" aria-controls="ssbNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="collapse navbar-collapse order-xl-2" id="ssbNavbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="speaker-roster.html">Speaker Roster</a></li>
+            <li class="nav-item"><a class="nav-link" href="topics-industries.html">Topics & Industries</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="insights.html">Insights</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="py-5 bg-secondary-theme border-bottom border-theme">
+    <div class="container text-center">
+      <span class="sub-title text-gold">Speaker Engagement Request</span>
+      <h1 class="mb-2">Book a Keynote Speaker</h1>
+      <p class="lead mx-auto mb-0" style="max-width: 680px;">
+        Provide your event parameters below. Our senior booking agents will verify calendar availability, evaluate travel logistics, and provide a tailored proposal within 24 business hours.
+      </p>
+    </div>
+  </section>
+
+  <!-- MULTI-STEP BOOKING WIZARD -->
+  <section class="section-padding bg-soft">
+    <div class="container" id="wizard-container">
+      
+      <!-- Wizard Stepper with Connected Progress Bar -->
+      <div class="wizard-stepper-wrapper">
+        <div class="wizard-steps-track">
+          <div class="wizard-stepper-track-bar">
+            <div class="wizard-stepper-progress" id="wizard-progress-bar" style="width: 0%;"></div>
+          </div>
+          <div class="wizard-step-indicator active" data-step-indicator="1">
+            <div class="indicator-badge">
+              <span class="step-num">01</span>
+              <svg class="step-check" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+            </div>
+            <div class="indicator-meta">
+              <span class="indicator-step-tag">Step 01</span>
+              <span class="indicator-title">Event Info</span>
+            </div>
+          </div>
+          <div class="wizard-step-indicator" data-step-indicator="2">
+            <div class="indicator-badge">
+              <span class="step-num">02</span>
+              <svg class="step-check" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+            </div>
+            <div class="indicator-meta">
+              <span class="indicator-step-tag">Step 02</span>
+              <span class="indicator-title">Speaker Req.</span>
+            </div>
+          </div>
+          <div class="wizard-step-indicator" data-step-indicator="3">
+            <div class="indicator-badge">
+              <span class="step-num">03</span>
+              <svg class="step-check" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+            </div>
+            <div class="indicator-meta">
+              <span class="indicator-step-tag">Step 03</span>
+              <span class="indicator-title">Logistics & Budget</span>
+            </div>
+          </div>
+          <div class="wizard-step-indicator" data-step-indicator="4">
+            <div class="indicator-badge">
+              <span class="step-num">04</span>
+              <svg class="step-check" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+            </div>
+            <div class="indicator-meta">
+              <span class="indicator-step-tag">Step 04</span>
+              <span class="indicator-title">Contact & Submit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-start">
+        <!-- Main Form Column (Left: 8-col) -->
+        <div class="col-lg-8">
+          <div class="booking-form-card">
+            <form id="ssb-booking-wizard-form" novalidate>
+              
+              <!-- STEP 1: EVENT INFORMATION -->
+              <div class="wizard-step-panel" data-step="1">
+                <div class="booking-step-header">
+                  <div class="booking-step-header-left">
+                    <span class="booking-step-pill">Phase 01 &bull; Event Parameters</span>
+                    <h2 class="booking-step-title">Event Information</h2>
+                    <p class="booking-step-desc">Core gathering parameters, audience tier, venue logistics, and scheduled dates.</p>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-event-name">
+                      <span>Event Name</span>
+                      <span class="text-danger">*</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                      </span>
+                      <input type="text" id="field-event-name" class="form-control" placeholder="e.g. Global Leadership Summit 2026" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-company-name">
+                      <span>Company / Organization</span>
+                      <span class="text-danger">*</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h18v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h3V1.54L7 4.99v10.01z"/></svg>
+                      </span>
+                      <input type="text" id="field-company-name" class="form-control" placeholder="e.g. Apex Global Enterprises" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-event-type">
+                      <span>Event Type</span>
+                      <span class="text-danger">*</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L4 8.286v3.25a.5.5 0 0 0 .235.421l3.5 2a.5.5 0 0 0 .53 0l3.5-2A.5.5 0 0 0 12 11.536V8.286l3.735-1.845a.5.5 0 0 0 0-.882l-7.5-4zM11 8.786l-2.735 1.352a.5.5 0 0 1-.53 0L5 8.786v2.457l3 1.714 3-1.714V8.786z"/></svg>
+                      </span>
+                      <div class="dropdown custom-select-dropdown w-100">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="custom-select-label">Leadership Summit</span>
+                        </button>
+                        <ul class="dropdown-menu custom-select-menu w-100">
+                          <li><button type="button" class="dropdown-item active" data-value="Leadership Summit">Leadership Summit</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Annual Conference">Annual Conference</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Sales Kickoff">Sales Kickoff (SKO)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Executive Retreat">Executive Retreat</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Product Launch">Product Launch</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Awards Ceremony">Awards Ceremony</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Industry Convention">Industry Convention</button></li>
+                        </ul>
+                        <input type="hidden" id="field-event-type" value="Leadership Summit" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-event-date">
+                      <span>Target Event Date</span>
+                      <span class="text-danger">*</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                      </span>
+                      <input type="date" id="field-event-date" class="form-control" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-alt-date">
+                      <span>Alternative Date (Optional)</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/></svg>
+                      </span>
+                      <input type="date" id="field-alt-date" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-timezone">
+                      <span>Event Time Zone</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8zm7.5-4a.5.5 0 0 0-1 0v4.5a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8.5 8.21V4z"/></svg>
+                      </span>
+                      <div class="dropdown custom-select-dropdown w-100">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="custom-select-label">Eastern Time (US & Canada) UTC-05:00</span>
+                        </button>
+                        <ul class="dropdown-menu custom-select-menu w-100">
+                          <li><button type="button" class="dropdown-item active" data-value="EST">Eastern Time (US & Canada) UTC-05:00</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="CST">Central Time (US & Canada) UTC-06:00</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="PST">Pacific Time (US & Canada) UTC-08:00</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="GMT">Greenwich Mean Time (London) UTC+00:00</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="CET">Central European Time (Zurich/Paris) UTC+01:00</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="SGT">Singapore Standard Time UTC+08:00</button></li>
+                        </ul>
+                        <input type="hidden" id="field-timezone" value="EST">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-event-format">
+                      <span>Event Format</span>
+                      <span class="text-danger">*</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z"/><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/></svg>
+                      </span>
+                      <div class="dropdown custom-select-dropdown w-100">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="custom-select-label">In-Person Stage Keynote</span>
+                        </button>
+                        <ul class="dropdown-menu custom-select-menu w-100">
+                          <li><button type="button" class="dropdown-item active" data-value="In-Person">In-Person Stage Keynote</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Virtual">Virtual Keynote (Live Studio Stream)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Hybrid">Hybrid (Dual Audience)</button></li>
+                        </ul>
+                        <input type="hidden" id="field-event-format" value="In-Person" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-event-location">
+                      <span>Event Location (City, Venue, Country)</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                      </span>
+                      <input type="text" id="field-event-location" class="form-control" placeholder="e.g. Chicago, IL — McCormick Place">
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label-corporate" for="field-audience-size">
+                      <span>Expected Audience Caliber & Size</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>
+                      </span>
+                      <div class="dropdown custom-select-dropdown w-100">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="custom-select-label">Intimate Executive Circle (20 – 50 C-Suite leaders)</span>
+                        </button>
+                        <ul class="dropdown-menu custom-select-menu w-100">
+                          <li><button type="button" class="dropdown-item active" data-value="20 - 50 executives">Intimate Executive Circle (20 – 50 C-Suite leaders)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="50 - 200 attendees">Mid-Size Leadership Summit (50 – 200 attendees)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="200 - 500 attendees">Major Corporate Forum (200 – 500 attendees)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="500 - 1,500 attendees">Enterprise Annual Convention (500 – 1,500 attendees)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="1,500+ attendees">Global Arena / Industry Expo (1,500+ attendees)</button></li>
+                        </ul>
+                        <input type="hidden" id="field-audience-size" value="20 - 50 executives">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 2: SPEAKER REQUIREMENTS -->
+              <div class="wizard-step-panel" data-step="2" style="display:none;">
+                <div class="booking-step-header">
+                  <div class="booking-step-header-left">
+                    <span class="booking-step-pill">Phase 02 &bull; Strategic Curation</span>
+                    <h2 class="booking-step-title">Speaker Requirements</h2>
+                    <p class="booking-step-desc">Desired topics, presentation format, language, and core audience takeaways.</p>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label-corporate" for="field-speaker-preference">
+                      <span>Preferred Keynote Speaker</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/></svg>
+                      </span>
+                      <div class="dropdown custom-select-dropdown w-100" id="speaker-preference-dropdown">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="custom-select-label">— Request Open Speaker Recommendations —</span>
+                        </button>
+                        <ul class="dropdown-menu custom-select-menu w-100" id="speaker-preference-menu">
+                          <li><button type="button" class="dropdown-item active" data-value="">— Request Open Speaker Recommendations —</button></li>
+                        </ul>
+                        <input type="hidden" id="field-speaker-preference" value="">
+                      </div>
+                    </div>
+                    <div class="form-text small text-muted mt-1">Select an individual speaker from our verified roster or request open curated advisory options.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-primary-topic">
+                      <span>Primary Speaking Topic</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/></svg>
+                      </span>
+                      <div class="dropdown custom-select-dropdown w-100">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="custom-select-label">Leadership & High-Performance Management</span>
+                        </button>
+                        <ul class="dropdown-menu custom-select-menu w-100">
+                          <li><button type="button" class="dropdown-item active" data-value="Leadership & Management">Leadership & High-Performance Management</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Artificial Intelligence & Technology">AI & Future Technology Transformation</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Motivation & Human Performance">Motivation & Peak Human Performance</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Innovation & Future Trends">Innovation & Business Model Disruption</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Economics & Global Affairs">Macroeconomics & Geopolitical Strategy</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Workplace Culture & Wellbeing">Workplace Culture, Retention & Resilience</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Sustainability & Social Impact">Sustainability & ESG Executive Strategy</button></li>
+                        </ul>
+                        <input type="hidden" id="field-primary-topic" value="Leadership & Management">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-duration">
+                      <span>Presentation Duration</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+                      </span>
+                      <div class="dropdown custom-select-dropdown w-100">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="custom-select-label">45 min Keynote + 15 min Q&A (Standard)</span>
+                        </button>
+                        <ul class="dropdown-menu custom-select-menu w-100">
+                          <li><button type="button" class="dropdown-item active" data-value="45 min Keynote + 15 min Q&A">45 min Keynote + 15 min Q&A (Standard)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="60 min Keynote Only">60 min Keynote Only</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="30 min Executive Address">30 min High-Impact Executive Address</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="90 min Keynote & Interactive Masterclass">90 min Keynote & Interactive Masterclass</button></li>
+                        </ul>
+                        <input type="hidden" id="field-duration" value="45 min Keynote + 15 min Q&A">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-audience-level">
+                      <span>Primary Audience Seniority Level</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
+                      </span>
+                      <input type="text" id="field-audience-level" class="form-control" placeholder="e.g. C-Suite, Managing Directors, Sales Leaders">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-language">
+                      <span>Preferred Presentation Language</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.67A6.958 6.958 0 0 0 1 7.5c0 .17.008.337.023.5H3.508zM8.5 1.077V4h2.355a7.97 7.97 0 0 0-.468-1.068c-.552-1.035-1.218-1.65-1.887-1.855zM11.91 4h1.835a7.025 7.025 0 0 0-3.072-2.472c.218.284.418.598.597.933.245.463.461.98.64 1.539z"/></svg>
+                      </span>
+                      <div class="dropdown custom-select-dropdown w-100">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="custom-select-label">English (Fluent Global Delivery)</span>
+                        </button>
+                        <ul class="dropdown-menu custom-select-menu w-100">
+                          <li><button type="button" class="dropdown-item active" data-value="English">English (Fluent Global Delivery)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="French">French</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="German">German</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Spanish">Spanish</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Mandarin">Mandarin</button></li>
+                        </ul>
+                        <input type="hidden" id="field-language" value="English">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label-corporate" for="field-desired-takeaways">
+                      <span>Desired Audience Mindset Shift & Core Objectives</span>
+                    </label>
+                    <textarea id="field-desired-takeaways" class="form-control" rows="3" placeholder="What key insights, strategic actions, or cultural shifts do you want attendees to leave with?"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 3: BUDGET AND LOGISTICS -->
+              <div class="wizard-step-panel" data-step="3" style="display:none;">
+                <div class="booking-step-header">
+                  <div class="booking-step-header-left">
+                    <span class="booking-step-pill">Phase 03 &bull; Commercial Parameters</span>
+                    <h2 class="booking-step-title">Budget & Logistics</h2>
+                    <p class="booking-step-desc">Indicative honorarium tier, currency, ground travel, and recording specifications.</p>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-budget-range">
+                      <span>Indicative Speaker Budget Range</span>
+                      <span class="text-danger">*</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v3.629c-1.148-.12-1.97-.73-2.196-1.652H4z"/></svg>
+                      </span>
+                      <div class="dropdown custom-select-dropdown w-100">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="custom-select-label">$25,000 – $40,000 USD (Established Keynotes)</span>
+                        </button>
+                        <ul class="dropdown-menu custom-select-menu w-100">
+                          <li><button type="button" class="dropdown-item" data-value="$15,000 – $25,000">$15,000 – $25,000 USD (Emerging Pioneers)</button></li>
+                          <li><button type="button" class="dropdown-item active" data-value="$25,000 – $40,000">$25,000 – $40,000 USD (Established Keynotes)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="$40,000 – $65,000">$40,000 – $65,000 USD (Senior Authority)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="$65,000 – $100,000+">$65,000 – $100,000+ USD (Premier Global Icon)</button></li>
+                        </ul>
+                        <input type="hidden" id="field-budget-range" value="$25,000 – $40,000" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-currency">
+                      <span>Contract Currency</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/></svg>
+                      </span>
+                      <div class="dropdown custom-select-dropdown w-100">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="custom-select-label">USD ($) — United States Dollar</span>
+                        </button>
+                        <ul class="dropdown-menu custom-select-menu w-100">
+                          <li><button type="button" class="dropdown-item active" data-value="USD">USD ($) — United States Dollar</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="EUR">EUR (€) — Euro</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="GBP">GBP (£) — British Pound</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="CHF">CHF (Fr) — Swiss Franc</button></li>
+                        </ul>
+                        <input type="hidden" id="field-currency" value="USD">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-travel-prov">
+                      <span>Travel & Ground Transit Policy</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M6.428 1.151C6.708.591 7.214 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.377 1.505 1.73 1.73a.5.5 0 0 1-.354.854H5.09a.5.5 0 0 1-.354-.854l1.73-1.73-.377-1.505-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849z"/></svg>
+                      </span>
+                      <div class="dropdown custom-select-dropdown w-100">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="custom-select-label">Client Arranges & Settles Directly (Per Corporate Policy)</span>
+                        </button>
+                        <ul class="dropdown-menu custom-select-menu w-100">
+                          <li><button type="button" class="dropdown-item active" data-value="Client Books Air & Hotel">Client Arranges & Settles Directly (Per Corporate Policy)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Bureau Fixed Travel Buyout">Bureau Fixed Travel Stipend / Buyout (All-Inclusive)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Speaker Invoices Post-Event">Speaker Invoices Actual Receipts (Post-Event Reconciliation)</button></li>
+                        </ul>
+                        <input type="hidden" id="field-travel-prov" value="Client Books Air & Hotel">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-recording-rights">
+                      <span>Broadcast & Recording Allowances</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/></svg>
+                      </span>
+                      <div class="dropdown custom-select-dropdown w-100">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="custom-select-label">Internal Archival Only (Standard License)</span>
+                        </button>
+                        <ul class="dropdown-menu custom-select-menu w-100">
+                          <li><button type="button" class="dropdown-item active" data-value="Internal Archival Only">Internal Archival Only (Standard License)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Live Virtual Stream to Remote Staff">Live Virtual Stream to Remote Employees</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Public Video Marketing Excerpts">Public Video Marketing Excerpts (Requires Authorization)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="No Recording">No Audio/Video Recording</button></li>
+                        </ul>
+                        <input type="hidden" id="field-recording-rights" value="Internal Archival Only">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label-corporate" for="field-special-inst">
+                      <span>Audiovisual, Security or VIP Hospitality Instructions</span>
+                    </label>
+                    <textarea id="field-special-inst" class="form-control" rows="2" placeholder="e.g. Corporate confidentiality NDA required, VIP holding room needed, wireless lavalier mic, teleprompter..."></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 4: CONTACT DETAILS & SUBMISSION -->
+              <div class="wizard-step-panel" data-step="4" style="display:none;">
+                <div class="booking-step-header">
+                  <div class="booking-step-header-left">
+                    <span class="booking-step-pill">Phase 04 &bull; Procurement & Verification</span>
+                    <h2 class="booking-step-title">Contact & Authorized Representative</h2>
+                    <p class="booking-step-desc">Official contact details for calendar holds, SLA coordination, and contract routing.</p>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-contact-name">
+                      <span>Authorized Representative Full Name</span>
+                      <span class="text-danger">*</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/></svg>
+                      </span>
+                      <input type="text" id="field-contact-name" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-contact-title">
+                      <span>Corporate Job Title</span>
+                      <span class="text-danger">*</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/></svg>
+                      </span>
+                      <input type="text" id="field-contact-title" class="form-control" placeholder="e.g. Director of Global Events" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-contact-email">
+                      <span>Official Corporate Email</span>
+                      <span class="text-danger">*</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.026L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/></svg>
+                      </span>
+                      <input type="email" id="field-contact-email" class="form-control" placeholder="sarah.jenkins@apexglobal.com" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-contact-phone">
+                      <span>Direct Phone / Mobile</span>
+                      <span class="text-danger">*</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg>
+                      </span>
+                      <input type="tel" id="field-contact-phone" class="form-control" placeholder="+1 (555) 392-8104" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label-corporate" for="field-contact-channel">
+                      <span>Preferred Advisory Channel</span>
+                    </label>
+                    <div class="corporate-input-group">
+                      <span class="corporate-input-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z"/></svg>
+                      </span>
+                      <div class="dropdown custom-select-dropdown w-100">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="custom-select-label">Secure Corporate Email</span>
+                        </button>
+                        <ul class="dropdown-menu custom-select-menu w-100">
+                          <li><button type="button" class="dropdown-item active" data-value="Email">Secure Corporate Email</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Phone Call">Executive Direct Phone Call</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Video Conference">Virtual Video Briefing (Zoom / Teams)</button></li>
+                        </ul>
+                        <input type="hidden" id="field-contact-channel" value="Email">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="p-3 bg-secondary-theme rounded-3 border border-theme mt-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="field-privacy-consent" required checked>
+                        <label class="form-check-label small text-muted" for="field-privacy-consent">
+                          I understand that submitting this enquiry initiates formal availability holds. A keynote date is legally confirmed only upon tripartite agreement execution and escrow deposit settlement.
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Navigation Controls -->
+              <div class="d-flex justify-content-between align-items-center mt-5 pt-3 border-top border-theme">
+                <button type="button" id="wizard-prev-btn" class="btn btn-outline-corporate px-4" style="display:none;">
+                  &larr; Previous Step
+                </button>
+                <div class="ms-auto d-flex align-items-center gap-3">
+                  <button type="button" id="wizard-next-btn" class="btn btn-gold btn-lg px-4">
+                    Next Step &rarr;
+                  </button>
+                  <button type="submit" id="wizard-submit-btn" class="btn btn-gold btn-lg px-4 shadow-sm" style="display:none;">
+                    Submit Booking Request &rarr;
+                  </button>
+                </div>
+              </div>
+
+              <div class="text-center mt-3">
+                <span class="text-muted small d-inline-flex align-items-center gap-1">
+                  <svg width="13" height="13" fill="currentColor" class="text-gold" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 0-2 2v2H5a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-1V3a2 2 0 0 0-2-2zm1 4H7V3a1 1 0 0 1 2 0v2z"/></svg>
+                  <span>256-Bit TLS Encrypted Procurement &bull; Strict Non-Disclosure Protected</span>
+                </span>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- Sidebar Column (Right: 4-col) -->
+        <div class="col-lg-4">
+          <div class="booking-sidebar-card">
+            <span class="badge-gold mb-2">Executive Bureau Advisory</span>
+            <h3 class="booking-sidebar-title">Why Book via SummitSpeak</h3>
+            <p class="booking-sidebar-desc">
+              From calendar priority through on-site stage check-in, our corporate booking engine eliminates risk.
+            </p>
+
+            <ul class="booking-sidebar-trust-list">
+              <li class="booking-sidebar-trust-item">
+                <div class="booking-sidebar-trust-icon">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+                </div>
+                <div>
+                  <h4 class="booking-sidebar-trust-title">24h Guaranteed Holds</h4>
+                  <p class="booking-sidebar-desc mb-0">Direct priority calendar holds locked with talent personal management.</p>
+                </div>
+              </li>
+
+              <li class="booking-sidebar-trust-item">
+                <div class="booking-sidebar-trust-icon">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.464 9.99a11.777 11.777 0 0 0 3.732 3.037.5.5 0 0 0 .663 0 11.777 11.777 0 0 0 3.732-3.037c1.677-2.195 3.06-5.513 2.464-9.99a1.54 1.54 0 0 0-1.044-1.262c-.658-.215-1.777-.57-2.887-.87C9.843.265 8.69 0 8 0z"/></svg>
+                </div>
+                <div>
+                  <h4 class="booking-sidebar-trust-title">100% Escrow Protection</h4>
+                  <p class="booking-sidebar-desc mb-0">Deposits held in segregated, audited escrow accounts until stage execution.</p>
+                </div>
+              </li>
+
+              <li class="booking-sidebar-trust-item">
+                <div class="booking-sidebar-trust-icon">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/><path d="M10.97 6.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 10.384a.757.757 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/></svg>
+                </div>
+                <div>
+                  <h4 class="booking-sidebar-trust-title">Zero Hidden Surcharges</h4>
+                  <p class="booking-sidebar-desc mb-0">Itemized gross honorariums with full corporate fee transparency.</p>
+                </div>
+              </li>
+
+              <li class="booking-sidebar-trust-item">
+                <div class="booking-sidebar-trust-icon">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/></svg>
+                </div>
+                <div>
+                  <h4 class="booking-sidebar-trust-title">Dedicated Staging Producer</h4>
+                  <p class="booking-sidebar-desc mb-0">Technical soundcheck, slide decks, and contingency standby included.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="booking-sidebar-concierge">
+              <div class="booking-sidebar-concierge-title">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg>
+                <span>Direct Booking Concierge</span>
+              </div>
+              <a href="tel:+18005843920" class="booking-sidebar-concierge-phone">+1 (800) 584-3920</a>
+              <p class="booking-sidebar-concierge-sub">Mon &ndash; Fri: 08:30 &ndash; 18:00 EST &bull; Priority SLA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ssb-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand & Identity -->
+        <div class="col-lg-4 col-md-6">
+          <a class="ssb-brand mb-3 d-inline-flex" href="../index.html">
+            <div class="ssb-brand-logo">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z"/></svg>
+            </div>
+            <div class="ssb-brand-text">
+              <span class="ssb-brand-name text-white">SummitSpeak</span>
+              <span class="ssb-brand-tagline">Bureau</span>
+            </div>
+          </a>
+          <p class="small text-muted mb-4">
+            A premier corporate speaker bureau connecting organizations with exceptional keynote speakers, industry pioneers, authors, and executive thought leaders.
+          </p>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+            <span>Corporate Office: 100 Montgomery Street, Suite 2400, San Francisco, CA</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+            <span>Direct Inquiries: +1 (800) 584-3920 &bull; concierge@summitspeak.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+            <span>Hours: Mon – Fri: 08:30 – 18:00 EST / UTC-05:00</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="col-lg-2 col-md-3 col-12">
+          <div class="footer-heading">Bureau</div>
+          <ul class="footer-list">
+            <li>
+              <a href="../index.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/><path d="m8 3.293 6 6V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V9.293l6-6Z"/></svg>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="speaker-roster.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z"/></svg>
+                <span>Speaker Roster</span>
+              </a>
+            </li>
+            <li>
+              <a href="topics-industries.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/></svg>
+                <span>Topics &amp; Industries</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/><path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/></svg>
+                <span>Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="how-it-works.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v1.5a.5.5 0 0 1-1 0V8H2v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 1.5 7H7V6A1.5 1.5 0 0 1 5.5 4.5v-1z"/></svg>
+                <span>How It Works</span>
+              </a>
+            </li>
+            <li>
+              <a href="about.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>
+                <span>About Us</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Resources & Insights -->
+        <div class="col-lg-3 col-md-3 col-12">
+          <div class="footer-heading">Editorial &amp; Portal</div>
+          <ul class="footer-list">
+            <li>
+              <a href="insights.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/><path d="M3 4h10v1H3V4zm0 3h10v1H3V7zm0 3h7v1H3v-1z"/></svg>
+                <span>Insights &amp; Articles</span>
+              </a>
+            </li>
+            <li>
+              <a href="book-a-speaker.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                <span>Book a Speaker Form</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2 0-.3-.15-.25-.33l.633-2.531A8.995 8.995 0 0 1 0 8c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8a8.97 8.97 0 0 1-4.32-.997l-1.495.896z"/></svg>
+                <span>Contact Booking Advisors</span>
+              </a>
+            </li>
+            <li>
+              <a href="../auth/login.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z"/></svg>
+                <span>Client Portal Login</span>
+              </a>
+            </li>
+            <li>
+              <a href="../dashboard/index.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5-.5a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5h-1.586a.5.5 0 0 1 0-1H11.5zm-1.046-3.354a.5.5 0 0 1 0 .708l-.914.914a.5.5 0 1 1-.708-.707l.915-.915a.5.5 0 0 1 .708 0zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1z"/></svg>
+                <span>Client Dashboard (SaaS)</span>
+              </a>
+            </li>
+            <li>
+              <a href="../auth/signup.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C8.844 9.04 8.434 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/></svg>
+                <span>Create Business Account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Standards -->
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-heading">Booking Security</div>
+          <p class="small text-muted mb-3">
+            All speaker contracts, deposit holding, and travel arrangements adhere to international corporate entertainment standards and audited escrow practices.
+          </p>
+          <div class="d-flex flex-column gap-2 small footer-legal-links">
+            <a href="about.html#standards">
+              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.599 4.491.71 7.776 2.363 9.941a11.777 11.777 0 0 0 2.52 2.46c.302.216.685.45 1.07.634.315.15.63.267.894.312a1.458 1.458 0 0 0 .01 0c.264-.045.58-.162.894-.312.385-.184.768-.418 1.07-.634a11.777 11.777 0 0 0 2.52-2.46c1.653-2.165 2.962-5.45 2.363-9.941a1.54 1.54 0 0 0-1.044-1.262c-.658-.215-1.777-.57-2.887-.87C9.843.265 8.69 0 8 0z"/></svg>
+              <span>Ethical Booking Standards</span>
+            </a>
+            <a href="contact.html#privacy">
+              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 0-2 2v2H5a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-1V3a2 2 0 0 0-2-2zm1 4H7V3a1 1 0 0 1 2 0v2z"/></svg>
+              <span>Data Privacy &amp; NDA Support</span>
+            </a>
+            <a href="how-it-works.html#terms">
+              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/><path d="M4.5 7h7v1h-7V7zm0 2h7v1h-7V9zm0 2h5v1h-5v-1z"/></svg>
+              <span>Contract Terms &amp; Cancellation</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <div>
+          &copy; 2026 SummitSpeak Bureau. All rights reserved. Exceptional Voices. Extraordinary Events.
+        </div>
+        <div class="d-flex gap-4 footer-legal-links">
+          <a href="about.html#privacy">
+            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.599 4.491-.71 7.776-2.363 9.941a11.777 11.777 0 0 1-2.52 2.46c-.302.216-.685.45-1.07.634-.315.15-.63.267-.894.312a1.458 1.458 0 0 1-.01 0c-.264-.045-.58-.162.894-.312.385-.184.768-.418 1.07-.634a11.777 11.777 0 0 1-2.52-2.46C1.653 10.455.344 7.17.943 2.692A1.54 1.54 0 0 1 1.987 1.43c.658-.215 1.777-.57 2.887-.87z"/></svg>
+            <span>Privacy Policy</span>
+          </a>
+          <a href="about.html#terms">
+            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/></svg>
+            <span>Terms of Service</span>
+          </a>
+          <a href="contact.html#compliance">
+            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.757.757 0 0 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/></svg>
+            <span>Compliance</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM NAVIGATION (Fixed Dock — Mobile Responsive View Only)
+       ========================================================================== -->
+  <nav class="mobile-bottom-nav d-md-none" aria-label="Mobile Quick Navigation">
+    <div class="mobile-bottom-nav-inner">
+      <!-- 1. Wishlist -->
+      <a href="../dashboard/index.html?view=shortlist" class="mobile-bottom-nav-item" aria-label="Wishlist">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+          </svg>
+          <span class="shortlist-count-badge">0</span>
+        </div>
+        <span class="mobile-bottom-nav-label">Wishlist</span>
+      </a>
+
+      <!-- 2. Book Enquiry -->
+      <a href="book-a-speaker.html" class="mobile-bottom-nav-item active" aria-label="Book Enquiry">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+          </svg>
+        </div>
+        <span class="mobile-bottom-nav-label">Book Enquiry</span>
+      </a>
+
+      <!-- 3. Account -->
+      <a href="../auth/login.html" class="mobile-bottom-nav-item" aria-label="Account">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+          </svg>
+        </div>
+        <span class="mobile-bottom-nav-label">Account</span>
+      </a>
+
+      <!-- 4. Client Portal -->
+      <a href="../dashboard/index.html" class="mobile-bottom-nav-item" aria-label="Client Portal">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.15V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1 6.1v-.6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v.6L8.687 7.78a.5.5 0 0 1-.374 0L1 6.1z"/>
+          </svg>
+        </div>
+        <span class="mobile-bottom-nav-label">Client Portal</span>
+      </a>
+    </div>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/storage.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/booking.js"></script>
+</body>
+</html>

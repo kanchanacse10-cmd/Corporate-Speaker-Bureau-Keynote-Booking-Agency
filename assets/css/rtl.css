@@ -1,0 +1,299 @@
+/* ==========================================================================
+   SummitSpeak Bureau — RTL Bidirectional Stylesheet
+   ========================================================================== */
+
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] body {
+  direction: rtl;
+}
+
+/* Nav links underline animation origin */
+[dir="rtl"] .navbar-nav .nav-link::after {
+  transform-origin: center;
+}
+
+/* Header Action Controls */
+[dir="rtl"] .header-actions,
+[dir="rtl"] .header-nav-actions {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Speaker Card Top Badges / Shortlist Button */
+[dir="rtl"] .speaker-shortlist-btn {
+  right: auto;
+  left: 12px;
+}
+
+/* Toast notifications in RTL */
+[dir="rtl"] #ssb-toast-container {
+  right: auto;
+  left: 24px;
+}
+[dir="rtl"] .ssb-toast {
+  border-left: 1px solid var(--ssb-border);
+  border-right: 4px solid var(--ssb-secondary);
+}
+
+/* Dashboard Sidebar RTL docking */
+[dir="rtl"] .dash-sidebar {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 1px solid #344153;
+  transform: translateX(100%);
+}
+[dir="rtl"] .dash-sidebar.show {
+  transform: translateX(0);
+}
+@media (min-width: 768px) {
+  [dir="rtl"] .dash-sidebar {
+    transform: translateX(0) !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  [dir="rtl"] .dash-main {
+    margin-left: 0 !important;
+    margin-right: 250px !important;
+  }
+}
+@media (min-width: 992px) {
+  [dir="rtl"] .dash-sidebar {
+    transform: translateX(0);
+  }
+  [dir="rtl"] .dash-main {
+    margin-left: 0;
+    margin-right: 280px;
+  }
+}
+
+/* Dashboard Navigation Active Item Border */
+[dir="rtl"] .dash-nav-link.active {
+  border-left: none;
+  border-right: 3px solid var(--ssb-secondary);
+}
+[dir="rtl"] .dash-nav-badge {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Topbar Left and Right alignment */
+[dir="rtl"] .dash-topbar-left {
+  flex-direction: row-reverse;
+}
+
+/* Badges and Icons */
+[dir="rtl"] .btn {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .trust-item {
+  flex-direction: row;
+}
+
+/* Form Inputs */
+[dir="rtl"] .form-control,
+[dir="rtl"] .form-select {
+  text-align: right;
+}
+[dir="rtl"] .form-select {
+  background-position: left 0.75rem center;
+}
+
+/* Calendar Day Headers & Event Pills */
+[dir="rtl"] .calendar-event-pill.confirmed {
+  border-left: none;
+  border-right: 2px solid var(--ssb-success);
+}
+[dir="rtl"] .calendar-event-pill.tentative {
+  border-left: none;
+  border-right: 2px solid var(--ssb-warning);
+}
+
+/* Footer contact items */
+[dir="rtl"] .footer-contact-item svg {
+  margin-left: 0.75rem;
+  margin-right: 0;
+}
+
+/* Scroll To Top button in RTL */
+[dir="rtl"] .ssb-back-to-top {
+  right: auto !important;
+  left: 28px !important;
+}
+
+@media (max-width: 1199.98px) {
+  [dir="rtl"] .ssb-back-to-top {
+    right: auto !important;
+    left: 16px !important;
+  }
+}
+
+/* Trust Cards in RTL */
+[dir="rtl"] .trust-card {
+  text-align: right;
+}
+
+[dir="rtl"] .trust-check-list li {
+  text-align: right;
+}
+
+[dir="rtl"] .trust-metric {
+  text-align: right;
+}
+
+/* Speaker Cards in RTL */
+[dir="rtl"] .speaker-card {
+  text-align: right;
+}
+
+[dir="rtl"] .speaker-card-actions {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .speaker-meta-strip {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .speaker-industry-pill {
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+
+[dir="rtl"] .speaker-card-top-badges {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .speaker-card-img-footer {
+  flex-direction: row-reverse;
+}
+
+/* Industry Sector Cards in RTL */
+[dir="rtl"] .industry-sector-card {
+  text-align: right;
+}
+
+[dir="rtl"] .industry-objectives-list li {
+  text-align: right;
+}
+
+[dir="rtl"] .industry-card-top {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .industry-meta-bar {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .industry-consult-badge-row {
+  flex-direction: row-reverse;
+}
+
+/* Perspectives & Testimonials RTL adjustments */
+[dir="rtl"] .stage-pull-quote {
+  padding-left: 0;
+  padding-right: 1.5rem;
+  border-left: none;
+  border-right: 4px solid var(--ssb-secondary);
+}
+[dir="rtl"] .companion-card.active::before {
+  left: auto;
+  right: 0;
+}
+[dir="rtl"] .companion-card:hover {
+  transform: translateX(-6px);
+}
+[dir="rtl"] .stage-watermark-quote {
+  right: auto;
+  left: 1.5rem;
+}
+[dir="rtl"] .stage-author-stamp {
+  text-align: left;
+}
+[dir="rtl"] .stage-impact-item:not(:last-child) {
+  border-right: none;
+  border-left: 1px solid var(--ssb-border);
+  padding-right: 0;
+  padding-left: 0.65rem;
+}
+
+@media (max-width: 767.98px) {
+  [dir="rtl"] .stage-impact-item:not(:last-child) {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+}
+
+/* FAQ Concierge RTL adjustments */
+[dir="rtl"] .faq-category-btn:hover {
+  transform: translateX(-4px);
+}
+[dir="rtl"] .faq-search-input {
+  padding: 0.9rem 3.1rem 0.9rem 1.25rem;
+}
+[dir="rtl"] .faq-search-icon {
+  left: auto;
+  right: 1.25rem;
+}
+[dir="rtl"] .faq-executive-card.open::before {
+  left: auto;
+  right: 0;
+}
+[dir="rtl"] .faq-executive-body {
+  padding: 0 4.4rem 1.65rem 1.65rem;
+}
+@media (max-width: 991.98px) {
+  [dir="rtl"] .faq-search-input {
+    padding: 0.75rem 2.65rem 0.75rem 1rem !important;
+  }
+  [dir="rtl"] .faq-search-icon {
+    left: auto !important;
+    right: 0.95rem !important;
+  }
+  [dir="rtl"] .faq-executive-body {
+    padding: 0 1rem 1.15rem 1rem !important;
+  }
+}
+
+/* Footer menu hover RTL */
+[dir="rtl"] .footer-list li a:hover {
+  transform: translateX(-4px);
+}
+[dir="rtl"] .footer-legal-links a:hover {
+  transform: translateX(-3px);
+}
+
+/* Hero Carousel in RTL */
+@media (min-width: 992px) {
+  [dir="rtl"] .hero-slide-visual-wrapper {
+    left: auto;
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 85px 100%);
+  }
+  [dir="rtl"] .hero-slide-slant-line {
+    left: auto;
+    right: calc(64% - 87px);
+    transform: skewX(7.8deg);
+    transform-origin: top right;
+  }
+  [dir="rtl"] .hero-slide-content-wrapper {
+    margin-left: 0;
+    margin-right: auto;
+    padding: 4rem 3.5rem 4rem 4.5rem;
+    text-align: right;
+  }
+}
+[dir="rtl"] .hero-carousel-prev {
+  left: auto;
+  right: 20px;
+}
+[dir="rtl"] .hero-carousel-next {
+  right: auto;
+  left: 20px;
+}
+
+
+

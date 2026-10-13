@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topics & Industries — SummitSpeak Bureau</title>
+  <meta name="description"
+    content="Discover keynote speakers organized around critical business themes and specific industry sectors.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <script src="../assets/js/theme.js"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl ssb-navbar">
+      <div class="container-fluid px-3 px-xl-4 px-xxl-5">
+        <a class="ssb-brand" href="../index.html">
+          <div class="ssb-brand-logo">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+              <path
+                d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+            </svg>
+          </div>
+          <div class="ssb-brand-text">
+            <span class="ssb-brand-name">SummitSpeak</span>
+            <span class="ssb-brand-tagline">Bureau</span>
+          </div>
+        </a>
+
+        <!-- Header Actions: On Mobile (Theme Converter, RTL Toggle, Menu Toggle). On Desktop (Wishlist, Theme Converter, RTL Toggle, Login, Client Portal) -->
+        <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
+          <!-- Wishlist Jump (Desktop Only) -->
+          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-md-inline-flex" title="View Saved Wishlist" aria-label="View Saved Wishlist">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            </svg>
+            <span class="shortlist-count-badge">0</span>
+          </a>
+
+          <!-- Theme Toggle (Dark/Light Converter) - Visible on Mobile & Desktop -->
+          <button type="button" class="toggle-btn theme-toggle-btn"
+            onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle light or dark theme">
+            <!-- Injected by theme.js -->
+          </button>
+
+          <!-- RTL/LTR Toggle - Visible on Mobile & Desktop -->
+          <button type="button" class="toggle-btn rtl-toggle-btn"
+            onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle layout direction">
+            RTL
+          </button>
+
+          <!-- Login Button: Desktop view only (on mobile it's in the bottom bar) -->
+          <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-md-inline-flex" title="Client & Speaker Login" aria-label="Login">
+            <span class="login-text">Login</span>
+          </a>
+
+          <!-- Client Portal CTA (Desktop view only - on mobile it's in the bottom bar) -->
+          <a href="../dashboard/index.html" class="btn btn-gold btn-sm d-none d-md-inline-flex">Client Portal</a>
+
+          <!-- Responsive Mobile Toggle -->
+          <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#ssbNavbarContent" aria-controls="ssbNavbarContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="collapse navbar-collapse order-xl-2" id="ssbNavbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="speaker-roster.html">Speaker Roster</a></li>
+            <li class="nav-item"><a class="nav-link active" href="topics-industries.html">Topics & Industries</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="insights.html">Insights</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="py-5 bg-secondary-theme border-bottom border-theme">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <span class="sub-title text-gold">Subject & Sector Intelligence</span>
+          <h1 class="mb-2">Topics & Industries</h1>
+          <p class="lead mb-0">
+            Explore curated speaker collections organized around what your organization wants the audience to learn,
+            experience, and execute.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+          <a href="book-a-speaker.html" class="btn btn-gold discovery-recommend-btn">Request Speaker Recommendations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPICS SECTION -->
+  <section class="section-padding bg-soft">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-title">Core Disciplines</span>
+        <h2>Keynote Topic Categories</h2>
+        <p>Strategic themes driving modern corporate agendas, leadership performance, and institutional resilience.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1. Leadership -->
+        <div class="col-lg-6">
+          <div class="ssb-card h-100 p-3 p-sm-4 d-flex flex-column">
+            <div class="topic-card-header mb-3">
+              <span class="badge-gold">Executive Track</span>
+              <span class="text-muted small speaker-count text-nowrap">14 Roster Speakers</span>
+            </div>
+            <h3>Leadership & Management</h3>
+            <p class="text-muted">Executive leadership, organizational change, team development, decision-making under
+              uncertainty, and strategic governance in volatile environments.</p>
+            <div class="p-3 bg-secondary-theme rounded-2 mb-3">
+              <div class="small fw-bold text-gold mb-1">Key Executive Takeaways:</div>
+              <ul class="small text-muted mb-0 ps-3">
+                <li>Frameworks for decentralized high-stakes decision making</li>
+                <li>Fostering cultures of radical accountability and team safety</li>
+                <li>Leading enterprise transformation without organizational burnout</li>
+              </ul>
+            </div>
+            <div class="topic-card-footer mt-auto pt-2">
+              <span class="small text-muted topic-related-text">Related: Professional Services, Finance</span>
+              <a href="speaker-roster.html?topic=Leadership+%26+Management"
+                class="btn btn-outline-corporate btn-sm topic-card-btn">View Leadership Speakers</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. AI & Technology -->
+        <div class="col-lg-6">
+          <div class="ssb-card h-100 p-3 p-sm-4 d-flex flex-column">
+            <div class="topic-card-header mb-3">
+              <span class="badge-gold">Technology Track</span>
+              <span class="text-muted small speaker-count text-nowrap">18 Roster Speakers</span>
+            </div>
+            <h3>Artificial Intelligence & Technology</h3>
+            <p class="text-muted">Enterprise generative AI adoption, autonomous workflows, cybersecurity risk,
+              technology governance, and human-machine collaboration.</p>
+            <div class="p-3 bg-secondary-theme rounded-2 mb-3">
+              <div class="small fw-bold text-gold mb-1">Key Executive Takeaways:</div>
+              <ul class="small text-muted mb-0 ps-3">
+                <li>Pragmatic AI roadmaps beyond pilot experimentation</li>
+                <li>Responsible tech governance, data integrity, and compliance</li>
+                <li>Upskilling workforces for autonomous agent ecosystems</li>
+              </ul>
+            </div>
+            <div class="topic-card-footer mt-auto pt-2">
+              <span class="small text-muted topic-related-text">Related: Technology, Healthcare, Banking</span>
+              <a href="speaker-roster.html?topic=Artificial+Intelligence+%26+Technology"
+                class="btn btn-outline-corporate btn-sm topic-card-btn">View AI Speakers</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Innovation & Future Trends -->
+        <div class="col-lg-6">
+          <div class="ssb-card h-100 p-3 p-sm-4 d-flex flex-column">
+            <div class="topic-card-header mb-3">
+              <span class="badge-gold">Strategy Track</span>
+              <span class="text-muted small speaker-count text-nowrap">12 Roster Speakers</span>
+            </div>
+            <h3>Innovation & Future Trends</h3>
+            <p class="text-muted">Disruptive business models, design futurism, consumer psychology, speed as a moat, and
+              breakthrough product development.</p>
+            <div class="p-3 bg-secondary-theme rounded-2 mb-3">
+              <div class="small fw-bold text-gold mb-1">Key Executive Takeaways:</div>
+              <ul class="small text-muted mb-0 ps-3">
+                <li>Spotting weak signals before mainstream disruption</li>
+                <li>Human-centered design thinking and product velocity</li>
+                <li>Fostering rapid internal experimentation loops</li>
+              </ul>
+            </div>
+            <div class="topic-card-footer mt-auto pt-2">
+              <span class="small text-muted topic-related-text">Related: Retail, Consumer Tech, Media</span>
+              <a href="speaker-roster.html?topic=Innovation+%26+Future+Trends"
+                class="btn btn-outline-corporate btn-sm topic-card-btn">View Innovation Speakers</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Motivation & Performance -->
+        <div class="col-lg-6">
+          <div class="ssb-card h-100 p-3 p-sm-4 d-flex flex-column">
+            <div class="topic-card-header mb-3">
+              <span class="badge-gold">Performance Track</span>
+              <span class="text-muted small speaker-count text-nowrap">16 Roster Speakers</span>
+            </div>
+            <h3>Motivation & Human Performance</h3>
+            <p class="text-muted">Resilience through adversity, mental fortitude under high stakes, sustaining energy
+              across long operational cycles, and world-class execution standards.</p>
+            <div class="p-3 bg-secondary-theme rounded-2 mb-3">
+              <div class="small fw-bold text-gold mb-1">Key Executive Takeaways:</div>
+              <ul class="small text-muted mb-0 ps-3">
+                <li>Cognitive tools to maintain composure during crises</li>
+                <li>Reframing failure into tactical momentum and learning</li>
+                <li>Igniting collective passion during annual kickoffs and transitions</li>
+              </ul>
+            </div>
+            <div class="topic-card-footer mt-auto pt-2">
+              <span class="small text-muted topic-related-text">Related: Sales, Operations, Enterprise Teams</span>
+              <a href="speaker-roster.html?topic=Motivation+%26+Performance"
+                class="btn btn-outline-corporate btn-sm topic-card-btn">View Motivation Speakers</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Economics & Global Affairs -->
+        <div class="col-lg-6">
+          <div class="ssb-card h-100 p-3 p-sm-4 d-flex flex-column">
+            <div class="topic-card-header mb-3">
+              <span class="badge-gold">Macro Track</span>
+              <span class="text-muted small speaker-count text-nowrap">10 Roster Speakers</span>
+            </div>
+            <h3>Economics & Global Affairs</h3>
+            <p class="text-muted">Macroeconomic indicators, supply chain sovereignty, geopolitical fragmentation,
+              multilateral trade agreements, and capital allocation.</p>
+            <div class="p-3 bg-secondary-theme rounded-2 mb-3">
+              <div class="small fw-bold text-gold mb-1">Key Executive Takeaways:</div>
+              <ul class="small text-muted mb-0 ps-3">
+                <li>Navigating interest rate shifts, inflation, and currency risks</li>
+                <li>Scenario modeling for geopolitical volatility</li>
+                <li>Decoupling and friend-shoring supply chain architectures</li>
+              </ul>
+            </div>
+            <div class="topic-card-footer mt-auto pt-2">
+              <span class="small text-muted topic-related-text">Related: Finance, Energy, Manufacturing</span>
+              <a href="speaker-roster.html?topic=Economics+%26+Global+Affairs"
+                class="btn btn-outline-corporate btn-sm topic-card-btn">View Economics Speakers</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Workplace Culture & Wellbeing -->
+        <div class="col-lg-6">
+          <div class="ssb-card h-100 p-3 p-sm-4 d-flex flex-column">
+            <div class="topic-card-header mb-3">
+              <span class="badge-gold">Culture Track</span>
+              <span class="text-muted small speaker-count text-nowrap">15 Roster Speakers</span>
+            </div>
+            <h3>Workplace Culture & Wellbeing</h3>
+            <p class="text-muted">Psychological safety, employee retention, sustainable focus in digital distraction,
+              hybrid team dynamics, and authentic communication.</p>
+            <div class="p-3 bg-secondary-theme rounded-2 mb-3">
+              <div class="small fw-bold text-gold mb-1">Key Executive Takeaways:</div>
+              <ul class="small text-muted mb-0 ps-3">
+                <li>Preventing burnout while preserving high-output standards</li>
+                <li>Designing communication rituals that connect hybrid teams</li>
+                <li>Retaining top performers in competitive talent markets</li>
+              </ul>
+            </div>
+            <div class="topic-card-footer mt-auto pt-2">
+              <span class="small text-muted topic-related-text">Related: Healthcare, Tech, Education</span>
+              <a href="speaker-roster.html?topic=Workplace+Culture+%26+Wellbeing"
+                class="btn btn-outline-corporate btn-sm topic-card-btn">View Culture Speakers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRY MATCHING MATRIX -->
+  <section class="section-padding bg-secondary-theme">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-title">Industry Solutions</span>
+        <h2>Speaker Alignment by Industry Sector</h2>
+        <p>Identify keynote presenters with proven track records in your industry's specific commercial realities and
+          compliance environments.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1. Technology & SaaS -->
+        <div class="col-lg-3 col-md-6">
+          <div class="industry-sector-card tech-sector">
+            <div class="industry-card-top">
+              <div class="industry-icon-box" title="Technology & SaaS">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14A2.5 2.5 0 0 1 11.5 14v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zM3 4.5A1.5 1.5 0 0 0 4.5 3h7A1.5 1.5 0 0 0 13 4.5v7a1.5 1.5 0 0 0-1.5 1.5h-7A1.5 1.5 0 0 0 3 11.5v-7z" />
+                </svg>
+              </div>
+              <span class="industry-sector-badge">18 Presenters</span>
+            </div>
+            <h4 class="industry-card-title">Technology &amp; SaaS</h4>
+            <span class="industry-card-subtitle">Cloud, AI &amp; Cyber</span>
+            <p class="industry-card-desc">Frontier presenters addressing developer velocity, generative AI integration,
+              digital transformation, and CISO threat governance.</p>
+            <ul class="industry-objectives-list">
+              <li>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                Developer &amp; engineering kickoffs
+              </li>
+              <li>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                Customer conferences &amp; summits
+              </li>
+              <li>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                CIO &amp; CISO executive roundtables
+              </li>
+            </ul>
+            <div class="industry-card-footer">
+              <a href="speaker-roster.html?industry=Technology" class="btn btn-outline-corporate w-100 industry-btn">
+                Browse Tech Speakers <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Finance & Banking -->
+        <div class="col-lg-3 col-md-6">
+          <div class="industry-sector-card finance-sector">
+            <div class="industry-card-top">
+              <div class="industry-icon-box" title="Finance & Banking">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.382l.5 2a.498.498 0 0 1-.485.618H.5a.498.498 0 0 1-.485-.618l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89L8 0zM3.5 6a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 1 0v-5a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 1 0v-5a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 1 0v-5a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 1 0v-5a.5.5 0 0 0-.5-.5z" />
+                </svg>
+              </div>
+              <span class="industry-sector-badge">14 Presenters</span>
+            </div>
+            <h4 class="industry-card-title">Finance &amp; Banking</h4>
+            <span class="industry-card-subtitle">Capital Markets &amp; Risk</span>
+            <p class="industry-card-desc">Macroeconomists and monetary analysts decoding interest rate cycles,
+              multilateral trade shifts, algorithmic trading.</p>
+            <ul class="industry-objectives-list">
+              <li>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                Annual investor &amp; wealth summits
+              </li>
+              <li>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                Risk management symposiums
+              </li>
+              <li>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                C-suite macroeconomic outlooks
+              </li>
+            </ul>
+            <div class="industry-card-footer">
+              <a href="speaker-roster.html?industry=Finance+%26+Banking"
+                class="btn btn-outline-corporate w-100 industry-btn">
+                Browse Finance Speakers <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Healthcare & Life Sciences -->
+        <div class="col-lg-3 col-md-6">
+          <div class="industry-sector-card health-sector">
+            <div class="industry-card-top">
+              <div class="industry-icon-box" title="Healthcare & Life Sciences">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M4.5 0A1.5 1.5 0 0 0 3 1.5V14h-.5a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1H13V1.5A1.5 1.5 0 0 0 11.5 0h-7zM4 1.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5V14H4V1.5z" />
+                  <path
+                    d="M8.5 5.034v1.1l.953-.635a.5.5 0 0 1 .554.832l-1.488.992.833 1.25a.5.5 0 1 1-.832.554l-.52-1.04v1.1a.5.5 0 0 1-1 0v-1.1l-.52 1.04a.5.5 0 1 1-.832-.554l.833-1.25-1.488-.992a.5.5 0 0 1 .554-.832l.953.635v-1.1a.5.5 0 0 1 1 0z" />
+                </svg>
+              </div>
+              <span class="industry-sector-badge">12 Presenters</span>
+            </div>
+            <h4 class="industry-card-title">Healthcare &amp; Life Science</h4>
+            <span class="industry-card-subtitle">Biotech &amp; Clinical Leadership</span>
+            <p class="industry-card-desc">Visionaries guiding pharma executives, hospital networks, and biotech
+              innovators through digital medicine and provider resilience.</p>
+            <ul class="industry-objectives-list">
+              <li>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                Clinical leadership congresses
+              </li>
+              <li>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                Medical device innovation forums
+              </li>
+              <li>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                Healthcare workforce keynotes
+              </li>
+            </ul>
+            <div class="industry-card-footer">
+              <a href="speaker-roster.html?industry=Healthcare" class="btn btn-outline-corporate w-100 industry-btn">
+                Browse Healthcare Speakers <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Energy & Sustainability -->
+        <div class="col-lg-3 col-md-6">
+          <div class="industry-sector-card energy-sector">
+            <div class="industry-card-top">
+              <div class="industry-icon-box" title="Energy & Sustainability">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z" />
+                </svg>
+              </div>
+              <span class="industry-sector-badge">10 Presenters</span>
+            </div>
+            <h4 class="industry-card-title">Energy &amp; Sustainability</h4>
+            <span class="industry-card-subtitle">Net-Zero Transition &amp; ESG</span>
+            <p class="industry-card-desc">Specialists in capital allocation for clean tech, ESG governance reporting,
+              industrial decarbonization.</p>
+            <ul class="industry-objectives-list">
+              <li>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                Clean tech &amp; ESG forums
+              </li>
+              <li>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                Corporate board net-zero meetings
+              </li>
+              <li>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                Renewable infrastructure events
+              </li>
+            </ul>
+            <div class="industry-card-footer">
+              <a href="speaker-roster.html?industry=Energy+%26+Sustainability"
+                class="btn btn-outline-corporate w-100 industry-btn">
+                Browse Energy Speakers <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tailored consultation lounge banner -->
+      <div class="industry-consult-banner">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <div class="industry-consult-badge-row">
+              <span class="industry-consult-pill">
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.464 9.99a11.777 11.777 0 0 0 3.732 3.037.5.5 0 0 0 .663 0 11.777 11.777 0 0 0 3.732-3.037c1.677-2.195 3.06-5.513 2.464-9.99a1.54 1.54 0 0 0-1.044-1.262c-.658-.215-1.777-.57-2.887-.87C9.843.265 8.69 0 8 0z" />
+                </svg>
+                Confidential Industry Advisory
+              </span>
+              <span class="industry-consult-pill">
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                  <path
+                    d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />
+                </svg>
+                Compliance &amp; Rider Auditing
+              </span>
+              <span class="industry-consult-pill">
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                </svg>
+                Turnaround &lt; 24h
+              </span>
+            </div>
+            <h3 class="mb-2">Planning an Industry-Specific Event?</h3>
+            <p class="text-muted mb-0" style="max-width: 680px;">
+              Our booking directors build bespoke, conflict-checked speaker shortlists aligned with your industry's
+              specific commercial realities, audience seniority, and regulatory constraints.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+            <a href="book-a-speaker.html" class="btn btn-gold px-4 py-2 fw-semibold">
+              Request Industry Brief &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ssb-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand & Identity -->
+        <div class="col-lg-4 col-md-6">
+          <a class="ssb-brand mb-3 d-inline-flex" href="../index.html">
+            <div class="ssb-brand-logo">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+                <path
+                  d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+              </svg>
+            </div>
+            <div class="ssb-brand-text">
+              <span class="ssb-brand-name text-white">SummitSpeak</span>
+              <span class="ssb-brand-tagline">Bureau</span>
+            </div>
+          </a>
+          <p class="small text-muted mb-4">
+            A premier corporate speaker bureau connecting organizations with exceptional keynote speakers, industry
+            pioneers, authors, and executive thought leaders.
+          </p>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            </svg>
+            <span>Corporate Office: 100 Montgomery Street, Suite 2400, San Francisco, CA</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+            </svg>
+            <span>Direct Inquiries: +1 (800) 584-3920 &bull; concierge@summitspeak.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+            </svg>
+            <span>Hours: Mon – Fri: 08:30 – 18:00 EST / UTC-05:00</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="col-lg-2 col-md-3 col-12">
+          <div class="footer-heading">Bureau</div>
+          <ul class="footer-list">
+            <li>
+              <a href="../index.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                  <path d="m8 3.293 6 6V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V9.293l6-6Z" />
+                </svg>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="speaker-roster.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+                  <path
+                    d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+                </svg>
+                <span>Speaker Roster</span>
+              </a>
+            </li>
+            <li>
+              <a href="topics-industries.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+                </svg>
+                <span>Topics &amp; Industries</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                  <path
+                    d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                </svg>
+                <span>Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="how-it-works.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v1.5a.5.5 0 0 1-1 0V8H2v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 1.5 7H7V6A1.5 1.5 0 0 1 5.5 4.5v-1z" />
+                </svg>
+                <span>How It Works</span>
+              </a>
+            </li>
+            <li>
+              <a href="about.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                  <path
+                    d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                </svg>
+                <span>About Us</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Resources & Insights -->
+        <div class="col-lg-3 col-md-3 col-12">
+          <div class="footer-heading">Editorial &amp; Portal</div>
+          <ul class="footer-list">
+            <li>
+              <a href="insights.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                  <path d="M3 4h10v1H3V4zm0 3h10v1H3V7zm0 3h7v1H3v-1z" />
+                </svg>
+                <span>Insights &amp; Articles</span>
+              </a>
+            </li>
+            <li>
+              <a href="book-a-speaker.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
+                  <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                </svg>
+                <span>Book a Speaker Form</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2 0-.3-.15-.25-.33l.633-2.531A8.995 8.995 0 0 1 0 8c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8a8.97 8.97 0 0 1-4.32-.997l-1.495.896z" />
+                </svg>
+                <span>Contact Booking Advisors</span>
+              </a>
+            </li>
+            <li>
+              <a href="../auth/login.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z" />
+                </svg>
+                <span>Client Portal Login</span>
+              </a>
+            </li>
+            <li>
+              <a href="../dashboard/index.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5-.5a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5h-1.586a.5.5 0 0 1 0-1H11.5zm-1.046-3.354a.5.5 0 0 1 0 .708l-.914.914a.5.5 0 1 1-.708-.707l.915-.915a.5.5 0 0 1 .707 0zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1z" />
+                </svg>
+                <span>Client Dashboard (SaaS)</span>
+              </a>
+            </li>
+            <li>
+              <a href="../auth/signup.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                  <path
+                    d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C8.844 9.04 8.434 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z" />
+                </svg>
+                <span>Create Business Account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Standards -->
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-heading">Booking Security</div>
+          <p class="small text-muted mb-3">
+            All speaker contracts, deposit holding, and travel arrangements adhere to international corporate
+            entertainment standards and audited escrow practices.
+          </p>
+          <div class="d-flex flex-column gap-2 small footer-legal-links">
+            <a href="about.html#standards">
+              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                <path
+                  d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.599 4.491.71 7.776 2.363 9.941a11.777 11.777 0 0 0 2.52 2.46c.302.216.685.45-1.07.634-.315.15-.63.267-.894.312a1.458 1.458 0 0 0 .01 0c.264-.045.58-.162.894-.312.385-.184.768-.418 1.07-.634a11.777 11.777 0 0 0 2.52-2.46c1.653-2.165 2.962-5.45 2.363-9.941a1.54 1.54 0 0 0-1.044-1.262c-.658-.215-1.777-.57-2.887-.87C9.843.265 8.69 0 8 0z" />
+              </svg>
+              <span>Ethical Booking Standards</span>
+            </a>
+            <a href="contact.html#privacy">
+              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8 1a2 2 0 0 0-2 2v2H5a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-1V3a2 2 0 0 0-2-2zm1 4H7V3a1 1 0 0 1 2 0v2z" />
+              </svg>
+              <span>Data Privacy &amp; NDA Support</span>
+            </a>
+            <a href="how-it-works.html#terms">
+              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+                <path d="M4.5 7h7v1h-7V7zm0 2h7v1h-7V9zm0 2h5v1h-5v-1z" />
+              </svg>
+              <span>Contract Terms &amp; Cancellation</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <div>
+          &copy; 2026 SummitSpeak Bureau. All rights reserved. Exceptional Voices. Extraordinary Events.
+        </div>
+        <div class="d-flex gap-4 footer-legal-links">
+          <a href="about.html#privacy">
+            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.599 4.491-.71 7.776-2.363 9.941a11.777 11.777 0 0 1-2.52 2.46c-.302.216-.685.45-1.07.634-.315.15-.63.267-.894.312a1.458 1.458 0 0 1-.01 0c-.264-.045-.58-.162.894-.312.385-.184.768-.418 1.07-.634a11.777 11.777 0 0 1-2.52-2.46C1.653 10.455.344 7.17.943 2.692A1.54 1.54 0 0 1 1.987 1.43c.658-.215 1.777-.57 2.887-.87z" />
+            </svg>
+            <span>Privacy Policy</span>
+          </a>
+          <a href="about.html#terms">
+            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+            </svg>
+            <span>Terms of Service</span>
+          </a>
+          <a href="contact.html#compliance">
+            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.757.757 0 0 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z" />
+            </svg>
+            <span>Compliance</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM NAVIGATION (Fixed Dock — Mobile Responsive View Only)
+       ========================================================================== -->
+  <nav class="mobile-bottom-nav d-md-none" aria-label="Mobile Quick Navigation">
+    <div class="mobile-bottom-nav-inner">
+      <!-- 1. Wishlist -->
+      <a href="../dashboard/index.html?view=shortlist" class="mobile-bottom-nav-item" aria-label="Wishlist">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+          </svg>
+          <span class="shortlist-count-badge">0</span>
+        </div>
+        <span class="mobile-bottom-nav-label">Wishlist</span>
+      </a>
+
+      <!-- 2. Book Enquiry -->
+      <a href="book-a-speaker.html" class="mobile-bottom-nav-item" aria-label="Book Enquiry">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+          </svg>
+        </div>
+        <span class="mobile-bottom-nav-label">Book Enquiry</span>
+      </a>
+
+      <!-- 3. Account -->
+      <a href="../auth/login.html" class="mobile-bottom-nav-item" aria-label="Account">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+          </svg>
+        </div>
+        <span class="mobile-bottom-nav-label">Account</span>
+      </a>
+
+      <!-- 4. Client Portal -->
+      <a href="../dashboard/index.html" class="mobile-bottom-nav-item" aria-label="Client Portal">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.15V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1 6.1v-.6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v.6L8.687 7.78a.5.5 0 0 1-.374 0L1 6.1z"/>
+          </svg>
+        </div>
+        <span class="mobile-bottom-nav-label">Client Portal</span>
+      </a>
+    </div>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/storage.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

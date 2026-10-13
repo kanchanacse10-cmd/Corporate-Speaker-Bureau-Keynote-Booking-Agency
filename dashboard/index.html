@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Portal Dashboard — SummitSpeak Bureau</title>
+  <meta name="description" content="Manage keynote speaker booking requests, agreements, contracts, invoices, and event preparation.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <script src="../assets/js/theme.js"></script>
+</head>
+<body>
+
+  <div class="dashboard-app">
+    
+    <!-- ========================================================================
+         1. COLLAPSIBLE SIDEBAR
+         ======================================================================== -->
+    <aside class="dash-sidebar">
+      <!-- Sidebar Header -->
+      <div class="dash-sidebar-header">
+        <a class="ssb-brand" href="../index.html" style="text-decoration:none;">
+          <div class="ssb-brand-logo" style="width:34px; height:34px;">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z"/></svg>
+          </div>
+          <div class="ssb-brand-text">
+            <span class="ssb-brand-name">SummitSpeak</span>
+            <span class="ssb-brand-tagline">Client Portal</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Sidebar Body / Navigation List -->
+      <div class="dash-sidebar-body">
+        
+        <div class="dash-nav-section-title">Core Management</div>
+        <ul class="dash-nav-list">
+          <li>
+            <a href="#" class="dash-nav-link active" data-view="overview">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"/></svg>
+              <span>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dash-nav-link" data-view="find-speaker">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+              <span>Find a Speaker</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dash-nav-link" data-view="shortlist">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/></svg>
+              <span>My Shortlist</span>
+              <span class="dash-nav-badge" id="dash-shortlist-badge" style="display:none;">0</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dash-nav-link" data-view="requests">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/><path d="M4 4h8v1H4V4zm0 3h8v1H4V7zm0 3h5v1H4v-1z"/></svg>
+              <span>Booking Requests</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dash-nav-link" data-view="confirmed">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/></svg>
+              <span>Confirmed Bookings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dash-nav-link" data-view="calendar">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+              <span>Event Calendar</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="dash-nav-section-title">Finance & Legal</div>
+        <ul class="dash-nav-list">
+          <li>
+            <a href="#" class="dash-nav-link" data-view="contracts">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/></svg>
+              <span>Contracts & Documents</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dash-nav-link" data-view="billing">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/><path d="M2 10a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/></svg>
+              <span>Invoices & Payments</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dash-nav-link" data-view="history">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .607.367l-.66.773zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+              <span>Booking History</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="dash-nav-section-title">Account</div>
+        <ul class="dash-nav-list">
+          <li>
+            <a href="#" class="dash-nav-link" data-view="notifications">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/></svg>
+              <span>Notifications</span>
+              <span class="dash-nav-badge" id="dash-notif-badge" style="display:none;">0</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dash-nav-link" data-view="profile">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/></svg>
+              <span>Company & Team</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dash-nav-link" data-view="support">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0 13a6 6 0 1 1 0-12 6 6 0 0 1 0 12z"/><path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/></svg>
+              <span>Help & Advisor</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- Sidebar Footer (Active User) -->
+      <div class="dash-sidebar-footer">
+        <div class="user-mini-card">
+          <div class="user-avatar">SJ</div>
+          <div class="user-info flex-grow-1">
+            <div class="user-name">Sarah Jenkins</div>
+            <div class="user-role">Apex Global &bull; Admin</div>
+          </div>
+          <a href="../auth/login.html" class="text-muted hover-gold" title="Sign Out">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/><path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ========================================================================
+         2. MAIN CONTENT SHELL
+         ======================================================================== -->
+    <main class="dash-main">
+      
+      <!-- Topbar Header -->
+      <div class="dash-topbar">
+        <div class="dash-topbar-left">
+          <!-- Mobile Sidebar Menu Toggle Button (Visible only on < 768px, positioned on the left) -->
+          <button type="button" class="sidebar-toggle-btn d-md-none" id="dash-sidebar-toggle" aria-label="Toggle sidebar">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>
+          </button>
+
+          <!-- Mobile Brand Logo (visible only on mobile < 768px when sidebar is collapsed) -->
+          <a class="ssb-brand d-md-none dash-topbar-brand" href="../index.html" style="text-decoration:none;" title="SummitSpeak Home">
+            <div class="ssb-brand-logo">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z"/></svg>
+            </div>
+            <div class="ssb-brand-text">
+              <span class="ssb-brand-name">SummitSpeak</span>
+            </div>
+          </a>
+
+          <!-- Breadcrumb (>= 768px) -->
+          <div class="dash-breadcrumb d-none d-md-flex">
+            <span class="dash-portal-prefix">Client Portal / </span><span id="dash-breadcrumb-current" class="dash-breadcrumb-target">Overview</span>
+          </div>
+        </div>
+
+        <div class="dash-topbar-right">
+          <!-- Notification Bell Jump -->
+          <button type="button" class="toggle-btn position-relative" data-dash-jump="notifications" title="Notifications">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/></svg>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="dash-top-notif-badge" style="font-size:0.65rem; display:none;">0</span>
+          </button>
+
+          <!-- Theme & RTL Controls -->
+          <button type="button" class="toggle-btn theme-toggle-btn" onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle theme"></button>
+          <button type="button" class="toggle-btn rtl-toggle-btn" onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle direction">RTL</button>
+
+          <!-- New Booking CTA (Visible on >= 768px view) -->
+          <a href="../pages/book-a-speaker.html" class="btn btn-gold btn-sm d-none d-md-inline-flex dash-new-booking-btn" title="New Booking Enquiry">
+            + New Booking Enquiry
+          </a>
+        </div>
+      </div>
+
+      <!-- Content Area (Switchable View Panels) -->
+      <div class="dash-content-area">
+
+        <!-- VIEW 1: OVERVIEW -->
+        <section class="dash-view-panel" id="view-overview">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Corporate Client Overview</h2>
+              <p class="text-muted small mb-0">Live status for Apex Global Enterprises keynotes and conference engagements.</p>
+            </div>
+            <div class="badge bg-secondary-subtle text-dark-emphasis p-2 border font-monospace">Account ID: CUST-7820</div>
+          </div>
+
+          <!-- KPI Summary Cards -->
+          <div class="row g-3 mb-4">
+            <div class="col-xl-3 col-sm-6">
+              <div class="kpi-card">
+                <div class="kpi-header">
+                  <span class="kpi-title">Active Requests</span>
+                  <div class="kpi-icon bg-info-subtle text-info"><svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/></svg></div>
+                </div>
+                <div class="kpi-value" id="kpi-active-requests">3</div>
+                <div class="kpi-subtext">Under review & negotiation</div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+              <div class="kpi-card">
+                <div class="kpi-header">
+                  <span class="kpi-title text-nowrap">Confirmed Events</span>
+                  <div class="kpi-icon kpi-icon-success">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="kpi-value" id="kpi-confirmed-events">1</div>
+                <div class="kpi-subtext">Locked on calendar</div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+              <div class="kpi-card">
+                <div class="kpi-header">
+                  <span class="kpi-title text-nowrap">Contracts Pending</span>
+                  <div class="kpi-icon bg-warning-subtle text-warning"><svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5z"/></svg></div>
+                </div>
+                <div class="kpi-value text-warning" id="kpi-contracts-pending">1</div>
+                <div class="kpi-subtext">Awaiting e-signature</div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+              <div class="kpi-card">
+                <div class="kpi-header">
+                  <span class="kpi-title text-nowrap">Outstanding Balance</span>
+                  <div class="kpi-icon bg-secondary-subtle text-gold"><svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4z"/></svg></div>
+                </div>
+                <div class="kpi-value text-gold" id="kpi-balance-due">$17,500</div>
+                <div class="kpi-subtext">Due in next 14 days</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Booking Pipeline Visualization -->
+          <div class="ssb-card mb-4 p-4">
+            <h5 class="mb-3 text-gold">Enterprise Booking Pipeline</h5>
+            <div class="pipeline-track">
+              <div class="pipeline-stage completed">
+                <div class="stage-dot">&#10003;</div>
+                <div class="stage-title">Enquiry Submitted</div>
+                <div class="stage-count">All Logged</div>
+              </div>
+              <div class="pipeline-stage completed">
+                <div class="stage-dot">&#10003;</div>
+                <div class="stage-title">Availability Check</div>
+                <div class="stage-count">Holds Active</div>
+              </div>
+              <div class="pipeline-stage completed">
+                <div class="stage-dot">&#10003;</div>
+                <div class="stage-title">Offer Received</div>
+                <div class="stage-count">Fees Verified</div>
+              </div>
+              <div class="pipeline-stage current">
+                <div class="stage-dot">4</div>
+                <div class="stage-title">Contract Review</div>
+                <div class="stage-count">1 Agreement</div>
+              </div>
+              <div class="pipeline-stage">
+                <div class="stage-dot">5</div>
+                <div class="stage-title">Payment Pending</div>
+                <div class="stage-count">1 Deposit</div>
+              </div>
+              <div class="pipeline-stage">
+                <div class="stage-dot">6</div>
+                <div class="stage-title">Confirmed</div>
+                <div class="stage-count">1 Event Ready</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Two Column Lists: Upcoming Events & Recent Activity -->
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <div class="ssb-card p-0 overflow-hidden h-100">
+                <div class="p-3 border-bottom d-flex justify-content-between align-items-center gap-2 dash-card-header">
+                  <h5 class="mb-0 dash-card-header-title">Upcoming Engagements</h5>
+                  <button class="btn btn-sm btn-outline-corporate dash-card-header-btn" data-dash-jump="requests">View All &rarr;</button>
+                </div>
+                <div id="dash-overview-upcoming-list">
+                  <!-- Injected via dashboard.js -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="ssb-card p-0 overflow-hidden h-100">
+                <div class="p-3 border-bottom d-flex justify-content-between align-items-center gap-2 dash-card-header">
+                  <h5 class="mb-0 dash-card-header-title">Recent Activity Feed</h5>
+                  <button class="btn btn-sm btn-outline-corporate dash-card-header-btn" data-dash-jump="notifications">Notifications &rarr;</button>
+                </div>
+                <div class="p-3" id="dash-overview-activity-list">
+                  <!-- Injected via dashboard.js -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 2: FIND A SPEAKER (Dashboard Directory) -->
+        <section class="dash-view-panel" id="view-find-speaker" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Find & Compare Speakers</h2>
+              <p class="text-muted small mb-0">Search our authenticated roster and add candidates directly to your project shortlist.</p>
+            </div>
+          </div>
+
+          <!-- Search & Filter bar -->
+          <div class="ssb-card p-3 mb-4">
+            <div class="row g-2">
+              <div class="col-12 col-lg-5 mb-2 mb-lg-0">
+                <input type="text" id="dash-speaker-search" class="form-control" placeholder="Search by name, topic, or keyword...">
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 mb-2 mb-lg-0">
+                <div class="dropdown custom-select-dropdown w-100">
+                  <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="custom-select-label">All Topics</span>
+                  </button>
+                  <ul class="dropdown-menu custom-select-menu w-100">
+                    <li><button type="button" class="dropdown-item active" data-value="">All Topics</button></li>
+                    <li><button type="button" class="dropdown-item" data-value="Artificial Intelligence & Technology">AI & Technology</button></li>
+                    <li><button type="button" class="dropdown-item" data-value="Economics & Global Affairs">Economics & Global Affairs</button></li>
+                    <li><button type="button" class="dropdown-item" data-value="Leadership & Management">Leadership & Management</button></li>
+                    <li><button type="button" class="dropdown-item" data-value="Innovation & Future Trends">Innovation & Trends</button></li>
+                    <li><button type="button" class="dropdown-item" data-value="Workplace Culture & Wellbeing">Workplace Culture</button></li>
+                    <li><button type="button" class="dropdown-item" data-value="Sustainability & Social Impact">Sustainability & ESG</button></li>
+                  </ul>
+                  <input type="hidden" id="dash-speaker-topic-filter" value="">
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="dropdown custom-select-dropdown w-100">
+                  <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="custom-select-label">Any Format</span>
+                  </button>
+                  <ul class="dropdown-menu custom-select-menu w-100">
+                    <li><button type="button" class="dropdown-item active" data-value="">Any Format</button></li>
+                    <li><button type="button" class="dropdown-item" data-value="In-Person">In-Person</button></li>
+                    <li><button type="button" class="dropdown-item" data-value="Virtual">Virtual</button></li>
+                    <li><button type="button" class="dropdown-item" data-value="Hybrid">Hybrid</button></li>
+                  </ul>
+                  <input type="hidden" id="dash-speaker-format-filter" value="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="row g-4" id="dash-find-speakers-grid">
+            <!-- Injected via dashboard.js -->
+          </div>
+        </section>
+
+        <!-- VIEW 3: MY SHORTLIST -->
+        <section class="dash-view-panel" id="view-shortlist" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Saved Speaker Shortlist</h2>
+              <p class="text-muted small mb-0">Review candidate speakers, maintain planning notes, and submit formal availability enquiries.</p>
+            </div>
+            <button class="btn btn-outline-corporate btn-sm" data-dash-jump="find-speaker">+ Add More Speakers</button>
+          </div>
+
+          <div id="dash-shortlist-container">
+            <!-- Injected via dashboard.js -->
+          </div>
+        </section>
+
+        <!-- VIEW 4: BOOKING REQUESTS TABLE -->
+        <section class="dash-view-panel" id="view-requests" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Active Booking Requests</h2>
+              <p class="text-muted small mb-0">Track engagement statuses, review bureau offers, and manage event specifications.</p>
+            </div>
+            <a href="../pages/book-a-speaker.html" class="btn btn-gold btn-sm">+ New Request</a>
+          </div>
+
+          <div class="ssb-table-card">
+            <div class="table-responsive">
+              <table class="ssb-table">
+                <thead>
+                  <tr>
+                    <th>Reference</th>
+                    <th>Event & Venue</th>
+                    <th>Speaker / Format</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Fee</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="dash-booking-requests-tbody">
+                  <!-- Injected via dashboard.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 5: CONFIRMED BOOKINGS & CHECKLIST -->
+        <section class="dash-view-panel" id="view-confirmed" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Confirmed Engagements</h2>
+              <p class="text-muted small mb-0">Finalized keynotes with executed agreements and active event preparation checklists.</p>
+            </div>
+          </div>
+
+          <div id="dash-confirmed-container">
+            <!-- Injected via dashboard.js -->
+          </div>
+        </section>
+
+        <!-- VIEW 6: EVENT CALENDAR -->
+        <section class="dash-view-panel" id="view-calendar" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Event Calendar</h2>
+              <p class="text-muted small mb-0">Monthly view of locked keynote dates, travel windows, and tentative holds.</p>
+            </div>
+            <div class="d-flex gap-2 flex-wrap">
+              <span class="badge bg-success-subtle text-success p-2">Confirmed Date</span>
+              <span class="badge bg-warning-subtle text-warning p-2">Tentative Hold</span>
+            </div>
+          </div>
+
+          <div class="ssb-card p-3 mb-4 calendar-card">
+            <div class="calendar-controls-bar d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+              <h4 class="mb-0 fs-5 fw-bold">November 2026</h4>
+              <div class="btn-group btn-group-sm calendar-nav-btns">
+                <button class="btn btn-outline-corporate">&larr; Prev</button>
+                <button class="btn btn-outline-corporate">Today</button>
+                <button class="btn btn-outline-corporate">Next &rarr;</button>
+              </div>
+            </div>
+            <div class="calendar-grid" id="dash-calendar-grid">
+              <!-- Injected via dashboard.js -->
+            </div>
+
+            <!-- Mobile Keynote Schedule Agenda (Mobile View Only) -->
+            <div class="calendar-mobile-agenda d-md-none mt-3">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="small fw-bold text-muted text-uppercase" style="letter-spacing: 0.05em;">Scheduled Keynotes</span>
+                <span class="badge bg-gold text-dark fw-bold">2 Keynotes</span>
+              </div>
+              <div class="agenda-event-item tentative mb-2">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="badge bg-warning-subtle text-warning">Tentative Hold</span>
+                  <span class="small font-monospace text-muted">Nov 18, 2026</span>
+                </div>
+                <div class="fw-bold text-main small">Dr. Marcus Vance Keynote</div>
+                <div class="small text-muted">McCormick Place &bull; Chicago, IL</div>
+              </div>
+              <div class="agenda-event-item confirmed">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="badge bg-success-subtle text-success">Confirmed Date</span>
+                  <span class="small font-monospace text-muted">Dec 05, 2026</span>
+                </div>
+                <div class="fw-bold text-main small">Elena Rostova Keynote</div>
+                <div class="small text-muted">Zurich Convention Center &bull; Switzerland</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 7: CONTRACTS & DOCUMENTS -->
+        <section class="dash-view-panel" id="view-contracts" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Contracts & Legal Documents</h2>
+              <p class="text-muted small mb-0">Review engagement agreements, riders, and electronically execute binding contracts.</p>
+            </div>
+          </div>
+
+          <div class="ssb-table-card">
+            <div class="table-responsive">
+              <table class="ssb-table">
+                <thead>
+                  <tr>
+                    <th>Contract ID</th>
+                    <th>Document Name</th>
+                    <th>Issued Date</th>
+                    <th>Signature Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="dash-contracts-tbody">
+                  <!-- Injected via dashboard.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 8: INVOICES & PAYMENTS -->
+        <section class="dash-view-panel" id="view-billing" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Invoices & Financial Management</h2>
+              <p class="text-muted small mb-0">Review itemized billing schedules, settle deposit invoices, and download VAT receipts.</p>
+            </div>
+          </div>
+
+          <!-- Billing Overview Strip -->
+          <div class="row g-3 mb-4">
+            <div class="col-md-4">
+              <div class="kpi-card text-center">
+                <span class="kpi-title">Total Invoiced</span>
+                <div class="kpi-value" id="bill-total-invoiced">$37,500</div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="kpi-card text-center">
+                <span class="kpi-title">Amount Paid</span>
+                <div class="kpi-value text-success" id="bill-amount-paid">$20,000</div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="kpi-card text-center">
+                <span class="kpi-title">Balance Due</span>
+                <div class="kpi-value text-gold" id="bill-balance-due">$17,500</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ssb-table-card">
+            <div class="table-responsive">
+              <table class="ssb-table">
+                <thead>
+                  <tr>
+                    <th>Invoice #</th>
+                    <th>Description</th>
+                    <th>Issued</th>
+                    <th>Due Date</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Payment</th>
+                  </tr>
+                </thead>
+                <tbody id="dash-invoices-tbody">
+                  <!-- Injected via dashboard.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 9: BOOKING HISTORY -->
+        <section class="dash-view-panel" id="view-history" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Historical Audit Trail</h2>
+              <p class="text-muted small mb-0">Chronological archive of all corporate requests, offers, amendments, and completed events.</p>
+            </div>
+          </div>
+
+          <div class="ssb-card p-0" id="dash-history-list">
+            <!-- Injected via dashboard.js -->
+          </div>
+        </section>
+
+        <!-- VIEW 10: NOTIFICATIONS -->
+        <section class="dash-view-panel" id="view-notifications" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2 notif-panel-header">
+            <div>
+              <h2 class="mb-1">Notifications & System Alerts</h2>
+              <p class="text-muted small mb-0">Live status updates regarding availability confirmations, contracts, and payments.</p>
+            </div>
+            <button class="btn btn-outline-corporate btn-sm" id="btn-mark-all-notifications-read">Mark All as Read</button>
+          </div>
+
+          <div class="ssb-card p-0" id="dash-notifications-list">
+            <!-- Injected via dashboard.js -->
+          </div>
+        </section>
+
+        <!-- VIEW 11: COMPANY PROFILE & USER MANAGEMENT -->
+        <section class="dash-view-panel" id="view-profile" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Company Profile & Team Access</h2>
+              <p class="text-muted small mb-0">Manage organization billing information and authorized team members with role-based permissions.</p>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="ssb-card p-4">
+                <h5 class="mb-3">Company Details</h5>
+                <form id="company-profile-form" onsubmit="event.preventDefault(); SSB_STORAGE.updateProfile({companyName: document.getElementById('prof-company-name').value, contactPerson: document.getElementById('prof-contact-person').value, email: document.getElementById('prof-email').value, phone: document.getElementById('prof-phone').value}); if(window.SSB_SHOW_TOAST) window.SSB_SHOW_TOAST('Company details saved successfully.', 'success');">
+                  <div class="mb-3">
+                    <label class="form-label">Registered Corporate Name</label>
+                    <input type="text" id="prof-company-name" class="form-control" value="Apex Global Enterprises">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Primary Account Officer</label>
+                    <input type="text" id="prof-contact-person" class="form-control" value="Sarah Jenkins">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Billing Email</label>
+                    <input type="email" id="prof-email" class="form-control" value="sarah.jenkins@apexglobal.com">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Direct Contact Phone</label>
+                    <input type="tel" id="prof-phone" class="form-control" value="+1 (555) 392-8104">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Preferred Currency</label>
+                    <div class="dropdown custom-select-dropdown w-100">
+                      <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="custom-select-label">USD ($)</span>
+                      </button>
+                      <ul class="dropdown-menu custom-select-menu w-100">
+                        <li><button type="button" class="dropdown-item active" data-value="USD ($)">USD ($)</button></li>
+                        <li><button type="button" class="dropdown-item" data-value="EUR (€)">EUR (€)</button></li>
+                        <li><button type="button" class="dropdown-item" data-value="GBP (£)">GBP (£)</button></li>
+                      </ul>
+                      <input type="hidden" id="prof-currency" value="USD ($)">
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-gold">Save Changes</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="ssb-card p-4 team-members-card">
+                <div class="d-flex justify-content-between align-items-center mb-3 team-card-header">
+                  <h5 class="mb-0">Authorized Team Members</h5>
+                  <button class="btn btn-outline-corporate btn-sm team-add-user-btn" onclick="alert('Inviting new authorized enterprise user...')">+ Add User</button>
+                </div>
+                <div class="table-responsive d-none d-md-block">
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th>User</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody id="dash-team-tbody">
+                      <!-- Injected via dashboard.js -->
+                    </tbody>
+                  </table>
+                </div>
+                <!-- Mobile View Only Cards Container (< 768px) -->
+                <div class="team-cards-mobile d-md-none" id="dash-team-mobile-list">
+                  <!-- Injected via dashboard.js -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 12: HELP & ADVISOR SUPPORT -->
+        <section class="dash-view-panel" id="view-support" style="display:none;">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h2 class="mb-1">Dedicated Booking Advisor & Support</h2>
+              <p class="text-muted small mb-0">Direct escalation desk and client concierge contacts for your account.</p>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="ssb-card p-4">
+                <span class="badge-gold mb-2">Assigned Senior Booking Director</span>
+                <h4 class="mb-1">Jonathan Reynolds</h4>
+                <div class="text-muted small mb-3">Senior Director of Corporate Engagements &bull; San Francisco Desk</div>
+                <hr class="border-theme">
+                <div class="mb-2"><strong>Direct Line:</strong> +1 (415) 890-4122 ext 104</div>
+                <div class="mb-2"><strong>Emergency Event Mobile:</strong> +1 (415) 993-2001</div>
+                <div class="mb-3"><strong>Email:</strong> j.reynolds@summitspeak.com</div>
+                <button class="btn btn-gold btn-sm" onclick="alert('Initiating direct video conference with Jonathan Reynolds.')">Start Video Briefing</button>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="ssb-card p-4">
+                <h5 class="mb-3">Submit an Expedited Escalation Ticket</h5>
+                <form onsubmit="event.preventDefault(); alert('Priority enquiry ticket dispatched to Jonathan Reynolds and executive desk.'); this.reset();">
+                  <div class="mb-2">
+                    <label class="form-label small">Subject</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="e.g. Flight schedule change for McCormick Place keynote" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label small">Details</label>
+                    <textarea class="form-control form-control-sm" rows="3" placeholder="Provide event reference and specific requirements..." required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-outline-corporate btn-sm">Dispatch Escalation</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Dashboard Universal Footer -->
+      <footer class="dash-footer">
+        <div class="dash-footer-container">
+          <p class="dash-footer-text mb-0">&copy; 2026 SummitSpeak Bureau. All rights reserved. Exceptional Voices. Extraordinary Events.</p>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM NAVIGATION (Fixed Dock — Mobile Responsive View Only)
+       ========================================================================== -->
+  <nav class="mobile-bottom-nav d-md-none" aria-label="Mobile Quick Navigation">
+    <div class="mobile-bottom-nav-inner">
+      <!-- 1. Wishlist -->
+      <a href="#" class="mobile-bottom-nav-item" data-dash-jump="shortlist" aria-label="Wishlist">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+          </svg>
+          <span class="shortlist-count-badge" id="dash-mob-shortlist-badge" style="display:none;">0</span>
+        </div>
+        <span class="mobile-bottom-nav-label">Wishlist</span>
+      </a>
+
+      <!-- 2. Account -->
+      <a href="../auth/login.html" class="mobile-bottom-nav-item" aria-label="Account">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+          </svg>
+        </div>
+        <span class="mobile-bottom-nav-label">Account</span>
+      </a>
+
+      <!-- 3. Client Portal -->
+      <a href="#" class="mobile-bottom-nav-item active" data-dash-jump="overview" aria-label="Client Portal">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.15V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1 6.1v-.6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v.6L8.687 7.78a.5.5 0 0 1-.374 0L1 6.1z" />
+          </svg>
+        </div>
+        <span class="mobile-bottom-nav-label">Client Portal</span>
+      </a>
+
+      <!-- 4. Book Enquiry -->
+      <a href="../pages/book-a-speaker.html" class="mobile-bottom-nav-item" aria-label="Book Enquiry">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+          </svg>
+        </div>
+        <span class="mobile-bottom-nav-label">Book Enquiry</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       MODALS: BOOKING DETAIL, CONTRACT E-SIGN, INVOICE PAYMENT
+       ======================================================================== -->
+  
+  <!-- 1. Booking Details Modal -->
+  <div class="modal fade" id="bookingDetailModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bookingModalLabel">Engagement Dossier</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="booking-modal-content">
+          <!-- Injected via viewBookingModal -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-corporate" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Contract Review & E-Sign Modal -->
+  <div class="modal fade" id="contractModal" tabindex="-1" aria-labelledby="contractModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contractModalLabel">Electronic Agreement Review & Execution</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="contract-modal-content">
+          <!-- Injected via openSignContractModal -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Invoice Payment Simulation Modal -->
+  <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="paymentModalLabel">Settle Invoice Deposit</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="payment-modal-content">
+          <!-- Injected via openPaymentModal -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Portal Engine -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/storage.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
