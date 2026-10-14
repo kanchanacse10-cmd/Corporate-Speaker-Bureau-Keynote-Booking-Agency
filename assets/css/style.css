@@ -3,32 +3,40 @@
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+@import url('animations.css');
 
 :root {
-  /* Brand Corporate Palette (Executive Light Mode) */
-  --ssb-primary: #0B192C;
-  /* Executive Midnight Navy */
-  --ssb-primary-hover: #06101E;
-  /* Deep Obsidian Navy */
+  /* Brand Corporate Palette (Executive Light Mode — Warm Alabaster Ivory & Prussian Navy) */
+  --ssb-primary: #0E2A47;
+  /* Executive Prussian Navy */
+  --ssb-primary-hover: #091C30;
+  /* Deep Midnight Ink */
+  --ssb-primary-subtle: rgba(14, 42, 71, 0.08);
+  --ssb-primary-light: #EDF3F8;
+  /* Soft Pill Tint */
   --ssb-secondary: #C89D4B;
-  /* Radiant Champagne Gold */
+  /* Champagne Gold */
   --ssb-secondary-hover: #B58A38;
   /* Deep Lustre Gold */
   --ssb-secondary-subtle: rgba(200, 157, 75, 0.12);
   --ssb-secondary-glow: rgba(200, 157, 75, 0.28);
-  --ssb-bg-soft: #F8FAFC;
-  /* Crisp Porcelain Slate */
-  --ssb-bg-secondary: #EEF2F7;
-  /* Architectural Cool Platinum Slate */
+
+  /* Warm Organic Porcelain / Ivory Backgrounds (Luméra Skin aesthetic) */
+  --ssb-bg-soft: #FAF8F5;
+  /* Soft Warm Alabaster Ivory */
+  --ssb-bg-secondary: #F3EFE8;
+  /* Warm Cashmere Mist */
   --ssb-bg-card: #FFFFFF;
-  /* Pristine Pure White */
-  --ssb-text-main: #0F172A;
-  /* Authoritative Obsidian Slate */
-  --ssb-text-muted: #475569;
-  /* Crisp Slate Grey */
-  --ssb-border: #E2E8F0;
-  /* Clean Hairline Border */
-  --ssb-border-subtle: rgba(226, 232, 240, 0.7);
+  /* Pristine Silk White */
+
+  /* High-Contrast Crisp Ink Typography */
+  --ssb-text-main: #142132;
+  /* Executive Deep Ink */
+  --ssb-text-muted: #566576;
+  /* Warm Slate Grey */
+  --ssb-border: #E8E3DA;
+  /* Warm Stone Hairline Border */
+  --ssb-border-subtle: rgba(232, 227, 218, 0.7);
   --ssb-white: #FFFFFF;
 
   /* Status Colors */
@@ -36,15 +44,15 @@
   --ssb-success-bg: rgba(13, 148, 136, 0.1);
   --ssb-warning: #D97706;
   --ssb-warning-bg: rgba(217, 119, 6, 0.1);
-  --ssb-info: #2563EB;
-  --ssb-info-bg: rgba(37, 99, 235, 0.1);
+  --ssb-info: #0E2A47;
+  --ssb-info-bg: rgba(14, 42, 71, 0.08);
   --ssb-danger: #E11D48;
   --ssb-danger-bg: rgba(225, 29, 72, 0.1);
 
-  /* Shadows */
-  --ssb-shadow-sm: 0 2px 8px rgba(11, 25, 44, 0.05);
-  --ssb-shadow-md: 0 8px 24px rgba(11, 25, 44, 0.08);
-  --ssb-shadow-lg: 0 20px 48px -10px rgba(11, 25, 44, 0.13);
+  /* Warm Executive Shadows */
+  --ssb-shadow-sm: 0 2px 8px rgba(14, 42, 71, 0.04);
+  --ssb-shadow-md: 0 8px 24px rgba(14, 42, 71, 0.07);
+  --ssb-shadow-lg: 0 20px 48px -10px rgba(14, 42, 71, 0.11);
   --ssb-shadow-gold: 0 8px 24px rgba(200, 157, 75, 0.28);
 
   /* Typography */
@@ -54,6 +62,12 @@
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --bs-body-bg: #FAF8F5;
+  --bs-body-color: #142132;
+  --bs-border-color: #E8E3DA;
+  --bs-secondary-bg: #F3EFE8;
+  --bs-tertiary-bg: #FFFFFF;
 }
 
 /* ==========================================================================
@@ -116,7 +130,7 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: 'DM Sans', system-ui, sans-serif;
   background-color: var(--ssb-bg-soft);
   color: var(--ssb-text-main);
   line-height: 1.6;
@@ -141,9 +155,9 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: var(--font-heading);
+  font-family: 'DM Sans', system-ui, sans-serif;
   color: var(--ssb-text-main);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.25;
   letter-spacing: -0.02em;
 }
@@ -186,46 +200,58 @@ a {
   transition: color var(--transition-fast);
 }
 
-/* Standard Container responsive paddings & desktop width */
+/* Global Full-Width Fluid Containers across all pages (matching Home 2 full-width luxury layout) */
 .container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl,
 .container-fluid {
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
   .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl,
   .container-fluid {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
   }
 }
 
-@media (min-width: 1024px) {
-  .container,
-  .container-fluid {
-    padding-left: 28px;
-    padding-right: 28px;
-  }
-}
-
-/* Desktop 1240px width enforcement */
 @media (min-width: 1200px) {
   .container,
   .container-sm,
   .container-md,
   .container-lg,
   .container-xl,
-  .container-xxl {
-    max-width: 1240px !important;
+  .container-xxl,
+  .container-fluid {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1400px) {
   .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl,
   .container-fluid {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
   }
 }
 
@@ -256,38 +282,39 @@ a {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--ssb-primary) 0%, #172B4D 100%);
+  background: var(--ssb-primary);
   border: 1.5px solid var(--ssb-primary);
   color: #FFFFFF !important;
-  box-shadow: 0 4px 14px rgba(11, 25, 44, 0.16);
+  border-radius: 24px;
+  box-shadow: 0 4px 14px rgba(14, 42, 71, 0.16);
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background: #FFFFFF !important;
+  background: var(--ssb-primary-hover) !important;
   background-image: none !important;
-  border-color: var(--ssb-primary) !important;
-  color: var(--ssb-primary) !important;
+  border-color: var(--ssb-primary-hover) !important;
+  color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(11, 25, 44, 0.18);
+  box-shadow: 0 8px 22px rgba(14, 42, 71, 0.25);
 }
 
 .btn-gold {
-  background: linear-gradient(135deg, #D4AF37 0%, #C89D4B 50%, #B88B38 100%);
+  background: var(--ssb-secondary);
   border: 1.5px solid var(--ssb-secondary);
-  color: #0B192C !important;
+  color: #0E2A47 !important;
   font-weight: 700;
+  border-radius: 24px;
   box-shadow: 0 4px 16px rgba(200, 157, 75, 0.28);
 }
 
 .btn-gold:hover,
 .btn-gold:focus {
-  background: #FFFFFF !important;
-  background-image: none !important;
-  border-color: var(--ssb-secondary) !important;
-  color: var(--ssb-primary) !important;
+  background: var(--ssb-secondary-hover) !important;
+  border-color: var(--ssb-secondary-hover) !important;
+  color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(200, 157, 75, 0.32);
+  box-shadow: 0 8px 24px rgba(200, 157, 75, 0.35);
 }
 
 /* Custom Recommendations & Discovery Action Button Responsive Adaptation */
@@ -316,6 +343,7 @@ a {
 
 /* --- 768 View (Tablet) Discovery Engine 2x2 Grid & Button Optimization --- */
 @media (min-width: 768px) and (max-width: 991.98px) {
+
   .discovery-submit-btn,
   form button.discovery-submit-btn {
     height: 46px !important;
@@ -368,23 +396,24 @@ a {
 }
 
 .btn-outline-corporate {
-  background: linear-gradient(135deg, var(--ssb-primary) 0%, #172B4D 100%);
-  border: 1.5px solid var(--ssb-primary);
-  color: #FFFFFF !important;
+  background: #FFFFFF;
+  border: 1.5px solid var(--ssb-border);
+  color: var(--ssb-primary) !important;
   font-weight: 600;
-  box-shadow: 0 4px 14px rgba(11, 25, 44, 0.14);
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(14, 42, 71, 0.05);
   letter-spacing: 0.01em;
   transition: all var(--transition-fast);
 }
 
 .btn-outline-corporate:hover,
 .btn-outline-corporate:focus {
-  background: #FFFFFF !important;
+  background: var(--ssb-primary) !important;
   background-image: none !important;
   border-color: var(--ssb-primary) !important;
-  color: var(--ssb-primary) !important;
+  color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(11, 25, 44, 0.18);
+  box-shadow: 0 8px 22px rgba(14, 42, 71, 0.22);
 }
 
 /* Outline Corporate on dark/hero sections with text-white */

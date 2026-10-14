@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const locationShort = speaker.location ? speaker.location.split('/')[0].trim() : '';
 
     return `
-      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 fade-up visible">
         <div class="speaker-card">
           <div class="speaker-img-box">
             <img src="${basePath}${speaker.image}" alt="${speaker.name}" class="speaker-img" loading="lazy">
@@ -155,6 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (featuredContainer) {
     const featuredList = SSB_DATA.speakers.filter(s => s.featured);
     featuredContainer.innerHTML = featuredList.map(s => window.SSB_RENDER_SPEAKER_CARD(s, "")).join("");
+    initScrollAnimations(featuredContainer);
   }
 
   // 5. Active Nav Highlighting
@@ -367,6 +368,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const categoryBtns = document.querySelectorAll(".faq-category-btn");
     const searchInput = document.getElementById("faqSearchInput");
     const noResults = document.getElementById("faqNoResults");
+    const mobileCatName = document.getElementById("faqMobileCatName");
+    const mobileCatCount = document.getElementById("faqMobileCatCount");
+    const mobileNextBtn = document.getElementById("faqMobileNextBtn");
+
+    const syncMobileCatBar = (btn) => {
+      if (!btn) return;
+      if (mobileCatName) {
+        const textSpan = btn.querySelector("span:first-child");
+        if (textSpan) mobileCatName.textContent = textSpan.textContent.trim();
+      }
+      if (mobileCatCount) {
+        const countSpan = btn.querySelector(".faq-cat-count");
+        if (countSpan) mobileCatCount.textContent = countSpan.textContent.trim();
+      }
+    };
 
     // Accordion Toggle
     cards.forEach(card => {
@@ -402,6 +418,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const filter = btn.dataset.faqFilter;
         categoryBtns.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
+        syncMobileCatBar(btn);
 
         if (searchInput) searchInput.value = "";
 
@@ -444,6 +461,22 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+    // Mobile Next Category Button Action (cycles through categories)
+    if (mobileNextBtn && categoryBtns.length > 0) {
+      mobileNextBtn.addEventListener("click", () => {
+        let currentIdx = Array.from(categoryBtns).findIndex(b => b.classList.contains("active"));
+        if (currentIdx === -1) currentIdx = 0;
+        const nextIdx = (currentIdx + 1) % categoryBtns.length;
+        categoryBtns[nextIdx].click();
+      });
+    }
+
+    // Set initial state for mobile bar
+    const initialActiveBtn = document.querySelector(".faq-category-btn.active") || categoryBtns[0];
+    if (initialActiveBtn) {
+      syncMobileCatBar(initialActiveBtn);
+    }
+
     // Live Instant Search
     if (searchInput) {
       searchInput.addEventListener("input", () => {
@@ -459,6 +492,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (query.length > 0) {
           categoryBtns.forEach(b => b.classList.toggle("active", b.dataset.faqFilter === "all"));
+          const allBtn = document.querySelector(".faq-category-btn[data-faq-filter='all']");
+          if (allBtn) syncMobileCatBar(allBtn);
         }
 
         if (noResults) {
@@ -506,10 +541,155 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // 13. Scroll Progress Indicator Bar (Top of Viewport)
+  function initScrollProgressBar() {
+    let bar = document.getElementById("ssbScrollProgress");
+    if (!bar) {
+      bar = document.createElement("div");
+      bar.id = "ssbScrollProgress";
+      document.body.prepend(bar);
+    }
+    const updateProgress = () => {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+      bar.style.width = Math.min(100, Math.max(0, progress)) + "%";
+    };
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+  }
+
+  // 14. Luméra-Style Scroll-Driven Reveal Animations (IntersectionObserver)
+  function initScrollAnimations(root = document) {
+    const animatedElements = root.querySelectorAll(
+      ".fade-up, .fade-down, .fade-left, .fade-right, .scale-in"
+    );
+    if (!animatedElements.length) return;
+
+    if (!("IntersectionObserver" in window)) {
+      animatedElements.forEach(el => el.classList.add("visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const target = entry.target;
+            
+            // Check for explicit or parent-sibling delay
+            let delay = 0;
+            if (target.dataset.delay) {
+              delay = parseInt(target.dataset.delay, 10);
+            } else if (!target.style.transitionDelay && target.parentElement) {
+              const siblings = Array.from(target.parentElement.children).filter(child =>
+                child.matches(".fade-up, .fade-down, .fade-left, .fade-right, .scale-in")
+              );
+              if (siblings.length > 1) {
+                const idx = siblings.indexOf(target);
+                if (idx >= 0) {
+                  delay = Math.min(idx * 75, 500);
+                }
+              }
+            }
+
+            if (delay > 0) {
+              setTimeout(() => {
+                target.classList.add("visible");
+              }, delay);
+            } else {
+              target.classList.add("visible");
+            }
+
+            observer.unobserve(target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -30px 0px" }
+    );
+
+    animatedElements.forEach((el) => {
+      if (!el.classList.contains("visible")) {
+        observer.observe(el);
+      }
+    });
+  }
+  window.SSB_INIT_SCROLL_ANIMATIONS = initScrollAnimations;
+
+  // 15. Animated Number Counters for Statistics
+  function initStatCounters() {
+    const statElements = document.querySelectorAll(
+      ".trust-stat-num, .trust-metric-val, .counter-num"
+    );
+    if (!statElements.length) return;
+
+    if (!("IntersectionObserver" in window)) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            observer.unobserve(el);
+            animateStatValue(el);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    statElements.forEach(el => observer.observe(el));
+
+    function animateStatValue(el) {
+      const originalText = el.textContent.trim();
+      const match = originalText.match(/^([^\d]*)([\d,.]+)(.*)$/);
+      if (!match) return;
+
+      const prefix = match[1] || "";
+      const rawNum = parseFloat(match[2].replace(/,/g, ""));
+      const suffix = match[3] || "";
+      const isDecimal = match[2].includes(".");
+      const decimalPlaces = isDecimal ? match[2].split(".")[1].length : 0;
+
+      if (isNaN(rawNum)) return;
+
+      el.classList.add("counter-num");
+      const duration = 1500;
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        const currentVal = rawNum * ease;
+
+        const formattedVal = isDecimal
+          ? currentVal.toFixed(decimalPlaces)
+          : Math.floor(currentVal).toLocaleString();
+
+        el.textContent = `${prefix}${formattedVal}${suffix}`;
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = originalText;
+          el.classList.add("counted");
+        }
+      }
+      requestAnimationFrame(update);
+    }
+  }
+
   initPerspectivesShowcase();
   initFaqConcierge();
   initScrollToTop();
   initCustomSelectDropdowns();
+  initScrollProgressBar();
+  initScrollAnimations();
+  initStatCounters();
 });
+
 
 

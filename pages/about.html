@@ -35,9 +35,9 @@
           </div>
         </a>
 
-        <!-- Header Actions: On Mobile (Theme Converter, RTL Toggle, Menu Toggle). On Desktop (Wishlist, Theme Converter, RTL Toggle, Login, Client Portal) -->
+        <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard (Client Portal on mobile), 5. Login -->
         <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
-          <!-- Wishlist Jump (Desktop Only) -->
+          <!-- 1. Wishlist Button (Desktop & Tablets >= 768px) -->
           <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-md-inline-flex" title="View Saved Wishlist" aria-label="View Saved Wishlist">
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
               <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
@@ -45,27 +45,31 @@
             <span class="shortlist-count-badge">0</span>
           </a>
 
-          <!-- Theme Toggle (Dark/Light Converter) - Visible on Mobile & Desktop -->
-          <button type="button" class="toggle-btn theme-toggle-btn"
-            onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle light or dark theme">
-            <!-- Injected by theme.js -->
-          </button>
-
-          <!-- RTL/LTR Toggle - Visible on Mobile & Desktop -->
-          <button type="button" class="toggle-btn rtl-toggle-btn"
+          <!-- 2. RTL/LTR Toggle (Desktop & Tablets >= 768px) -->
+          <button type="button" class="toggle-btn rtl-toggle-btn d-none d-md-inline-flex"
             onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle layout direction">
             RTL
           </button>
 
-          <!-- Login Button: Desktop view only (on mobile it's in the bottom bar) -->
+          <!-- 3. Dark/Light Theme Converter (Desktop & Tablets >= 768px) -->
+          <button type="button" class="toggle-btn theme-toggle-btn d-none d-md-inline-flex"
+            onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle light or dark theme">
+            <!-- Injected by theme.js -->
+          </button>
+
+          <!-- 4. Client Portal / Dashboard (Dashboard on Desktop & Tablets >= 768px | Client Portal on Mobile) -->
+          <a href="../dashboard/index.html" class="btn btn-gold btn-sm nav-portal-btn d-none d-md-inline-flex"
+            title="Client Portal & Dashboard" aria-label="Dashboard">
+            <span class="d-none d-md-inline">Dashboard</span>
+            <span class="d-inline d-md-none">Client Portal</span>
+          </a>
+
+          <!-- 5. Login Button (Desktop & Tablets >= 768px) -->
           <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-md-inline-flex" title="Client & Speaker Login" aria-label="Login">
             <span class="login-text">Login</span>
           </a>
 
-          <!-- Client Portal CTA (Desktop view only - on mobile it's in the bottom bar) -->
-          <a href="../dashboard/index.html" class="btn btn-gold btn-sm d-none d-md-inline-flex">Client Portal</a>
-
-          <!-- Responsive Mobile Toggle -->
+          <!-- Responsive Mobile Toggle (Visible on mobile & tablet < 1200px) -->
           <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse"
             data-bs-target="#ssbNavbarContent" aria-controls="ssbNavbarContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -77,34 +81,87 @@
         <div class="collapse navbar-collapse order-xl-2" id="ssbNavbarContent">
           <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
             <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../home-2.html">Home 2</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="speaker-roster.html">Speaker Roster</a></li>
             <li class="nav-item"><a class="nav-link" href="topics-industries.html">Topics & Industries</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
-            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="insights.html">Insights</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
+
+          <!-- Mobile Menu Drawer Actions (Luméra Skin Style: 1. Wishlist, 2. RTL, 3. Theme Switcher, 4. Login, 5. Dashboard) -->
+          <div class="mobile-nav-actions d-md-none">
+            <div class="mobile-nav-actions-row">
+              <div class="mobile-nav-toggles">
+                <!-- 1. Wishlist Button -->
+                <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn mobile-menu-wishlist"
+                  title="Saved Wishlist" aria-label="Saved Wishlist">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                  </svg>
+                  <span class="shortlist-count-badge">0</span>
+                </a>
+
+                <!-- 2. RTL Toggle -->
+                <button type="button" class="toggle-btn rtl-toggle-btn mobile-menu-rtl"
+                  onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle layout direction">
+                  RTL
+                </button>
+
+                <!-- 3. Dark/Light Theme Switcher -->
+                <button type="button" class="toggle-btn theme-toggle-btn mobile-menu-theme"
+                  onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle light or dark theme">
+                </button>
+              </div>
+
+              <div class="mobile-nav-buttons">
+                <!-- 4. Login Button -->
+                <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm mobile-menu-login"
+                  title="Client & Speaker Login" aria-label="Login">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                  </svg>
+                  <span class="login-text">Login</span>
+                </a>
+
+                <!-- 5. Dashboard Button -->
+                <a href="../dashboard/index.html" class="btn btn-gold btn-sm mobile-menu-dash"
+                  title="Client Dashboard" aria-label="Dashboard">
+                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+                    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                  </svg>
+                  <span>Dashboard</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- PAGE HEADER -->
-  <section class="py-5 bg-secondary-theme border-bottom border-theme">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-8">
-          <span class="sub-title text-gold">Agency Identity & Values</span>
-          <h1 class="mb-2">About SummitSpeak Bureau</h1>
-          <p class="lead mb-0">
-            Dedicated to pairing world-class organizations with keynote speakers who catalyze meaningful perspective,
-            strategic clarity, and enduring motivation.
-          </p>
-        </div>
-        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-          <a href="contact.html" class="btn btn-gold">Request an Executive Consultation</a>
-        </div>
+  <!-- ==========================================================================
+       CINEMATIC PAGE HERO BANNER
+       ========================================================================== -->
+  <section class="cinematic-page-hero">
+    <img src="../assets/images/about/panel.jpg" alt="Executive Leadership Panel" class="cinematic-page-hero-bg">
+    <div class="cinematic-page-hero-overlay"></div>
+    <div class="cinematic-page-hero-content">
+      <div class="cinematic-breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="cinematic-breadcrumb-sep">/</span>
+        <span class="cinematic-breadcrumb-current">About Us</span>
+      </div>
+      <h1 class="cinematic-page-hero-title">Our Story &amp; Sovereign Heritage</h1>
+      <p class="cinematic-page-hero-desc">
+        "Founded on the conviction that high-stakes corporate summits deserve rigorous talent curation, zero bureaucracy, and ironclad delivery."
+      </p>
+      <div class="cinematic-page-hero-cta">
+        <a href="contact.html" class="btn btn-gold btn-lg px-4 shadow-sm">Request an Executive Consultation &rarr;</a>
+        <a href="services.html" class="btn btn-outline-corporate text-white border-white btn-lg px-4">Explore Bureau Capabilities</a>
       </div>
     </div>
   </section>

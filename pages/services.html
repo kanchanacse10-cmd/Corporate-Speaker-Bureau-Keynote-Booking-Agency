@@ -28,10 +28,9 @@
           </div>
         </a>
 
-        <!-- Header Actions: On Mobile (Wishlist, Theme, Login Icon beside Toggler). On Desktop (Wishlist, Theme, RTL, Login "Login", Client Portal) -->
-        <!-- Header Actions: On Mobile (Theme Converter, RTL Toggle, Menu Toggle). On Desktop (Wishlist, Theme Converter, RTL Toggle, Login, Client Portal) -->
+        <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard (Client Portal on mobile), 5. Login -->
         <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
-          <!-- Wishlist Jump (Desktop Only) -->
+          <!-- 1. Wishlist Button (Desktop & Tablets >= 768px) -->
           <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-md-inline-flex" title="View Saved Wishlist" aria-label="View Saved Wishlist">
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
               <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
@@ -39,21 +38,25 @@
             <span class="shortlist-count-badge">0</span>
           </a>
 
-          <!-- Theme Toggle (Dark/Light Converter) - Visible on Mobile & Desktop -->
-          <button type="button" class="toggle-btn theme-toggle-btn" onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle theme"></button>
+          <!-- 2. RTL/LTR Toggle (Desktop & Tablets >= 768px) -->
+          <button type="button" class="toggle-btn rtl-toggle-btn d-none d-md-inline-flex" onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle direction">RTL</button>
 
-          <!-- RTL/LTR Toggle - Visible on Mobile & Desktop -->
-          <button type="button" class="toggle-btn rtl-toggle-btn" onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle direction">RTL</button>
+          <!-- 3. Dark/Light Theme Converter (Desktop & Tablets >= 768px) -->
+          <button type="button" class="toggle-btn theme-toggle-btn d-none d-md-inline-flex" onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle theme"></button>
 
-          <!-- Login Button: Desktop view only (on mobile it's in the bottom bar) -->
+          <!-- 4. Client Portal / Dashboard (Dashboard on Desktop & Tablets >= 768px | Client Portal on Mobile) -->
+          <a href="../dashboard/index.html" class="btn btn-gold btn-sm nav-portal-btn d-none d-md-inline-flex"
+            title="Client Portal & Dashboard" aria-label="Dashboard">
+            <span class="d-none d-md-inline">Dashboard</span>
+            <span class="d-inline d-md-none">Client Portal</span>
+          </a>
+
+          <!-- 5. Login Button (Desktop & Tablets >= 768px) -->
           <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-md-inline-flex" title="Client & Speaker Login" aria-label="Login">
             <span class="login-text">Login</span>
           </a>
 
-          <!-- Client Portal CTA (Desktop view only - on mobile it's in the bottom bar) -->
-          <a href="../dashboard/index.html" class="btn btn-gold btn-sm d-none d-md-inline-flex">Client Portal</a>
-
-          <!-- Responsive Mobile Toggle -->
+          <!-- Responsive Mobile Toggle (Visible on mobile & tablet < 1200px) -->
           <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#ssbNavbarContent" aria-controls="ssbNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -63,171 +66,637 @@
         <div class="collapse navbar-collapse order-xl-2" id="ssbNavbarContent">
           <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
             <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../home-2.html">Home 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="speaker-roster.html">Speaker Roster</a></li>
             <li class="nav-item"><a class="nav-link" href="topics-industries.html">Topics & Industries</a></li>
             <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="insights.html">Insights</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
+
+          <!-- Mobile Menu Drawer Actions (Luméra Skin Style: 1. Wishlist, 2. RTL, 3. Theme Switcher, 4. Login, 5. Dashboard) -->
+          <div class="mobile-nav-actions d-md-none">
+            <div class="mobile-nav-actions-row">
+              <div class="mobile-nav-toggles">
+                <!-- 1. Wishlist Button -->
+                <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn mobile-menu-wishlist"
+                  title="Saved Wishlist" aria-label="Saved Wishlist">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                  </svg>
+                  <span class="shortlist-count-badge">0</span>
+                </a>
+
+                <!-- 2. RTL Toggle -->
+                <button type="button" class="toggle-btn rtl-toggle-btn mobile-menu-rtl"
+                  onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle layout direction">
+                  RTL
+                </button>
+
+                <!-- 3. Dark/Light Theme Switcher -->
+                <button type="button" class="toggle-btn theme-toggle-btn mobile-menu-theme"
+                  onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle light or dark theme">
+                </button>
+              </div>
+
+              <div class="mobile-nav-buttons">
+                <!-- 4. Login Button -->
+                <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm mobile-menu-login"
+                  title="Client & Speaker Login" aria-label="Login">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                  </svg>
+                  <span class="login-text">Login</span>
+                </a>
+
+                <!-- 5. Dashboard Button -->
+                <a href="../dashboard/index.html" class="btn btn-gold btn-sm mobile-menu-dash"
+                  title="Client Dashboard" aria-label="Dashboard">
+                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+                    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                  </svg>
+                  <span>Dashboard</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- PAGE HEADER -->
-  <section class="py-5 bg-secondary-theme border-bottom border-theme">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-8">
-          <span class="sub-title text-gold">Bureau Capabilities</span>
-          <h1 class="mb-2">Our Event & Speaker Services</h1>
-          <p class="lead mb-0">
-            End-to-end speaker discovery, contract administration, and presentation coordination designed specifically for corporate meeting planners and conference directors.
-          </p>
-        </div>
-        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-          <a href="contact.html" class="btn btn-gold">Speak with a Booking Advisor</a>
-        </div>
+  <!-- ==========================================================================
+       CINEMATIC PAGE HERO BANNER
+       ========================================================================== -->
+  <section class="cinematic-page-hero">
+    <img src="../assets/images/events/summit.jpg" alt="Global Keynote Summit Arena" class="cinematic-page-hero-bg">
+    <div class="cinematic-page-hero-overlay"></div>
+    <div class="cinematic-page-hero-content">
+      <div class="cinematic-breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="cinematic-breadcrumb-sep">/</span>
+        <span class="cinematic-breadcrumb-current">Services &amp; Capabilities</span>
+      </div>
+      <h1 class="cinematic-page-hero-title">End-to-End Keynote &amp; Bureau Services</h1>
+      <p class="cinematic-page-hero-desc">
+        "From confidential board roundtables to 10,000-seat arena productions, we orchestrate talent contracts, stage riders, and sovereign escrow."
+      </p>
+      <div class="cinematic-page-hero-cta">
+        <a href="contact.html" class="btn btn-gold btn-lg px-4 shadow-sm">Speak with a Booking Advisor &rarr;</a>
+        <a href="book-a-speaker.html" class="btn btn-outline-corporate text-white border-white btn-lg px-4">Book a Keynote Speaker</a>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES LIST -->
-  <section class="section-padding bg-soft">
+  <!-- SERVICES LIST (COMPLETELY REDESIGNED LUXURY CARDS WITH IMAGES) -->
+  <section class="services-section-wrapper section-padding">
     <div class="container">
-      <div class="row g-4">
+      
+      <!-- Mobile Single-Line Category Switcher (Mobile Only) -->
+      <div class="services-mobile-filter-bar d-lg-none" id="servicesMobileFilterBar">
+        <div class="services-mobile-cat-info" id="servicesMobileCurrentPill">
+          <span class="services-mobile-cat-name" id="servicesMobileCatName">All Capabilities</span>
+          <span class="filter-count" id="servicesMobileCatCount">8</span>
+        </div>
+        <div class="services-mobile-nav-btns">
+          <button type="button" class="services-mobile-nav-btn services-mobile-prev-btn" id="servicesMobilePrevBtn" aria-label="Previous Category">
+            <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            <span>Back</span>
+          </button>
+          <button type="button" class="services-mobile-nav-btn services-mobile-next-btn" id="servicesMobileNextBtn" aria-label="Next Category">
+            <span>Next</span>
+            <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Interactive Category Filter Navigation (Desktop Only) -->
+      <div class="services-filter-nav d-none d-lg-flex">
+        <button type="button" class="services-filter-btn active" onclick="filterServices('all', this)">
+          All Capabilities <span class="filter-count">8</span>
+        </button>
+        <button type="button" class="services-filter-btn" onclick="filterServices('arena', this)">
+          Keynote &amp; Arenas <span class="filter-count">3</span>
+        </button>
+        <button type="button" class="services-filter-btn" onclick="filterServices('executive', this)">
+          Executive &amp; Advisory <span class="filter-count">2</span>
+        </button>
+        <button type="button" class="services-filter-btn" onclick="filterServices('logistics', this)">
+          Logistics &amp; Portal <span class="filter-count">3</span>
+        </button>
+      </div>
+
+      <!-- Services Grid with Rich Photography -->
+      <div class="row g-4" id="servicesGridContainer">
+        
         <!-- 1. Keynote Speaker Booking -->
-        <div class="col-lg-6">
-          <div class="ssb-card service-card h-100 p-3 p-sm-4">
-            <div class="service-card-header">
-              <span class="badge-gold">Service 01</span>
-              <h3 class="service-card-title">Keynote Speaker Booking</h3>
+        <div class="col-lg-6 service-card-item" data-category="arena">
+          <div class="service-card-luxury">
+            <div class="service-card-media">
+              <img src="../assets/images/hero/hero_keynote_stage.jpg" alt="Keynote Speaker Booking Stage" class="service-card-img" loading="lazy">
+              <div class="service-card-overlay"></div>
+              <div class="service-card-badges">
+                <span class="service-badge-pill">Service 01</span>
+                <span class="service-category-tag">Arena Spotlight</span>
+              </div>
+              <div class="service-media-label">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z"/></svg>
+                <span>Full-Scale Keynote Delivery</span>
+              </div>
             </div>
-            <p class="service-card-body">
-              We help organizations discover, evaluate, and book exceptional keynote speakers. From establishing event parameters and checking calendar holds to negotiating commercial terms and coordinating stage riders, we ensure flawless booking execution.
-            </p>
-            <div class="service-card-footer">
-              <a href="book-a-speaker.html" class="btn btn-outline-corporate btn-sm w-100">Book a Keynote Speaker</a>
+            <div class="service-card-body-luxury">
+              <h3 class="service-card-title-luxury">Keynote Speaker Booking</h3>
+              <p class="service-card-desc-luxury">
+                We help organizations discover, evaluate, and book exceptional keynote speakers. From establishing event parameters and checking calendar holds to negotiating commercial terms and coordinating stage riders, we ensure flawless booking execution.
+              </p>
+              <div class="service-deliverables-list">
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Calendar Hold Audit
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Commercial Negotiation
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Stage Rider Audit
+                </span>
+              </div>
+            </div>
+            <div class="service-card-footer-luxury">
+              <a href="book-a-speaker.html" class="service-card-btn">
+                <span>Book a Keynote Speaker</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+              </a>
+              <span class="service-quick-meta">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+                24h Availability Check
+              </span>
             </div>
           </div>
         </div>
 
         <!-- 2. Corporate Conference Speakers -->
-        <div class="col-lg-6">
-          <div class="ssb-card service-card h-100 p-3 p-sm-4">
-            <div class="service-card-header">
-              <span class="badge-gold">Service 02</span>
-              <h3 class="service-card-title">Corporate Conference Speakers</h3>
+        <div class="col-lg-6 service-card-item" data-category="arena">
+          <div class="service-card-luxury">
+            <div class="service-card-media">
+              <img src="../assets/images/events/summit.jpg" alt="Corporate Conference Summit" class="service-card-img" loading="lazy">
+              <div class="service-card-overlay"></div>
+              <div class="service-card-badges">
+                <span class="service-badge-pill">Service 02</span>
+                <span class="service-category-tag">Global Conventions</span>
+              </div>
+              <div class="service-media-label">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/><path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/></svg>
+                <span>Multi-Track Summit Command</span>
+              </div>
             </div>
-            <p class="service-card-body">
-              Supporting annual conventions, global partner summits, customer user conferences, and sales kickoffs. We match keynote speakers who understand how to command arena stages and align with overarching corporate strategic goals.
-            </p>
-            <div class="service-card-footer">
-              <a href="book-a-speaker.html?type=Corporate+Conference" class="btn btn-outline-corporate btn-sm w-100">Plan Your Conference</a>
+            <div class="service-card-body-luxury">
+              <h3 class="service-card-title-luxury">Corporate Conference Speakers</h3>
+              <p class="service-card-desc-luxury">
+                Supporting annual conventions, global partner summits, customer user conferences, and sales kickoffs. We match keynote speakers who understand how to command arena stages and align with overarching corporate strategic goals.
+              </p>
+              <div class="service-deliverables-list">
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Arena Stage Command
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Global Partner Summits
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Sales Kickoffs (SKO)
+                </span>
+              </div>
+            </div>
+            <div class="service-card-footer-luxury">
+              <a href="book-a-speaker.html?type=Corporate+Conference" class="service-card-btn">
+                <span>Plan Your Conference</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+              </a>
+              <span class="service-quick-meta">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/></svg>
+                100 to 10,000+ Attendees
+              </span>
             </div>
           </div>
         </div>
 
-        <!-- 3. Leadership and Executive Events -->
-        <div class="col-lg-6">
-          <div class="ssb-card service-card h-100 p-3 p-sm-4">
-            <div class="service-card-header">
-              <span class="badge-gold">Service 03</span>
-              <h3 class="service-card-title">Leadership & Executive Events</h3>
+        <!-- 3. Leadership & Executive Events -->
+        <div class="col-lg-6 service-card-item" data-category="executive">
+          <div class="service-card-luxury">
+            <div class="service-card-media">
+              <img src="../assets/images/hero/hero_leadership_stage.jpg" alt="Leadership & Executive Events" class="service-card-img" loading="lazy">
+              <div class="service-card-overlay"></div>
+              <div class="service-card-badges">
+                <span class="service-badge-pill">Service 03</span>
+                <span class="service-category-tag">C-Suite & Boardroom</span>
+              </div>
+              <div class="service-media-label">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/></svg>
+                <span>Strategic Offsites & Retreats</span>
+              </div>
             </div>
-            <p class="service-card-body">
-              Curating confidential, intimate thought leaders for board retreats, senior management conferences, and strategic offsites. Presenters who can engage in rigorous, peer-level dialogue with C-suite executives and board members.
-            </p>
-            <div class="service-card-footer">
-              <a href="speaker-roster.html?topic=Leadership+%26+Management" class="btn btn-outline-corporate btn-sm w-100">Find a Leadership Speaker</a>
+            <div class="service-card-body-luxury">
+              <h3 class="service-card-title-luxury">Leadership & Executive Events</h3>
+              <p class="service-card-desc-luxury">
+                Curating confidential, intimate thought leaders for board retreats, senior management conferences, and strategic offsites. Presenters who can engage in rigorous, peer-level dialogue with C-suite executives and board members.
+              </p>
+              <div class="service-deliverables-list">
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Boardroom Retreats
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Confidential Briefings
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Peer-Level C-Suite Dialogue
+                </span>
+              </div>
+            </div>
+            <div class="service-card-footer-luxury">
+              <a href="speaker-roster.html?topic=Leadership+%26+Management" class="service-card-btn">
+                <span>Find a Leadership Speaker</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+              </a>
+              <span class="service-quick-meta">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/></svg>
+                Strict NDA Compliance
+              </span>
             </div>
           </div>
         </div>
 
-        <!-- 4. Motivational and Inspirational Speaking -->
-        <div class="col-lg-6">
-          <div class="ssb-card service-card h-100 p-3 p-sm-4">
-            <div class="service-card-header">
-              <span class="badge-gold">Service 04</span>
-              <h3 class="service-card-title">Motivational & Inspirational Speaking</h3>
+        <!-- 4. Motivational & Inspirational Speaking -->
+        <div class="col-lg-6 service-card-item" data-category="arena">
+          <div class="service-card-luxury">
+            <div class="service-card-media">
+              <img src="../assets/images/hero/hero_ai_keynote.jpg" alt="Motivational & Inspirational Speaking" class="service-card-img" loading="lazy">
+              <div class="service-card-overlay"></div>
+              <div class="service-card-badges">
+                <span class="service-badge-pill">Service 04</span>
+                <span class="service-category-tag">Culture & Impact</span>
+              </div>
+              <div class="service-media-label">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M8 4a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 8.293V4.5A.5.5 0 0 1 8 4z"/></svg>
+                <span>Resilience & Transformational Storytelling</span>
+              </div>
             </div>
-            <p class="service-card-body">
-              Helping organizations ignite employee engagement, reinforce corporate resilience, and navigate major mergers or turnaround phases with authenticity, avoiding superficial cliches in favor of deep human truth.
-            </p>
-            <div class="service-card-footer">
-              <a href="speaker-roster.html?topic=Motivation+%26+Performance" class="btn btn-outline-corporate btn-sm w-100">Explore Motivational Speakers</a>
+            <div class="service-card-body-luxury">
+              <h3 class="service-card-title-luxury">Motivational & Inspirational Speaking</h3>
+              <p class="service-card-desc-luxury">
+                Helping organizations ignite employee engagement, reinforce corporate resilience, and navigate major mergers or turnaround phases with authenticity, avoiding superficial cliches in favor of deep human truth.
+              </p>
+              <div class="service-deliverables-list">
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Organizational Resilience
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Authentic Human Truth
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Turnaround Motivation
+                </span>
+              </div>
+            </div>
+            <div class="service-card-footer-luxury">
+              <a href="speaker-roster.html?topic=Motivation+%26+Performance" class="service-card-btn">
+                <span>Explore Motivational Speakers</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+              </a>
+              <span class="service-quick-meta">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
+                Top-Rated Audience Feedback
+              </span>
             </div>
           </div>
         </div>
 
         <!-- 5. Virtual and Hybrid Events -->
-        <div class="col-lg-6">
-          <div class="ssb-card service-card h-100 p-3 p-sm-4">
-            <div class="service-card-header">
-              <span class="badge-gold">Service 05</span>
-              <h3 class="service-card-title">Virtual & Hybrid Events</h3>
+        <div class="col-lg-6 service-card-item" data-category="logistics">
+          <div class="service-card-luxury">
+            <div class="service-card-media">
+              <img src="../assets/images/auth/login.jpg" alt="Virtual and Hybrid Events Studio" class="service-card-img" loading="lazy">
+              <div class="service-card-overlay"></div>
+              <div class="service-card-badges">
+                <span class="service-badge-pill">Service 05</span>
+                <span class="service-category-tag">Studio Broadcast</span>
+              </div>
+              <div class="service-media-label">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z"/></svg>
+                <span>Dual-Audience Studio Production</span>
+              </div>
             </div>
-            <p class="service-card-body">
-              Delivering studio-grade remote keynotes and dual-audience hybrid presentations. We verify broadcast-quality cameras, sound gear, high-bandwidth connections, and interactive live audience polling setups.
-            </p>
-            <div class="service-card-footer">
-              <a href="book-a-speaker.html?format=Virtual" class="btn btn-outline-corporate btn-sm w-100">Plan a Virtual Event</a>
+            <div class="service-card-body-luxury">
+              <h3 class="service-card-title-luxury">Virtual & Hybrid Events</h3>
+              <p class="service-card-desc-luxury">
+                Delivering studio-grade remote keynotes and dual-audience hybrid presentations. We verify broadcast-quality cameras, sound gear, high-bandwidth connections, and interactive live audience polling setups.
+              </p>
+              <div class="service-deliverables-list">
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  4K Multi-Cam Broadcast
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Dual-Audience Live Q&A
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Pre-Event Bandwidth Test
+                </span>
+              </div>
+            </div>
+            <div class="service-card-footer-luxury">
+              <a href="book-a-speaker.html?format=Virtual" class="service-card-btn">
+                <span>Plan a Virtual Event</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+              </a>
+              <span class="service-quick-meta">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M0 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6zm14-1H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z"/><path d="M8 7.5a.5.5 0 0 1 .5.5v2.5a.5.5 0 0 1-1 0V8a.5.5 0 0 1 .5-.5z"/></svg>
+                Zoom / Teams / Webex Ready
+              </span>
             </div>
           </div>
         </div>
 
         <!-- 6. Speaker Matching and Consultation -->
-        <div class="col-lg-6">
-          <div class="ssb-card service-card h-100 p-3 p-sm-4">
-            <div class="service-card-header">
-              <span class="badge-gold">Service 06</span>
-              <h3 class="service-card-title">Speaker Matching & Consultation</h3>
+        <div class="col-lg-6 service-card-item" data-category="executive">
+          <div class="service-card-luxury">
+            <div class="service-card-media">
+              <img src="../assets/images/about/panel.jpg" alt="Speaker Matching and Consultation Panel" class="service-card-img" loading="lazy">
+              <div class="service-card-overlay"></div>
+              <div class="service-card-badges">
+                <span class="service-badge-pill">Service 06</span>
+                <span class="service-category-tag">Talent Curation</span>
+              </div>
+              <div class="service-media-label">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/><path d="M4 4h8v2H4V4zm0 3h8v2H4V7zm0 3h5v2H4v-2z"/></svg>
+                <span>Curated Talent Dossiers</span>
+              </div>
             </div>
-            <p class="service-card-body">
-              Not sure which speaker fits best? Share your meeting objectives, budget boundaries, and audience demographics. Our advisory team evaluates your brief and prepares a tailored candidate dossier within 24 hours.
-            </p>
-            <div class="service-card-footer">
-              <a href="contact.html" class="btn btn-outline-corporate btn-sm w-100">Request Speaker Recommendations</a>
+            <div class="service-card-body-luxury">
+              <h3 class="service-card-title-luxury">Speaker Matching & Consultation</h3>
+              <p class="service-card-desc-luxury">
+                Not sure which speaker fits best? Share your meeting objectives, budget boundaries, and audience demographics. Our advisory team evaluates your brief and prepares a tailored candidate dossier within 24 hours.
+              </p>
+              <div class="service-deliverables-list">
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  24-Hour Dossier Delivery
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Budget & Topic Fit
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Verified Video Showreels
+                </span>
+              </div>
+            </div>
+            <div class="service-card-footer-luxury">
+              <a href="contact.html" class="service-card-btn">
+                <span>Request Speaker Recommendations</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+              </a>
+              <span class="service-quick-meta">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/></svg>
+                Direct Senior Agent
+              </span>
             </div>
           </div>
         </div>
 
         <!-- 7. Booking Coordination -->
-        <div class="col-lg-6">
-          <div class="ssb-card service-card h-100 p-3 p-sm-4">
-            <div class="service-card-header">
-              <span class="badge-gold">Service 07</span>
-              <h3 class="service-card-title">Booking Coordination</h3>
+        <div class="col-lg-6 service-card-item" data-category="logistics">
+          <div class="service-card-luxury">
+            <div class="service-card-media">
+              <img src="../assets/images/insights/backstage.jpg" alt="Booking Coordination and Stage Logistics" class="service-card-img" loading="lazy">
+              <div class="service-card-overlay"></div>
+              <div class="service-card-badges">
+                <span class="service-badge-pill">Service 07</span>
+                <span class="service-category-tag">VIP Backstage Logistics</span>
+              </div>
+              <div class="service-media-label">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/></svg>
+                <span>Zero-Friction Travel & AV Rider Run</span>
+              </div>
             </div>
-            <p class="service-card-body">
-              Dedicated agency liaison handling briefing calls, audiovisual rider review, slide formatting, flight itineraries, executive hotel accommodations, and on-site contact alignment. Included in all confirmed bookings.
-            </p>
-            <div class="service-card-footer">
-              <a href="contact.html" class="btn btn-outline-corporate btn-sm w-100">Inquire Booking Coordination</a>
+            <div class="service-card-body-luxury">
+              <h3 class="service-card-title-luxury">Booking Coordination & Logistics</h3>
+              <p class="service-card-desc-luxury">
+                Dedicated agency liaison handling briefing calls, audiovisual rider review, slide formatting, flight itineraries, executive hotel accommodations, and on-site contact alignment. Included in all confirmed bookings.
+              </p>
+              <div class="service-deliverables-list">
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Dedicated Agency Liaison
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Flight & Hotel Management
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Pre-Event Tech Rehearsal
+                </span>
+              </div>
+            </div>
+            <div class="service-card-footer-luxury">
+              <a href="contact.html" class="service-card-btn">
+                <span>Inquire Booking Coordination</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+              </a>
+              <span class="service-quick-meta">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>
+                Included with Bookings
+              </span>
             </div>
           </div>
         </div>
 
         <!-- 8. Contract & Payment Coordination -->
-        <div class="col-lg-6">
-          <div class="ssb-card service-card h-100 p-3 p-sm-4">
-            <div class="service-card-header">
-              <span class="badge-gold">Service 08</span>
-              <h3 class="service-card-title">Contract & Payment Coordination</h3>
+        <div class="col-lg-6 service-card-item" data-category="logistics">
+          <div class="service-card-luxury">
+            <div class="service-card-media">
+              <img src="../assets/images/auth/signup.jpg" alt="Contract and Payment Portal" class="service-card-img" loading="lazy">
+              <div class="service-card-overlay"></div>
+              <div class="service-card-badges">
+                <span class="service-badge-pill">Service 08</span>
+                <span class="service-category-tag">Client Portal</span>
+              </div>
+              <div class="service-media-label">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/></svg>
+                <span>Automated Enterprise Compliance</span>
+              </div>
             </div>
-            <p class="service-card-body">
-              A centralized digital workflow for reviewing booking agreements, executing corporate electronic signatures, monitoring deposit schedules, and downloading official VAT / tax invoices directly in your client portal.
-            </p>
-            <div class="service-card-footer">
-              <a href="../dashboard/index.html" class="btn btn-outline-corporate btn-sm w-100">Preview Client Portal</a>
+            <div class="service-card-body-luxury">
+              <h3 class="service-card-title-luxury">Contract & Payment Coordination</h3>
+              <p class="service-card-desc-luxury">
+                A centralized digital workflow for reviewing booking agreements, executing corporate electronic signatures, monitoring deposit schedules, and downloading official VAT / tax invoices directly in your client portal.
+              </p>
+              <div class="service-deliverables-list">
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Electronic E-Signatures
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Corporate Escrow Protection
+                </span>
+                <span class="service-deliverable-chip">
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  Direct VAT / Tax Invoicing
+                </span>
+              </div>
+            </div>
+            <div class="service-card-footer-luxury">
+              <a href="../dashboard/index.html" class="service-card-btn">
+                <span>Preview Client Portal</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+              </a>
+              <span class="service-quick-meta">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2zm3 4V3a3 3 0 1 0-6 0v2H3.5A1.5 1.5 0 0 0 2 6.5v7A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 12.5 5H11z"/></svg>
+                SOC2 / 256-Bit SSL
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Capability Assurance & Guarantee Strip -->
+      <div class="services-assurance-strip">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="services-assurance-item">
+              <div class="services-assurance-icon">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14z"/></svg>
+              </div>
+              <div>
+                <h4 class="services-assurance-title">100% Rider Audit Guarantee</h4>
+                <p class="services-assurance-desc">Every audiovisual, travel, and rehearsal requirement pre-audited and confirmed before event day.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="services-assurance-item">
+              <div class="services-assurance-icon">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+              </div>
+              <div>
+                <h4 class="services-assurance-title">24-Hour Dossier Turnaround</h4>
+                <p class="services-assurance-desc">Custom candidate shortlist proposals with verified availability and commercial quotes within 1 business day.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <div class="services-assurance-item">
+              <div class="services-assurance-icon">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/></svg>
+              </div>
+              <div>
+                <h4 class="services-assurance-title">Global Multi-Currency Billing</h4>
+                <p class="services-assurance-desc">Transparent corporate billing in USD, EUR, and GBP with complete corporate VAT tax compliance.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
+
+  <!-- Interactive Filter Script -->
+  <script>
+    function updateMobileServicesBar(btn) {
+      const mobileCatName = document.getElementById('servicesMobileCatName');
+      const mobileCatCount = document.getElementById('servicesMobileCatCount');
+      if (!btn || !mobileCatName) return;
+
+      const countEl = btn.querySelector('.filter-count');
+      const countVal = countEl ? countEl.textContent.trim() : '';
+
+      let catText = '';
+      if (btn.childNodes && btn.childNodes[0]) {
+        catText = btn.childNodes[0].textContent.trim();
+      } else {
+        catText = btn.textContent.replace(countVal, '').trim();
+      }
+
+      mobileCatName.textContent = catText;
+      if (mobileCatCount) mobileCatCount.textContent = countVal;
+    }
+
+    function filterServices(category, btn) {
+      document.querySelectorAll('.services-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      updateMobileServicesBar(btn);
+      
+      const cards = document.querySelectorAll('.service-card-item');
+      cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'all' || cardCategory === category) {
+          card.style.display = 'block';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(15px)';
+          setTimeout(() => {
+            card.style.transition = 'all 0.35s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 30);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterBtns = Array.from(document.querySelectorAll('.services-filter-btn'));
+      const prevBtn = document.getElementById('servicesMobilePrevBtn');
+      const nextBtn = document.getElementById('servicesMobileNextBtn');
+
+      if (filterBtns.length > 0) {
+        const initialActive = filterBtns.find(b => b.classList.contains('active')) || filterBtns[0];
+        updateMobileServicesBar(initialActive);
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', function () {
+            let currentIdx = filterBtns.findIndex(b => b.classList.contains('active'));
+            if (currentIdx === -1) currentIdx = 0;
+            const nextIdx = (currentIdx + 1) % filterBtns.length;
+            filterBtns[nextIdx].click();
+          });
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', function () {
+            let currentIdx = filterBtns.findIndex(b => b.classList.contains('active'));
+            if (currentIdx === -1) currentIdx = 0;
+            const prevIdx = (currentIdx - 1 + filterBtns.length) % filterBtns.length;
+            filterBtns[prevIdx].click();
+          });
+        }
+      }
+    });
+  </script>
 
   <!-- FOOTER -->
   <footer class="ssb-footer">

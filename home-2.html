@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SummitSpeak Bureau — Home 2: The Luminary Stage & Executive Curations</title>
+  <meta name="description"
+    content="Experience SummitSpeak Bureau's executive keynote curations, curated summit tracks, intelligent Speaker Match Matrix, and Sovereign SLA for world-class corporate summits.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+
+  <!-- Immediate Theme Engine Initialization -->
+  <script src="assets/js/theme.js"></script>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION (Sticky Navbar with Exact Requested Menu Order)
+       ========================================================================== -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl ssb-navbar">
+      <div class="container-fluid px-3 px-xl-4 px-xxl-5">
+        <!-- Logo & Brand -->
+        <a class="ssb-brand" href="index.html">
+          <div class="ssb-brand-logo">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+              <path
+                d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+            </svg>
+          </div>
+          <div class="ssb-brand-text">
+            <span class="ssb-brand-name">SummitSpeak</span>
+            <span class="ssb-brand-tagline">Bureau</span>
+          </div>
+        </a>
+
+        <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard, 5. Login -->
+        <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
+          <!-- 1. Wishlist Button -->
+          <a href="dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-md-inline-flex"
+            title="View Saved Wishlist" aria-label="View Saved Wishlist">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            </svg>
+            <span class="shortlist-count-badge">0</span>
+          </a>
+
+          <!-- 2. RTL/LTR Toggle -->
+          <button type="button" class="toggle-btn rtl-toggle-btn d-none d-md-inline-flex"
+            onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle layout direction">
+            RTL
+          </button>
+
+          <!-- 3. Dark/Light Theme Converter -->
+          <button type="button" class="toggle-btn theme-toggle-btn d-none d-md-inline-flex"
+            onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle light or dark theme">
+          </button>
+
+          <!-- 4. Client Portal / Dashboard -->
+          <a href="dashboard/index.html" class="btn btn-gold btn-sm nav-portal-btn d-none d-md-inline-flex"
+            title="Client Portal & Dashboard" aria-label="Dashboard">
+            <span class="d-none d-md-inline">Dashboard</span>
+            <span class="d-inline d-md-none">Client Portal</span>
+          </a>
+
+          <!-- 5. Login Button -->
+          <a href="auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-md-inline-flex"
+            title="Client & Speaker Login" aria-label="Login">
+            <span class="login-text">Login</span>
+          </a>
+
+          <!-- Responsive Mobile Toggle -->
+          <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#ssbNavbarContent" aria-controls="ssbNavbarContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu in Exact Requested Order:
+             1. Home, 2. Home 2 (Active), 3. About, 4. Speaker Roster, 5. Topics & Industries, 6. Services, 7. How It Works, 8. Insights, 9. Contact -->
+        <div class="collapse navbar-collapse order-xl-2" id="ssbNavbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="home-2.html">Home 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/speaker-roster.html">Speaker Roster</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/topics-industries.html">Topics & Industries</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/how-it-works.html">How It Works</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/insights.html">Insights</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
+          </ul>
+
+          <!-- Mobile Menu Drawer Actions -->
+          <div class="mobile-nav-actions d-md-none">
+            <div class="mobile-nav-actions-row">
+              <div class="mobile-nav-toggles">
+                <a href="dashboard/index.html?view=shortlist" class="nav-wishlist-btn mobile-menu-wishlist"
+                  title="Saved Wishlist" aria-label="Saved Wishlist">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                  </svg>
+                  <span class="shortlist-count-badge">0</span>
+                </a>
+                <button type="button" class="toggle-btn rtl-toggle-btn mobile-menu-rtl"
+                  onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle layout direction">
+                  RTL
+                </button>
+                <button type="button" class="toggle-btn theme-toggle-btn mobile-menu-theme"
+                  onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle light or dark theme">
+                </button>
+              </div>
+              <div class="mobile-nav-buttons">
+                <a href="auth/login.html" class="btn btn-outline-corporate btn-sm mobile-menu-login"
+                  title="Client & Speaker Login" aria-label="Login">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                  </svg>
+                  <span class="login-text">Login</span>
+                </a>
+                <a href="dashboard/index.html" class="btn btn-gold btn-sm mobile-menu-dash"
+                  title="Client Dashboard" aria-label="Dashboard">
+                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+                    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                  </svg>
+                  <span>Dashboard</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 1: THE LUMINARY STAGE & C-SUITE SHOWREEL (Cinematic Editorial Hero)
+       Unique Design: Ambient editorial hero with audio waveform preview & live ticker
+       ========================================================================== -->
+  <section class="home2-hero-section">
+    <div class="container-fluid px-3 px-xl-4 px-xxl-5">
+      <div class="row align-items-center g-5">
+        <!-- Left Column: Editorial Headline & Value Narrative -->
+        <div class="col-lg-7">
+          <div class="home2-live-badge mb-3">
+            <span class="pulse-dot-gold"></span>
+            <span>Live Stage Ticker: 2026–2027 World Summits Active • 48h Concierge Shortlist</span>
+          </div>
+
+          <h1 class="home2-hero-title">
+            Where Global Thought Leaders Meet <span class="text-gold">World-Shaping Stages</span>.
+          </h1>
+
+          <p class="home2-hero-subtitle">
+            SummitSpeak curates world-class keynote speakers, Nobel laureates, bestselling authors, and Fortune 50 pioneers for landmark leadership symposiums, geopolitical assemblies, and enterprise conventions.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 align-items-center mb-4">
+            <a href="#curated-tracks" class="btn btn-gold btn-lg px-4 shadow-sm">
+              Explore Curated Tracks
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16" class="ms-2">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+            </a>
+            <a href="#speaker-matrix" class="btn btn-outline-corporate btn-lg px-4">
+              Try Speaker Match Matrix™
+            </a>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="row g-3 pt-3 border-top" style="border-color: var(--ssb-border) !important;">
+            <div class="col-4">
+              <div class="fw-bold fs-4 text-gold" style="font-family: var(--font-heading);">99.4%</div>
+              <div class="text-muted small">Standing Ovation Metric</div>
+            </div>
+            <div class="col-4">
+              <div class="fw-bold fs-4 text-gold" style="font-family: var(--font-heading);">84+</div>
+              <div class="text-muted small">Countries Keynoted</div>
+            </div>
+            <div class="col-4">
+              <div class="fw-bold fs-4 text-gold" style="font-family: var(--font-heading);">100%</div>
+              <div class="text-muted small">Sovereign SLA Protection</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Keynote Showreel Card -->
+        <div class="col-lg-5">
+          <div class="home2-showreel-card">
+            <div class="home2-video-wrap">
+              <img src="assets/images/hero/hero_ai_keynote.jpg" alt="Keynote Stage Preview" class="img-fluid">
+              <button class="home2-play-trigger" onclick="openKeynoteReelModal()" title="Play Keynote Showreel" aria-label="Play Keynote Showreel">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                </svg>
+              </button>
+              <div class="position-absolute top-0 end-0 m-3">
+                <span class="badge bg-dark bg-opacity-75 text-gold border border-gold px-3 py-2 rounded-pill small">
+                  Davos 2026 Keynote Preview
+                </span>
+              </div>
+            </div>
+
+            <div class="p-4 bg-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-primary-subtle text-primary px-2 py-1 rounded">Featured Preview Clip</span>
+                <!-- Soundwave Animation -->
+                <div class="d-flex align-items-center gap-2">
+                  <span class="small text-muted fw-semibold">Audio Clip</span>
+                  <div class="home2-audio-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+
+              <h5 class="fw-bold mb-1" style="font-family: var(--font-heading); color: var(--ssb-text-main);">
+                "The Autonomous Enterprise & Moral Intelligence"
+              </h5>
+              <p class="small text-muted mb-3">
+                Keynote address by <strong>Dr. Marcus Vance</strong> — MIT Fellow & Former Singularity Director.
+              </p>
+
+              <div class="d-flex gap-2">
+                <button class="btn btn-gold btn-sm flex-grow-1" onclick="quickHoldSpeaker('Dr. Marcus Vance')">
+                  Hold Speaker Date
+                </button>
+                <a href="pages/speaker-profile.html?id=marcus-vance" class="btn btn-outline-corporate btn-sm">
+                  View Full Profile
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Horizon Filter Bar -->
+      <div class="home2-search-bar mt-5">
+        <form class="row g-3 align-items-center" onsubmit="event.preventDefault(); applyHeroSearch();">
+          <div class="col-12 col-md-6 col-xl-3 home2-search-col">
+            <label class="form-label small fw-bold text-muted mb-1">Summit Horizon</label>
+            <select class="form-select border-0 bg-transparent fw-semibold" id="heroHorizonSelect">
+              <option value="q3">Q3 2026 Summits</option>
+              <option value="q4">Q4 2026 Annual Symposia</option>
+              <option value="2027">2027 Global World Tour</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3 home2-search-col home2-search-col-divider-tablet">
+            <label class="form-label small fw-bold text-muted mb-1">Keynote Modality</label>
+            <select class="form-select border-0 bg-transparent fw-semibold" id="heroModalitySelect">
+              <option value="mainstage">Mainstage Arena Keynote</option>
+              <option value="fireside">C-Suite Chatham House Fireside</option>
+              <option value="debate">Provocateur Titan Debate</option>
+              <option value="retreat">Boardroom Strategy Retreat</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-7 col-xl-4 home2-search-col home2-search-col-divider-desktop pt-md-2 pt-xl-0">
+            <label class="form-label small fw-bold text-muted mb-1">Strategic Theme Domain</label>
+            <select class="form-select border-0 bg-transparent fw-semibold" id="heroThemeSelect">
+              <option value="ai">Generative AI, Quantum & The Singularity</option>
+              <option value="geopolitics">Geopolitical Resilience & Global Macro</option>
+              <option value="leadership">Extreme Leadership & Special Ops Resilience</option>
+              <option value="esg">Regenerative Economy & Clean Tech Capital</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-5 col-xl-2 home2-search-col text-md-end pt-md-2 pt-xl-0 d-flex align-items-end justify-content-end">
+            <button type="submit" class="btn btn-gold w-100 py-2">
+              Filter Availability
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: SIGNATURE CURATED SUMMIT TRACKS (Complete Event Blueprints)
+       Unique Design: Comprehensive 6-track architectural packages with run-of-show
+       ========================================================================== -->
+  <section class="section-padding bg-secondary-theme position-relative" id="curated-tracks">
+    <div class="container-fluid px-3 px-xl-4 px-xxl-5">
+      <div class="row justify-content-between align-items-end mb-5">
+        <div class="col-lg-7">
+          <span class="home2-track-badge">Event Architecture</span>
+          <h2 class="section-title text-start mb-2">Curated Summit Tracks & Syllabuses</h2>
+          <p class="section-subtitle text-start mb-0">
+            Far beyond standalone speeches. Our editorial bureau engineers comprehensive, cohesive thematic tracks complete with run-of-show choreography, keynote pairing, and breakout executive roundtables.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+          <button class="btn btn-outline-corporate btn-sm" onclick="downloadAllTracksBrief()">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+              <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+              <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+            </svg>
+            Download 2026 Tracks Blueprint PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- 6 Curated Tracks Grid -->
+      <div class="row g-4">
+        <!-- Track 01 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="home2-track-card">
+            <span class="home2-track-badge">Track 01 • Frontier Tech</span>
+            <h3 class="home2-track-title">The Exponential AI & Quantum Enterprise</h3>
+            <p class="home2-track-desc">
+              Navigating agentic autonomous workflows, proprietary foundational models, and the existential risk of unaligned machine intelligence.
+            </p>
+            <div class="home2-track-blueprint">
+              <div class="home2-blueprint-item">
+                <span>Kickoff Address:</span>
+                <span class="text-gold">45m Provocation</span>
+              </div>
+              <div class="home2-blueprint-item">
+                <span>Executive Fireside:</span>
+                <span class="text-gold">30m With CTO/Board</span>
+              </div>
+              <div class="home2-blueprint-item">
+                <span>Curated Luminary:</span>
+                <span class="fw-bold">Dr. Marcus Vance</span>
+              </div>
+            </div>
+            <button class="btn btn-outline-corporate btn-sm mt-auto w-100" onclick="openTrackModal('Track 01: Exponential AI')">
+              View Complete Track Syllabus
+            </button>
+          </div>
+        </div>
+
+        <!-- Track 02 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="home2-track-card">
+            <span class="home2-track-badge">Track 02 • Global Macro</span>
+            <h3 class="home2-track-title">Geopolitical Volatility & Sovereign Supply Chains</h3>
+            <p class="home2-track-desc">
+              Strategic decoupling, friendshoring across APAC and EMEA, critical mineral security, and multilateral central bank liquidity shifts.
+            </p>
+            <div class="home2-track-blueprint">
+              <div class="home2-blueprint-item">
+                <span>Opening Keynote:</span>
+                <span class="text-gold">50m Global Intel</span>
+              </div>
+              <div class="home2-blueprint-item">
+                <span>War-Room Simulation:</span>
+                <span class="text-gold">60m Scenario Planning</span>
+              </div>
+              <div class="home2-blueprint-item">
+                <span>Curated Luminary:</span>
+                <span class="fw-bold">Sir Julian Thorne</span>
+              </div>
+            </div>
+            <button class="btn btn-outline-corporate btn-sm mt-auto w-100" onclick="openTrackModal('Track 02: Geopolitical Volatility')">
+              View Complete Track Syllabus
+            </button>
+          </div>
+        </div>
+
+        <!-- Track 03 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="home2-track-card">
+            <span class="home2-track-badge">Track 03 • High Performance</span>
+            <h3 class="home2-track-title">Radical Resilience & Elite Command Leadership</h3>
+            <p class="home2-track-desc">
+              Mental toughness under extreme volatility, asymmetric decision-making from Special Operations and high-altitude Everest missions.
+            </p>
+            <div class="home2-track-blueprint">
+              <div class="home2-blueprint-item">
+                <span>Catalyst Keynote:</span>
+                <span class="text-gold">45m Galvanizing Story</span>
+              </div>
+              <div class="home2-blueprint-item">
+                <span>Mindset Workshop:</span>
+                <span class="text-gold">45m Tactical Stress Protocol</span>
+              </div>
+              <div class="home2-blueprint-item">
+                <span>Curated Luminary:</span>
+                <span class="fw-bold">Dr. Elena Rostova</span>
+              </div>
+            </div>
+            <button class="btn btn-outline-corporate btn-sm mt-auto w-100" onclick="openTrackModal('Track 03: Radical Resilience')">
+              View Complete Track Syllabus
+            </button>
+          </div>
+        </div>
+
+        <!-- Track 04 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="home2-track-card">
+            <span class="home2-track-badge">Track 04 • ESG & Clean Tech</span>
+            <h3 class="home2-track-title">The Regenerative Future & Decarbonized Capital</h3>
+            <p class="home2-track-desc">
+              Re-engineering industrial assets, the trillion-dollar energy transition, carbon accounting integrity, and green hydrogen scaling.
+            </p>
+            <div class="home2-track-blueprint">
+              <div class="home2-blueprint-item">
+                <span>Opening Address:</span>
+                <span class="text-gold">45m Future Macro</span>
+              </div>
+              <div class="home2-blueprint-item">
+                <span>Investor Roundtable:</span>
+                <span class="text-gold">45m ESG Allocation</span>
+              </div>
+              <div class="home2-blueprint-item">
+                <span>Curated Luminary:</span>
+                <span class="fw-bold">David O'Connor</span>
+              </div>
+            </div>
+            <button class="btn btn-outline-corporate btn-sm mt-auto w-100" onclick="openTrackModal('Track 04: Regenerative Future')">
+              View Complete Track Syllabus
+            </button>
+          </div>
+        </div>
+
+        <!-- Track 05 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="home2-track-card">
+            <span class="home2-track-badge">Track 05 • Future of Work</span>
+            <h3 class="home2-track-title">Cognitive Longevity & The Augmented Workforce</h3>
+            <p class="home2-track-desc">
+              Neuroscience-backed cognitive endurance, organizational redesign for hybrid humans and AI coworkers, and burnout eradication.
+            </p>
+            <div class="home2-track-blueprint">
+              <div class="home2-blueprint-item">
+                <span>Mainstage Address:</span>
+                <span class="text-gold">45m Neuroscience Deep Dive</span>
+              </div>
+              <div class="home2-blueprint-item">
+                <span>Culture Clinic:</span>
+                <span class="text-gold">40m People Leaders Q&A</span>
+              </div>
+              <div class="home2-blueprint-item">
+                <span>Curated Luminary:</span>
+                <span class="fw-bold">Maya Chen</span>
+              </div>
+            </div>
+            <button class="btn btn-outline-corporate btn-sm mt-auto w-100" onclick="openTrackModal('Track 05: Cognitive Longevity')">
+              View Complete Track Syllabus
+            </button>
+          </div>
+        </div>
+
+        <!-- Track 06 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="home2-track-card">
+            <span class="home2-track-badge">Track 06 • Cyber Defense</span>
+            <h3 class="home2-track-title">Cyber Sovereignty & Information Warfare Defense</h3>
+            <p class="home2-track-desc">
+              Nation-state cyber campaigns, deepfake corporate manipulation, quantum cryptography defense, and proactive board governance.
+            </p>
+            <div class="home2-track-blueprint">
+              <div class="home2-blueprint-item">
+                <span>Crisis Address:</span>
+                <span class="text-gold">45m Threat Landscape</span>
+              </div>
+              <div class="home2-blueprint-item">
+                <span>Board Red-Team Brief:</span>
+                <span class="text-gold">45m Classified Q&A</span>
+              </div>
+              <div class="home2-blueprint-item">
+                <span>Curated Luminary:</span>
+                <span class="fw-bold">Amara Okafor</span>
+              </div>
+            </div>
+            <button class="btn btn-outline-corporate btn-sm mt-auto w-100" onclick="openTrackModal('Track 06: Cyber Sovereignty')">
+              View Complete Track Syllabus
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: HALL OF THOUGHT TITANS & WORLD LUMINARIES (Editorial Salon)
+       Unique Design: Luminary cards with gold rims, book masterworks, & direct rider modal
+       ========================================================================== -->
+  <section class="section-padding bg-soft" id="thought-titans">
+    <div class="container-fluid px-3 px-xl-4 px-xxl-5">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="home2-track-badge">Editorial Roster</span>
+        <h2 class="section-title">Hall of Thought Titans & World Luminaries</h2>
+        <p class="section-subtitle">
+          Voices that shift stock markets, advise prime ministers, and reshape global corporate paradigms. Exclusive worldwide agency representation.
+        </p>
+      </div>
+
+      <!-- Mobile Single-Line Category Switcher (Mobile Only) -->
+      <div class="titans-mobile-filter-bar d-lg-none" id="titansMobileFilterBar">
+        <div class="titans-mobile-cat-info" id="titansMobileCurrentPill">
+          <span class="titans-mobile-cat-name" id="titansMobileCatName">All Luminaries</span>
+        </div>
+        <div class="titans-mobile-nav-btns">
+          <button type="button" class="titans-mobile-nav-btn titans-mobile-prev-btn" id="titansMobilePrevBtn" onclick="navigateTitansCategory('prev')" aria-label="Previous Category">
+            <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            <span>Back</span>
+          </button>
+          <button type="button" class="titans-mobile-nav-btn titans-mobile-next-btn" id="titansMobileNextBtn" onclick="navigateTitansCategory('next')" aria-label="Next Category">
+            <span>Next</span>
+            <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Titan Category Pills Filter (Desktop Only) -->
+      <div class="d-none d-lg-flex justify-content-center flex-wrap gap-2 mb-5 titan-desktop-filter-nav">
+        <button class="btn btn-gold btn-sm titan-filter-btn active" onclick="filterTitans('all', this)">All Luminaries</button>
+        <button class="btn btn-outline-corporate btn-sm titan-filter-btn" onclick="filterTitans('tech', this)">AI &amp; Tech Titans</button>
+        <button class="btn btn-outline-corporate btn-sm titan-filter-btn" onclick="filterTitans('geopolitics', this)">Geopolitical Diplomats</button>
+        <button class="btn btn-outline-corporate btn-sm titan-filter-btn" onclick="filterTitans('resilience', this)">Extreme Leadership</button>
+        <button class="btn btn-outline-corporate btn-sm titan-filter-btn" onclick="filterTitans('sustainability', this)">Clean Tech &amp; ESG</button>
+      </div>
+
+      <!-- Titans Showcase Grid -->
+      <div class="row g-4" id="titansGrid">
+        <!-- Titan 1 -->
+        <div class="col-md-6 col-lg-3 titan-item" data-category="tech">
+          <div class="home2-titan-card">
+            <div class="home2-titan-media">
+              <img src="assets/images/speakers/marcus-vance.jpg" alt="Dr. Marcus Vance">
+              <div class="home2-titan-overlay">
+                <span class="badge bg-gold text-dark fw-bold mb-1">MIT Fellow</span>
+                <h4 class="h5 fw-bold mb-0 text-white">Dr. Marcus Vance</h4>
+                <small class="text-white-50">Artificial General Intelligence</small>
+              </div>
+            </div>
+            <div class="home2-titan-body">
+              <div class="home2-titan-book-badge">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                </svg>
+                Author: <em>The Autonomous Mind</em>
+              </div>
+              <p class="small text-muted mb-3">
+                Keynoted 3 World Economic Forum summits. Specializes in autonomous corporate architectures and alignment ethics.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
+                <span class="small fw-bold text-gold">$50,000+ Tier</span>
+                <button class="btn btn-sm btn-outline-corporate" onclick="openRiderModal('Dr. Marcus Vance', '$50,000+', 'Boston / Global')">
+                  Rider & Specs
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Titan 2 -->
+        <div class="col-md-6 col-lg-3 titan-item" data-category="tech">
+          <div class="home2-titan-card">
+            <div class="home2-titan-media">
+              <img src="assets/images/speakers/maya-chen.jpg" alt="Maya Chen">
+              <div class="home2-titan-overlay">
+                <span class="badge bg-gold text-dark fw-bold mb-1">Global Ethicist</span>
+                <h4 class="h5 fw-bold mb-0 text-white">Maya Chen</h4>
+                <small class="text-white-50">Human-Centric Tech & Culture</small>
+              </div>
+            </div>
+            <div class="home2-titan-body">
+              <div class="home2-titan-book-badge">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                </svg>
+                Author: <em>Algorithmic Humanity</em>
+              </div>
+              <p class="small text-muted mb-3">
+                Advisor to the European Parliament AI Commission. Pioneer in neurodiversity and AI-augmented workforce longevity.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
+                <span class="small fw-bold text-gold">$40,000+ Tier</span>
+                <button class="btn btn-sm btn-outline-corporate" onclick="openRiderModal('Maya Chen', '$40,000+', 'San Francisco / Global')">
+                  Rider & Specs
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Titan 3 -->
+        <div class="col-md-6 col-lg-3 titan-item" data-category="geopolitics">
+          <div class="home2-titan-card">
+            <div class="home2-titan-media">
+              <img src="assets/images/speakers/julian-thorne.jpg" alt="Sir Julian Thorne">
+              <div class="home2-titan-overlay">
+                <span class="badge bg-gold text-dark fw-bold mb-1">Diplomatic Envoy</span>
+                <h4 class="h5 fw-bold mb-0 text-white">Sir Julian Thorne</h4>
+                <small class="text-white-50">Oxford Geopolitical Chair</small>
+              </div>
+            </div>
+            <div class="home2-titan-body">
+              <div class="home2-titan-book-badge">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                </svg>
+                Author: <em>The Fragmented Order</em>
+              </div>
+              <p class="small text-muted mb-3">
+                Former Foreign Office chief negotiator. Decodes multilateral sanctions, strategic trade bottlenecks, and energy wars.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
+                <span class="small fw-bold text-gold">$60,000+ Tier</span>
+                <button class="btn btn-sm btn-outline-corporate" onclick="openRiderModal('Sir Julian Thorne', '$60,000+', 'London / Geneva')">
+                  Rider & Specs
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Titan 4 -->
+        <div class="col-md-6 col-lg-3 titan-item" data-category="resilience">
+          <div class="home2-titan-card">
+            <div class="home2-titan-media">
+              <img src="assets/images/speakers/elena-rostova.jpg" alt="Dr. Elena Rostova">
+              <div class="home2-titan-overlay">
+                <span class="badge bg-gold text-dark fw-bold mb-1">Expedition Leader</span>
+                <h4 class="h5 fw-bold mb-0 text-white">Dr. Elena Rostova</h4>
+                <small class="text-white-50">Extreme Neurobiology</small>
+              </div>
+            </div>
+            <div class="home2-titan-body">
+              <div class="home2-titan-book-badge">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                </svg>
+                Author: <em>Beyond The Thin Air</em>
+              </div>
+              <p class="small text-muted mb-3">
+                Led 4 K2 winter ascents. Translates high-altitude survival into boardroom crisis agility and neuro-calm under duress.
+              </p>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
+                <span class="small fw-bold text-gold">$35,000+ Tier</span>
+                <button class="btn btn-sm btn-outline-corporate" onclick="openRiderModal('Dr. Elena Rostova', '$35,000+', 'Zurich / Global')">
+                  Rider & Specs
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: SPEAKER MATCH MATRIX™ (Interactive Algorithmic Concierge)
+       Unique Design: An in-page dynamic algorithm tool that matches event criteria
+       ========================================================================== -->
+  <section class="section-padding bg-secondary-theme" id="speaker-matrix">
+    <div class="container-fluid px-3 px-xl-4 px-xxl-5">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="home2-track-badge">Proprietary Technology</span>
+        <h2 class="section-title">Speaker Match Matrix™: Real-Time Algorithmic Concierge</h2>
+        <p class="section-subtitle">
+          Calibrate your audience DNA, required stage energy, and event stakes. Our intelligence engine analyzes over 40 variables to generate an instant, calibrated speaker compatibility match.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-xl-10">
+          <div class="home2-matrix-box">
+            <div class="row g-4">
+              <!-- Matrix Controls -->
+              <div class="col-lg-7">
+                <!-- Step 1 -->
+                <div class="mb-4">
+                  <label class="form-label fw-bold text-muted small text-uppercase mb-2">
+                    Step 1: Select Audience Archetype
+                  </label>
+                  <div class="row g-2">
+                    <div class="col-sm-6">
+                      <button type="button" class="matrix-option-btn active" data-step="1" data-val="csuite" onclick="setMatrixOption(1, 'csuite', this)">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                        <span>C-Suite & Board Members</span>
+                      </button>
+                    </div>
+                    <div class="col-sm-6">
+                      <button type="button" class="matrix-option-btn" data-step="1" data-val="allhands" onclick="setMatrixOption(1, 'allhands', this)">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                        <span>Global Summit (2,000+)</span>
+                      </button>
+                    </div>
+                    <div class="col-sm-6">
+                      <button type="button" class="matrix-option-btn" data-step="1" data-val="tech" onclick="setMatrixOption(1, 'tech', this)">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6z"/>
+                        </svg>
+                        <span>Engineering & Innovators</span>
+                      </button>
+                    </div>
+                    <div class="col-sm-6">
+                      <button type="button" class="matrix-option-btn" data-step="1" data-val="sales" onclick="setMatrixOption(1, 'sales', this)">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z"/>
+                        </svg>
+                        <span>Global Sales Kickoff</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="mb-4">
+                  <label class="form-label fw-bold text-muted small text-uppercase mb-2">
+                    Step 2: Desired Stage Delivery Energy
+                  </label>
+                  <div class="row g-2">
+                    <div class="col-sm-6">
+                      <button type="button" class="matrix-option-btn active justify-content-center text-center" data-step="2" data-val="provocative" onclick="setMatrixOption(2, 'provocative', this)">
+                        <span>Disruptive &amp; Provocative</span>
+                      </button>
+                    </div>
+                    <div class="col-sm-6">
+                      <button type="button" class="matrix-option-btn justify-content-center text-center" data-step="2" data-val="strategic" onclick="setMatrixOption(2, 'strategic', this)">
+                        <span>Strategic &amp; Empirical</span>
+                      </button>
+                    </div>
+                    <div class="col-12">
+                      <button type="button" class="matrix-option-btn justify-content-center text-center" data-step="2" data-val="emotional" onclick="setMatrixOption(2, 'emotional', this)">
+                        <span>Galvanizing &amp; High Energy</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="mb-4">
+                  <label class="form-label fw-bold text-muted small text-uppercase mb-2">
+                    Step 3: Honorarium Allocation Tier
+                  </label>
+                  <div class="row g-2">
+                    <div class="col-sm-4 col-4">
+                      <button type="button" class="matrix-option-btn justify-content-center text-center" data-step="3" data-val="tier1" onclick="setMatrixOption(3, 'tier1', this)">
+                        <span>$25k – $45k</span>
+                      </button>
+                    </div>
+                    <div class="col-sm-4 col-4">
+                      <button type="button" class="matrix-option-btn active justify-content-center text-center" data-step="3" data-val="tier2" onclick="setMatrixOption(3, 'tier2', this)">
+                        <span>$50k – $85k</span>
+                      </button>
+                    </div>
+                    <div class="col-sm-4 col-4">
+                      <button type="button" class="matrix-option-btn justify-content-center text-center" data-step="3" data-val="tier3" onclick="setMatrixOption(3, 'tier3', this)">
+                        <span>$90k – $150k+</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Live Algorithm Result Card -->
+              <div class="col-lg-5">
+                <div class="matrix-result-card h-100 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <span class="badge bg-gold text-dark fw-bold px-2 py-1">Algorithm Output</span>
+                      <span class="text-success fw-bold small d-flex align-items-center gap-1">
+                        <span class="pulse-dot-gold" style="background-color: var(--ssb-success);"></span>
+                        <span id="matrixMatchScore">99.4% Compatibility</span>
+                      </span>
+                    </div>
+
+                    <div class="text-center py-2" id="matrixSpeakerPreview">
+                      <img src="assets/images/speakers/marcus-vance.jpg" id="matrixSpeakerImg" alt="Matched Speaker"
+                        class="rounded-circle shadow-sm border border-2 border-gold mb-3" style="width: 90px; height: 90px; object-fit: cover;">
+                      <h4 class="h5 fw-bold mb-1" id="matrixSpeakerName">Dr. Marcus Vance</h4>
+                      <p class="small text-gold fw-semibold mb-2" id="matrixSpeakerTopic">The Autonomous Enterprise & Frontier AI</p>
+                      <p class="small text-muted mb-3" id="matrixSpeakerReason">
+                        Best match for C-Suite audiences requiring disruptive yet peer-reviewed technological forecasting.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="pt-3 border-top mt-3" style="border-color: var(--ssb-border) !important;">
+                    <div class="d-flex flex-wrap gap-2">
+                      <button class="btn btn-gold btn-sm flex-grow-1 py-2 px-3 fw-semibold text-center" onclick="holdMatchedSpeaker()">
+                        Hold This Match for 48 Hours
+                      </button>
+                      <button class="btn btn-outline-corporate btn-sm flex-grow-1 py-2 px-3 fw-semibold text-center" onclick="saveMatchedToShortlist()">
+                        Add to Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: KEYNOTE DELIVERY FORMATS & STAGECRAFT (Event Architecture)
+       Unique Design: Structural breakdown of engagement blueprints and run-of-show
+       ========================================================================== -->
+  <section class="section-padding bg-soft" id="delivery-formats">
+    <div class="container-fluid px-3 px-xl-4 px-xxl-5">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="home2-track-badge">Format Blueprints</span>
+        <h2 class="section-title">Keynote Delivery Formats & Stagecraft Blueprints</h2>
+        <p class="section-subtitle">
+          Every corporate gathering has distinct stakes. We engineer tailored delivery modalities to maximize retention, spark strategic debate, and inspire organizational shift.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Format 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="home2-format-card">
+            <span class="badge bg-primary text-white rounded-pill px-3 py-1 mb-3 align-self-start small">Format 01</span>
+            <h4 class="h5 fw-bold mb-2" style="font-family: var(--font-heading);">The Catalyst Keynote</h4>
+            <p class="small text-muted mb-4">
+              High-octane opening address designed to shatter outdated assumptions and establish the overarching vision for a 3-day world summit.
+            </p>
+            <div class="mt-auto">
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">00–10m</span>
+                <span>The Industry Paradox</span>
+              </div>
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">10–35m</span>
+                <span>Proprietary Data & Paradigm</span>
+              </div>
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">35–45m</span>
+                <span>The 3-Year Strategic Mandate</span>
+              </div>
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">45–60m</span>
+                <span>Audience Q&A & Catalyst Close</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Format 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="home2-format-card">
+            <span class="badge bg-primary text-white rounded-pill px-3 py-1 mb-3 align-self-start small">Format 02</span>
+            <h4 class="h5 fw-bold mb-2" style="font-family: var(--font-heading);">Chatham House VIP Salon</h4>
+            <p class="small text-muted mb-4">
+              Strictly off-the-record, closed-door strategy session for your top 25 leaders, CEO, and board. Zero slides, candid unscripted truths.
+            </p>
+            <div class="mt-auto">
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">00–15m</span>
+                <span>Unfiltered State of the Market</span>
+              </div>
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">15–60m</span>
+                <span>Roundtable Socratic Inquiries</span>
+              </div>
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">60–75m</span>
+                <span>Vulnerability & Risk Audit</span>
+              </div>
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">75–90m</span>
+                <span>Executive Consensus Roadmap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Format 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="home2-format-card">
+            <span class="badge bg-primary text-white rounded-pill px-3 py-1 mb-3 align-self-start small">Format 03</span>
+            <h4 class="h5 fw-bold mb-2" style="font-family: var(--font-heading);">The Provocateur Duel</h4>
+            <p class="small text-muted mb-4">
+              Two intellectual heavyweights with diametrically opposing viewpoints debating the future of AI, climate, or capitalism under elite moderation.
+            </p>
+            <div class="mt-auto">
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">00–10m</span>
+                <span>Moderator Thesis Framing</span>
+              </div>
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">10–40m</span>
+                <span>Timed Rebuttals & Point Spar</span>
+              </div>
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">40–65m</span>
+                <span>Live Audience Pulse Inquiries</span>
+              </div>
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">65–75m</span>
+                <span>Synthesized Dual Summary</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Format 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="home2-format-card">
+            <span class="badge bg-primary text-white rounded-pill px-3 py-1 mb-3 align-self-start small">Format 04</span>
+            <h4 class="h5 fw-bold mb-2" style="font-family: var(--font-heading);">Global Tour Series</h4>
+            <p class="small text-muted mb-4">
+              A synchronized keynote roadshow deployed across New York, London, Dubai, and Singapore with unified narrative alignment and localized slides.
+            </p>
+            <div class="mt-auto">
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">City 1</span>
+                <span>New York • Financial Forum</span>
+              </div>
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">City 2</span>
+                <span>London • EMEA Summit</span>
+              </div>
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">City 3</span>
+                <span>Dubai • Emerging Tech Expo</span>
+              </div>
+              <div class="home2-timeline-segment">
+                <span class="home2-timeline-time">City 4</span>
+                <span>Singapore • APAC Finale</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: THE SOVEREIGN BUREAU SLA (Trust & Risk Elimination)
+       Unique Design: Contractual insurance guarantees with direct comparison table
+       ========================================================================== -->
+  <section class="section-padding bg-secondary-theme" id="sovereign-sla">
+    <div class="container-fluid px-3 px-xl-4 px-xxl-5">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="home2-track-badge">Enterprise Assurance</span>
+        <h2 class="section-title">The Sovereign Bureau SLA & Risk Elimination Shield</h2>
+        <p class="section-subtitle">
+          Hosting an international conference carries millions in operational exposure. We eliminate every point of failure through legally binding service level agreements.
+        </p>
+      </div>
+
+      <!-- 4 SLA Pillars -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-6 col-lg-3">
+          <div class="home2-sla-card">
+            <div class="home2-sla-icon">
+              <svg width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+              </svg>
+            </div>
+            <h4 class="h5 fw-bold mb-2">2-Hour Emergency Understudy</h4>
+            <p class="small text-muted mb-0">
+              Guaranteed standby replacement of equal standing pre-briefed and ready in case of catastrophic medical or weather cancellation.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="home2-sla-card">
+            <div class="home2-sla-icon">
+              <svg width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+              </svg>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Strict Corporate NDA Protocols</h4>
+            <p class="small text-muted mb-0">
+              Comprehensive legal IP assignment protecting confidential strategic reveals, internal metrics, and unpublished merger visions.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="home2-sla-card">
+            <div class="home2-sla-icon">
+              <svg width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
+              </svg>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Pre-Event Executive Briefings</h4>
+            <p class="small text-muted mb-0">
+              Two mandatory discovery strategy calls between the speaker and the client's Chief Executive to align every thesis and nuance.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="home2-sla-card">
+            <div class="home2-sla-icon">
+              <svg width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z"/>
+              </svg>
+            </div>
+            <h4 class="h5 fw-bold mb-2">White-Glove Flight & AV Concierge</h4>
+            <p class="small text-muted mb-0">
+              End-to-end travel manifests, VIP airport tarmac escorts, teleprompter rehearsals, and backup audio recording rights included.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison SLA Table -->
+      <div class="home2-sla-table shadow-sm">
+        <div class="table-responsive">
+          <table class="table mb-0">
+            <thead>
+              <tr>
+                <th style="width: 40%;">Bureau Deliverable / Protection</th>
+                <th style="width: 30%;">Direct Speaker / Unmanaged</th>
+                <th style="width: 30%;" class="text-gold">SummitSpeak Sovereign SLA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Flight Delay / Medical Cancellation</strong></td>
+                <td class="text-muted">Total event cancellation risk, no replacement</td>
+                <td class="fw-bold text-success">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                  2-Hour Certified Understudy Standby
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Contractual Escrow Protection</strong></td>
+                <td class="text-muted">Direct upfront wire to speaker agent</td>
+                <td class="fw-bold text-success">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                  Escrow hold until stage walk confirmation
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Custom Slide & Content Tailoring</strong></td>
+                <td class="text-muted">Generic stock slide deck often delivered</td>
+                <td class="fw-bold text-success">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                  2 Mandatory pre-briefings with Client CEO
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Green Room & AV Tech Coordination</strong></td>
+                <td class="text-muted">Client event planner handles all hassles</td>
+                <td class="fw-bold text-success">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                  Dedicated bureau logistics director on-site
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 7: SUMMIT PLANNING STUDIO & VIP CONSULTATION (Direct Booking Hub)
+       Unique Design: Senior concierge contact cards + Fast-track brief builder
+       ========================================================================== -->
+  <section class="section-padding bg-soft" id="planning-studio">
+    <div class="container-fluid px-3 px-xl-4 px-xxl-5">
+      <div class="row g-5 align-items-center">
+        <!-- Left Column: Concierge Team & Direct Access -->
+        <div class="col-lg-5">
+          <span class="home2-track-badge">Private Client Advisory</span>
+          <h2 class="section-title text-start mb-3">Summit Planning Studio & VIP Consultation</h2>
+          <p class="section-subtitle text-start mb-4">
+            Connect directly with our senior booking partners. We provide confidential speaker availability checks, rider negotiations, and custom briefing packages within 24 hours.
+          </p>
+
+          <div class="d-flex flex-column gap-3 mb-4">
+            <!-- Concierge Partner 1 -->
+            <div class="concierge-card-mini">
+              <img src="assets/images/clients/markus-hoffmann.jpg" alt="Arthur Vance">
+              <div>
+                <h5 class="fw-bold mb-0" style="font-family: var(--font-heading);">Arthur Vance</h5>
+                <small class="text-gold fw-semibold">Managing Director • Americas & EMEA</small>
+                <div class="small text-muted mt-1">Direct: +1 (212) 555-0198 • arthur@summitspeak.com</div>
+              </div>
+            </div>
+
+            <!-- Concierge Partner 2 -->
+            <div class="concierge-card-mini">
+              <img src="assets/images/clients/claire-lawson.jpg" alt="Claire Beauchamp">
+              <div>
+                <h5 class="fw-bold mb-0" style="font-family: var(--font-heading);">Claire Beauchamp</h5>
+                <small class="text-gold fw-semibold">Senior Vice President • APAC & Global Summits</small>
+                <div class="small text-muted mt-1">Direct: +44 20 7946 0921 • claire@summitspeak.com</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Benchmark Report Download Card -->
+          <div class="p-3 bg-secondary-theme rounded-3 border">
+            <div class="d-flex align-items-center gap-3">
+              <div class="p-2 bg-gold bg-opacity-10 text-gold rounded">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="fw-bold small text-main">2026-2027 Global Keynote Speaker Compensation Report</div>
+                <div class="small text-muted">Complete fee benchmarks across 500+ global speakers.</div>
+              </div>
+              <button class="btn btn-outline-corporate btn-sm ms-auto" onclick="downloadBenchmarkReport()">
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Fast-Track Briefing Console -->
+        <div class="col-lg-7">
+          <div class="home2-studio-box">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="h4 fw-bold mb-0" style="font-family: var(--font-heading);">
+                Fast-Track Keynote Briefing Form
+              </h3>
+              <span class="badge bg-gold text-dark fw-bold px-2 py-1">24h Turnaround</span>
+            </div>
+
+            <form id="home2BriefForm" onsubmit="event.preventDefault(); submitHome2Brief();">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Organization / Enterprise</label>
+                  <input type="text" class="form-control" id="briefOrg" placeholder="e.g. Goldman Sachs, Microsoft, World Bank" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Contact Name & Title</label>
+                  <input type="text" class="form-control" id="briefName" placeholder="e.g. Sarah Jenkins, VP Global Events" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Official Business Email</label>
+                  <input type="email" class="form-control" id="briefEmail" placeholder="sarah@company.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Direct Phone Number</label>
+                  <input type="tel" class="form-control" id="briefPhone" placeholder="+1 (555) 000-0000" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Target Event Date & City</label>
+                  <input type="text" class="form-control" id="briefDateCity" placeholder="e.g. October 18, 2026 — London" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Audience Scale & Type</label>
+                  <select class="form-select" id="briefAudienceScale">
+                    <option value="50-150">50 - 150 (Board & C-Suite Retreat)</option>
+                    <option value="200-800">200 - 800 (Leadership Symposium)</option>
+                    <option value="1000+">1,000 - 5,000+ (Annual World Convention)</option>
+                    <option value="virtual">Global Virtual / Hybrid Simulcast</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label small fw-bold">Desired Keynote Theme / Strategic Objective</label>
+                  <textarea class="form-control" id="briefObjective" rows="3" placeholder="Describe the strategic mood, desired audience transformation, or specific preferred speaker names..." required></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="briefNdaCheck" checked>
+                    <label class="form-check-label small text-muted" for="briefNdaCheck">
+                      Treat this inquiry under standard mutual non-disclosure and strict confidentiality.
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-gold btn-lg w-100 py-3 shadow-sm">
+                    Submit Keynote Brief & Request Custom Shortlist
+                  </button>
+                  <div class="text-center small text-muted mt-2">
+                    Guaranteed response within 24 hours from a dedicated Managing Director.
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER
+       ========================================================================== -->
+  <footer class="ssb-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand & Identity -->
+        <div class="col-lg-4 col-md-6">
+          <a class="ssb-brand mb-3 d-inline-flex" href="index.html">
+            <div class="ssb-brand-logo">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+                <path
+                  d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+              </svg>
+            </div>
+            <div class="ssb-brand-text">
+              <span class="ssb-brand-name text-white">SummitSpeak</span>
+              <span class="ssb-brand-tagline">Bureau</span>
+            </div>
+          </a>
+          <p class="small text-muted mb-4">
+            A premier corporate speaker bureau connecting organizations with exceptional keynote speakers, industry
+            pioneers, authors, and executive thought leaders.
+          </p>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            </svg>
+            <span>Corporate Office: 100 Montgomery Street, Suite 2400, San Francisco, CA</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+            </svg>
+            <span>Direct Inquiries: +1 (800) 584-3920 &bull; concierge@summitspeak.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+            </svg>
+            <span>Hours: Mon – Fri: 08:30 – 18:00 EST / UTC-05:00</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="col-lg-2 col-md-6 col-12 fade-up delay-100">
+          <div class="footer-heading">Bureau</div>
+          <ul class="footer-list">
+            <li>
+              <a href="index.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                  <path d="m8 3.293 6 6V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V9.293l6-6Z" />
+                </svg>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="home-2.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                  <path d="m8 3.293 6 6V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V9.293l6-6Z" />
+                </svg>
+                <span>Home 2</span>
+              </a>
+            </li>
+            <li>
+              <a href="pages/about.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                  <path
+                    d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                </svg>
+                <span>About Us</span>
+              </a>
+            </li>
+            <li>
+              <a href="pages/speaker-roster.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+                  <path
+                    d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+                </svg>
+                <span>Speaker Roster</span>
+              </a>
+            </li>
+            <li>
+              <a href="pages/topics-industries.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+                </svg>
+                <span>Topics &amp; Industries</span>
+              </a>
+            </li>
+            <li>
+              <a href="pages/services.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                  <path
+                    d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                </svg>
+                <span>Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="pages/how-it-works.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v1.5a.5.5 0 0 1-1 0V8H2v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 1.5 7H7V6A1.5 1.5 0 0 1 5.5 4.5v-1z" />
+                </svg>
+                <span>How It Works</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Resources & Insights -->
+        <div class="col-lg-3 col-md-6 col-12 fade-up delay-200">
+          <div class="footer-heading">Editorial &amp; Portal</div>
+          <ul class="footer-list">
+            <li>
+              <a href="pages/insights.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                  <path d="M3 4h10v1H3V4zm0 3h10v1H3V7zm0 3h7v1H3v-1z" />
+                </svg>
+                <span>Insights &amp; Articles</span>
+              </a>
+            </li>
+            <li>
+              <a href="pages/book-a-speaker.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
+                  <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                </svg>
+                <span>Book a Speaker Form</span>
+              </a>
+            </li>
+            <li>
+              <a href="pages/contact.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2 0-.3-.15-.25-.33l.633-2.531A8.995 8.995 0 0 1 0 8c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8a8.97 8.97 0 0 1-4.32-.997l-1.495.896z" />
+                </svg>
+                <span>Contact Booking Advisors</span>
+              </a>
+            </li>
+            <li>
+              <a href="auth/login.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z" />
+                </svg>
+                <span>Client Portal Login</span>
+              </a>
+            </li>
+            <li>
+              <a href="dashboard/index.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5-.5a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5h-1.586a.5.5 0 0 1 0-1H11.5zm-1.046-3.354a.5.5 0 0 1 0 .708l-.914.914a.5.5 0 1 1-.708-.707l.915-.915a.5.5 0 0 1 .707 0zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1z" />
+                </svg>
+                <span>Client Dashboard (SaaS)</span>
+              </a>
+            </li>
+            <li>
+              <a href="auth/signup.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                  <path
+                    d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C8.844 9.04 8.434 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z" />
+                </svg>
+                <span>Create Business Account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Standards -->
+        <div class="col-lg-3 col-md-6 fade-up delay-300">
+          <div class="footer-heading">Booking Security</div>
+          <p class="small text-muted mb-3">
+            All speaker contracts, deposit holding, and travel arrangements adhere to international corporate
+            entertainment standards and audited escrow practices.
+          </p>
+          <div class="d-flex flex-column gap-2 small footer-legal-links">
+            <a href="pages/about.html#standards">
+              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                <path
+                  d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.599 4.491.71 7.776 2.363 9.941a11.777 11.777 0 0 0 2.52 2.46c.302.216.685.45 1.07.634.315.15.63.267.894.312a1.458 1.458 0 0 0 .01 0c.264-.045.58-.162.894-.312.385-.184.768-.418 1.07-.634a11.777 11.777 0 0 0 2.52-2.46c1.653-2.165 2.962-5.45 2.363-9.941a1.54 1.54 0 0 0-1.044-1.262c-.658-.215-1.777-.57-2.887-.87C9.843.265 8.69 0 8 0z" />
+              </svg>
+              <span>Ethical Booking Standards</span>
+            </a>
+            <a href="pages/contact.html#privacy">
+              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8 1a2 2 0 0 0-2 2v2H5a1 1 0 0 0-1 1v7a1 1 0 0 1 1 1h6a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-1V3a2 2 0 0 0-2-2zm1 4H7V3a1 1 0 0 1 2 0v2z" />
+              </svg>
+              <span>Data Privacy &amp; NDA Support</span>
+            </a>
+            <a href="pages/how-it-works.html#terms">
+              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+                <path d="M4.5 7h7v1h-7V7zm0 2h7v1h-7V9zm0 2h5v1h-5v-1z" />
+              </svg>
+              <span>Contract Terms &amp; Cancellation</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3 fade-up delay-150">
+        <div>
+          &copy; 2026 SummitSpeak Bureau. All rights reserved. Exceptional Voices. Extraordinary Events.
+        </div>
+        <div class="d-flex gap-4 footer-legal-links">
+          <a href="pages/about.html#privacy">
+            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.599 4.491-.71 7.776-2.363 9.941a11.777 11.777 0 0 1-2.52 2.46c-.302.216-.685.45-1.07.634-.315.15-.63.267-.894.312a1.458 1.458 0 0 1-.01 0c-.264-.045-.58-.162-.894-.312-.385-.184-.768-.418-1.07-.634a11.777 11.777 0 0 1-2.52-2.46C1.653 10.455.344 7.17.943 2.692A1.54 1.54 0 0 1 1.987 1.43c.658-.215 1.777-.57 2.887-.87z" />
+            </svg>
+            <span>Privacy Policy</span>
+          </a>
+          <a href="pages/about.html#terms">
+            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+            </svg>
+            <span>Terms of Service</span>
+          </a>
+          <a href="pages/contact.html#compliance">
+            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+              <path
+                d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.757.757 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z" />
+            </svg>
+            <span>Compliance</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM NAVIGATION DOCK
+       ========================================================================== -->
+  <nav class="mobile-bottom-nav d-md-none" aria-label="Mobile Navigation">
+    <div class="mobile-bottom-nav-container">
+      <a href="home-2.html" class="mobile-bottom-nav-item active" aria-label="Home 2">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+            <path d="m8 3.293 6 6V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V9.293l6-6Z"/>
+          </svg>
+        </div>
+        <span class="mobile-bottom-nav-label">Home 2</span>
+      </a>
+
+      <a href="pages/book-a-speaker.html" class="mobile-bottom-nav-item" aria-label="Book Enquiry">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+          </svg>
+        </div>
+        <span class="mobile-bottom-nav-label">Book Enquiry</span>
+      </a>
+
+      <a href="auth/login.html" class="mobile-bottom-nav-item" aria-label="Account">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+          </svg>
+        </div>
+        <span class="mobile-bottom-nav-label">Account</span>
+      </a>
+
+      <a href="dashboard/index.html" class="mobile-bottom-nav-item" aria-label="Dashboard">
+        <div class="mobile-bottom-nav-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.15V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1 6.1v-.6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v.6L8.687 7.78a.5.5 0 0 1-.374 0L1 6.1z" />
+          </svg>
+        </div>
+        <span class="mobile-bottom-nav-label">Dashboard</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       INTERACTIVE MODALS
+       ========================================================================== -->
+  <!-- 1. Video Showreel Modal -->
+  <div class="modal fade" id="keynoteReelModal" tabindex="-1" aria-labelledby="keynoteReelModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header bg-dark text-white border-0">
+          <h5 class="modal-title fw-bold" id="keynoteReelModalLabel">Dr. Marcus Vance — World Economic Forum Keynote Preview</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0 bg-black">
+          <div class="ratio ratio-16x9">
+            <div class="d-flex flex-column align-items-center justify-content-center text-white p-4">
+              <svg width="48" height="48" fill="var(--ssb-secondary)" viewBox="0 0 16 16" class="mb-3 animate-pulse">
+                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+              </svg>
+              <h5 class="fw-bold mb-2">Simulated HD Keynote Stream</h5>
+              <p class="text-white-50 small text-center max-w-500 mb-3">
+                "The shift from human augmentations to sovereign agentic systems will take place before 2028. Is your board prepared to govern non-human colleagues?"
+              </p>
+              <span class="badge bg-gold text-dark px-3 py-2 fw-bold">Live Stream Audio & Visuals Loaded</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer bg-secondary-theme border-0">
+          <button type="button" class="btn btn-outline-corporate btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-gold btn-sm" onclick="quickHoldSpeaker('Dr. Marcus Vance')">Hold Date for Marcus Vance</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Speaker Rider & Specs Modal -->
+  <div class="modal fade" id="riderModal" tabindex="-1" aria-labelledby="riderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="riderModalTitle">Speaker Rider & Honorarium Specs</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="small text-muted fw-bold">Speaker Profile</label>
+            <div class="h5 fw-bold text-main" id="riderSpeakerName">Dr. Marcus Vance</div>
+          </div>
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <div class="p-2 bg-secondary-theme rounded">
+                <small class="text-muted d-block">Honorarium Tier</small>
+                <span class="fw-bold text-gold" id="riderFeeTier">$50,000+</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-2 bg-secondary-theme rounded">
+                <small class="text-muted d-block">Home Base / Origin</small>
+                <span class="fw-bold" id="riderOrigin">Boston / Global</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-3 bg-secondary-theme rounded mb-3 small">
+            <strong>Standard Rider Inclusions:</strong>
+            <ul class="mb-0 mt-2 ps-3">
+              <li>1 First / Business Class international airfare roundtrip</li>
+              <li>2 Nights 5-Star accommodations (club floor / suite)</li>
+              <li>Dual wireless DPA headset microphone + confidence monitor</li>
+              <li>Pre-approved recording rights for internal enterprise distribution</li>
+            </ul>
+          </div>
+          <p class="small text-muted mb-0">
+            SummitSpeak handles all flight bookings, rider coordination, and stage check management directly.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-corporate btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-gold btn-sm" onclick="quickHoldFromRider()">Request Availability Hold</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. General Information Modal -->
+  <div class="modal fade" id="infoNoticeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="infoNoticeTitle">Notice</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="infoNoticeBody">
+          Operation executed successfully.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-gold btn-sm" data-bs-dismiss="modal">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Application Logic -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Home 2 Specific Interactive Logic -->
+  <script>
+    // 1. Video Showreel Modal Trigger
+    function openKeynoteReelModal() {
+      const reelModal = new bootstrap.Modal(document.getElementById('keynoteReelModal'));
+      reelModal.show();
+    }
+
+    // 2. Rider Modal Trigger
+    let currentRiderSpeaker = '';
+    function openRiderModal(speakerName, feeTier, origin) {
+      currentRiderSpeaker = speakerName;
+      document.getElementById('riderSpeakerName').textContent = speakerName;
+      document.getElementById('riderFeeTier').textContent = feeTier;
+      document.getElementById('riderOrigin').textContent = origin;
+      const rModal = new bootstrap.Modal(document.getElementById('riderModal'));
+      rModal.show();
+    }
+
+    function quickHoldFromRider() {
+      bootstrap.Modal.getInstance(document.getElementById('riderModal')).hide();
+      quickHoldSpeaker(currentRiderSpeaker);
+    }
+
+    // 3. Quick Hold Speaker Date
+    function quickHoldSpeaker(speakerName) {
+      showNoticeModal('48-Hour Complimentary Hold Placed', 
+        `A tentative 48-hour date hold has been registered for ${speakerName}. Our Senior Vice President will contact your office within 2 hours to confirm your summit dates and agenda requirements.`);
+    }
+
+    // 4. Hero Search Filter
+    function applyHeroSearch() {
+      const horizon = document.getElementById('heroHorizonSelect').value;
+      const modality = document.getElementById('heroModalitySelect').value;
+      const theme = document.getElementById('heroThemeSelect').value;
+      
+      showNoticeModal('Curated Availability Filtered',
+        `Filtering keynote roster for: ${horizon.toUpperCase()} • ${modality.toUpperCase()} • ${theme.toUpperCase()}. Matched 8 premier world luminaries currently available for these dates.`);
+      
+      const tracksSec = document.getElementById('curated-tracks');
+      if (tracksSec) tracksSec.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // 5. Track Modal
+    function openTrackModal(trackName) {
+      showNoticeModal(trackName, 
+        `The full syllabus for ${trackName} has been generated. This blueprint includes a 45m opening keynote, 30m executive fireside, and a 60m board-level simulation. Our team will send the full 14-page PDF briefing to your email upon request.`);
+    }
+
+    function downloadAllTracksBrief() {
+      showNoticeModal('2026 Summit Tracks Blueprint', 
+        'Downloading the complete 2026-2027 SummitSpeak Curated Tracks Architecture Guide (PDF). Over 24 calibrated conference tracks designed for Fortune 500 summits.');
+    }
+
+    function downloadBenchmarkReport() {
+      showNoticeModal('Keynote Compensation Benchmark Report', 
+        'The 2026-2027 Global Keynote Speaker Compensation & Rider Benchmark Report has been queued for immediate download.');
+    }
+
+    // 6. Titans Category Filtering
+    function filterTitans(category, btn) {
+      const allBtns = Array.from(document.querySelectorAll('.titan-filter-btn'));
+      allBtns.forEach(b => {
+        b.classList.remove('active', 'btn-gold');
+        b.classList.add('btn-outline-corporate');
+      });
+
+      if (btn) {
+        btn.classList.add('active', 'btn-gold');
+        btn.classList.remove('btn-outline-corporate');
+
+        // Update mobile bar title
+        const mobileCatName = document.getElementById('titansMobileCatName');
+        if (mobileCatName) {
+          mobileCatName.textContent = btn.textContent.trim();
+        }
+      }
+
+      const items = document.querySelectorAll('.titan-item');
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    function navigateTitansCategory(direction) {
+      const allBtns = Array.from(document.querySelectorAll('.titan-filter-btn'));
+      if (!allBtns.length) return;
+      let currentIndex = allBtns.findIndex(b => b.classList.contains('active'));
+      if (currentIndex === -1) currentIndex = 0;
+
+      let nextIndex;
+      if (direction === 'next') {
+        nextIndex = (currentIndex + 1) % allBtns.length;
+      } else {
+        nextIndex = (currentIndex - 1 + allBtns.length) % allBtns.length;
+      }
+
+      allBtns[nextIndex].click();
+    }
+
+
+    // 7. Speaker Match Matrix Algorithm Engine
+    const matrixSelections = {
+      audience: 'csuite',
+      energy: 'provocative',
+      budget: 'tier2'
+    };
+
+    const matrixSpeakers = {
+      'csuite_provocative': {
+        name: 'Dr. Marcus Vance',
+        topic: 'The Autonomous Enterprise & Frontier AI',
+        img: 'assets/images/speakers/marcus-vance.jpg',
+        score: '99.4%',
+        reason: 'Optimal alignment for C-Suite summits requiring disruptive technological forecasting and moral intelligence governance.'
+      },
+      'csuite_strategic': {
+        name: 'Sir Julian Thorne',
+        topic: 'Geopolitical Volatility & Sovereign Supply Chains',
+        img: 'assets/images/speakers/julian-thorne.jpg',
+        score: '98.8%',
+        reason: 'Decodes trade corridors, macro-currency volatility, and boardroom strategic resilience with former diplomatic precision.'
+      },
+      'csuite_emotional': {
+        name: 'Dr. Elena Rostova',
+        topic: 'Radical Resilience & Decision Mastery Under Duress',
+        img: 'assets/images/speakers/elena-rostova.jpg',
+        score: '99.1%',
+        reason: 'Galvanizes high-stakes executive teams with neurological stress protocols derived from extreme K2 winter summits.'
+      },
+      'allhands_emotional': {
+        name: 'Amara Okafor',
+        topic: 'Architecting The High-Trust Organization',
+        img: 'assets/images/speakers/amara-okafor.jpg',
+        score: '99.6%',
+        reason: 'Spectacular standing-ovation stage presence tailored for large audiences of 2,000+ demanding unity and inspiration.'
+      },
+      'tech_provocative': {
+        name: 'Maya Chen',
+        topic: 'Algorithmic Humanity & Next-Gen Culture',
+        img: 'assets/images/speakers/maya-chen.jpg',
+        score: '99.2%',
+        reason: 'Deep credibility with engineering leaders, AI architects, and innovation committees seeking ethical clarity.'
+      }
+    };
+
+    function setMatrixOption(step, val, btn) {
+      document.querySelectorAll(`.matrix-option-btn[data-step="${step}"]`).forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if (step === 1) matrixSelections.audience = val;
+      if (step === 2) matrixSelections.energy = val;
+      if (step === 3) matrixSelections.budget = val;
+
+      updateMatrixCalculation();
+    }
+
+    function updateMatrixCalculation() {
+      const key = `${matrixSelections.audience}_${matrixSelections.energy}`;
+      const matched = matrixSpeakers[key] || matrixSpeakers['csuite_provocative'];
+
+      document.getElementById('matrixMatchScore').textContent = `${matched.score} Compatibility`;
+      document.getElementById('matrixSpeakerName').textContent = matched.name;
+      document.getElementById('matrixSpeakerTopic').textContent = matched.topic;
+      document.getElementById('matrixSpeakerImg').src = matched.img;
+      document.getElementById('matrixSpeakerReason').textContent = matched.reason;
+    }
+
+    function holdMatchedSpeaker() {
+      const name = document.getElementById('matrixSpeakerName').textContent;
+      quickHoldSpeaker(name);
+    }
+
+    function saveMatchedToShortlist() {
+      const name = document.getElementById('matrixSpeakerName').textContent;
+      if (window.SSB_STORAGE && window.SSB_STORAGE.addToShortlist) {
+        window.SSB_STORAGE.addToShortlist({
+          id: name.toLowerCase().replace(/[^a-z0-9]/g, '-'),
+          name: name,
+          topic: document.getElementById('matrixSpeakerTopic').textContent
+        });
+      }
+      showNoticeModal('Added to Saved Wishlist', `${name} has been added to your client shortlist wishlist. You can review all saved speakers anytime from the dashboard.`);
+    }
+
+    // 8. Submit Home 2 Fast-Track Brief
+    function submitHome2Brief() {
+      const org = document.getElementById('briefOrg').value;
+      const name = document.getElementById('briefName').value;
+      const email = document.getElementById('briefEmail').value;
+      const dateCity = document.getElementById('briefDateCity').value;
+
+      showNoticeModal('Keynote Brief Submitted Successfully',
+        `Thank you ${name}. Your confidential brief for ${org} (${dateCity}) has been assigned to a Senior Managing Partner. We are preparing a bespoke 3-speaker shortlist with verified calendar availability and full riders to be delivered to ${email} within 24 hours.`);
+
+      document.getElementById('home2BriefForm').reset();
+    }
+
+    function showNoticeModal(title, body) {
+      document.getElementById('infoNoticeTitle').textContent = title;
+      document.getElementById('infoNoticeBody').textContent = body;
+      const modal = new bootstrap.Modal(document.getElementById('infoNoticeModal'));
+      modal.show();
+    }
+  </script>
+</body>
+
+</html>

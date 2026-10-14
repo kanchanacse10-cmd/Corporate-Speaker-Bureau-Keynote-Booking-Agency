@@ -1,0 +1,521 @@
+/* ==========================================================================
+   SummitSpeak Bureau — Premium Animation Engine (Inspired by Luméra Skin)
+   ========================================================================== */
+
+/* ---- Top Scroll Progress Indicator ---- */
+#ssbScrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--ssb-secondary) 0%, #F5D77F 50%, var(--ssb-secondary) 100%);
+  z-index: 9999;
+  pointer-events: none;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 10px rgba(200, 157, 75, 0.6);
+}
+
+[dir="rtl"] #ssbScrollProgress {
+  left: auto;
+  right: 0;
+}
+
+/* ==========================================================================
+   Scroll-Driven Reveal Classes (AOS / Luméra Style)
+   ========================================================================== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-down {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-down.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-36px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(36px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger Delay Utility Classes */
+.delay-0 {
+  transition-delay: 0ms !important;
+}
+
+.delay-50 {
+  transition-delay: 50ms !important;
+}
+
+.delay-100 {
+  transition-delay: 100ms !important;
+}
+
+.delay-150 {
+  transition-delay: 150ms !important;
+}
+
+.delay-200 {
+  transition-delay: 200ms !important;
+}
+
+.delay-250 {
+  transition-delay: 250ms !important;
+}
+
+.delay-300 {
+  transition-delay: 300ms !important;
+}
+
+.delay-350 {
+  transition-delay: 350ms !important;
+}
+
+.delay-400 {
+  transition-delay: 400ms !important;
+}
+
+.delay-450 {
+  transition-delay: 450ms !important;
+}
+
+.delay-500 {
+  transition-delay: 500ms !important;
+}
+
+.delay-600 {
+  transition-delay: 600ms !important;
+}
+
+/* ==========================================================================
+   Ambient Background Floating Orbs (Luméra Skin Hero Orbs)
+   ========================================================================== */
+.ssb-hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+  pointer-events: none;
+  animation: heroOrbFloat 9s ease-in-out infinite alternate;
+  will-change: transform;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+.ssb-hero-orb-1 {
+  width: 540px;
+  height: 540px;
+  background: radial-gradient(circle, rgba(200, 157, 75, 0.18) 0%, rgba(200, 157, 75, 0.05) 50%, transparent 70%);
+  top: -100px;
+  left: -80px;
+  animation-delay: 0s;
+  animation-duration: 9s;
+}
+
+.ssb-hero-orb-2 {
+  width: 440px;
+  height: 440px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.14) 0%, rgba(11, 25, 44, 0.08) 50%, transparent 70%);
+  bottom: -60px;
+  right: 25%;
+  animation-delay: -3s;
+  animation-duration: 12s;
+}
+
+.ssb-hero-orb-3 {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.16) 0%, transparent 70%);
+  top: 30%;
+  right: -60px;
+  animation-delay: -5s;
+  animation-duration: 10s;
+}
+
+[data-bs-theme="dark"] .ssb-hero-orb-1 {
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, transparent 70%);
+}
+
+[data-bs-theme="dark"] .ssb-hero-orb-2 {
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.18) 0%, transparent 70%);
+}
+
+[data-bs-theme="dark"] .ssb-hero-orb-3 {
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, transparent 70%);
+}
+
+@keyframes heroOrbFloat {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(25px, -30px) scale(1.08);
+  }
+
+  100% {
+    transform: translate(-20px, 20px) scale(0.94);
+  }
+}
+
+/* ==========================================================================
+   Scrolling Trust Marquee Strip (Luméra Skin Marquee)
+   ========================================================================== */
+.hero-marquee-strip {
+  background: linear-gradient(90deg, #071220 0%, var(--ssb-primary) 50%, #071220 100%);
+  padding: 0.85rem 0;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid rgba(200, 157, 75, 0.25);
+  border-bottom: 1px solid rgba(200, 157, 75, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.hero-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 32s linear infinite;
+  gap: 0;
+  align-items: center;
+  will-change: transform;
+}
+
+.hero-marquee-strip:hover .hero-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.hero-marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0 2rem;
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.hero-marquee-item:hover {
+  color: var(--ssb-secondary);
+}
+
+.hero-marquee-item svg,
+.hero-marquee-item i {
+  font-size: 0.95rem;
+  color: var(--ssb-secondary);
+  flex-shrink: 0;
+}
+
+.hero-marquee-sep {
+  width: 5px;
+  height: 5px;
+  background: var(--ssb-secondary);
+  border-radius: 50%;
+  flex-shrink: 0;
+  opacity: 0.65;
+  box-shadow: 0 0 6px rgba(200, 157, 75, 0.8);
+}
+
+[dir="rtl"] .hero-marquee-track {
+  animation-direction: reverse;
+}
+
+/* ==========================================================================
+   Micro-Animations & Shimmer Effects
+   ========================================================================== */
+/* Section Sub-title Shimmer Badge */
+.sub-title,
+.badge-gold,
+.perspectives-trust-badge {
+  position: relative;
+  overflow: hidden;
+}
+
+.sub-title::after,
+.badge-gold::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  animation: labelShimmer 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes labelShimmer {
+  0% {
+    left: -100%;
+  }
+
+  30%,
+  100% {
+    left: 200%;
+  }
+}
+
+/* Floating Badges & Cards */
+.hero-image-chip,
+.speaker-location-badge,
+.floating-accent-badge {
+  animation: chipFloat 4.5s ease-in-out infinite alternate;
+}
+
+@keyframes chipFloat {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-6px);
+  }
+}
+
+/* Pulsing Status Dot */
+.status-dot,
+.concierge-dot {
+  position: relative;
+}
+
+.status-dot::after,
+.concierge-dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--ssb-secondary);
+  animation: dotPulse 2s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes dotPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(2.6);
+    opacity: 0;
+  }
+}
+
+/* Animated Underline Expansion */
+.animated-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--ssb-secondary);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animated-underline:hover::after,
+.visible .animated-underline::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Card Hover Elevation & Dynamic Interactions
+   ========================================================================== */
+.speaker-card,
+.topic-card,
+.industry-card,
+.format-card,
+.trust-card,
+.perspectives-stage-card,
+.companion-card,
+.faq-executive-card,
+.process-step-card,
+.portal-interactive-card,
+.service-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.speaker-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(11, 25, 44, 0.14);
+  border-color: rgba(200, 157, 75, 0.4) !important;
+}
+
+.speaker-card:hover .speaker-img {
+  transform: scale(1.06);
+}
+
+.speaker-img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.topic-card:hover,
+.industry-card:hover,
+.format-card:hover,
+.trust-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(11, 25, 44, 0.12);
+  border-color: var(--ssb-secondary) !important;
+}
+
+.topic-card:hover .topic-icon-wrap,
+.format-card:hover .format-icon-box,
+.trust-card:hover .trust-icon-box {
+  transform: scale(1.1) rotate(4deg);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.topic-icon-wrap,
+.format-icon-box,
+.trust-icon-box {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Button Micro-Animations */
+.btn-gold,
+.btn-primary,
+.hero-btn-primary,
+.hero-btn-secondary,
+.btn-roster-cta {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.25s ease !important;
+}
+
+.btn-gold:hover,
+.hero-btn-primary:hover,
+.btn-roster-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(200, 157, 75, 0.4) !important;
+}
+
+.btn-gold:active,
+.hero-btn-primary:active,
+.btn-roster-cta:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Stat Number Counter Animation Pulse
+   ========================================================================== */
+.counter-num {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  transition: color 0.3s ease;
+}
+
+.counter-num.counted {
+  animation: counterPop 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes counterPop {
+  0% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ==========================================================================
+   Accessibility: Reduced Motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+
+  .fade-up,
+  .fade-down,
+  .fade-left,
+  .fade-right,
+  .scale-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .ssb-hero-orb,
+  .hero-marquee-track,
+  .hero-image-chip,
+  .status-dot::after {
+    animation: none !important;
+  }
+
+  #ssbScrollProgress {
+    display: none !important;
+  }
+}

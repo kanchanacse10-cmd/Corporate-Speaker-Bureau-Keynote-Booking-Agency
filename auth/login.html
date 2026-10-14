@@ -233,11 +233,19 @@
       left: 12px;
     }
 
-    /* Custom Checkbox */
+    /* Custom Checkbox & Forgot Password Row in Same Line */
     .auth-remember-row {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
       margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .auth-remember-left {
+      display: flex;
+      align-items: center;
     }
 
     .auth-remember-row .form-check-input {
@@ -265,6 +273,21 @@
       color: var(--ssb-text-muted);
       cursor: pointer;
       user-select: none;
+      margin-bottom: 0;
+    }
+
+    .auth-forgot-link {
+      font-size: 0.86rem;
+      color: var(--ssb-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: color var(--transition-fast);
+    }
+
+    .auth-forgot-link:hover {
+      color: var(--ssb-secondary-hover);
+      text-decoration: underline;
     }
 
     /* Submit Button */
@@ -465,6 +488,19 @@
       <!-- Main Form Body -->
       <div class="auth-form-container">
 
+        <!-- Mobile View Brand Logo (Visible on mobile/tablet) -->
+        <div class="auth-mobile-brand d-lg-none mb-3">
+          <a class="ssb-brand text-decoration-none d-inline-flex align-items-center" href="../index.html">
+            <div class="ssb-brand-logo">
+              <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z"/></svg>
+            </div>
+            <div class="ssb-brand-text ms-2 text-start">
+              <span class="ssb-brand-name">SummitSpeak</span>
+              <span class="ssb-brand-tagline">Bureau</span>
+            </div>
+          </a>
+        </div>
+
         <!-- Title & Subtitle -->
         <h1 class="auth-title">Sign In</h1>
         <p class="auth-subtitle">
@@ -490,11 +526,10 @@
             <input type="email" id="login-email" class="form-control" placeholder="your@company.com" required value="sarah.jenkins@apexglobal.com">
           </div>
 
-          <!-- Password + Forgot link -->
+          <!-- Password Field -->
           <div class="auth-input-group">
             <div class="auth-field-label">
               <span>Password <span class="req">*</span></span>
-              <a href="forgot-password.html" class="small text-gold text-decoration-none">Forgot Password?</a>
             </div>
             <div class="position-relative">
               <input type="password" id="login-password" class="form-control pe-5" placeholder="Enter your password" required value="Apex2026!Global">
@@ -508,12 +543,15 @@
             </div>
           </div>
 
-          <!-- Remember Me Checkbox -->
+          <!-- Remember Me (Left) & Forgot Password (Right) in Same Line -->
           <div class="auth-remember-row">
-            <input class="form-check-input" type="checkbox" id="remember-me" checked>
-            <label class="form-check-label" for="remember-me">
-              Remember me for 30 days
-            </label>
+            <div class="auth-remember-left">
+              <input class="form-check-input" type="checkbox" id="remember-me" checked>
+              <label class="form-check-label" for="remember-me">
+                Remember me for 30 days
+              </label>
+            </div>
+            <a href="forgot-password.html" class="auth-forgot-link">Forgot Password?</a>
           </div>
 
           <!-- Primary Submit Button -->
@@ -538,15 +576,12 @@
           Continue with Google
         </button>
 
-        <!-- Microsoft SSO Button -->
-        <button type="button" class="btn-social" id="btn-sso-microsoft">
-          <svg width="18" height="18" viewBox="0 0 21 21" class="me-2">
-            <rect x="1" y="1" width="9" height="9" fill="#f25022"/>
-            <rect x="11" y="1" width="9" height="9" fill="#7fba00"/>
-            <rect x="1" y="11" width="9" height="9" fill="#00a4ef"/>
-            <rect x="11" y="11" width="9" height="9" fill="#ffb900"/>
+        <!-- iOS SSO Button -->
+        <button type="button" class="btn-social" id="btn-sso-ios">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16" class="me-2">
+            <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.937-.133-1.752.182-2.324.643-.572.46-1.12 1.34-1.233 2.585-.113 1.244.316 2.809 1.096 4.095.78 1.286 1.705 2.502 2.766 2.484 1.06-.018 1.488-.637 2.65-.637 1.162 0 1.503.637 2.564.637 1.061 0 1.879-1.107 2.56-2.227.68-1.12.875-1.895.89-1.944a.27.27 0 0 0-.065-.084z"/>
           </svg>
-          Continue with Microsoft
+          Continue with iOS
         </button>
 
         <!-- Signup Prompt Link -->
@@ -623,8 +658,8 @@
       const googleBtn = document.getElementById("btn-sso-google");
       if (googleBtn) googleBtn.addEventListener("click", () => handleSocialAuth("Google Workspace"));
 
-      const msBtn = document.getElementById("btn-sso-microsoft");
-      if (msBtn) msBtn.addEventListener("click", () => handleSocialAuth("Microsoft 365"));
+      const iosBtn = document.getElementById("btn-sso-ios");
+      if (iosBtn) iosBtn.addEventListener("click", () => handleSocialAuth("Apple iOS"));
     });
   </script>
 </body>
