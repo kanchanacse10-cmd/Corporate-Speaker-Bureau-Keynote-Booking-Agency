@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <a href="${profileUrl}">${speaker.name}</a>
             </h4>
             <div class="speaker-title" title="${speaker.title}">${speaker.title}</div>
-            <p class="speaker-bio-teaser">${speaker.bio}</p>
+            <p class="speaker-bio-teaser speaker-card-desc">${speaker.teaser || speaker.bio}</p>
             <div class="speaker-meta-strip">
               <div class="speaker-fee-wrap">
                 <span class="fee-lbl">Honorarium Tier</span>
@@ -371,6 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileCatName = document.getElementById("faqMobileCatName");
     const mobileCatCount = document.getElementById("faqMobileCatCount");
     const mobileNextBtn = document.getElementById("faqMobileNextBtn");
+    const mobilePrevBtn = document.getElementById("faqMobilePrevBtn");
 
     const syncMobileCatBar = (btn) => {
       if (!btn) return;
@@ -460,6 +461,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
+
+    // Mobile Prev Category Button Action (cycles backward through categories)
+    if (mobilePrevBtn && categoryBtns.length > 0) {
+      mobilePrevBtn.addEventListener("click", () => {
+        let currentIdx = Array.from(categoryBtns).findIndex(b => b.classList.contains("active"));
+        if (currentIdx === -1) currentIdx = 0;
+        const prevIdx = (currentIdx - 1 + categoryBtns.length) % categoryBtns.length;
+        categoryBtns[prevIdx].click();
+      });
+    }
 
     // Mobile Next Category Button Action (cycles through categories)
     if (mobileNextBtn && categoryBtns.length > 0) {

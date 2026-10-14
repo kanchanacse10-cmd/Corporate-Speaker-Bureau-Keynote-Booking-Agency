@@ -66,6 +66,10 @@
 
           <!-- 5. Login Button (Desktop & Tablets >= 768px) -->
           <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-md-inline-flex" title="Client & Speaker Login" aria-label="Login">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+            </svg>
             <span class="login-text">Login</span>
           </a>
 
@@ -170,8 +174,30 @@
   <section class="section-padding bg-soft">
     <div class="container">
 
-      <!-- Interactive Phase Navigation Ribbon -->
-      <div class="process-phase-ribbon">
+      <!-- Mobile Single-Line Phase Switcher (Mobile Only) -->
+      <div class="process-mobile-filter-bar d-lg-none" id="processMobileFilterBar">
+        <div class="process-mobile-cat-info" id="processMobileCurrentPill">
+          <span class="process-mobile-badge" id="processMobilePhaseNum">01</span>
+          <span class="process-mobile-cat-name" id="processMobilePhaseName">Discovery &amp; Strategy</span>
+        </div>
+        <div class="process-mobile-nav-btns">
+          <button type="button" class="process-mobile-nav-btn process-mobile-prev-btn" id="processMobilePrevBtn" onclick="navigateProcessPhase('prev')" aria-label="Previous Phase">
+            <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            <span>Back</span>
+          </button>
+          <button type="button" class="process-mobile-nav-btn process-mobile-next-btn" id="processMobileNextBtn" onclick="navigateProcessPhase('next')" aria-label="Next Phase">
+            <span>Next</span>
+            <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Interactive Phase Navigation Ribbon (Desktop Only) -->
+      <div class="process-phase-ribbon d-none d-lg-grid">
         <a href="#phase-1" class="phase-ribbon-btn active" data-phase="1">
           <span class="ribbon-num">01</span>
           <span>Discovery &amp; Strategy</span>
@@ -193,7 +219,7 @@
       <!-- ==============================================
            PHASE 01: DISCOVERY & STRATEGY
       ============================================== -->
-      <div id="phase-1" class="process-chapter">
+      <div id="phase-1" class="process-chapter active-mobile-phase">
         <div class="process-chapter-header">
           <div class="chapter-title-group">
             <span class="chapter-phase-pill">Phase 01</span>
@@ -890,6 +916,16 @@
               </a>
             </li>
             <li>
+              <a href="../home-2.html">
+                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                  <path d="m8 3.293 6 6V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V9.293l6-6Z" />
+                </svg>
+                <span>Home 2</span>
+              </a>
+            </li>
+            <li>
               <a href="speaker-roster.html">
                 <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
                   <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
@@ -1128,8 +1164,65 @@
   <script src="../assets/js/storage.js"></script>
   <script src="../assets/js/main.js"></script>
   <script>
-    // Smooth scroll and active phase ribbon highlight
+    // Smooth scroll and active phase ribbon/mobile switcher highlight
+    const processPhases = [
+      { id: 'phase-1', num: '01', name: 'Discovery & Strategy' },
+      { id: 'phase-2', num: '02', name: 'Holds & Commercials' },
+      { id: 'phase-3', num: '03', name: 'Governance & Escrow' },
+      { id: 'phase-4', num: '04', name: 'Production & Delivery' }
+    ];
+
+    let currentProcessIdx = 0;
+
+    function updateMobilePhaseUI(idx) {
+      if (idx < 0 || idx >= processPhases.length) return;
+      currentProcessIdx = idx;
+      const phase = processPhases[idx];
+      const numEl = document.getElementById('processMobilePhaseNum');
+      const nameEl = document.getElementById('processMobilePhaseName');
+      if (numEl) numEl.textContent = phase.num;
+      if (nameEl) nameEl.textContent = phase.name;
+
+      // In mobile view (< 992px): switch displayed chapter in place without scrolling
+      const chapters = document.querySelectorAll('.process-chapter');
+      chapters.forEach(ch => {
+        ch.classList.toggle('active-mobile-phase', ch.getAttribute('id') === phase.id);
+      });
+    }
+
+    function navigateProcessPhase(direction) {
+      if (direction === 'next') {
+        currentProcessIdx = (currentProcessIdx + 1) % processPhases.length;
+      } else {
+        currentProcessIdx = (currentProcessIdx - 1 + processPhases.length) % processPhases.length;
+      }
+      const targetPhase = processPhases[currentProcessIdx];
+      updateMobilePhaseUI(currentProcessIdx);
+
+      // Only scroll on desktop view (>= 992px); on mobile view, switch information in place with ZERO scrolling
+      if (window.innerWidth >= 992) {
+        const targetEl = document.getElementById(targetPhase.id);
+        if (targetEl) {
+          const navOffset = 90;
+          const elementPosition = targetEl.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+
+      const ribbonBtns = document.querySelectorAll('.phase-ribbon-btn');
+      ribbonBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('href') === '#' + targetPhase.id);
+      });
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
+      // Initialize Phase 1 on mobile
+      updateMobilePhaseUI(0);
+
       const ribbonBtns = document.querySelectorAll('.phase-ribbon-btn');
       const chapters = document.querySelectorAll('.process-chapter');
 
@@ -1148,19 +1241,26 @@
               top: offsetPosition,
               behavior: 'smooth'
             });
+
+            const cleanId = targetId.replace('#', '');
+            const idx = processPhases.findIndex(p => p.id === cleanId);
+            if (idx !== -1) updateMobilePhaseUI(idx);
           }
         });
       });
 
-      // Intersection observer to track active phase on scroll
+      // Intersection observer to track active phase on desktop scroll only
       if ('IntersectionObserver' in window && chapters.length) {
         const observer = new IntersectionObserver((entries) => {
+          if (window.innerWidth < 992) return;
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               const id = entry.target.getAttribute('id');
               ribbonBtns.forEach(btn => {
                 btn.classList.toggle('active', btn.getAttribute('href') === '#' + id);
               });
+              const idx = processPhases.findIndex(p => p.id === id);
+              if (idx !== -1) updateMobilePhaseUI(idx);
             }
           });
         }, {
