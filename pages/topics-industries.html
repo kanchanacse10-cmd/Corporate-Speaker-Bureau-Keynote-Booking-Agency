@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="shortcut icon" href="../favicon.svg">
   <title>Topics & Industries — SummitSpeak Bureau</title>
   <meta name="description"
     content="Discover keynote speakers organized around critical business themes and specific industry sectors.">
@@ -38,9 +41,11 @@
         <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard (Client Portal on mobile), 5. Login -->
         <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
           <!-- 1. Wishlist Button (Desktop & Tablets >= 768px) -->
-          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-md-inline-flex" title="View Saved Wishlist" aria-label="View Saved Wishlist">
+          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-md-inline-flex"
+            title="View Saved Wishlist" aria-label="View Saved Wishlist">
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+              <path
+                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
             </svg>
             <span class="shortlist-count-badge">0</span>
           </a>
@@ -65,7 +70,8 @@
           </a>
 
           <!-- 5. Login Button (Desktop & Tablets >= 768px) -->
-          <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-md-inline-flex" title="Client & Speaker Login" aria-label="Login">
+          <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-md-inline-flex"
+            title="Client & Speaker Login" aria-label="Login">
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
               <path
                 d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
@@ -84,8 +90,16 @@
         <!-- Navigation Menu -->
         <div class="collapse navbar-collapse order-xl-2" id="ssbNavbarContent">
           <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="../home-2.html">Home 2</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="../index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="../home-2.html">Home 2</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="speaker-roster.html">Speaker Roster</a></li>
             <li class="nav-item"><a class="nav-link active" href="topics-industries.html">Topics & Industries</a></li>
@@ -126,16 +140,18 @@
                 <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm mobile-menu-login"
                   title="Client & Speaker Login" aria-label="Login">
                   <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
-                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    <path
+                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                   </svg>
                   <span class="login-text">Login</span>
                 </a>
 
                 <!-- 5. Dashboard Button -->
-                <a href="../dashboard/index.html" class="btn btn-gold btn-sm mobile-menu-dash"
-                  title="Client Dashboard" aria-label="Dashboard">
+                <a href="../dashboard/index.html" class="btn btn-gold btn-sm mobile-menu-dash" title="Client Dashboard"
+                  aria-label="Dashboard">
                   <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16" class="me-1">
-                    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                    <path
+                      d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
                   </svg>
                   <span>Dashboard</span>
                 </a>
@@ -151,7 +167,8 @@
        CINEMATIC PAGE HERO BANNER
        ========================================================================== -->
   <section class="cinematic-page-hero">
-    <img src="../assets/images/hero/hero_ai_keynote.jpg" alt="AI and Frontier Tech Keynote Stage" class="cinematic-page-hero-bg">
+    <img src="../assets/images/hero/hero_ai_keynote.jpg" alt="AI and Frontier Tech Keynote Stage"
+      class="cinematic-page-hero-bg">
     <div class="cinematic-page-hero-overlay"></div>
     <div class="cinematic-page-hero-content">
       <div class="cinematic-breadcrumb">
@@ -161,11 +178,14 @@
       </div>
       <h1 class="cinematic-page-hero-title">Topics &amp; Global Industry Horizons</h1>
       <p class="cinematic-page-hero-desc">
-        "Empowering boards and summit organizers with authoritative voices across AI, Quantum Enterprise, Geopolitics, ESG, and Resilient Leadership."
+        "Empowering boards and summit organizers with authoritative voices across AI, Quantum Enterprise, Geopolitics,
+        ESG, and Resilient Leadership."
       </p>
       <div class="cinematic-page-hero-cta">
-        <a href="book-a-speaker.html" class="btn btn-gold btn-lg px-4 shadow-sm">Request Topic Recommendations &rarr;</a>
-        <a href="speaker-roster.html" class="btn btn-outline-corporate text-white border-white btn-lg px-4">View Keynote Roster</a>
+        <a href="book-a-speaker.html" class="btn btn-gold btn-lg px-4 shadow-sm">Request Topic Recommendations
+          &rarr;</a>
+        <a href="speaker-roster.html" class="btn btn-outline-corporate text-white border-white btn-lg px-4">View Keynote
+          Roster</a>
       </div>
     </div>
   </section>
@@ -179,159 +199,213 @@
         <p>Strategic themes driving modern corporate agendas, leadership performance, and institutional resilience.</p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 g-xl-5">
         <!-- 1. Leadership -->
-        <div class="col-lg-6">
-          <div class="ssb-card h-100 p-3 p-sm-4 d-flex flex-column">
-            <div class="topic-card-header mb-3">
-              <span class="badge-gold">Executive Track</span>
-              <span class="text-muted small speaker-count text-nowrap">14 Roster Speakers</span>
+        <div class="col-12 col-lg-6 fade-up">
+          <div class="topic-lumera-card">
+            <div class="topic-lumera-media">
+              <img src="../assets/images/topics/topic_leadership.jpg" alt="Leadership &amp; Management" class="topic-lumera-img" loading="lazy">
             </div>
-            <h3>Leadership & Management</h3>
-            <p class="text-muted">Executive leadership, organizational change, team development, decision-making under
-              uncertainty, and strategic governance in volatile environments.</p>
-            <div class="p-3 bg-secondary-theme rounded-2 mb-3">
-              <div class="small fw-bold text-gold mb-1">Key Executive Takeaways:</div>
-              <ul class="small text-muted mb-0 ps-3">
+            <h3 class="topic-lumera-title">Leadership &amp; Management</h3>
+            <span class="topic-lumera-subtitle">Executive Track &bull; 14 Roster Keynotes</span>
+            <p class="topic-lumera-desc">
+              Executive leadership, organizational change, team development, decision-making under uncertainty, and strategic governance in volatile environments.
+            </p>
+            <div class="topic-lumera-takeaways">
+              <div class="topic-lumera-takeaways-heading">Key Executive Takeaways</div>
+              <ul>
                 <li>Frameworks for decentralized high-stakes decision making</li>
                 <li>Fostering cultures of radical accountability and team safety</li>
                 <li>Leading enterprise transformation without organizational burnout</li>
               </ul>
             </div>
-            <div class="topic-card-footer mt-auto pt-2">
-              <span class="small text-muted topic-related-text">Related: Professional Services, Finance</span>
-              <a href="speaker-roster.html?topic=Leadership+%26+Management"
-                class="btn btn-outline-corporate btn-sm topic-card-btn">View Leadership Speakers</a>
+            <div class="topic-lumera-pills-wrap">
+              <span class="topic-lumera-pill">EXECUTIVE TRACK</span>
+              <span class="topic-lumera-pill">14 SPEAKERS</span>
+              <span class="topic-lumera-pill">HIGH-STAKES</span>
+              <span class="topic-lumera-pill">GOVERNANCE</span>
+            </div>
+            <div class="topic-lumera-footer">
+              <span class="topic-lumera-related">Related: Professional Services, Finance</span>
+              <a href="speaker-roster.html?topic=Leadership+%26+Management" class="topic-lumera-btn">
+                <span>View Leadership Speakers</span>
+                &rarr;
+              </a>
             </div>
           </div>
         </div>
 
         <!-- 2. AI & Technology -->
-        <div class="col-lg-6">
-          <div class="ssb-card h-100 p-3 p-sm-4 d-flex flex-column">
-            <div class="topic-card-header mb-3">
-              <span class="badge-gold">Technology Track</span>
-              <span class="text-muted small speaker-count text-nowrap">18 Roster Speakers</span>
+        <div class="col-12 col-lg-6 fade-up delay-100">
+          <div class="topic-lumera-card">
+            <div class="topic-lumera-media">
+              <img src="../assets/images/topics/topic_ai_tech.jpg" alt="Artificial Intelligence &amp; Technology" class="topic-lumera-img" loading="lazy">
             </div>
-            <h3>Artificial Intelligence & Technology</h3>
-            <p class="text-muted">Enterprise generative AI adoption, autonomous workflows, cybersecurity risk,
-              technology governance, and human-machine collaboration.</p>
-            <div class="p-3 bg-secondary-theme rounded-2 mb-3">
-              <div class="small fw-bold text-gold mb-1">Key Executive Takeaways:</div>
-              <ul class="small text-muted mb-0 ps-3">
+            <h3 class="topic-lumera-title">Artificial Intelligence &amp; Technology</h3>
+            <span class="topic-lumera-subtitle">Technology Track &bull; 18 Roster Keynotes</span>
+            <p class="topic-lumera-desc">
+              Enterprise generative AI adoption, autonomous workflows, cybersecurity risk, technology governance, and human-machine collaboration.
+            </p>
+            <div class="topic-lumera-takeaways">
+              <div class="topic-lumera-takeaways-heading">Key Executive Takeaways</div>
+              <ul>
                 <li>Pragmatic AI roadmaps beyond pilot experimentation</li>
                 <li>Responsible tech governance, data integrity, and compliance</li>
                 <li>Upskilling workforces for autonomous agent ecosystems</li>
               </ul>
             </div>
-            <div class="topic-card-footer mt-auto pt-2">
-              <span class="small text-muted topic-related-text">Related: Technology, Healthcare, Banking</span>
-              <a href="speaker-roster.html?topic=Artificial+Intelligence+%26+Technology"
-                class="btn btn-outline-corporate btn-sm topic-card-btn">View AI Speakers</a>
+            <div class="topic-lumera-pills-wrap">
+              <span class="topic-lumera-pill">TECHNOLOGY TRACK</span>
+              <span class="topic-lumera-pill">18 SPEAKERS</span>
+              <span class="topic-lumera-pill">AGENTIC AI</span>
+              <span class="topic-lumera-pill">CYBER GOVERNANCE</span>
+            </div>
+            <div class="topic-lumera-footer">
+              <span class="topic-lumera-related">Related: Technology, Healthcare, Banking</span>
+              <a href="speaker-roster.html?topic=Artificial+Intelligence+%26+Technology" class="topic-lumera-btn">
+                <span>View AI Speakers</span>
+                &rarr;
+              </a>
             </div>
           </div>
         </div>
 
         <!-- 3. Innovation & Future Trends -->
-        <div class="col-lg-6">
-          <div class="ssb-card h-100 p-3 p-sm-4 d-flex flex-column">
-            <div class="topic-card-header mb-3">
-              <span class="badge-gold">Strategy Track</span>
-              <span class="text-muted small speaker-count text-nowrap">12 Roster Speakers</span>
+        <div class="col-12 col-lg-6 fade-up">
+          <div class="topic-lumera-card">
+            <div class="topic-lumera-media">
+              <img src="../assets/images/topics/topic_innovation.jpg" alt="Innovation &amp; Future Trends" class="topic-lumera-img" loading="lazy">
             </div>
-            <h3>Innovation & Future Trends</h3>
-            <p class="text-muted">Disruptive business models, design futurism, consumer psychology, speed as a moat, and
-              breakthrough product development.</p>
-            <div class="p-3 bg-secondary-theme rounded-2 mb-3">
-              <div class="small fw-bold text-gold mb-1">Key Executive Takeaways:</div>
-              <ul class="small text-muted mb-0 ps-3">
+            <h3 class="topic-lumera-title">Innovation &amp; Future Trends</h3>
+            <span class="topic-lumera-subtitle">Strategy Track &bull; 12 Roster Keynotes</span>
+            <p class="topic-lumera-desc">
+              Disruptive business models, design futurism, consumer psychology, speed as a moat, and breakthrough product development.
+            </p>
+            <div class="topic-lumera-takeaways">
+              <div class="topic-lumera-takeaways-heading">Key Executive Takeaways</div>
+              <ul>
                 <li>Spotting weak signals before mainstream disruption</li>
                 <li>Human-centered design thinking and product velocity</li>
                 <li>Fostering rapid internal experimentation loops</li>
               </ul>
             </div>
-            <div class="topic-card-footer mt-auto pt-2">
-              <span class="small text-muted topic-related-text">Related: Retail, Consumer Tech, Media</span>
-              <a href="speaker-roster.html?topic=Innovation+%26+Future+Trends"
-                class="btn btn-outline-corporate btn-sm topic-card-btn">View Innovation Speakers</a>
+            <div class="topic-lumera-pills-wrap">
+              <span class="topic-lumera-pill">STRATEGY TRACK</span>
+              <span class="topic-lumera-pill">12 SPEAKERS</span>
+              <span class="topic-lumera-pill">DISRUPTION</span>
+              <span class="topic-lumera-pill">VELOCITY</span>
+            </div>
+            <div class="topic-lumera-footer">
+              <span class="topic-lumera-related">Related: Retail, Consumer Tech, Media</span>
+              <a href="speaker-roster.html?topic=Innovation+%26+Future+Trends" class="topic-lumera-btn">
+                <span>View Innovation Speakers</span>
+                &rarr;
+              </a>
             </div>
           </div>
         </div>
 
         <!-- 4. Motivation & Performance -->
-        <div class="col-lg-6">
-          <div class="ssb-card h-100 p-3 p-sm-4 d-flex flex-column">
-            <div class="topic-card-header mb-3">
-              <span class="badge-gold">Performance Track</span>
-              <span class="text-muted small speaker-count text-nowrap">16 Roster Speakers</span>
+        <div class="col-12 col-lg-6 fade-up delay-100">
+          <div class="topic-lumera-card">
+            <div class="topic-lumera-media">
+              <img src="../assets/images/topics/topic_motivation.jpg" alt="Motivation &amp; Human Performance" class="topic-lumera-img" loading="lazy">
             </div>
-            <h3>Motivation & Human Performance</h3>
-            <p class="text-muted">Resilience through adversity, mental fortitude under high stakes, sustaining energy
-              across long operational cycles, and world-class execution standards.</p>
-            <div class="p-3 bg-secondary-theme rounded-2 mb-3">
-              <div class="small fw-bold text-gold mb-1">Key Executive Takeaways:</div>
-              <ul class="small text-muted mb-0 ps-3">
+            <h3 class="topic-lumera-title">Motivation &amp; Human Performance</h3>
+            <span class="topic-lumera-subtitle">Performance Track &bull; 16 Roster Keynotes</span>
+            <p class="topic-lumera-desc">
+              Resilience through adversity, mental fortitude under high stakes, sustaining energy across long operational cycles, and world-class execution standards.
+            </p>
+            <div class="topic-lumera-takeaways">
+              <div class="topic-lumera-takeaways-heading">Key Executive Takeaways</div>
+              <ul>
                 <li>Cognitive tools to maintain composure during crises</li>
                 <li>Reframing failure into tactical momentum and learning</li>
                 <li>Igniting collective passion during annual kickoffs and transitions</li>
               </ul>
             </div>
-            <div class="topic-card-footer mt-auto pt-2">
-              <span class="small text-muted topic-related-text">Related: Sales, Operations, Enterprise Teams</span>
-              <a href="speaker-roster.html?topic=Motivation+%26+Performance"
-                class="btn btn-outline-corporate btn-sm topic-card-btn">View Motivation Speakers</a>
+            <div class="topic-lumera-pills-wrap">
+              <span class="topic-lumera-pill">PERFORMANCE TRACK</span>
+              <span class="topic-lumera-pill">16 SPEAKERS</span>
+              <span class="topic-lumera-pill">RESILIENCE</span>
+              <span class="topic-lumera-pill">PEAK MINDSET</span>
+            </div>
+            <div class="topic-lumera-footer">
+              <span class="topic-lumera-related">Related: Sales, Operations, Enterprise Teams</span>
+              <a href="speaker-roster.html?topic=Motivation+%26+Performance" class="topic-lumera-btn">
+                <span>View Motivation Speakers</span>
+                &rarr;
+              </a>
             </div>
           </div>
         </div>
 
         <!-- 5. Economics & Global Affairs -->
-        <div class="col-lg-6">
-          <div class="ssb-card h-100 p-3 p-sm-4 d-flex flex-column">
-            <div class="topic-card-header mb-3">
-              <span class="badge-gold">Macro Track</span>
-              <span class="text-muted small speaker-count text-nowrap">10 Roster Speakers</span>
+        <div class="col-12 col-lg-6 fade-up">
+          <div class="topic-lumera-card">
+            <div class="topic-lumera-media">
+              <img src="../assets/images/topics/topic_economics.jpg" alt="Economics &amp; Global Affairs" class="topic-lumera-img" loading="lazy">
             </div>
-            <h3>Economics & Global Affairs</h3>
-            <p class="text-muted">Macroeconomic indicators, supply chain sovereignty, geopolitical fragmentation,
-              multilateral trade agreements, and capital allocation.</p>
-            <div class="p-3 bg-secondary-theme rounded-2 mb-3">
-              <div class="small fw-bold text-gold mb-1">Key Executive Takeaways:</div>
-              <ul class="small text-muted mb-0 ps-3">
+            <h3 class="topic-lumera-title">Economics &amp; Global Affairs</h3>
+            <span class="topic-lumera-subtitle">Macro Track &bull; 10 Roster Keynotes</span>
+            <p class="topic-lumera-desc">
+              Macroeconomic indicators, supply chain sovereignty, geopolitical fragmentation, multilateral trade agreements, and capital allocation.
+            </p>
+            <div class="topic-lumera-takeaways">
+              <div class="topic-lumera-takeaways-heading">Key Executive Takeaways</div>
+              <ul>
                 <li>Navigating interest rate shifts, inflation, and currency risks</li>
                 <li>Scenario modeling for geopolitical volatility</li>
                 <li>Decoupling and friend-shoring supply chain architectures</li>
               </ul>
             </div>
-            <div class="topic-card-footer mt-auto pt-2">
-              <span class="small text-muted topic-related-text">Related: Finance, Energy, Manufacturing</span>
-              <a href="speaker-roster.html?topic=Economics+%26+Global+Affairs"
-                class="btn btn-outline-corporate btn-sm topic-card-btn">View Economics Speakers</a>
+            <div class="topic-lumera-pills-wrap">
+              <span class="topic-lumera-pill">MACRO TRACK</span>
+              <span class="topic-lumera-pill">10 SPEAKERS</span>
+              <span class="topic-lumera-pill">GEOPOLITICS</span>
+              <span class="topic-lumera-pill">TRADE RISK</span>
+            </div>
+            <div class="topic-lumera-footer">
+              <span class="topic-lumera-related">Related: Finance, Energy, Manufacturing</span>
+              <a href="speaker-roster.html?topic=Economics+%26+Global+Affairs" class="topic-lumera-btn">
+                <span>View Economics Speakers</span>
+                &rarr;
+              </a>
             </div>
           </div>
         </div>
 
         <!-- 6. Workplace Culture & Wellbeing -->
-        <div class="col-lg-6">
-          <div class="ssb-card h-100 p-3 p-sm-4 d-flex flex-column">
-            <div class="topic-card-header mb-3">
-              <span class="badge-gold">Culture Track</span>
-              <span class="text-muted small speaker-count text-nowrap">15 Roster Speakers</span>
+        <div class="col-12 col-lg-6 fade-up delay-100">
+          <div class="topic-lumera-card">
+            <div class="topic-lumera-media">
+              <img src="../assets/images/topics/topic_culture.jpg" alt="Workplace Culture &amp; Wellbeing" class="topic-lumera-img" loading="lazy">
             </div>
-            <h3>Workplace Culture & Wellbeing</h3>
-            <p class="text-muted">Psychological safety, employee retention, sustainable focus in digital distraction,
-              hybrid team dynamics, and authentic communication.</p>
-            <div class="p-3 bg-secondary-theme rounded-2 mb-3">
-              <div class="small fw-bold text-gold mb-1">Key Executive Takeaways:</div>
-              <ul class="small text-muted mb-0 ps-3">
+            <h3 class="topic-lumera-title">Workplace Culture &amp; Wellbeing</h3>
+            <span class="topic-lumera-subtitle">Culture Track &bull; 15 Roster Keynotes</span>
+            <p class="topic-lumera-desc">
+              Psychological safety, employee retention, sustainable focus in digital distraction, hybrid team dynamics, and authentic communication.
+            </p>
+            <div class="topic-lumera-takeaways">
+              <div class="topic-lumera-takeaways-heading">Key Executive Takeaways</div>
+              <ul>
                 <li>Preventing burnout while preserving high-output standards</li>
                 <li>Designing communication rituals that connect hybrid teams</li>
                 <li>Retaining top performers in competitive talent markets</li>
               </ul>
             </div>
-            <div class="topic-card-footer mt-auto pt-2">
-              <span class="small text-muted topic-related-text">Related: Healthcare, Tech, Education</span>
-              <a href="speaker-roster.html?topic=Workplace+Culture+%26+Wellbeing"
-                class="btn btn-outline-corporate btn-sm topic-card-btn">View Culture Speakers</a>
+            <div class="topic-lumera-pills-wrap">
+              <span class="topic-lumera-pill">CULTURE TRACK</span>
+              <span class="topic-lumera-pill">15 SPEAKERS</span>
+              <span class="topic-lumera-pill">WELLBEING</span>
+              <span class="topic-lumera-pill">HYBRID TEAMS</span>
+            </div>
+            <div class="topic-lumera-footer">
+              <span class="topic-lumera-related">Related: Healthcare, Tech, Education</span>
+              <a href="speaker-roster.html?topic=Workplace+Culture+%26+Wellbeing" class="topic-lumera-btn">
+                <span>View Culture Speakers</span>
+                &rarr;
+              </a>
             </div>
           </div>
         </div>
@@ -365,7 +439,7 @@
             <h4 class="industry-card-title">Technology &amp; SaaS</h4>
             <span class="industry-card-subtitle">Cloud, AI &amp; Cyber</span>
             <p class="industry-card-desc">Frontier presenters addressing developer velocity, generative AI integration,
-              digital transformation, and CISO threat governance.</p>
+              digital transformation.</p>
             <ul class="industry-objectives-list">
               <li>
                 <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
@@ -462,7 +536,7 @@
             <h4 class="industry-card-title">Healthcare &amp; Life Science</h4>
             <span class="industry-card-subtitle">Biotech &amp; Clinical Leadership</span>
             <p class="industry-card-desc">Visionaries guiding pharma executives, hospital networks, and biotech
-              innovators through digital medicine and provider resilience.</p>
+              innovators through digital medicine.</p>
             <ul class="industry-objectives-list">
               <li>
                 <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
@@ -589,253 +663,130 @@
   </section>
 
   <!-- FOOTER -->
+  <!-- ==========================================================================
+       GLOBAL FOOTER (INSPIRATION: SEOULFIRE MINIMALIST SPLIT FOOTER)
+       ========================================================================== -->
   <footer class="ssb-footer">
     <div class="container">
-      <div class="row g-4">
-        <!-- Col 1: Brand & Identity -->
-        <div class="col-lg-4 col-md-6">
-          <a class="ssb-brand mb-3 d-inline-flex" href="../index.html">
-            <div class="ssb-brand-logo">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+      <div class="row g-4 g-lg-5">
+        <!-- Col 1: Brand, Tagline, Socials & Newsletter -->
+        <div class="col-lg-4 col-md-6 fade-up">
+          <a class="ssb-footer-brand" href="../index.html">
+            <div class="ssb-footer-logo">
+              <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
                 <path
                   d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
               </svg>
             </div>
-            <div class="ssb-brand-text">
-              <span class="ssb-brand-name text-white">SummitSpeak</span>
-              <span class="ssb-brand-tagline">Bureau</span>
+            <div class="ssb-footer-brand-text">
+              <span class="ssb-footer-brand-name">SummitSpeak</span>
+              <span class="ssb-footer-brand-sub">BUREAU</span>
             </div>
           </a>
-          <p class="small text-muted mb-4">
-            A premier corporate speaker bureau connecting organizations with exceptional keynote speakers, industry
-            pioneers, authors, and executive thought leaders.
+
+          <div class="ssb-footer-lead">Gravitas. Resonance. Impact.</div>
+          <p class="ssb-footer-desc">
+            A premier corporate speaker bureau connecting global organizations with exceptional keynote pioneers.
           </p>
-          <div class="footer-contact-item">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-            </svg>
-            <span>Corporate Office: 100 Montgomery Street, Suite 2400, San Francisco, CA</span>
+
+          <!-- Social Buttons -->
+          <div class="ssb-footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="Instagram">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a5.109 5.109 0 1 0 0 10.218 5.109 5.109 0 0 0 0-10.218zm0 1.442a3.667 3.667 0 1 1 0 7.334 3.667 3.667 0 0 1 0-7.334z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="LinkedIn">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="YouTube">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v5.582l4.8-2.79-4.8-2.792z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="X / Twitter">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.147H2.865l8.875 11.631Z" />
+              </svg>
+            </a>
           </div>
-          <div class="footer-contact-item">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-            </svg>
-            <span>Direct Inquiries: +1 (800) 584-3920 &bull; concierge@summitspeak.com</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-            </svg>
-            <span>Hours: Mon – Fri: 08:30 – 18:00 EST / UTC-05:00</span>
-          </div>
+
+          <!-- Email Newsletter Input -->
+          <form class="ssb-footer-newsletter-form"
+            onsubmit="event.preventDefault(); window.SSB_SHOW_TOAST ? window.SSB_SHOW_TOAST('Thank you for subscribing to Keynote Intelligence.', 'success') : alert('Subscribed!'); this.reset();">
+            <input type="email" class="ssb-footer-newsletter-input" placeholder="Email for keynote intelligence"
+              required aria-label="Email for keynote intelligence">
+            <button type="submit" class="ssb-footer-newsletter-btn"
+              aria-label="Subscribe to intelligence">&rarr;</button>
+          </form>
         </div>
 
-        <!-- Col 2: Navigation Links -->
-        <div class="col-lg-2 col-md-3 col-12">
-          <div class="footer-heading">Bureau</div>
-          <ul class="footer-list">
-            <li>
-              <a href="../index.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
-                  <path d="m8 3.293 6 6V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V9.293l6-6Z" />
-                </svg>
-                <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="../home-2.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
-                  <path d="m8 3.293 6 6V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V9.293l6-6Z" />
-                </svg>
-                <span>Home 2</span>
-              </a>
-            </li>
-            <li>
-              <a href="speaker-roster.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
-                  <path
-                    d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
-                </svg>
-                <span>Speaker Roster</span>
-              </a>
-            </li>
-            <li>
-              <a href="topics-industries.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
-                </svg>
-                <span>Topics &amp; Industries</span>
-              </a>
-            </li>
-            <li>
-              <a href="services.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
-                  <path
-                    d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
-                </svg>
-                <span>Services</span>
-              </a>
-            </li>
-            <li>
-              <a href="how-it-works.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v1.5a.5.5 0 0 1-1 0V8H2v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 1.5 7H7V6A1.5 1.5 0 0 1 5.5 4.5v-1z" />
-                </svg>
-                <span>How It Works</span>
-              </a>
-            </li>
-            <li>
-              <a href="about.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                  <path
-                    d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                </svg>
-                <span>About Us</span>
-              </a>
-            </li>
+        <!-- Col 2: EXPLORE -->
+        <div class="col-lg-2 col-md-6 col-6 fade-up delay-100">
+          <div class="ssb-footer-heading">EXPLORE</div>
+          <ul class="ssb-footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="speaker-roster.html">Speaker Roster</a></li>
+            <li><a href="topics-industries.html">Topics &amp; Industries</a></li>
+            <li><a href="services.html">Bureau Services</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="insights.html">Insights &amp; Articles</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Resources & Insights -->
-        <div class="col-lg-3 col-md-3 col-12">
-          <div class="footer-heading">Editorial &amp; Portal</div>
-          <ul class="footer-list">
-            <li>
-              <a href="insights.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-                  <path d="M3 4h10v1H3V4zm0 3h10v1H3V7zm0 3h7v1H3v-1z" />
-                </svg>
-                <span>Insights &amp; Articles</span>
-              </a>
-            </li>
-            <li>
-              <a href="book-a-speaker.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
-                  <path
-                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                </svg>
-                <span>Book a Speaker Form</span>
-              </a>
-            </li>
-            <li>
-              <a href="contact.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2 0-.3-.15-.25-.33l.633-2.531A8.995 8.995 0 0 1 0 8c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8a8.97 8.97 0 0 1-4.32-.997l-1.495.896z" />
-                </svg>
-                <span>Contact Booking Advisors</span>
-              </a>
-            </li>
-            <li>
-              <a href="../auth/login.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z" />
-                </svg>
-                <span>Client Portal Login</span>
-              </a>
-            </li>
-            <li>
-              <a href="../dashboard/index.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5-.5a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5h-1.586a.5.5 0 0 1 0-1H11.5zm-1.046-3.354a.5.5 0 0 1 0 .708l-.914.914a.5.5 0 1 1-.708-.707l.915-.915a.5.5 0 0 1 .707 0zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1z" />
-                </svg>
-                <span>Client Dashboard (SaaS)</span>
-              </a>
-            </li>
-            <li>
-              <a href="../auth/signup.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-                  <path
-                    d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C8.844 9.04 8.434 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z" />
-                </svg>
-                <span>Create Business Account</span>
-              </a>
-            </li>
+        <!-- Col 3: YOUR EVENT -->
+        <div class="col-lg-3 col-md-6 col-6 fade-up delay-150">
+          <div class="ssb-footer-heading">YOUR EVENT</div>
+          <ul class="ssb-footer-links">
+            <li><a href="book-a-speaker.html">Book a Speaker</a></li>
+            <li><a href="../dashboard/index.html">Client Portal</a></li>
+            <li><a href="../home-2.html">Executive Matrix</a></li>
+            <li><a href="contact.html">Request Availability</a></li>
+            <li><a href="../auth/login.html">Sign In</a></li>
+            <li><a href="../auth/signup.html">Create Client Account</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: Legal & Standards -->
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-heading">Booking Security</div>
-          <p class="small text-muted mb-3">
-            All speaker contracts, deposit holding, and travel arrangements adhere to international corporate
-            entertainment standards and audited escrow practices.
-          </p>
-          <div class="d-flex flex-column gap-2 small footer-legal-links">
-            <a href="about.html#standards">
-              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
-                <path
-                  d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.599 4.491.71 7.776 2.363 9.941a11.777 11.777 0 0 0 2.52 2.46c.302.216.685.45-1.07.634-.315.15-.63.267-.894.312a1.458 1.458 0 0 0 .01 0c.264-.045.58-.162.894-.312.385-.184.768-.418 1.07-.634a11.777 11.777 0 0 0 2.52-2.46c1.653-2.165 2.962-5.45 2.363-9.941a1.54 1.54 0 0 0-1.044-1.262c-.658-.215-1.777-.57-2.887-.87C9.843.265 8.69 0 8 0z" />
-              </svg>
-              <span>Ethical Booking Standards</span>
-            </a>
-            <a href="contact.html#privacy">
-              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M8 1a2 2 0 0 0-2 2v2H5a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-1V3a2 2 0 0 0-2-2zm1 4H7V3a1 1 0 0 1 2 0v2z" />
-              </svg>
-              <span>Data Privacy &amp; NDA Support</span>
-            </a>
-            <a href="how-it-works.html#terms">
-              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-                <path d="M4.5 7h7v1h-7V7zm0 2h7v1h-7V9zm0 2h5v1h-5v-1z" />
-              </svg>
-              <span>Contract Terms &amp; Cancellation</span>
-            </a>
-          </div>
+        <!-- Col 4: ADVISORY & STANDARDS -->
+        <div class="col-lg-3 col-md-6 fade-up delay-200">
+          <div class="ssb-footer-heading">STANDARDS &amp; ADVISORY</div>
+          <ul class="ssb-footer-links">
+            <li><a href="about.html#standards">Ethical Booking Standards</a></li>
+            <li><a href="how-it-works.html#escrow">Audited Escrow Protocol</a></li>
+            <li><a href="how-it-works.html#terms">Contract &amp; Rider Terms</a></li>
+            <li><a href="../index.html#faq-section">Frequently Asked Questions</a></li>
+            <li><a href="contact.html">Contact Senior Advisory</a></li>
+            <li><a href="about.html#privacy">Data Privacy &amp; NDA</a></li>
+          </ul>
         </div>
       </div>
 
-      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
-        <div>
-          &copy; 2026 SummitSpeak Bureau. All rights reserved. Exceptional Voices. Extraordinary Events.
-        </div>
-        <div class="d-flex gap-4 footer-legal-links">
-          <a href="about.html#privacy">
-            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.599 4.491-.71 7.776-2.363 9.941a11.777 11.777 0 0 1-2.52 2.46c-.302.216-.685.45-1.07.634-.315.15-.63.267-.894.312a1.458 1.458 0 0 1-.01 0c-.264-.045-.58-.162.894-.312.385-.184.768-.418 1.07-.634a11.777 11.777 0 0 1-2.52-2.46C1.653 10.455.344 7.17.943 2.692A1.54 1.54 0 0 1 1.987 1.43c.658-.215 1.777-.57 2.887-.87z" />
-            </svg>
-            <span>Privacy Policy</span>
-          </a>
-          <a href="about.html#terms">
-            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-            </svg>
-            <span>Terms of Service</span>
-          </a>
-          <a href="contact.html#compliance">
-            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.757.757 0 0 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z" />
-            </svg>
-            <span>Compliance</span>
-          </a>
+      <!-- Bottom Bar -->
+      <div class="ssb-footer-bottom fade-up delay-250">
+        <div class="row align-items-center g-3">
+          <div class="col-md-7 text-center text-md-start">
+            <span>&copy; 2026 SummitSpeak Bureau &mdash; Gravitas. Resonance. Impact.</span>
+          </div>
+          <div class="col-md-5 text-center text-md-end">
+            <div class="ssb-footer-legal-links">
+              <a href="about.html#privacy">Privacy Policy</a>
+              <span class="dot">&bull;</span>
+              <a href="about.html#terms">Terms of Service</a>
+              <span class="dot">&bull;</span>
+              <a href="how-it-works.html#escrow">Escrow SLA</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -850,7 +801,8 @@
       <a href="../dashboard/index.html?view=shortlist" class="mobile-bottom-nav-item" aria-label="Wishlist">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            <path
+              d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
           </svg>
           <span class="shortlist-count-badge">0</span>
         </div>
@@ -861,8 +813,10 @@
       <a href="book-a-speaker.html" class="mobile-bottom-nav-item" aria-label="Book Enquiry">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+            <path
+              d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+            <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
           </svg>
         </div>
         <span class="mobile-bottom-nav-label">Book Enquiry</span>
@@ -872,8 +826,9 @@
       <a href="../auth/login.html" class="mobile-bottom-nav-item" aria-label="Account">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
           </svg>
         </div>
         <span class="mobile-bottom-nav-label">Account</span>
@@ -883,7 +838,8 @@
       <a href="../dashboard/index.html" class="mobile-bottom-nav-item" aria-label="Client Portal">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.15V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1 6.1v-.6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v.6L8.687 7.78a.5.5 0 0 1-.374 0L1 6.1z"/>
+            <path
+              d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.15V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1 6.1v-.6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v.6L8.687 7.78a.5.5 0 0 1-.374 0L1 6.1z" />
           </svg>
         </div>
         <span class="mobile-bottom-nav-label">Client Portal</span>

@@ -271,19 +271,19 @@
   [dir="rtl"] .hero-slide-visual-wrapper {
     left: auto;
     right: 0;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 85px 100%);
+    width: 58%;
+    clip-path: none;
   }
   [dir="rtl"] .hero-slide-slant-line {
-    left: auto;
-    right: calc(64% - 87px);
-    transform: skewX(7.8deg);
-    transform-origin: top right;
+    display: none !important;
   }
   [dir="rtl"] .hero-slide-content-wrapper {
     margin-left: 0;
     margin-right: auto;
+    width: 44%;
     padding: 4rem 3.5rem 4rem 4.5rem;
     text-align: right;
+    box-shadow: 15px 0 35px rgba(14, 42, 71, 0.08);
   }
 }
 [dir="rtl"] .hero-carousel-prev {

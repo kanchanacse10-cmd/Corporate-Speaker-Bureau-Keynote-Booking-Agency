@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="shortcut icon" href="favicon.svg">
   <title>SummitSpeak Bureau — Home 2: The Luminary Stage & Executive Curations</title>
   <meta name="description"
     content="Experience SummitSpeak Bureau's executive keynote curations, curated summit tracks, intelligent Speaker Match Matrix, and Sovereign SLA for world-class corporate summits.">
@@ -96,8 +99,16 @@
              1. Home, 2. Home 2 (Active), 3. About, 4. Speaker Roster, 5. Topics & Industries, 6. Services, 7. How It Works, 8. Insights, 9. Contact -->
         <div class="collapse navbar-collapse order-xl-2" id="ssbNavbarContent">
           <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link active" href="home-2.html">Home 2</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item active" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/speaker-roster.html">Speaker Roster</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/topics-industries.html">Topics & Industries</a></li>
@@ -157,12 +168,18 @@
        Unique Design: Ambient editorial hero with audio waveform preview & live ticker
        ========================================================================== -->
   <section class="home2-hero-section">
-    <div class="container-fluid px-3 px-xl-4 px-xxl-5">
+    <div class="home2-hero-bg-layer">
+      <img src="assets/images/faq/faq_stage_showcase.jpg" alt="Global Keynote Summit Auditorium"
+        class="home2-hero-bg-img" loading="eager">
+      <div class="home2-hero-overlay"></div>
+      <div class="home2-hero-ambient-glow"></div>
+    </div>
+    <div class="container-fluid px-3 px-xl-4 px-xxl-5 position-relative" style="z-index: 2;">
       <div class="row align-items-center g-5">
         <!-- Left Column: Editorial Headline & Value Narrative -->
         <div class="col-lg-7">
           <div class="home2-live-badge mb-3">
-            <span class="pulse-dot-gold"></span>
+
             <span>Live Stage Ticker: 2026–2027 World Summits Active • 48h Concierge Shortlist</span>
           </div>
 
@@ -183,13 +200,13 @@
                   d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
               </svg>
             </a>
-            <a href="#speaker-matrix" class="btn btn-outline-corporate btn-lg px-4">
-              Try Speaker Match Matrix™
+            <a href="#speaker-matrix" class="btn home2-hero-btn-ghost btn-lg px-4">
+              Try Speaker Match Matrix
             </a>
           </div>
 
           <!-- Quick Metrics Bar -->
-          <div class="row g-3 pt-3 border-top" style="border-color: var(--ssb-border) !important;">
+          <div class="row g-3 pt-3 border-top home2-metrics-row">
             <div class="col-4">
               <div class="fw-bold fs-4 text-gold" style="font-family: var(--font-heading);">99.4%</div>
               <div class="text-muted small">Standing Ovation Metric</div>
@@ -226,10 +243,10 @@
 
             <div class="p-4 bg-card">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge bg-primary-subtle text-primary px-2 py-1 rounded">Featured Preview Clip</span>
+                <span class="badge badge-gold px-2 py-1">Featured Preview Clip</span>
                 <!-- Soundwave Animation -->
                 <div class="d-flex align-items-center gap-2">
-                  <span class="small text-muted fw-semibold">Audio Clip</span>
+
                   <div class="home2-audio-wave">
                     <span></span><span></span><span></span><span></span><span></span>
                   </div>
@@ -247,9 +264,7 @@
                 <button class="btn btn-gold btn-sm flex-grow-1" onclick="quickHoldSpeaker('Dr. Marcus Vance')">
                   Hold Speaker Date
                 </button>
-                <a href="pages/speaker-profile.html?id=marcus-vance" class="btn btn-outline-corporate btn-sm">
-                  View Full Profile
-                </a>
+
               </div>
             </div>
           </div>
@@ -324,184 +339,249 @@
         </div>
       </div>
 
-      <!-- 6 Curated Tracks Grid -->
-      <div class="row g-4">
+      <!-- 6 Curated Tracks Grid (Lumera-Inspired Signature Luxury Style) -->
+      <div class="row g-4 g-xl-5">
         <!-- Track 01 -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="home2-track-card">
-            <span class="home2-track-badge">Track 01 • Frontier Tech</span>
-            <h3 class="home2-track-title">The Exponential AI & Quantum Enterprise</h3>
-            <p class="home2-track-desc">
-              Navigating agentic autonomous workflows, proprietary foundational models, and the existential risk of
+        <div class="col-12 col-lg-6 fade-up">
+          <div class="home2-track-lumera-card">
+            <div class="track-lumera-media">
+              <img src="assets/images/topics/topic_ai_tech.jpg" alt="The Exponential AI &amp; Quantum Enterprise"
+                class="track-lumera-img" loading="lazy">
+            </div>
+            <span class="track-lumera-subtitle">Track 01 &bull; Frontier Tech</span>
+            <h3 class="track-lumera-title">The Exponential AI &amp; Quantum Enterprise</h3>
+            <p class="track-lumera-desc">
+              Navigating agentic autonomous workflows, proprietary foundational models, and executive governance of
               unaligned machine intelligence.
             </p>
-            <div class="home2-track-blueprint">
-              <div class="home2-blueprint-item">
-                <span>Kickoff Address:</span>
-                <span class="text-gold">45m Provocation</span>
+            <div class="track-lumera-specs">
+              <div class="track-lumera-spec-item">
+                <span>Kickoff:</span>
+                <span class="track-lumera-spec-val">45m Provocation</span>
               </div>
-              <div class="home2-blueprint-item">
-                <span>Executive Fireside:</span>
-                <span class="text-gold">30m With CTO/Board</span>
+
+              <div class="track-lumera-spec-item">
+                <span>Fireside:</span>
+                <span class="track-lumera-spec-val">30m CTO/Board</span>
               </div>
-              <div class="home2-blueprint-item">
-                <span>Curated Luminary:</span>
-                <span class="fw-bold">Dr. Marcus Vance</span>
+
+              <div class="track-lumera-spec-item">
+                <span>Luminary:</span>
+                <span class="track-lumera-spec-val">Dr. Marcus Vance</span>
               </div>
             </div>
-            <button class="btn btn-outline-corporate btn-sm mt-auto w-100"
-              onclick="openTrackModal('Track 01: Exponential AI')">
-              View Complete Track Syllabus
+            <div class="track-lumera-pills-wrap">
+              <span class="track-lumera-pill">FRONTIER TECH</span>
+            </div>
+            <button class="track-lumera-btn" onclick="openTrackModal('Track 01: Exponential AI')">
+              <span>View Complete Track Syllabus</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+              </svg>
             </button>
           </div>
         </div>
 
         <!-- Track 02 -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="home2-track-card">
-            <span class="home2-track-badge">Track 02 • Global Macro</span>
-            <h3 class="home2-track-title">Geopolitical Volatility & Sovereign Supply Chains</h3>
-            <p class="home2-track-desc">
+        <div class="col-12 col-lg-6 fade-up delay-100">
+          <div class="home2-track-lumera-card">
+            <div class="track-lumera-media">
+              <img src="assets/images/topics/topic_economics.jpg"
+                alt="Geopolitical Volatility &amp; Sovereign Supply Chains" class="track-lumera-img" loading="lazy">
+            </div>
+            <span class="track-lumera-subtitle">Track 02 &bull; Global Macro</span>
+            <h3 class="track-lumera-title">Geopolitical Volatility &amp; Sovereign Supply Chains</h3>
+            <p class="track-lumera-desc">
               Strategic decoupling, friendshoring across APAC and EMEA, critical mineral security, and multilateral
               central bank liquidity shifts.
             </p>
-            <div class="home2-track-blueprint">
-              <div class="home2-blueprint-item">
-                <span>Opening Keynote:</span>
-                <span class="text-gold">50m Global Intel</span>
+            <div class="track-lumera-specs">
+              <div class="track-lumera-spec-item">
+                <span>Keynote:</span>
+                <span class="track-lumera-spec-val">50m Global Intel</span>
               </div>
-              <div class="home2-blueprint-item">
-                <span>War-Room Simulation:</span>
-                <span class="text-gold">60m Scenario Planning</span>
+
+              <div class="track-lumera-spec-item">
+                <span>Simulation:</span>
+                <span class="track-lumera-spec-val">60m War-Room</span>
               </div>
-              <div class="home2-blueprint-item">
-                <span>Curated Luminary:</span>
-                <span class="fw-bold">Sir Julian Thorne</span>
+
+              <div class="track-lumera-spec-item">
+                <span>Luminary:</span>
+                <span class="track-lumera-spec-val">Sir Julian Thorne</span>
               </div>
             </div>
-            <button class="btn btn-outline-corporate btn-sm mt-auto w-100"
-              onclick="openTrackModal('Track 02: Geopolitical Volatility')">
-              View Complete Track Syllabus
+            <div class="track-lumera-pills-wrap">
+              <span class="track-lumera-pill">GLOBAL MACRO</span>
+            </div>
+            <button class="track-lumera-btn" onclick="openTrackModal('Track 02: Geopolitical Volatility')">
+              <span>View Complete Track Syllabus</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+              </svg>
             </button>
           </div>
         </div>
 
         <!-- Track 03 -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="home2-track-card">
-            <span class="home2-track-badge">Track 03 • High Performance</span>
-            <h3 class="home2-track-title">Radical Resilience & Elite Command Leadership</h3>
-            <p class="home2-track-desc">
+        <div class="col-12 col-lg-6 fade-up">
+          <div class="home2-track-lumera-card">
+            <div class="track-lumera-media">
+              <img src="assets/images/topics/topic_leadership.jpg"
+                alt="Radical Resilience &amp; Elite Command Leadership" class="track-lumera-img" loading="lazy">
+            </div>
+            <span class="track-lumera-subtitle">Track 03 &bull; High Performance</span>
+            <h3 class="track-lumera-title">Radical Resilience &amp; Elite Command Leadership</h3>
+            <p class="track-lumera-desc">
               Mental toughness under extreme volatility, asymmetric decision-making from Special Operations and
-              high-altitude Everest missions.
+              high-altitude Everest expeditions.
             </p>
-            <div class="home2-track-blueprint">
-              <div class="home2-blueprint-item">
-                <span>Catalyst Keynote:</span>
-                <span class="text-gold">45m Galvanizing Story</span>
+            <div class="track-lumera-specs">
+              <div class="track-lumera-spec-item">
+                <span>Keynote:</span>
+                <span class="track-lumera-spec-val">45m Galvanizing Story</span>
               </div>
-              <div class="home2-blueprint-item">
-                <span>Mindset Workshop:</span>
-                <span class="text-gold">45m Tactical Stress Protocol</span>
+
+              <div class="track-lumera-spec-item">
+                <span>Workshop:</span>
+                <span class="track-lumera-spec-val">45m Tactical Protocol</span>
               </div>
-              <div class="home2-blueprint-item">
-                <span>Curated Luminary:</span>
-                <span class="fw-bold">Dr. Elena Rostova</span>
+              <div class="track-lumera-spec-item">
+                <span>Luminary:</span>
+                <span class="track-lumera-spec-val">Dr. Elena Rostova</span>
               </div>
             </div>
-            <button class="btn btn-outline-corporate btn-sm mt-auto w-100"
-              onclick="openTrackModal('Track 03: Radical Resilience')">
-              View Complete Track Syllabus
+            <div class="track-lumera-pills-wrap">
+              <span class="track-lumera-pill">ELITE COMMAND</span>
+            </div>
+            <button class="track-lumera-btn" onclick="openTrackModal('Track 03: Radical Resilience')">
+              <span>View Complete Track Syllabus</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+              </svg>
             </button>
           </div>
         </div>
 
         <!-- Track 04 -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="home2-track-card">
-            <span class="home2-track-badge">Track 04 • ESG & Clean Tech</span>
-            <h3 class="home2-track-title">The Regenerative Future & Decarbonized Capital</h3>
-            <p class="home2-track-desc">
+        <div class="col-12 col-lg-6 fade-up delay-100">
+          <div class="home2-track-lumera-card">
+            <div class="track-lumera-media">
+              <img src="assets/images/topics/topic_innovation.jpg"
+                alt="The Regenerative Future &amp; Decarbonized Capital" class="track-lumera-img" loading="lazy">
+            </div>
+            <span class="track-lumera-subtitle">Track 04 &bull; ESG &amp; Clean Tech</span>
+            <h3 class="track-lumera-title">The Regenerative Future &amp; Decarbonized Capital</h3>
+            <p class="track-lumera-desc">
               Re-engineering industrial assets, the trillion-dollar energy transition, carbon accounting integrity, and
               green hydrogen scaling.
             </p>
-            <div class="home2-track-blueprint">
-              <div class="home2-blueprint-item">
-                <span>Opening Address:</span>
-                <span class="text-gold">45m Future Macro</span>
+            <div class="track-lumera-specs">
+              <div class="track-lumera-spec-item">
+                <span>Opening:</span>
+                <span class="track-lumera-spec-val">45m Future Macro</span>
               </div>
-              <div class="home2-blueprint-item">
-                <span>Investor Roundtable:</span>
-                <span class="text-gold">45m ESG Allocation</span>
+              <div class="track-lumera-spec-item">
+                <span>Roundtable:</span>
+                <span class="track-lumera-spec-val">45m ESG Allocation</span>
               </div>
-              <div class="home2-blueprint-item">
-                <span>Curated Luminary:</span>
-                <span class="fw-bold">David O'Connor</span>
+              <div class="track-lumera-spec-item">
+                <span>Luminary:</span>
+                <span class="track-lumera-spec-val">David O'Connor</span>
               </div>
             </div>
-            <button class="btn btn-outline-corporate btn-sm mt-auto w-100"
-              onclick="openTrackModal('Track 04: Regenerative Future')">
-              View Complete Track Syllabus
+            <div class="track-lumera-pills-wrap">
+              <span class="track-lumera-pill">CLEAN CAPITAL</span>
+            </div>
+            <button class="track-lumera-btn" onclick="openTrackModal('Track 04: Regenerative Future')">
+              <span>View Complete Track Syllabus</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+              </svg>
             </button>
           </div>
         </div>
 
         <!-- Track 05 -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="home2-track-card">
-            <span class="home2-track-badge">Track 05 • Future of Work</span>
-            <h3 class="home2-track-title">Cognitive Longevity & The Augmented Workforce</h3>
-            <p class="home2-track-desc">
+        <div class="col-12 col-lg-6 fade-up">
+          <div class="home2-track-lumera-card">
+            <div class="track-lumera-media">
+              <img src="assets/images/topics/topic_culture.jpg" alt="Cognitive Longevity &amp; The Augmented Workforce"
+                class="track-lumera-img" loading="lazy">
+            </div>
+            <span class="track-lumera-subtitle">Track 05 &bull; Future of Work</span>
+            <h3 class="track-lumera-title">Cognitive Longevity &amp; The Augmented Workforce</h3>
+            <p class="track-lumera-desc">
               Neuroscience-backed cognitive endurance, organizational redesign for hybrid humans and AI coworkers, and
               burnout eradication.
             </p>
-            <div class="home2-track-blueprint">
-              <div class="home2-blueprint-item">
-                <span>Mainstage Address:</span>
-                <span class="text-gold">45m Neuroscience Deep Dive</span>
+            <div class="track-lumera-specs">
+              <div class="track-lumera-spec-item">
+                <span>Mainstage:</span>
+                <span class="track-lumera-spec-val">45m Neuroscience</span>
               </div>
-              <div class="home2-blueprint-item">
-                <span>Culture Clinic:</span>
-                <span class="text-gold">40m People Leaders Q&A</span>
+              <div class="track-lumera-spec-item">
+                <span>Clinic:</span>
+                <span class="track-lumera-spec-val">40m Leaders Q&amp;A</span>
               </div>
-              <div class="home2-blueprint-item">
-                <span>Curated Luminary:</span>
-                <span class="fw-bold">Maya Chen</span>
+              <div class="track-lumera-spec-item">
+                <span>Luminary:</span>
+                <span class="track-lumera-spec-val">Maya Chen</span>
               </div>
             </div>
-            <button class="btn btn-outline-corporate btn-sm mt-auto w-100"
-              onclick="openTrackModal('Track 05: Cognitive Longevity')">
-              View Complete Track Syllabus
+            <div class="track-lumera-pills-wrap">
+              <span class="track-lumera-pill">AUGMENTED WORKFORCE</span>
+            </div>
+            <button class="track-lumera-btn" onclick="openTrackModal('Track 05: Cognitive Longevity')">
+              <span>View Complete Track Syllabus</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+              </svg>
             </button>
           </div>
         </div>
 
         <!-- Track 06 -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="home2-track-card">
-            <span class="home2-track-badge">Track 06 • Cyber Defense</span>
-            <h3 class="home2-track-title">Cyber Sovereignty & Information Warfare Defense</h3>
-            <p class="home2-track-desc">
+        <div class="col-12 col-lg-6 fade-up delay-100">
+          <div class="home2-track-lumera-card">
+            <div class="track-lumera-media">
+              <img src="assets/images/topics/topic_cyber_defense.jpg"
+                alt="Cyber Sovereignty &amp; Information Warfare Defense" class="track-lumera-img" loading="lazy">
+            </div>
+            <span class="track-lumera-subtitle">Track 06 &bull; Cyber Defense</span>
+            <h3 class="track-lumera-title">Cyber Sovereignty &amp; Information Warfare Defense</h3>
+            <p class="track-lumera-desc">
               Nation-state cyber campaigns, deepfake corporate manipulation, quantum cryptography defense, and proactive
               board governance.
             </p>
-            <div class="home2-track-blueprint">
-              <div class="home2-blueprint-item">
-                <span>Crisis Address:</span>
-                <span class="text-gold">45m Threat Landscape</span>
+            <div class="track-lumera-specs">
+              <div class="track-lumera-spec-item">
+                <span>Crisis:</span>
+                <span class="track-lumera-spec-val">45m Threat Intel</span>
               </div>
-              <div class="home2-blueprint-item">
-                <span>Board Red-Team Brief:</span>
-                <span class="text-gold">45m Classified Q&A</span>
+              <div class="track-lumera-spec-item">
+                <span>Briefing:</span>
+                <span class="track-lumera-spec-val">45m Red-Team</span>
               </div>
-              <div class="home2-blueprint-item">
-                <span>Curated Luminary:</span>
-                <span class="fw-bold">Amara Okafor</span>
+              <div class="track-lumera-spec-item">
+                <span>Luminary:</span>
+                <span class="track-lumera-spec-val">Amara Okafor</span>
               </div>
             </div>
-            <button class="btn btn-outline-corporate btn-sm mt-auto w-100"
-              onclick="openTrackModal('Track 06: Cyber Sovereignty')">
-              View Complete Track Syllabus
+            <div class="track-lumera-pills-wrap">
+              <span class="track-lumera-pill">CYBER SOVEREIGNTY</span>
+            </div>
+            <button class="track-lumera-btn" onclick="openTrackModal('Track 06: Cyber Sovereignty')">
+              <span>View Complete Track Syllabus</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+              </svg>
             </button>
           </div>
         </div>
@@ -571,7 +651,7 @@
             <div class="home2-titan-media">
               <img src="assets/images/speakers/marcus-vance.jpg" alt="Dr. Marcus Vance">
               <div class="home2-titan-overlay">
-                <span class="badge bg-gold text-dark fw-bold mb-1">MIT Fellow</span>
+                <span class="badge badge-gold mb-1">MIT Fellow</span>
                 <h4 class="h5 fw-bold mb-0 text-white">Dr. Marcus Vance</h4>
                 <small class="text-white-50">Artificial General Intelligence</small>
               </div>
@@ -605,7 +685,7 @@
             <div class="home2-titan-media">
               <img src="assets/images/speakers/maya-chen.jpg" alt="Maya Chen">
               <div class="home2-titan-overlay">
-                <span class="badge bg-gold text-dark fw-bold mb-1">Global Ethicist</span>
+                <span class="badge badge-gold mb-1">Global Ethicist</span>
                 <h4 class="h5 fw-bold mb-0 text-white">Maya Chen</h4>
                 <small class="text-white-50">Human-Centric Tech & Culture</small>
               </div>
@@ -639,7 +719,7 @@
             <div class="home2-titan-media">
               <img src="assets/images/speakers/julian-thorne.jpg" alt="Sir Julian Thorne">
               <div class="home2-titan-overlay">
-                <span class="badge bg-gold text-dark fw-bold mb-1">Diplomatic Envoy</span>
+                <span class="badge badge-gold mb-1">Diplomatic Envoy</span>
                 <h4 class="h5 fw-bold mb-0 text-white">Sir Julian Thorne</h4>
                 <small class="text-white-50">Oxford Geopolitical Chair</small>
               </div>
@@ -673,7 +753,7 @@
             <div class="home2-titan-media">
               <img src="assets/images/speakers/elena-rostova.jpg" alt="Dr. Elena Rostova">
               <div class="home2-titan-overlay">
-                <span class="badge bg-gold text-dark fw-bold mb-1">Expedition Leader</span>
+                <span class="badge badge-gold mb-1">Expedition Leader</span>
                 <h4 class="h5 fw-bold mb-0 text-white">Dr. Elena Rostova</h4>
                 <small class="text-white-50">Extreme Neurobiology</small>
               </div>
@@ -706,13 +786,16 @@
 
   <!-- ==========================================================================
        SECTION 4: SPEAKER MATCH MATRIX™ (Interactive Algorithmic Concierge)
-       Unique Design: An in-page dynamic algorithm tool that matches event criteria
+       Executive Intelligence Tool: Calibrates event criteria & audience DNA
        ========================================================================== -->
   <section class="section-padding bg-secondary-theme" id="speaker-matrix">
     <div class="container-fluid px-3 px-xl-4 px-xxl-5">
       <div class="text-center max-w-700 mx-auto mb-5">
-        <span class="home2-track-badge">Proprietary Technology</span>
-        <h2 class="section-title">Speaker Match Matrix™: Real-Time Algorithmic Concierge</h2>
+        <div class="matrix-eyebrow-badge d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill">
+          <span class="matrix-live-beacon"></span>
+          <span>Proprietary Stagecraft Intelligence</span>
+        </div>
+        <h2 class="section-title">Speaker Match Matrix<span class="text-gold">™</span>: Real-Time Algorithmic Concierge</h2>
         <p class="section-subtitle">
           Calibrate your audience DNA, required stage energy, and event stakes. Our intelligence engine analyzes over 40
           variables to generate an instant, calibrated speaker compatibility match.
@@ -720,183 +803,255 @@
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-xl-10">
+        <div class="col-xl-11 col-xxl-10">
           <div class="home2-matrix-box">
-            <div class="row g-4">
-              <!-- Matrix Controls -->
-              <div class="col-lg-7">
-                <!-- Mobile Only: Live Algorithm Match Header & Quick Preview -->
-                <div class="matrix-mobile-banner d-lg-none mb-3">
-                  <div class="d-flex align-items-center justify-content-between mb-2">
-                    <div class="d-flex align-items-center gap-2">
-                      <span class="badge bg-gold text-dark fw-bold px-2 py-1">AI Concierge</span>
-                      <span class="matrix-live-match-pill">
-                        <span class="pulse-dot-green"></span>
-                        <span id="matrixMobileScoreText">99.4% Match</span>
-                      </span>
+            <!-- Top Telemetry Status Bar -->
+            <div class="matrix-console-topbar d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 pb-3">
+              <div class="d-flex align-items-center gap-2">
+                <span class="matrix-radar-pulse"></span>
+                <span class="matrix-radar-text fw-bold text-uppercase">Interactive Stage Calibration Console</span>
+              </div>
+              <div class="d-none d-md-flex align-items-center gap-3 small text-muted">
+                <span class="d-flex align-items-center gap-1"><span class="matrix-tiny-dot bg-success"></span> 40+ Variables Active</span>
+                <span class="text-gold-subtle">•</span>
+                <span class="d-flex align-items-center gap-1"><span class="matrix-tiny-dot bg-warning"></span> Real-Time Weighting</span>
+                <span class="text-gold-subtle">•</span>
+                <span class="text-gold fw-semibold">Instant Output</span>
+              </div>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+              <!-- Matrix Controls (Left Column) -->
+              <div class="col-lg-7 d-flex flex-column justify-content-between">
+                <div>
+                  <!-- Step 1 -->
+                  <div class="mb-4">
+                    <div class="matrix-step-badge-wrap">
+                      <span class="matrix-step-number">01</span>
+                      <span class="matrix-step-label">Select Audience Archetype</span>
+                      <span class="matrix-step-line"></span>
                     </div>
-                    <a href="#matrixResultAnchor" class="matrix-jump-btn" onclick="scrollToMatrixResult(event)">
-                      View Match &darr;
-                    </a>
-                  </div>
-                  <div class="matrix-mobile-speaker-strip" onclick="scrollToMatrixResult(event)">
-                    <img src="assets/images/speakers/marcus-vance.jpg" id="matrixMobileSpeakerImg"
-                      class="rounded-circle border border-gold" width="40" height="40" alt="Speaker Match">
-                    <div class="matrix-mobile-speaker-details">
-                      <div class="d-flex align-items-center gap-1">
-                        <strong id="matrixMobileSpeakerName" class="text-truncate">Dr. Marcus Vance</strong>
-                        <span class="badge bg-secondary-subtle text-secondary small py-0 px-1">Matched</span>
+                    <div class="row g-2">
+                      <div class="col-6 col-sm-6">
+                        <button type="button" class="matrix-option-btn active" data-step="1" data-val="csuite"
+                          onclick="setMatrixOption(1, 'csuite', this)">
+                          <span class="matrix-btn-icon-wrap">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>
+                          </span>
+                          <span class="matrix-btn-text-block">
+                            <span class="matrix-btn-main">C-Suite &amp; Board</span>
+                            <span class="matrix-btn-sub">Executive Committees</span>
+                          </span>
+                        </button>
                       </div>
-                      <span id="matrixMobileSpeakerTopic" class="text-gold small text-truncate d-block">The Autonomous
-                        Enterprise &amp; Frontier AI</span>
+                      <div class="col-6 col-sm-6">
+                        <button type="button" class="matrix-option-btn" data-step="1" data-val="allhands"
+                          onclick="setMatrixOption(1, 'allhands', this)">
+                          <span class="matrix-btn-icon-wrap">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>
+                          </span>
+                          <span class="matrix-btn-text-block">
+                            <span class="matrix-btn-main">Global Summit</span>
+                            <span class="matrix-btn-sub">2,000+ Keynote Stage</span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="col-6 col-sm-6">
+                        <button type="button" class="matrix-option-btn" data-step="1" data-val="tech"
+                          onclick="setMatrixOption(1, 'tech', this)">
+                          <span class="matrix-btn-icon-wrap">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6z" />
+                            </svg>
+                          </span>
+                          <span class="matrix-btn-text-block">
+                            <span class="matrix-btn-main">Tech Innovators</span>
+                            <span class="matrix-btn-sub">R&amp;D &amp; Engineering</span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="col-6 col-sm-6">
+                        <button type="button" class="matrix-option-btn" data-step="1" data-val="sales"
+                          onclick="setMatrixOption(1, 'sales', this)">
+                          <span class="matrix-btn-icon-wrap">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z" />
+                            </svg>
+                          </span>
+                          <span class="matrix-btn-text-block">
+                            <span class="matrix-btn-main">Sales Kickoff</span>
+                            <span class="matrix-btn-sub">Revenue Summits</span>
+                          </span>
+                        </button>
+                      </div>
                     </div>
-                    <span class="matrix-mobile-arrow">&rarr;</span>
                   </div>
-                  <div class="matrix-mobile-helper-text">
-                    <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16" class="me-1 flex-shrink-0">
-                      <path
-                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
-                    </svg>
-                    <span>Tap any option below to instantly re-calculate your keynote match:</span>
-                  </div>
-                </div>
 
-                <!-- Step 1 -->
-                <div class="mb-4">
-                  <label class="form-label fw-bold text-muted small text-uppercase mb-2">
-                    Step 1: Select Audience Archetype
-                  </label>
-                  <div class="row g-2">
-                    <div class="col-6 col-sm-6">
-                      <button type="button" class="matrix-option-btn active" data-step="1" data-val="csuite"
-                        onclick="setMatrixOption(1, 'csuite', this)">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        </svg>
-                        <span>C-Suite & Board Members</span>
-                      </button>
+                  <!-- Step 2 -->
+                  <div class="mb-4">
+                    <div class="matrix-step-badge-wrap">
+                      <span class="matrix-step-number">02</span>
+                      <span class="matrix-step-label">Desired Stage Delivery Energy</span>
+                      <span class="matrix-step-line"></span>
                     </div>
-                    <div class="col-6 col-sm-6">
-                      <button type="button" class="matrix-option-btn" data-step="1" data-val="allhands"
-                        onclick="setMatrixOption(1, 'allhands', this)">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                          <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        </svg>
-                        <span>Global Summit (2,000+)</span>
-                      </button>
-                    </div>
-                    <div class="col-6 col-sm-6">
-                      <button type="button" class="matrix-option-btn" data-step="1" data-val="tech"
-                        onclick="setMatrixOption(1, 'tech', this)">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                          <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6z" />
-                        </svg>
-                        <span>Engineering & Innovators</span>
-                      </button>
-                    </div>
-                    <div class="col-6 col-sm-6">
-                      <button type="button" class="matrix-option-btn" data-step="1" data-val="sales"
-                        onclick="setMatrixOption(1, 'sales', this)">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                          <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z" />
-                        </svg>
-                        <span>Global Sales Kickoff Summit </span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="mb-4">
-                  <label class="form-label fw-bold text-muted small text-uppercase mb-2">
-                    Step 2: Desired Stage Delivery Energy
-                  </label>
-                  <div class="row g-2">
-                    <div class="col-6 col-sm-6">
-                      <button type="button" class="matrix-option-btn active justify-content-center text-center"
-                        data-step="2" data-val="provocative" onclick="setMatrixOption(2, 'provocative', this)">
-                        <span>Disruptive &amp; Provocative</span>
-                      </button>
-                    </div>
-                    <div class="col-6 col-sm-6">
-                      <button type="button" class="matrix-option-btn justify-content-center text-center" data-step="2"
-                        data-val="strategic" onclick="setMatrixOption(2, 'strategic', this)">
-                        <span>Strategic &amp; Empirical</span>
-                      </button>
-                    </div>
-                    <div class="col-12">
-                      <button type="button" class="matrix-option-btn justify-content-center text-center" data-step="2"
-                        data-val="emotional" onclick="setMatrixOption(2, 'emotional', this)">
-                        <span>Galvanizing &amp; High Energy</span>
-                      </button>
+                    <div class="row g-2">
+                      <div class="col-6 col-sm-6">
+                        <button type="button" class="matrix-option-btn active" data-step="2" data-val="provocative"
+                          onclick="setMatrixOption(2, 'provocative', this)">
+                          <span class="matrix-btn-icon-wrap">
+                            <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+                            </svg>
+                          </span>
+                          <span class="matrix-btn-text-block">
+                            <span class="matrix-btn-main">Disruptive</span>
+                            <span class="matrix-btn-sub">Provocative Paradigm</span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="col-6 col-sm-6">
+                        <button type="button" class="matrix-option-btn" data-step="2" data-val="strategic"
+                          onclick="setMatrixOption(2, 'strategic', this)">
+                          <span class="matrix-btn-icon-wrap">
+                            <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5h-2v12h2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM7 6a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H7zM2 10a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H2z"/>
+                            </svg>
+                          </span>
+                          <span class="matrix-btn-text-block">
+                            <span class="matrix-btn-main">Strategic</span>
+                            <span class="matrix-btn-sub">Empirical &amp; Measured</span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="col-12">
+                        <button type="button" class="matrix-option-btn" data-step="2" data-val="emotional"
+                          onclick="setMatrixOption(2, 'emotional', this)">
+                          <span class="matrix-btn-icon-wrap">
+                            <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.75 10 7 11 8 11c.5 0 1.25-.5 1.25-1.5 1 1 1.75 2.25 1.75 3.25C11 14 9.657 15 8 15Z"/>
+                            </svg>
+                          </span>
+                          <span class="matrix-btn-text-block">
+                            <span class="matrix-btn-main">Galvanizing &amp; High Energy</span>
+                            <span class="matrix-btn-sub">Standing Ovation Resonance</span>
+                          </span>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <!-- Step 3 -->
-                <div class="mb-4">
-                  <label class="form-label fw-bold text-muted small text-uppercase mb-2">
-                    Step 3: Honorarium Allocation Tier
-                  </label>
-                  <div class="row g-2">
-                    <div class="col-4 col-sm-4">
-                      <button type="button" class="matrix-option-btn justify-content-center text-center" data-step="3"
-                        data-val="tier1" onclick="setMatrixOption(3, 'tier1', this)">
-                        <span>$25k – $45k</span>
-                      </button>
+                  <!-- Step 3 -->
+                  <div class="mb-2">
+                    <div class="matrix-step-badge-wrap">
+                      <span class="matrix-step-number">03</span>
+                      <span class="matrix-step-label">Honorarium Allocation Tier</span>
+                      <span class="matrix-step-line"></span>
                     </div>
-                    <div class="col-4 col-sm-4">
-                      <button type="button" class="matrix-option-btn active justify-content-center text-center"
-                        data-step="3" data-val="tier2" onclick="setMatrixOption(3, 'tier2', this)">
-                        <span>$50k – $85k</span>
-                      </button>
-                    </div>
-                    <div class="col-4 col-sm-4">
-                      <button type="button" class="matrix-option-btn justify-content-center text-center" data-step="3"
-                        data-val="tier3" onclick="setMatrixOption(3, 'tier3', this)">
-                        <span>$90k – $150k+</span>
-                      </button>
+                    <div class="row g-2">
+                      <div class="col-4 col-sm-4">
+                        <button type="button" class="matrix-option-btn" data-step="3" data-val="tier1"
+                          onclick="setMatrixOption(3, 'tier1', this)">
+                          <span class="matrix-btn-text-block text-center w-100">
+                            <span class="matrix-btn-main">$25k – $45k</span>
+                            <span class="matrix-btn-sub">Tier 1 • Specialty</span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="col-4 col-sm-4">
+                        <button type="button" class="matrix-option-btn active" data-step="3" data-val="tier2"
+                          onclick="setMatrixOption(3, 'tier2', this)">
+                          <span class="matrix-btn-text-block text-center w-100">
+                            <span class="matrix-btn-main">$50k – $85k</span>
+                            <span class="matrix-btn-sub">Tier 2 • Flagship</span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="col-4 col-sm-4">
+                        <button type="button" class="matrix-option-btn" data-step="3" data-val="tier3"
+                          onclick="setMatrixOption(3, 'tier3', this)">
+                          <span class="matrix-btn-text-block text-center w-100">
+                            <span class="matrix-btn-main">$90k – $150k+</span>
+                            <span class="matrix-btn-sub">Tier 3 • Global Titan</span>
+                          </span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Live Algorithm Result Card -->
+              <!-- Live Algorithm Result Card (Right Column) -->
               <div class="col-lg-5" id="matrixResultAnchor">
-                <div class="matrix-result-card h-100 d-flex flex-column justify-content-between">
+                <div class="matrix-result-card">
                   <div>
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                      <span class="badge bg-gold text-dark fw-bold px-2 py-1">Algorithm Output</span>
-                      <span class="text-success fw-bold small d-flex align-items-center gap-1">
-                        <span class="pulse-dot-gold" style="background-color: var(--ssb-success);"></span>
-                        <span id="matrixMatchScore">99.4% Compatibility</span>
+                    <!-- Card Topbar -->
+                    <div class="matrix-result-topbar">
+                      <span class="matrix-status-badge">
+                        <span class="pulse-dot-gold"></span>
+                        <span>Calibrated Match</span>
                       </span>
+                      <span class="matrix-score-pill" id="matrixMatchScore">99.4% Compatibility</span>
                     </div>
 
-                    <div class="text-center py-2" id="matrixSpeakerPreview">
-                      <img src="assets/images/speakers/marcus-vance.jpg" id="matrixSpeakerImg" alt="Matched Speaker"
-                        class="rounded-circle shadow-sm border border-2 border-gold mb-3"
-                        style="width: 90px; height: 90px; object-fit: cover;">
+                    <!-- Speaker Presentation -->
+                    <div class="text-center py-1" id="matrixSpeakerPreview">
+                      <div class="matrix-avatar-wrap">
+                        <img src="assets/images/speakers/marcus-vance.jpg" id="matrixSpeakerImg" alt="Matched Speaker"
+                          class="matrix-speaker-avatar">
+                        <span class="matrix-verified-badge" title="Verified Bureau Fellow">&#10003;</span>
+                      </div>
                       <h4 class="h5 fw-bold mb-1" id="matrixSpeakerName">Dr. Marcus Vance</h4>
-                      <p class="small text-gold fw-semibold mb-2" id="matrixSpeakerTopic">The Autonomous Enterprise &
-                        Frontier AI</p>
-                      <p class="small text-muted mb-3" id="matrixSpeakerReason">
-                        Best match for C-Suite audiences requiring disruptive yet peer-reviewed technological
-                        forecasting.
-                      </p>
+                      <div class="mb-2">
+                        <span class="matrix-topic-pill" id="matrixSpeakerTopic">The Autonomous Enterprise &amp; Frontier AI</span>
+                      </div>
+                      
+                      <!-- Executive Rationale -->
+                      <div class="matrix-reason-card">
+                        <p id="matrixSpeakerReason">
+                          Best match for C-Suite audiences requiring disruptive yet peer-reviewed technological forecasting.
+                        </p>
+                      </div>
+
+                      <!-- Keynote Metrics Strip -->
+                      <div class="matrix-metrics-strip">
+                        <div class="matrix-metric-item">
+                          <div class="matrix-metric-val">9.9<small>/10</small></div>
+                          <div class="matrix-metric-lbl">Stage Impact</div>
+                        </div>
+                        <div class="matrix-metric-divider"></div>
+                        <div class="matrix-metric-item">
+                          <div class="matrix-metric-val">99.4%</div>
+                          <div class="matrix-metric-lbl">Score Fit</div>
+                        </div>
+                        <div class="matrix-metric-divider"></div>
+                        <div class="matrix-metric-item">
+                          <div class="matrix-metric-val text-gold">Tier-1</div>
+                          <div class="matrix-metric-lbl">Clearance</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
-                  <div class="pt-3 border-top mt-3" style="border-color: var(--ssb-border) !important;">
-                    <div class="d-flex flex-wrap gap-2">
-                      <button class="btn btn-gold btn-sm flex-grow-1 py-2 px-3 fw-semibold text-center"
+                  <!-- Action Buttons -->
+                  <div class="pt-2">
+                    <div class="d-flex flex-column flex-sm-row gap-2">
+                      <button class="btn btn-gold btn-sm flex-grow-1 py-2 px-3 fw-bold text-center"
                         onclick="holdMatchedSpeaker()">
-                        Hold This Match for 48 Hours
+                        Hold Match for 48 Hours
                       </button>
-                      <button class="btn btn-outline-corporate btn-sm flex-grow-1 py-2 px-3 fw-semibold text-center"
+                      <button class="btn btn-outline-corporate btn-sm flex-grow-1 py-2 px-3 fw-bold text-center"
                         onclick="saveMatchedToShortlist()">
                         Add to Wishlist
                       </button>
+                    </div>
+                    <div class="text-center mt-2">
+                      <a href="pages/contact.html" class="matrix-advisor-link">
+                        Need tailored advisory? Talk to a Senior Partner &rarr;
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -925,10 +1080,9 @@
 
       <div class="row g-4">
         <!-- Format 1 -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-6">
           <div class="home2-format-card">
-            <span class="badge bg-primary text-white rounded-pill px-3 py-1 mb-3 align-self-start small">Format
-              01</span>
+            <span class="badge badge-gold mb-3 align-self-start">Format 01</span>
             <h4 class="h5 fw-bold mb-2" style="font-family: var(--font-heading);">The Catalyst Keynote</h4>
             <p class="small text-muted mb-4">
               High-octane opening address designed to shatter outdated assumptions and establish the overarching vision
@@ -956,10 +1110,9 @@
         </div>
 
         <!-- Format 2 -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-6">
           <div class="home2-format-card">
-            <span class="badge bg-primary text-white rounded-pill px-3 py-1 mb-3 align-self-start small">Format
-              02</span>
+            <span class="badge badge-gold mb-3 align-self-start">Format 02</span>
             <h4 class="h5 fw-bold mb-2" style="font-family: var(--font-heading);">Chatham House VIP Salon</h4>
             <p class="small text-muted mb-4">
               Strictly off-the-record, closed-door strategy session for your top 25 leaders, CEO, and board. Zero
@@ -987,10 +1140,9 @@
         </div>
 
         <!-- Format 3 -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-6">
           <div class="home2-format-card">
-            <span class="badge bg-primary text-white rounded-pill px-3 py-1 mb-3 align-self-start small">Format
-              03</span>
+            <span class="badge badge-gold mb-3 align-self-start">Format 03</span>
             <h4 class="h5 fw-bold mb-2" style="font-family: var(--font-heading);">The Provocateur Duel</h4>
             <p class="small text-muted mb-4">
               Two intellectual heavyweights with diametrically opposing viewpoints debating the future of AI, climate,
@@ -1018,10 +1170,9 @@
         </div>
 
         <!-- Format 4 -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-6">
           <div class="home2-format-card">
-            <span class="badge bg-primary text-white rounded-pill px-3 py-1 mb-3 align-self-start small">Format
-              04</span>
+            <span class="badge badge-gold mb-3 align-self-start">Format 04</span>
             <h4 class="h5 fw-bold mb-2" style="font-family: var(--font-heading);">Global Tour Series</h4>
             <p class="small text-muted mb-4">
               A synchronized keynote roadshow deployed across New York, London, Dubai, and Singapore with unified
@@ -1068,7 +1219,7 @@
 
       <!-- 4 SLA Pillars -->
       <div class="row g-4 mb-5">
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-6">
           <div class="home2-sla-card">
             <div class="home2-sla-icon">
               <svg width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
@@ -1084,7 +1235,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-6">
           <div class="home2-sla-card">
             <div class="home2-sla-icon">
               <svg width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
@@ -1100,7 +1251,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-6">
           <div class="home2-sla-card">
             <div class="home2-sla-icon">
               <svg width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
@@ -1118,7 +1269,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-6">
           <div class="home2-sla-card">
             <div class="home2-sla-icon">
               <svg width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
@@ -1150,44 +1301,52 @@
               <tr>
                 <td><strong>Flight Delay / Medical Cancellation</strong></td>
                 <td class="text-muted">Total event cancellation risk, no replacement</td>
-                <td class="fw-bold text-success">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1">
-                    <path
-                      d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-                  </svg>
+                <td class="fw-bold">
+                  <span class="text-gold me-2">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path
+                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                    </svg>
+                  </span>
                   2-Hour Certified Understudy Standby
                 </td>
               </tr>
               <tr>
                 <td><strong>Contractual Escrow Protection</strong></td>
                 <td class="text-muted">Direct upfront wire to speaker agent</td>
-                <td class="fw-bold text-success">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1">
-                    <path
-                      d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-                  </svg>
+                <td class="fw-bold">
+                  <span class="text-gold me-2">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path
+                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                    </svg>
+                  </span>
                   Escrow hold until stage walk confirmation
                 </td>
               </tr>
               <tr>
                 <td><strong>Custom Slide & Content Tailoring</strong></td>
                 <td class="text-muted">Generic stock slide deck often delivered</td>
-                <td class="fw-bold text-success">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1">
-                    <path
-                      d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-                  </svg>
+                <td class="fw-bold">
+                  <span class="text-gold me-2">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path
+                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                    </svg>
+                  </span>
                   2 Mandatory pre-briefings with Client CEO
                 </td>
               </tr>
               <tr>
                 <td><strong>Green Room & AV Tech Coordination</strong></td>
                 <td class="text-muted">Client event planner handles all hassles</td>
-                <td class="fw-bold text-success">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1">
-                    <path
-                      d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-                  </svg>
+                <td class="fw-bold">
+                  <span class="text-gold me-2">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path
+                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                    </svg>
+                  </span>
                   Dedicated bureau logistics director on-site
                 </td>
               </tr>
@@ -1199,387 +1358,129 @@
   </section>
 
   <!-- ==========================================================================
-       SECTION 7: SUMMIT PLANNING STUDIO & VIP CONSULTATION (Direct Booking Hub)
-       Unique Design: Senior concierge contact cards + Fast-track brief builder
-       ========================================================================== -->
-  <section class="section-padding bg-soft" id="planning-studio">
-    <div class="container-fluid px-3 px-xl-4 px-xxl-5">
-      <div class="row g-5 align-items-center">
-        <!-- Left Column: Concierge Team & Direct Access -->
-        <div class="col-lg-5">
-          <span class="home2-track-badge">Private Client Advisory</span>
-          <h2 class="section-title text-start mb-3">Summit Planning Studio & VIP Consultation</h2>
-          <p class="section-subtitle text-start mb-4">
-            Connect directly with our senior booking partners. We provide confidential speaker availability checks,
-            rider negotiations, and custom briefing packages within 24 hours.
-          </p>
-
-          <div class="d-flex flex-column gap-3 mb-4">
-            <!-- Concierge Partner 1 -->
-            <div class="concierge-card-mini">
-              <img src="assets/images/clients/markus-hoffmann.jpg" alt="Arthur Vance">
-              <div>
-                <h5 class="fw-bold mb-0" style="font-family: var(--font-heading);">Arthur Vance</h5>
-                <small class="text-gold fw-semibold">Managing Director • Americas & EMEA</small>
-                <div class="small text-muted mt-1">Direct: +1 (212) 555-0198 • arthur@summitspeak.com</div>
-              </div>
-            </div>
-
-            <!-- Concierge Partner 2 -->
-            <div class="concierge-card-mini">
-              <img src="assets/images/clients/claire-lawson.jpg" alt="Claire Beauchamp">
-              <div>
-                <h5 class="fw-bold mb-0" style="font-family: var(--font-heading);">Claire Beauchamp</h5>
-                <small class="text-gold fw-semibold">Senior Vice President • APAC & Global Summits</small>
-                <div class="small text-muted mt-1">Direct: +44 20 7946 0921 • claire@summitspeak.com</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Benchmark Report Download Card -->
-          <div class="p-3 bg-secondary-theme rounded-3 border">
-            <div class="d-flex align-items-center gap-3">
-              <div class="p-2 bg-gold bg-opacity-10 text-gold rounded">
-                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
-                </svg>
-              </div>
-              <div>
-                <div class="fw-bold small text-main">2026-2027 Global Keynote Speaker Compensation Report</div>
-                <div class="small text-muted">Complete fee benchmarks across 500+ global speakers.</div>
-              </div>
-              <button class="btn btn-outline-corporate btn-sm ms-auto" onclick="downloadBenchmarkReport()">
-                Download
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Fast-Track Briefing Console -->
-        <div class="col-lg-7">
-          <div class="home2-studio-box">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <h3 class="h4 fw-bold mb-0" style="font-family: var(--font-heading);">
-                Fast-Track Keynote Briefing Form
-              </h3>
-              <span class="badge bg-gold text-dark fw-bold px-2 py-1">24h Turnaround</span>
-            </div>
-
-            <form id="home2BriefForm" onsubmit="event.preventDefault(); submitHome2Brief();">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label class="form-label small fw-bold">Organization / Enterprise</label>
-                  <input type="text" class="form-control" id="briefOrg"
-                    placeholder="e.g. Goldman Sachs, Microsoft, World Bank" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label small fw-bold">Contact Name & Title</label>
-                  <input type="text" class="form-control" id="briefName"
-                    placeholder="e.g. Sarah Jenkins, VP Global Events" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label small fw-bold">Official Business Email</label>
-                  <input type="email" class="form-control" id="briefEmail" placeholder="sarah@company.com" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label small fw-bold">Direct Phone Number</label>
-                  <input type="tel" class="form-control" id="briefPhone" placeholder="+1 (555) 000-0000" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label small fw-bold">Target Event Date & City</label>
-                  <input type="text" class="form-control" id="briefDateCity"
-                    placeholder="e.g. October 18, 2026 — London" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label small fw-bold">Audience Scale & Type</label>
-                  <select class="form-select" id="briefAudienceScale">
-                    <option value="50-150">50 - 150 (Board & C-Suite Retreat)</option>
-                    <option value="200-800">200 - 800 (Leadership Symposium)</option>
-                    <option value="1000+">1,000 - 5,000+ (Annual World Convention)</option>
-                    <option value="virtual">Global Virtual / Hybrid Simulcast</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label class="form-label small fw-bold">Desired Keynote Theme / Strategic Objective</label>
-                  <textarea class="form-control" id="briefObjective" rows="3"
-                    placeholder="Describe the strategic mood, desired audience transformation, or specific preferred speaker names..."
-                    required></textarea>
-                </div>
-                <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="briefNdaCheck" checked>
-                    <label class="form-check-label small text-muted" for="briefNdaCheck">
-                      Treat this inquiry under standard mutual non-disclosure and strict confidentiality.
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12 mt-4">
-                  <button type="submit" class="btn btn-gold btn-lg w-100 py-3 shadow-sm">
-                    Submit Keynote Brief & Request Custom Shortlist
-                  </button>
-                  <div class="text-center small text-muted mt-2">
-                    Guaranteed response within 24 hours from a dedicated Managing Director.
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       GLOBAL FOOTER
+       GLOBAL FOOTER (INSPIRATION: SEOULFIRE MINIMALIST SPLIT FOOTER)
        ========================================================================== -->
   <footer class="ssb-footer">
     <div class="container">
-      <div class="row g-4">
-        <!-- Col 1: Brand & Identity -->
-        <div class="col-lg-4 col-md-6">
-          <a class="ssb-brand mb-3 d-inline-flex" href="index.html">
-            <div class="ssb-brand-logo">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+      <div class="row g-4 g-lg-5">
+        <!-- Col 1: Brand, Tagline, Socials & Newsletter -->
+        <div class="col-lg-4 col-md-6 fade-up">
+          <a class="ssb-footer-brand" href="index.html">
+            <div class="ssb-footer-logo">
+              <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
                 <path
                   d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
               </svg>
             </div>
-            <div class="ssb-brand-text">
-              <span class="ssb-brand-name text-white">SummitSpeak</span>
-              <span class="ssb-brand-tagline">Bureau</span>
+            <div class="ssb-footer-brand-text">
+              <span class="ssb-footer-brand-name">SummitSpeak</span>
+              <span class="ssb-footer-brand-sub">BUREAU</span>
             </div>
           </a>
-          <p class="small text-muted mb-4">
-            A premier corporate speaker bureau connecting organizations with exceptional keynote speakers, industry
-            pioneers, authors, and executive thought leaders.
+
+          <div class="ssb-footer-lead">Gravitas. Resonance. Impact.</div>
+          <p class="ssb-footer-desc">
+            A premier corporate speaker bureau connecting global organizations with exceptional keynote pioneers.
           </p>
-          <div class="footer-contact-item">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-            </svg>
-            <span>Corporate Office: 100 Montgomery Street, Suite 2400, San Francisco, CA</span>
+
+          <!-- Social Buttons -->
+          <div class="ssb-footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="Instagram">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a5.109 5.109 0 1 0 0 10.218 5.109 5.109 0 0 0 0-10.218zm0 1.442a3.667 3.667 0 1 1 0 7.334 3.667 3.667 0 0 1 0-7.334z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="LinkedIn">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="YouTube">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v5.582l4.8-2.79-4.8-2.792z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="X / Twitter">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.147H2.865l8.875 11.631Z" />
+              </svg>
+            </a>
           </div>
-          <div class="footer-contact-item">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-            </svg>
-            <span>Direct Inquiries: +1 (800) 584-3920 &bull; concierge@summitspeak.com</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-            </svg>
-            <span>Hours: Mon – Fri: 08:30 – 18:00 EST / UTC-05:00</span>
-          </div>
+
+          <!-- Email Newsletter Input -->
+          <form class="ssb-footer-newsletter-form"
+            onsubmit="event.preventDefault(); window.SSB_SHOW_TOAST ? window.SSB_SHOW_TOAST('Thank you for subscribing to Keynote Intelligence.', 'success') : alert('Subscribed!'); this.reset();">
+            <input type="email" class="ssb-footer-newsletter-input" placeholder="Email for keynote intelligence"
+              required aria-label="Email for keynote intelligence">
+            <button type="submit" class="ssb-footer-newsletter-btn"
+              aria-label="Subscribe to intelligence">&rarr;</button>
+          </form>
         </div>
 
-        <!-- Col 2: Navigation Links -->
-        <div class="col-lg-2 col-md-6 col-12 fade-up delay-100">
-          <div class="footer-heading">Bureau</div>
-          <ul class="footer-list">
-            <li>
-              <a href="index.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
-                  <path d="m8 3.293 6 6V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V9.293l6-6Z" />
-                </svg>
-                <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="home-2.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
-                  <path d="m8 3.293 6 6V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V9.293l6-6Z" />
-                </svg>
-                <span>Home 2</span>
-              </a>
-            </li>
-            <li>
-              <a href="pages/about.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                  <path
-                    d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                </svg>
-                <span>About Us</span>
-              </a>
-            </li>
-            <li>
-              <a href="pages/speaker-roster.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
-                  <path
-                    d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
-                </svg>
-                <span>Speaker Roster</span>
-              </a>
-            </li>
-            <li>
-              <a href="pages/topics-industries.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
-                </svg>
-                <span>Topics &amp; Industries</span>
-              </a>
-            </li>
-            <li>
-              <a href="pages/services.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
-                  <path
-                    d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
-                </svg>
-                <span>Services</span>
-              </a>
-            </li>
-            <li>
-              <a href="pages/how-it-works.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v1.5a.5.5 0 0 1-1 0V8H2v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 1.5 7H7V6A1.5 1.5 0 0 1 5.5 4.5v-1z" />
-                </svg>
-                <span>How It Works</span>
-              </a>
-            </li>
+        <!-- Col 2: EXPLORE -->
+        <div class="col-lg-2 col-md-6 col-6 fade-up delay-100">
+          <div class="ssb-footer-heading">EXPLORE</div>
+          <ul class="ssb-footer-links">
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/speaker-roster.html">Speaker Roster</a></li>
+            <li><a href="pages/topics-industries.html">Topics &amp; Industries</a></li>
+            <li><a href="pages/services.html">Bureau Services</a></li>
+            <li><a href="pages/how-it-works.html">How It Works</a></li>
+            <li><a href="pages/insights.html">Insights &amp; Articles</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Resources & Insights -->
-        <div class="col-lg-3 col-md-6 col-12 fade-up delay-200">
-          <div class="footer-heading">Editorial &amp; Portal</div>
-          <ul class="footer-list">
-            <li>
-              <a href="pages/insights.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-                  <path d="M3 4h10v1H3V4zm0 3h10v1H3V7zm0 3h7v1H3v-1z" />
-                </svg>
-                <span>Insights &amp; Articles</span>
-              </a>
-            </li>
-            <li>
-              <a href="pages/book-a-speaker.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
-                  <path
-                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                </svg>
-                <span>Book a Speaker Form</span>
-              </a>
-            </li>
-            <li>
-              <a href="pages/contact.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2 0-.3-.15-.25-.33l.633-2.531A8.995 8.995 0 0 1 0 8c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8a8.97 8.97 0 0 1-4.32-.997l-1.495.896z" />
-                </svg>
-                <span>Contact Booking Advisors</span>
-              </a>
-            </li>
-            <li>
-              <a href="auth/login.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z" />
-                </svg>
-                <span>Client Portal Login</span>
-              </a>
-            </li>
-            <li>
-              <a href="dashboard/index.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5-.5a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5h-1.586a.5.5 0 0 1 0-1H11.5zm-1.046-3.354a.5.5 0 0 1 0 .708l-.914.914a.5.5 0 1 1-.708-.707l.915-.915a.5.5 0 0 1 .707 0zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1z" />
-                </svg>
-                <span>Client Dashboard (SaaS)</span>
-              </a>
-            </li>
-            <li>
-              <a href="auth/signup.html">
-                <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-                  <path
-                    d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C8.844 9.04 8.434 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z" />
-                </svg>
-                <span>Create Business Account</span>
-              </a>
-            </li>
+        <!-- Col 3: YOUR EVENT -->
+        <div class="col-lg-3 col-md-6 col-6 fade-up delay-150">
+          <div class="ssb-footer-heading">YOUR EVENT</div>
+          <ul class="ssb-footer-links">
+            <li><a href="pages/book-a-speaker.html">Book a Speaker</a></li>
+            <li><a href="dashboard/index.html">Client Portal</a></li>
+            <li><a href="home-2.html">Executive Matrix</a></li>
+            <li><a href="pages/contact.html">Request Availability</a></li>
+            <li><a href="auth/login.html">Sign In</a></li>
+            <li><a href="auth/signup.html">Create Client Account</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: Legal & Standards -->
-        <div class="col-lg-3 col-md-6 fade-up delay-300">
-          <div class="footer-heading">Booking Security</div>
-          <p class="small text-muted mb-3">
-            All speaker contracts, deposit holding, and travel arrangements adhere to international corporate
-            entertainment standards and audited escrow practices.
-          </p>
-          <div class="d-flex flex-column gap-2 small footer-legal-links">
-            <a href="pages/about.html#standards">
-              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
-                <path
-                  d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.599 4.491.71 7.776 2.363 9.941a11.777 11.777 0 0 0 2.52 2.46c.302.216.685.45 1.07.634.315.15.63.267.894.312a1.458 1.458 0 0 0 .01 0c.264-.045.58-.162.894-.312.385-.184.768-.418 1.07-.634a11.777 11.777 0 0 0 2.52-2.46c1.653-2.165 2.962-5.45 2.363-9.941a1.54 1.54 0 0 0-1.044-1.262c-.658-.215-1.777-.57-2.887-.87C9.843.265 8.69 0 8 0z" />
-              </svg>
-              <span>Ethical Booking Standards</span>
-            </a>
-            <a href="pages/contact.html#privacy">
-              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M8 1a2 2 0 0 0-2 2v2H5a1 1 0 0 0-1 1v7a1 1 0 0 1 1 1h6a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-1V3a2 2 0 0 0-2-2zm1 4H7V3a1 1 0 0 1 2 0v2z" />
-              </svg>
-              <span>Data Privacy &amp; NDA Support</span>
-            </a>
-            <a href="pages/how-it-works.html#terms">
-              <svg class="footer-menu-icon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-                <path d="M4.5 7h7v1h-7V7zm0 2h7v1h-7V9zm0 2h5v1h-5v-1z" />
-              </svg>
-              <span>Contract Terms &amp; Cancellation</span>
-            </a>
-          </div>
+        <!-- Col 4: ADVISORY & STANDARDS -->
+        <div class="col-lg-3 col-md-6 fade-up delay-200">
+          <div class="ssb-footer-heading">STANDARDS &amp; ADVISORY</div>
+          <ul class="ssb-footer-links">
+            <li><a href="pages/about.html#standards">Ethical Booking Standards</a></li>
+            <li><a href="pages/how-it-works.html#escrow">Audited Escrow Protocol</a></li>
+            <li><a href="pages/how-it-works.html#terms">Contract &amp; Rider Terms</a></li>
+            <li><a href="index.html#faq-section">Frequently Asked Questions</a></li>
+            <li><a href="pages/contact.html">Contact Senior Advisory</a></li>
+            <li><a href="pages/about.html#privacy">Data Privacy &amp; NDA</a></li>
+          </ul>
         </div>
       </div>
 
-      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3 fade-up delay-150">
-        <div>
-          &copy; 2026 SummitSpeak Bureau. All rights reserved. Exceptional Voices. Extraordinary Events.
-        </div>
-        <div class="d-flex gap-4 footer-legal-links">
-          <a href="pages/about.html#privacy">
-            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.599 4.491-.71 7.776-2.363 9.941a11.777 11.777 0 0 1-2.52 2.46c-.302.216-.685.45-1.07.634-.315.15-.63.267-.894.312a1.458 1.458 0 0 1-.01 0c-.264-.045-.58-.162-.894-.312-.385-.184-.768-.418-1.07-.634a11.777 11.777 0 0 1-2.52-2.46C1.653 10.455.344 7.17.943 2.692A1.54 1.54 0 0 1 1.987 1.43c.658-.215 1.777-.57 2.887-.87z" />
-            </svg>
-            <span>Privacy Policy</span>
-          </a>
-          <a href="pages/about.html#terms">
-            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-            </svg>
-            <span>Terms of Service</span>
-          </a>
-          <a href="pages/contact.html#compliance">
-            <svg class="footer-menu-icon" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.757.757 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z" />
-            </svg>
-            <span>Compliance</span>
-          </a>
+      <!-- Bottom Bar -->
+      <div class="ssb-footer-bottom fade-up delay-250">
+        <div class="row align-items-center g-3">
+          <div class="col-md-7 text-center text-md-start">
+            <span>&copy; 2026 SummitSpeak Bureau &mdash; Gravitas. Resonance. Impact.</span>
+          </div>
+          <div class="col-md-5 text-center text-md-end">
+            <div class="ssb-footer-legal-links">
+              <a href="pages/about.html#privacy">Privacy Policy</a>
+              <span class="dot">&bull;</span>
+              <a href="pages/about.html#terms">Terms of Service</a>
+              <span class="dot">&bull;</span>
+              <a href="pages/how-it-works.html#escrow">Escrow SLA</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1661,7 +1562,7 @@
                 "The shift from human augmentations to sovereign agentic systems will take place before 2028. Is your
                 board prepared to govern non-human colleagues?"
               </p>
-              <span class="badge bg-gold text-dark px-3 py-2 fw-bold">Live Stream Audio & Visuals Loaded</span>
+              <span class="badge badge-gold px-3 py-2">Live Stream Audio & Visuals Loaded</span>
             </div>
           </div>
         </div>

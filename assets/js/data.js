@@ -8,7 +8,7 @@ const SSB_DATA = {
     {
       id: "marcus-vance",
       name: "Dr. Marcus Vance",
-      title: "AI Strategist & Former Tech Research Director",
+      title: "AI Strategist & Tech Research Director",
       image: "assets/images/speakers/marcus-vance.jpg",
       primaryTopic: "Artificial Intelligence & Technology",
       industry: "Technology",
@@ -17,7 +17,7 @@ const SSB_DATA = {
       languages: ["English"],
       feeTier: "$25,000 – $40,000",
       featured: true,
-      teaser: "Dr. Marcus Vance advises Fortune 500 boards on enterprise generative AI adoption, autonomous workflows, and executive strategy.",
+      teaser: "Dr. Marcus Vance advises Fortune 500 boards on enterprise generative AI adoption and executive strategy.",
       bio: "Dr. Marcus Vance advises Fortune 500 boards on enterprise generative AI adoption, autonomous workflows, and human-machine synergy. With two decades in frontier research, his keynotes cut through the hype to deliver pragmatic frameworks for organizational transformation.",
       signatureTalks: [
         "The Autonomous Enterprise: Pragmatic AI Roadmaps for 2026 & Beyond",
@@ -35,7 +35,7 @@ const SSB_DATA = {
     {
       id: "elena-rostova",
       name: "Elena Rostova",
-      title: "Global Geopolitical & Macroeconomic Advisor",
+      title: "Global Geopolitical & Economic Advisor",
       image: "assets/images/speakers/elena-rostova.jpg",
       primaryTopic: "Economics & Global Affairs",
       industry: "Finance & Banking",
@@ -44,7 +44,7 @@ const SSB_DATA = {
       languages: ["English", "French", "German"],
       feeTier: "$30,000 – $50,000",
       featured: true,
-      teaser: "Elena Rostova decodes macroeconomic shifts, global supply chain recalibration, and trade risks for sovereign investment funds.",
+      teaser: "Elena Rostova decodes macroeconomic shifts, global supply chain risks, and trade policy for sovereign funds.",
       bio: "Elena Rostova decodes macroeconomic shifts, supply chain recalibration, and multilateral trade risks for sovereign wealth funds and multinational leadership summits. Her data-driven analyses equip decision-makers to navigate turbulent geopolitical landscapes with clarity.",
       signatureTalks: [
         "Navigating Fragmented Markets: Macroeconomic Forecasts for Global Enterprise",
@@ -62,7 +62,7 @@ const SSB_DATA = {
     {
       id: "david-oconnor",
       name: "David O'Connor",
-      title: "High-Performance Leadership & Former Naval Commander",
+      title: "High-Performance Leadership Strategist",
       image: "assets/images/speakers/david-oconnor.jpg",
       primaryTopic: "Leadership & Management",
       industry: "Professional Services",
@@ -71,7 +71,7 @@ const SSB_DATA = {
       languages: ["English"],
       feeTier: "$20,000 – $35,000",
       featured: true,
-      teaser: "David O'Connor translates high-stakes naval command principles into battle-tested executive decision-making tools for leaders.",
+      teaser: "David O'Connor translates high-stakes naval command principles into battle-tested tools for executive leaders.",
       bio: "David O'Connor translates high-stakes naval command principles into battle-tested executive decision-making tools. Having led elite operational task forces across three continents, his high-energy sessions teach organizations how to forge resilient, autonomous teams that thrive under intense pressure.",
       signatureTalks: [
         "Command Under Pressure: Decentralized Decision-Making in Ambiguity",
@@ -98,7 +98,7 @@ const SSB_DATA = {
       languages: ["English", "Mandarin"],
       feeTier: "$25,000 – $38,000",
       featured: true,
-      teaser: "Maya Chen is an acclaimed technology entrepreneur and design innovator dissecting customer psychology and product velocity.",
+      teaser: "Maya Chen is an acclaimed technology entrepreneur and design innovator dissecting modern customer psychology.",
       bio: "Maya Chen is an acclaimed technology entrepreneur and design innovator who built two venture-backed consumer platforms acquired by tech conglomerates. Her keynotes dissect consumer psychology, frictionless user experiences, and breakthrough product innovation.",
       signatureTalks: [
         "Frictionless Horizons: Engineering Customer Obsession in 2026",
@@ -116,7 +116,7 @@ const SSB_DATA = {
     {
       id: "julian-thorne",
       name: "Julian Thorne",
-      title: "Organizational Psychologist & Workplace Culture Author",
+      title: "Organizational Psychologist & Culture Author",
       image: "assets/images/speakers/julian-thorne.jpg",
       primaryTopic: "Workplace Culture & Wellbeing",
       industry: "Healthcare",
@@ -125,7 +125,7 @@ const SSB_DATA = {
       languages: ["English"],
       feeTier: "$18,000 – $30,000",
       featured: true,
-      teaser: "Julian Thorne investigates why smart people work poorly together and how elite organizations cultivate psychological safety.",
+      teaser: "Julian Thorne investigates why teams struggle together and how elite leaders cultivate psychological safety.",
       bio: "Julian Thorne investigates why smart people work poorly together and how elite organizations cultivate psychological safety, focus, and enduring motivation. His engaging, evidence-based presentations consistently receive the highest audience ratings.",
       signatureTalks: [
         "The Architecture of High-Trust Teams: Beyond the Buzzwords",
@@ -143,7 +143,7 @@ const SSB_DATA = {
     {
       id: "amara-okafor",
       name: "Amara Okafor",
-      title: "Sustainable Finance & ESG Transformation Leader",
+      title: "Sustainable Finance & ESG Leader",
       image: "assets/images/speakers/amara-okafor.jpg",
       primaryTopic: "Sustainability & Social Impact",
       industry: "Energy & Sustainability",
@@ -152,7 +152,7 @@ const SSB_DATA = {
       languages: ["English", "Swahili"],
       feeTier: "$22,000 – $36,000",
       featured: true,
-      teaser: "Amara Okafor bridges corporate capital allocation with environmental resilience and sustainable social transformation.",
+      teaser: "Amara Okafor bridges corporate capital allocation with environmental resilience and sustainable transformation.",
       bio: "Amara Okafor bridges corporate capital allocation with tangible environmental and social transformation. An advisor to green infrastructure funds and sovereign investors, her keynote presentations demonstrate that sustainability is an engine of long-term economic resilience and alpha.",
       signatureTalks: [
         "Capital with Purpose: Profiting from the Net-Zero Transition",
@@ -170,7 +170,7 @@ const SSB_DATA = {
     {
       id: "kenji-tanaka",
       name: "Kenji Tanaka",
-      title: "Global Supply Chain Architect & Industry 4.0 Strategist",
+      title: "Supply Chain & Industry 4.0 Strategist",
       image: "assets/images/speakers/kenji-tanaka.jpg",
       primaryTopic: "Manufacturing & Global Operations",
       industry: "Technology",
@@ -179,7 +179,7 @@ const SSB_DATA = {
       languages: ["English", "Japanese"],
       feeTier: "$28,000 – $45,000",
       featured: true,
-      teaser: "Kenji Tanaka advises multinational conglomerates on robotics integration, autonomous supply lines, and industrial resilience.",
+      teaser: "Kenji Tanaka advises global enterprises on robotics integration, autonomous logistics, and industrial resilience.",
       bio: "Kenji Tanaka advises multinational conglomerates on robotics integration, autonomous supply lines, and industrial resilience. His high-impact keynotes deliver actionable frameworks for navigating volatile global logistics networks with speed and precision.",
       signatureTalks: [
         "Autonomous Supply Networks: From Fragile Just-In-Time to Anti-Fragility",
@@ -197,7 +197,7 @@ const SSB_DATA = {
     {
       id: "sarah-jenkins",
       name: "Sarah Jenkins",
-      title: "Enterprise Transformation & Executive Performance Pioneer",
+      title: "Enterprise Transformation & Executive Coach",
       image: "assets/images/speakers/sarah-jenkins.jpg",
       primaryTopic: "Leadership & Management",
       industry: "Professional Services",
@@ -206,7 +206,7 @@ const SSB_DATA = {
       languages: ["English"],
       feeTier: "$24,000 – $38,000",
       featured: true,
-      teaser: "Sarah Jenkins is an executive coach and organizational strategist who guides global executive boards through complex scale.",
+      teaser: "Sarah Jenkins is an executive coach and strategist who guides global enterprise boards through complex growth.",
       bio: "Sarah Jenkins is an executive coach and organizational strategist who guides global executive boards through massive scale, restructuring, and change management. Her commanding keynote talks empower executive teams to break silos and align around high-velocity goals.",
       signatureTalks: [
         "Velocity with Purpose: Scaling Enterprise Execution in Rapid Disruption",

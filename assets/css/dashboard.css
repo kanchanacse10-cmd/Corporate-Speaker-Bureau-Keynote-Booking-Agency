@@ -611,13 +611,13 @@ body:has(.dashboard-app),
 }
 
 .kpi-icon-success {
-  background-color: rgba(16, 185, 129, 0.18) !important;
-  color: #047857 !important;
-  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+  background-color: var(--ssb-secondary-subtle) !important;
+  color: var(--ssb-secondary) !important;
+  border: 1px solid rgba(200, 157, 75, 0.35) !important;
 }
 
 .kpi-icon-success svg {
-  color: #047857 !important;
+  color: var(--ssb-secondary) !important;
   fill: currentColor;
   stroke: currentColor;
   stroke-width: 0.4px;
@@ -625,14 +625,14 @@ body:has(.dashboard-app),
 
 [data-bs-theme="dark"] .kpi-icon-success,
 .theme-dark .kpi-icon-success {
-  background-color: rgba(16, 185, 129, 0.25) !important;
-  color: #34D399 !important;
-  border-color: rgba(52, 211, 153, 0.4) !important;
+  background-color: rgba(212, 175, 55, 0.16) !important;
+  color: #E5C358 !important;
+  border-color: rgba(212, 175, 55, 0.45) !important;
 }
 
 [data-bs-theme="dark"] .kpi-icon-success svg,
 .theme-dark .kpi-icon-success svg {
-  color: #34D399 !important;
+  color: #E5C358 !important;
 }
 
 .kpi-value {

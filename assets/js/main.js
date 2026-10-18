@@ -98,64 +98,112 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 3. Render Speaker Card Template Helper (Executive 4-Grid Layout)
-  window.SSB_RENDER_SPEAKER_CARD = function (speaker, basePath = "") {
+  // 3. Render Speaker Card Template Helper (Minimalist Prestige Gallery Card Layout)
+  window.SSB_RENDER_SPEAKER_CARD = function (speaker, basePath = "", colClass = "col-xl-3 col-lg-3 col-md-6 col-12") {
     const isSaved = SSB_STORAGE.isInShortlist(speaker.id);
     const profileUrl = `${basePath}pages/speaker-profile.html?id=${speaker.id}`;
     const bookUrl = `${basePath}pages/book-a-speaker.html?speaker=${encodeURIComponent(speaker.name)}&id=${speaker.id}`;
-    const topicShort = speaker.primaryTopic ? speaker.primaryTopic.split('&')[0].trim() : 'Keynote';
     const locationShort = speaker.location ? speaker.location.split('/')[0].trim() : '';
 
     return `
-      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 fade-up visible">
-        <div class="speaker-card">
-          <div class="speaker-img-box">
-            <img src="${basePath}${speaker.image}" alt="${speaker.name}" class="speaker-img" loading="lazy">
-            <div class="speaker-img-overlay"></div>
-            <div class="speaker-card-top-badges">
-              <span class="speaker-topic-pill" title="${speaker.primaryTopic}">${topicShort}</span>
-              <button type="button" class="speaker-shortlist-btn ${isSaved ? 'active' : ''}" data-speaker-id="${speaker.id}" title="${isSaved ? 'Remove from Shortlist' : 'Add to Shortlist'}" aria-label="Shortlist ${speaker.name}">
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/></svg>
+      <div class="${colClass} fade-up visible">
+        <article class="speaker-prestige-card speaker-luxury-card speaker-card h-100">
+          <!-- Gallery Portrait Box with Floating Accolades -->
+          <div class="speaker-prestige-media speaker-luxury-media speaker-img-box">
+            <a href="${profileUrl}" class="speaker-prestige-img-wrap speaker-luxury-img-link" tabindex="-1" aria-hidden="true">
+              <img src="${basePath}${speaker.image}" alt="${speaker.name}" class="speaker-prestige-img speaker-luxury-img speaker-img" loading="lazy">
+            </a>
+            <div class="speaker-prestige-vignette speaker-luxury-overlay speaker-img-overlay"></div>
+
+            <!-- Top Floating Accolades: CSAT Rating & Shortlist Bookmark -->
+            <div class="speaker-prestige-badges-top speaker-luxury-top speaker-card-top-badges">
+              <span class="prestige-csat-pill speaker-luxury-rating">
+                <svg width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
+                99.4% CSAT
+              </span>
+              <button type="button" class="speaker-prestige-wishlist-btn speaker-luxury-wishlist-btn speaker-shortlist-btn ${isSaved ? 'active' : ''}" data-speaker-id="${speaker.id}" title="${isSaved ? 'Remove from Shortlist' : 'Add to Shortlist'}" aria-label="Shortlist ${speaker.name}">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/></svg>
               </button>
             </div>
+
+            <!-- Bottom Location Pill -->
             ${locationShort ? `
-              <div class="speaker-card-img-footer">
-                <span class="speaker-location-badge">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-                  ${locationShort}
-                </span>
+              <div class="speaker-prestige-location speaker-luxury-loc-badge speaker-location-badge">
+                <svg width="11" height="11" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                <span>${locationShort}</span>
               </div>
             ` : ''}
           </div>
-          <div class="speaker-card-body">
-            <h4 class="speaker-name">
-              <a href="${profileUrl}">${speaker.name}</a>
-            </h4>
-            <div class="speaker-title" title="${speaker.title}">${speaker.title}</div>
-            <p class="speaker-bio-teaser speaker-card-desc">${speaker.teaser || speaker.bio}</p>
-            <div class="speaker-meta-strip">
-              <div class="speaker-fee-wrap">
-                <span class="fee-lbl">Honorarium Tier</span>
-                <span class="fee-val">${speaker.feeTier}</span>
-              </div>
-              <span class="speaker-industry-pill" title="${speaker.industry}">${speaker.industry}</span>
+
+          <!-- Elevated Editorial Body -->
+          <div class="speaker-prestige-body speaker-luxury-body speaker-card-body">
+            <div class="speaker-prestige-eyebrow speaker-luxury-meta-top">
+              <span class="prestige-dot"></span>
+              <span class="prestige-industry-name speaker-luxury-industry">${speaker.industry || 'Keynote Leader'}</span>
             </div>
-            <div class="speaker-card-actions">
-              <a href="${profileUrl}" class="btn btn-outline-corporate btn-sm flex-grow-1">View Profile</a>
-              <a href="${bookUrl}" class="btn btn-gold btn-sm px-3">Book &rarr;</a>
+
+            <h3 class="speaker-prestige-name speaker-luxury-name speaker-name">
+              <a href="${profileUrl}">${speaker.name}</a>
+            </h3>
+
+            <div class="speaker-prestige-title speaker-luxury-role speaker-title" title="${speaker.title}">
+              ${speaker.title}
+            </div>
+
+            <p class="speaker-prestige-bio speaker-luxury-bio speaker-bio-teaser speaker-card-desc">
+              ${speaker.teaser || speaker.bio}
+            </p>
+
+            <!-- Modern Seamless Footer -->
+            <div class="speaker-prestige-footer">
+              <div class="speaker-prestige-fee">
+                <span class="prestige-fee-caption">HONORARIUM</span>
+                <span class="prestige-fee-val">${speaker.feeTier}</span>
+              </div>
+              <a href="${bookUrl}" class="btn-prestige-book">
+                <span>Book</span>
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+              </a>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     `;
   };
 
-  // 4. Initialize Featured Speakers on Home
+  // 4. Initialize Featured Speakers on Home (with Live Topic Filter Pills)
   const featuredContainer = document.getElementById("featured-speakers-grid");
+  const filterPills = document.querySelectorAll("#speakerTopicFilters .speaker-luxury-filter-pill");
+
   if (featuredContainer) {
-    const featuredList = SSB_DATA.speakers.filter(s => s.featured);
-    featuredContainer.innerHTML = featuredList.map(s => window.SSB_RENDER_SPEAKER_CARD(s, "")).join("");
-    initScrollAnimations(featuredContainer);
+    const renderFeatured = (filterTopic = "all") => {
+      let filtered = SSB_DATA.speakers.filter(s => s.featured);
+      if (filterTopic !== "all") {
+        filtered = filtered.filter(s => 
+          (s.primaryTopic && s.primaryTopic.toLowerCase().includes(filterTopic.toLowerCase())) ||
+          (s.industry && s.industry.toLowerCase().includes(filterTopic.toLowerCase()))
+        );
+        if (filtered.length === 0) {
+          filtered = SSB_DATA.speakers.filter(s => 
+            (s.primaryTopic && s.primaryTopic.toLowerCase().includes(filterTopic.toLowerCase())) ||
+            (s.industry && s.industry.toLowerCase().includes(filterTopic.toLowerCase()))
+          );
+        }
+      }
+      featuredContainer.innerHTML = filtered.slice(0, 8).map(s => window.SSB_RENDER_SPEAKER_CARD(s, "", "col-xl-3 col-lg-3 col-md-6 col-12")).join("");
+      initScrollAnimations(featuredContainer);
+    };
+
+    renderFeatured();
+
+    filterPills.forEach(pill => {
+      pill.addEventListener("click", () => {
+        filterPills.forEach(p => p.classList.remove("active"));
+        pill.classList.add("active");
+        const topic = pill.dataset.topic;
+        renderFeatured(topic);
+      });
+    });
   }
 
   // 5. Active Nav Highlighting
@@ -237,7 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
         impactResonance: "99.4% Outstanding Rating",
         impactLogistics: "100% Rider SLA \u2022 VIP Briefing",
         authorName: "Sarah Jenkins",
-        authorRole: "Senior Director of Global Events, Enterprise Software",
+        authorRole: "VP Global Events \u2022 Enterprise Software",
         authorImg: "assets/images/clients/sarah-jenkins.jpg",
         stampId: "#SSB-8842-CONF"
       },
@@ -245,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
         eventPill: "Zurich International Financial Forum \u2022 Zurich, CH",
         csat: "100% Rider SLA Met",
         pullQuote: "\u201CHaving every technical rider confirmed weeks in advance gave our board complete confidence.\u201D",
-        fullQuote: "\u201CThe contract and logistics support was flawless. When planning an international forum in Zurich, having every technical rider detail confirmed weeks in advance gave our board complete confidence.\u201D",
+        fullQuote: "\u201CThe contract and logistics support was flawless. Having every technical rider detail confirmed weeks in advance gave our board complete confidence.\u201D",
         speakerName: "Elena Rostova",
         speakerTopic: "Global Macroeconomics & Geopolitics",
         speakerAvatar: "assets/images/speakers/elena-rostova.jpg",
@@ -254,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
         impactResonance: "100% Board Confidence Rating",
         impactLogistics: "Zurich Travel & Security Cleared",
         authorName: "Markus Hoffmann",
-        authorRole: "Chief Communications Officer, European Banking Group",
+        authorRole: "CCO \u2022 European Banking Group",
         authorImg: "assets/images/clients/markus-hoffmann.jpg",
         stampId: "#SSB-9104-CONF"
       },
@@ -262,7 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
         eventPill: "Annual Global Commercial Kickoff \u2022 Dallas, TX",
         csat: "Standing Ovation",
         pullQuote: "\u201CDelivered an electrifying presentation that our teams are still referencing months later.\u201D",
-        fullQuote: "\u201COur annual sales kickoff required a speaker who could speak authoritatively about resilience without relying on tired cliches. David O'Connor delivered an electrifying presentation that our teams are still referencing.\u201D",
+        fullQuote: "\u201COur annual sales kickoff required a speaker who could speak authoritatively about resilience without relying on tired cliches. David O'Connor delivered an electrifying presentation.\u201D",
         speakerName: "David O'Connor",
         speakerTopic: "High-Performance Resilience & Team Culture",
         speakerAvatar: "assets/images/speakers/david-oconnor.jpg",
@@ -271,7 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
         impactResonance: "Standing Ovation \u2022 98.9% NPS",
         impactLogistics: "Pre-Event Leadership Briefing",
         authorName: "Claire Lawson",
-        authorRole: "VP of Commercial Operations, Industrial Tech",
+        authorRole: "VP Operations \u2022 Industrial Tech",
         authorImg: "assets/images/clients/claire-lawson.jpg",
         stampId: "#SSB-7729-CONF"
       }
@@ -363,6 +411,37 @@ document.addEventListener("DOMContentLoaded", () => {
   function initFaqConcierge() {
     const container = document.getElementById("faqAccordionContainer");
     if (!container) return;
+
+    // Support minimalist clean accordion (.faq-clean-item)
+    const cleanItems = container.querySelectorAll(".faq-clean-item");
+    if (cleanItems.length > 0) {
+      cleanItems.forEach(item => {
+        const header = item.querySelector(".faq-clean-header");
+        if (!header) return;
+
+        const toggleItem = () => {
+          const isOpen = item.classList.contains("open");
+          cleanItems.forEach(other => {
+            if (other !== item) {
+              other.classList.remove("open");
+              const h = other.querySelector(".faq-clean-header");
+              if (h) h.setAttribute("aria-expanded", "false");
+            }
+          });
+          item.classList.toggle("open", !isOpen);
+          header.setAttribute("aria-expanded", !isOpen ? "true" : "false");
+        };
+
+        header.addEventListener("click", toggleItem);
+        header.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggleItem();
+          }
+        });
+      });
+      return;
+    }
 
     const cards = container.querySelectorAll(".faq-executive-card");
     const categoryBtns = document.querySelectorAll(".faq-category-btn");
@@ -548,6 +627,28 @@ document.addEventListener("DOMContentLoaded", () => {
       if (toggleBtn && window.bootstrap && window.bootstrap.Dropdown) {
         const bsDropdown = bootstrap.Dropdown.getInstance(toggleBtn) || new bootstrap.Dropdown(toggleBtn);
         if (bsDropdown) bsDropdown.hide();
+      }
+    });
+
+    // Elevate parent stacking context dynamically when dropdown opens
+    document.addEventListener("show.bs.dropdown", (e) => {
+      const dropdownWrap = e.target.closest(".custom-select-dropdown, .dropdown");
+      if (dropdownWrap) {
+        const parentCol = dropdownWrap.closest(".col-12, .col-md-6, .col-lg-3, .col-lg-4, .filter-bar, .home1-discovery-card");
+        if (parentCol) {
+          parentCol.style.zIndex = "1090";
+          parentCol.style.position = "relative";
+        }
+      }
+    });
+
+    document.addEventListener("hidden.bs.dropdown", (e) => {
+      const dropdownWrap = e.target.closest(".custom-select-dropdown, .dropdown");
+      if (dropdownWrap) {
+        const parentCol = dropdownWrap.closest(".col-12, .col-md-6, .col-lg-3, .col-lg-4, .filter-bar, .home1-discovery-card");
+        if (parentCol) {
+          parentCol.style.zIndex = "";
+        }
       }
     });
   }

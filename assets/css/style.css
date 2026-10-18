@@ -530,14 +530,17 @@ a {
 }
 
 /* Badges & Tags */
-.badge-gold {
-  background-color: var(--ssb-secondary-subtle);
-  color: var(--ssb-secondary);
-  font-weight: 600;
-  font-size: 0.78rem;
-  padding: 0.35rem 0.75rem;
-  border-radius: 20px;
-  border: 1px solid rgba(197, 164, 109, 0.25);
+.badge-gold,
+.badge.badge-gold,
+.badge.bg-gold,
+.bg-gold {
+  background-color: var(--ssb-secondary-subtle) !important;
+  color: var(--ssb-secondary) !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  padding: 0.35rem 0.75rem !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(200, 157, 75, 0.35) !important;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -545,6 +548,15 @@ a {
   text-transform: uppercase;
   white-space: nowrap !important;
   flex-shrink: 0;
+}
+
+[data-bs-theme="dark"] .badge-gold,
+[data-bs-theme="dark"] .badge.badge-gold,
+[data-bs-theme="dark"] .badge.bg-gold,
+[data-bs-theme="dark"] .bg-gold {
+  background-color: rgba(212, 175, 55, 0.16) !important;
+  color: #E5C358 !important;
+  border-color: rgba(212, 175, 55, 0.45) !important;
 }
 
 .tag-pill {
@@ -788,8 +800,8 @@ a {
   border-color: var(--ssb-border) !important;
 }
 
-/* Footer High-Contrast Text */
+/* Footer Text Styling */
 .ssb-footer p,
 .ssb-footer .text-muted {
-  color: #B8C1CC !important;
+  color: var(--ssb-text-muted);
 }
