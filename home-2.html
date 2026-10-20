@@ -179,8 +179,7 @@
         <!-- Left Column: Editorial Headline & Value Narrative -->
         <div class="col-lg-7">
           <div class="home2-live-badge mb-3">
-
-            <span>Live Stage Ticker: 2026–2027 World Summits Active • 48h Concierge Shortlist</span>
+            <span>2026–2027 World Summits Active • 48h Concierge Shortlist</span>
           </div>
 
           <h1 class="home2-hero-title">
@@ -188,8 +187,8 @@
           </h1>
 
           <p class="home2-hero-subtitle">
-            SummitSpeak curates world-class keynote speakers, Nobel laureates, bestselling authors, and Fortune 50
-            pioneers for landmark leadership symposiums, geopolitical assemblies, and enterprise conventions.
+            Curating world-class keynote speakers, Nobel laureates, and industry titans for landmark global conferences
+            and executive summits.
           </p>
 
           <div class="d-flex flex-wrap gap-3 align-items-center mb-4">
@@ -209,7 +208,7 @@
           <div class="row g-3 pt-3 border-top home2-metrics-row">
             <div class="col-4">
               <div class="fw-bold fs-4 text-gold" style="font-family: var(--font-heading);">99.4%</div>
-              <div class="text-muted small">Standing Ovation Metric</div>
+              <div class="text-muted small">Standing Ovations</div>
             </div>
             <div class="col-4">
               <div class="fw-bold fs-4 text-gold" style="font-family: var(--font-heading);">84+</div>
@@ -217,7 +216,7 @@
             </div>
             <div class="col-4">
               <div class="fw-bold fs-4 text-gold" style="font-family: var(--font-heading);">100%</div>
-              <div class="text-muted small">Sovereign SLA Protection</div>
+              <div class="text-muted small">Sovereign SLA</div>
             </div>
           </div>
         </div>
@@ -326,7 +325,30 @@
             complete with run-of-show choreography, keynote pairing, and breakout executive roundtables.
           </p>
         </div>
-        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+        <div class="col-lg-5 text-lg-end mt-3 mt-lg-0 d-flex align-items-center justify-content-lg-end gap-2 flex-wrap">
+          <div class="home2-tracks-controls d-inline-flex align-items-center gap-2 me-2">
+            <button type="button" class="home2-tracks-nav-btn" id="home2TracksPrev" aria-label="Previous track"
+              title="Previous track" onclick="scrollTracksSlider(-1, event)">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+              </svg>
+            </button>
+            <button type="button" class="home2-tracks-nav-btn" id="home2TracksPlayToggle"
+              aria-label="Pause or resume auto scroll" title="Pause or Resume" onclick="toggleTracksAutoScroll(event)">
+              <svg id="home2TracksPauseIcon" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z" />
+              </svg>
+            </button>
+            <button type="button" class="home2-tracks-nav-btn" id="home2TracksNext" aria-label="Next track"
+              title="Next track" onclick="scrollTracksSlider(1, event)">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg>
+            </button>
+          </div>
           <button class="btn btn-outline-corporate btn-sm" onclick="downloadAllTracksBrief()">
             <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16" class="me-1">
               <path
@@ -339,250 +361,498 @@
         </div>
       </div>
 
-      <!-- 6 Curated Tracks Grid (Lumera-Inspired Signature Luxury Style) -->
-      <div class="row g-4 g-xl-5">
-        <!-- Track 01 -->
-        <div class="col-12 col-lg-6 fade-up">
-          <div class="home2-track-lumera-card">
-            <div class="track-lumera-media">
-              <img src="assets/images/topics/topic_ai_tech.jpg" alt="The Exponential AI &amp; Quantum Enterprise"
-                class="track-lumera-img" loading="lazy">
-            </div>
-            <span class="track-lumera-subtitle">Track 01 &bull; Frontier Tech</span>
-            <h3 class="track-lumera-title">The Exponential AI &amp; Quantum Enterprise</h3>
-            <p class="track-lumera-desc">
-              Navigating agentic autonomous workflows, proprietary foundational models, and executive governance of
-              unaligned machine intelligence.
-            </p>
-            <div class="track-lumera-specs">
-              <div class="track-lumera-spec-item">
-                <span>Kickoff:</span>
-                <span class="track-lumera-spec-val">45m Provocation</span>
+      <!-- Continuous Auto-Moving Curated Tracks Carousel (Lumera-Inspired Signature Luxury Style) -->
+      <div class="home2-tracks-scroller-container">
+        <div class="home2-tracks-moving-wrap" id="home2TracksScroller" tabindex="0" role="region"
+          aria-label="Curated Summit Tracks Infinite Carousel">
+          <div class="home2-tracks-moving-track" id="home2TracksTrack">
+            <!-- ================= SET 1 ================= -->
+            <!-- Track 01 -->
+            <div class="home2-track-slide-item">
+              <div class="home2-track-lumera-card">
+                <div class="track-lumera-media">
+                  <img src="assets/images/topics/topic_ai_tech.jpg" alt="The Exponential AI &amp; Quantum Enterprise"
+                    class="track-lumera-img" loading="lazy">
+                </div>
+                <span class="track-lumera-subtitle">Track 01 &bull; Frontier Tech</span>
+                <h3 class="track-lumera-title">The Exponential AI &amp; Quantum Enterprise</h3>
+                <p class="track-lumera-desc">
+                  Navigating agentic autonomous workflows, proprietary foundational models, and executive governance of
+                  unaligned machine intelligence.
+                </p>
+                <div class="track-lumera-specs">
+                  <div class="track-lumera-spec-item">
+                    <span>Kickoff:</span>
+                    <span class="track-lumera-spec-val">45m Provocation</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Fireside:</span>
+                    <span class="track-lumera-spec-val">30m CTO/Board</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Luminary:</span>
+                    <span class="track-lumera-spec-val">Dr. Marcus Vance</span>
+                  </div>
+                </div>
+                <div class="track-lumera-pills-wrap">
+                  <span class="track-lumera-pill">FRONTIER TECH</span>
+                </div>
+                <button class="track-lumera-btn" onclick="openTrackModal('Track 01: Exponential AI')">
+                  <span>View Complete Track Syllabus</span>
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                  </svg>
+                </button>
               </div>
+            </div>
 
-              <div class="track-lumera-spec-item">
-                <span>Fireside:</span>
-                <span class="track-lumera-spec-val">30m CTO/Board</span>
+            <!-- Track 02 -->
+            <div class="home2-track-slide-item">
+              <div class="home2-track-lumera-card">
+                <div class="track-lumera-media">
+                  <img src="assets/images/topics/topic_economics.jpg"
+                    alt="Geopolitical Volatility &amp; Sovereign Supply Chains" class="track-lumera-img" loading="lazy">
+                </div>
+                <span class="track-lumera-subtitle">Track 02 &bull; Global Macro</span>
+                <h3 class="track-lumera-title">Geopolitical Volatility &amp; Sovereign Supply Chains</h3>
+                <p class="track-lumera-desc">
+                  Strategic decoupling, friendshoring across APAC and EMEA, critical mineral security, and multilateral
+                  central bank liquidity shifts.
+                </p>
+                <div class="track-lumera-specs">
+                  <div class="track-lumera-spec-item">
+                    <span>Keynote:</span>
+                    <span class="track-lumera-spec-val">50m Global Intel</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Simulation:</span>
+                    <span class="track-lumera-spec-val">60m War-Room</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Luminary:</span>
+                    <span class="track-lumera-spec-val">Sir Julian Thorne</span>
+                  </div>
+                </div>
+                <div class="track-lumera-pills-wrap">
+                  <span class="track-lumera-pill">GLOBAL MACRO</span>
+                </div>
+                <button class="track-lumera-btn" onclick="openTrackModal('Track 02: Geopolitical Volatility')">
+                  <span>View Complete Track Syllabus</span>
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                  </svg>
+                </button>
               </div>
+            </div>
 
-              <div class="track-lumera-spec-item">
-                <span>Luminary:</span>
-                <span class="track-lumera-spec-val">Dr. Marcus Vance</span>
+            <!-- Track 03 -->
+            <div class="home2-track-slide-item">
+              <div class="home2-track-lumera-card">
+                <div class="track-lumera-media">
+                  <img src="assets/images/topics/topic_leadership.jpg"
+                    alt="Radical Resilience &amp; Elite Command Leadership" class="track-lumera-img" loading="lazy">
+                </div>
+                <span class="track-lumera-subtitle">Track 03 &bull; High Performance</span>
+                <h3 class="track-lumera-title">Radical Resilience &amp; Elite Command Leadership</h3>
+                <p class="track-lumera-desc">
+                  Mental toughness under extreme volatility, asymmetric decision-making from Special Operations and
+                  high-altitude Everest expeditions.
+                </p>
+                <div class="track-lumera-specs">
+                  <div class="track-lumera-spec-item">
+                    <span>Keynote:</span>
+                    <span class="track-lumera-spec-val">45m Galvanizing Story</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Workshop:</span>
+                    <span class="track-lumera-spec-val">45m Tactical Protocol</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Luminary:</span>
+                    <span class="track-lumera-spec-val">Dr. Elena Rostova</span>
+                  </div>
+                </div>
+                <div class="track-lumera-pills-wrap">
+                  <span class="track-lumera-pill">ELITE COMMAND</span>
+                </div>
+                <button class="track-lumera-btn" onclick="openTrackModal('Track 03: Radical Resilience')">
+                  <span>View Complete Track Syllabus</span>
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                  </svg>
+                </button>
               </div>
             </div>
-            <div class="track-lumera-pills-wrap">
-              <span class="track-lumera-pill">FRONTIER TECH</span>
-            </div>
-            <button class="track-lumera-btn" onclick="openTrackModal('Track 01: Exponential AI')">
-              <span>View Complete Track Syllabus</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-              </svg>
-            </button>
-          </div>
-        </div>
 
-        <!-- Track 02 -->
-        <div class="col-12 col-lg-6 fade-up delay-100">
-          <div class="home2-track-lumera-card">
-            <div class="track-lumera-media">
-              <img src="assets/images/topics/topic_economics.jpg"
-                alt="Geopolitical Volatility &amp; Sovereign Supply Chains" class="track-lumera-img" loading="lazy">
-            </div>
-            <span class="track-lumera-subtitle">Track 02 &bull; Global Macro</span>
-            <h3 class="track-lumera-title">Geopolitical Volatility &amp; Sovereign Supply Chains</h3>
-            <p class="track-lumera-desc">
-              Strategic decoupling, friendshoring across APAC and EMEA, critical mineral security, and multilateral
-              central bank liquidity shifts.
-            </p>
-            <div class="track-lumera-specs">
-              <div class="track-lumera-spec-item">
-                <span>Keynote:</span>
-                <span class="track-lumera-spec-val">50m Global Intel</span>
+            <!-- Track 04 -->
+            <div class="home2-track-slide-item">
+              <div class="home2-track-lumera-card">
+                <div class="track-lumera-media">
+                  <img src="assets/images/topics/topic_innovation.jpg"
+                    alt="The Regenerative Future &amp; Decarbonized Capital" class="track-lumera-img" loading="lazy">
+                </div>
+                <span class="track-lumera-subtitle">Track 04 &bull; ESG &amp; Clean Tech</span>
+                <h3 class="track-lumera-title">The Regenerative Future &amp; Decarbonized Capital</h3>
+                <p class="track-lumera-desc">
+                  Re-engineering industrial assets, the trillion-dollar energy transition, carbon accounting integrity,
+                  and
+                  green hydrogen scaling.
+                </p>
+                <div class="track-lumera-specs">
+                  <div class="track-lumera-spec-item">
+                    <span>Opening:</span>
+                    <span class="track-lumera-spec-val">45m Future Macro</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Roundtable:</span>
+                    <span class="track-lumera-spec-val">45m ESG Allocation</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Luminary:</span>
+                    <span class="track-lumera-spec-val">David O'Connor</span>
+                  </div>
+                </div>
+                <div class="track-lumera-pills-wrap">
+                  <span class="track-lumera-pill">CLEAN CAPITAL</span>
+                </div>
+                <button class="track-lumera-btn" onclick="openTrackModal('Track 04: Regenerative Future')">
+                  <span>View Complete Track Syllabus</span>
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                  </svg>
+                </button>
               </div>
+            </div>
 
-              <div class="track-lumera-spec-item">
-                <span>Simulation:</span>
-                <span class="track-lumera-spec-val">60m War-Room</span>
+            <!-- Track 05 -->
+            <div class="home2-track-slide-item">
+              <div class="home2-track-lumera-card">
+                <div class="track-lumera-media">
+                  <img src="assets/images/topics/topic_culture.jpg"
+                    alt="Cognitive Longevity &amp; The Augmented Workforce" class="track-lumera-img" loading="lazy">
+                </div>
+                <span class="track-lumera-subtitle">Track 05 &bull; Future of Work</span>
+                <h3 class="track-lumera-title">Cognitive Longevity &amp; The Augmented Workforce</h3>
+                <p class="track-lumera-desc">
+                  Neuroscience-backed cognitive endurance, organizational redesign for hybrid humans and AI coworkers,
+                  and
+                  burnout eradication.
+                </p>
+                <div class="track-lumera-specs">
+                  <div class="track-lumera-spec-item">
+                    <span>Mainstage:</span>
+                    <span class="track-lumera-spec-val">45m Neuroscience</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Clinic:</span>
+                    <span class="track-lumera-spec-val">40m Leaders Q&amp;A</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Luminary:</span>
+                    <span class="track-lumera-spec-val">Maya Chen</span>
+                  </div>
+                </div>
+                <div class="track-lumera-pills-wrap">
+                  <span class="track-lumera-pill">AUGMENTED WORKFORCE</span>
+                </div>
+                <button class="track-lumera-btn" onclick="openTrackModal('Track 05: Cognitive Longevity')">
+                  <span>View Complete Track Syllabus</span>
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                  </svg>
+                </button>
               </div>
+            </div>
 
-              <div class="track-lumera-spec-item">
-                <span>Luminary:</span>
-                <span class="track-lumera-spec-val">Sir Julian Thorne</span>
+            <!-- Track 06 -->
+            <div class="home2-track-slide-item">
+              <div class="home2-track-lumera-card">
+                <div class="track-lumera-media">
+                  <img src="assets/images/topics/topic_cyber_defense.jpg"
+                    alt="Cyber Sovereignty &amp; Information Warfare Defense" class="track-lumera-img" loading="lazy">
+                </div>
+                <span class="track-lumera-subtitle">Track 06 &bull; Cyber Defense</span>
+                <h3 class="track-lumera-title">Cyber Sovereignty &amp; Information Warfare Defense</h3>
+                <p class="track-lumera-desc">
+                  Nation-state cyber campaigns, deepfake corporate manipulation, quantum cryptography defense, and
+                  proactive
+                  board governance.
+                </p>
+                <div class="track-lumera-specs">
+                  <div class="track-lumera-spec-item">
+                    <span>Crisis:</span>
+                    <span class="track-lumera-spec-val">45m Threat Intel</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Briefing:</span>
+                    <span class="track-lumera-spec-val">45m Red-Team</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Luminary:</span>
+                    <span class="track-lumera-spec-val">Amara Okafor</span>
+                  </div>
+                </div>
+                <div class="track-lumera-pills-wrap">
+                  <span class="track-lumera-pill">CYBER SOVEREIGNTY</span>
+                </div>
+                <button class="track-lumera-btn" onclick="openTrackModal('Track 06: Cyber Sovereignty')">
+                  <span>View Complete Track Syllabus</span>
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                  </svg>
+                </button>
               </div>
             </div>
-            <div class="track-lumera-pills-wrap">
-              <span class="track-lumera-pill">GLOBAL MACRO</span>
-            </div>
-            <button class="track-lumera-btn" onclick="openTrackModal('Track 02: Geopolitical Volatility')">
-              <span>View Complete Track Syllabus</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-              </svg>
-            </button>
-          </div>
-        </div>
 
-        <!-- Track 03 -->
-        <div class="col-12 col-lg-6 fade-up">
-          <div class="home2-track-lumera-card">
-            <div class="track-lumera-media">
-              <img src="assets/images/topics/topic_leadership.jpg"
-                alt="Radical Resilience &amp; Elite Command Leadership" class="track-lumera-img" loading="lazy">
-            </div>
-            <span class="track-lumera-subtitle">Track 03 &bull; High Performance</span>
-            <h3 class="track-lumera-title">Radical Resilience &amp; Elite Command Leadership</h3>
-            <p class="track-lumera-desc">
-              Mental toughness under extreme volatility, asymmetric decision-making from Special Operations and
-              high-altitude Everest expeditions.
-            </p>
-            <div class="track-lumera-specs">
-              <div class="track-lumera-spec-item">
-                <span>Keynote:</span>
-                <span class="track-lumera-spec-val">45m Galvanizing Story</span>
+            <!-- ================= SET 2 (Duplicate for Seamless Infinite Loop) ================= -->
+            <!-- Track 01 Duplicate -->
+            <div class="home2-track-slide-item" aria-hidden="true">
+              <div class="home2-track-lumera-card">
+                <div class="track-lumera-media">
+                  <img src="assets/images/topics/topic_ai_tech.jpg" alt="The Exponential AI &amp; Quantum Enterprise"
+                    class="track-lumera-img" loading="lazy">
+                </div>
+                <span class="track-lumera-subtitle">Track 01 &bull; Frontier Tech</span>
+                <h3 class="track-lumera-title">The Exponential AI &amp; Quantum Enterprise</h3>
+                <p class="track-lumera-desc">
+                  Navigating agentic autonomous workflows, proprietary foundational models, and executive governance of
+                  unaligned machine intelligence.
+                </p>
+                <div class="track-lumera-specs">
+                  <div class="track-lumera-spec-item">
+                    <span>Kickoff:</span>
+                    <span class="track-lumera-spec-val">45m Provocation</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Fireside:</span>
+                    <span class="track-lumera-spec-val">30m CTO/Board</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Luminary:</span>
+                    <span class="track-lumera-spec-val">Dr. Marcus Vance</span>
+                  </div>
+                </div>
+                <div class="track-lumera-pills-wrap">
+                  <span class="track-lumera-pill">FRONTIER TECH</span>
+                </div>
+                <button class="track-lumera-btn" onclick="openTrackModal('Track 01: Exponential AI')">
+                  <span>View Complete Track Syllabus</span>
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                  </svg>
+                </button>
               </div>
+            </div>
 
-              <div class="track-lumera-spec-item">
-                <span>Workshop:</span>
-                <span class="track-lumera-spec-val">45m Tactical Protocol</span>
-              </div>
-              <div class="track-lumera-spec-item">
-                <span>Luminary:</span>
-                <span class="track-lumera-spec-val">Dr. Elena Rostova</span>
+            <!-- Track 02 Duplicate -->
+            <div class="home2-track-slide-item" aria-hidden="true">
+              <div class="home2-track-lumera-card">
+                <div class="track-lumera-media">
+                  <img src="assets/images/topics/topic_economics.jpg"
+                    alt="Geopolitical Volatility &amp; Sovereign Supply Chains" class="track-lumera-img" loading="lazy">
+                </div>
+                <span class="track-lumera-subtitle">Track 02 &bull; Global Macro</span>
+                <h3 class="track-lumera-title">Geopolitical Volatility &amp; Sovereign Supply Chains</h3>
+                <p class="track-lumera-desc">
+                  Strategic decoupling, friendshoring across APAC and EMEA, critical mineral security, and multilateral
+                  central bank liquidity shifts.
+                </p>
+                <div class="track-lumera-specs">
+                  <div class="track-lumera-spec-item">
+                    <span>Keynote:</span>
+                    <span class="track-lumera-spec-val">50m Global Intel</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Simulation:</span>
+                    <span class="track-lumera-spec-val">60m War-Room</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Luminary:</span>
+                    <span class="track-lumera-spec-val">Sir Julian Thorne</span>
+                  </div>
+                </div>
+                <div class="track-lumera-pills-wrap">
+                  <span class="track-lumera-pill">GLOBAL MACRO</span>
+                </div>
+                <button class="track-lumera-btn" onclick="openTrackModal('Track 02: Geopolitical Volatility')">
+                  <span>View Complete Track Syllabus</span>
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                  </svg>
+                </button>
               </div>
             </div>
-            <div class="track-lumera-pills-wrap">
-              <span class="track-lumera-pill">ELITE COMMAND</span>
-            </div>
-            <button class="track-lumera-btn" onclick="openTrackModal('Track 03: Radical Resilience')">
-              <span>View Complete Track Syllabus</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-              </svg>
-            </button>
-          </div>
-        </div>
 
-        <!-- Track 04 -->
-        <div class="col-12 col-lg-6 fade-up delay-100">
-          <div class="home2-track-lumera-card">
-            <div class="track-lumera-media">
-              <img src="assets/images/topics/topic_innovation.jpg"
-                alt="The Regenerative Future &amp; Decarbonized Capital" class="track-lumera-img" loading="lazy">
-            </div>
-            <span class="track-lumera-subtitle">Track 04 &bull; ESG &amp; Clean Tech</span>
-            <h3 class="track-lumera-title">The Regenerative Future &amp; Decarbonized Capital</h3>
-            <p class="track-lumera-desc">
-              Re-engineering industrial assets, the trillion-dollar energy transition, carbon accounting integrity, and
-              green hydrogen scaling.
-            </p>
-            <div class="track-lumera-specs">
-              <div class="track-lumera-spec-item">
-                <span>Opening:</span>
-                <span class="track-lumera-spec-val">45m Future Macro</span>
+            <!-- Track 03 Duplicate -->
+            <div class="home2-track-slide-item" aria-hidden="true">
+              <div class="home2-track-lumera-card">
+                <div class="track-lumera-media">
+                  <img src="assets/images/topics/topic_leadership.jpg"
+                    alt="Radical Resilience &amp; Elite Command Leadership" class="track-lumera-img" loading="lazy">
+                </div>
+                <span class="track-lumera-subtitle">Track 03 &bull; High Performance</span>
+                <h3 class="track-lumera-title">Radical Resilience &amp; Elite Command Leadership</h3>
+                <p class="track-lumera-desc">
+                  Mental toughness under extreme volatility, asymmetric decision-making from Special Operations and
+                  high-altitude Everest expeditions.
+                </p>
+                <div class="track-lumera-specs">
+                  <div class="track-lumera-spec-item">
+                    <span>Keynote:</span>
+                    <span class="track-lumera-spec-val">45m Galvanizing Story</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Workshop:</span>
+                    <span class="track-lumera-spec-val">45m Tactical Protocol</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Luminary:</span>
+                    <span class="track-lumera-spec-val">Dr. Elena Rostova</span>
+                  </div>
+                </div>
+                <div class="track-lumera-pills-wrap">
+                  <span class="track-lumera-pill">ELITE COMMAND</span>
+                </div>
+                <button class="track-lumera-btn" onclick="openTrackModal('Track 03: Radical Resilience')">
+                  <span>View Complete Track Syllabus</span>
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                  </svg>
+                </button>
               </div>
-              <div class="track-lumera-spec-item">
-                <span>Roundtable:</span>
-                <span class="track-lumera-spec-val">45m ESG Allocation</span>
-              </div>
-              <div class="track-lumera-spec-item">
-                <span>Luminary:</span>
-                <span class="track-lumera-spec-val">David O'Connor</span>
-              </div>
             </div>
-            <div class="track-lumera-pills-wrap">
-              <span class="track-lumera-pill">CLEAN CAPITAL</span>
-            </div>
-            <button class="track-lumera-btn" onclick="openTrackModal('Track 04: Regenerative Future')">
-              <span>View Complete Track Syllabus</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-              </svg>
-            </button>
-          </div>
-        </div>
 
-        <!-- Track 05 -->
-        <div class="col-12 col-lg-6 fade-up">
-          <div class="home2-track-lumera-card">
-            <div class="track-lumera-media">
-              <img src="assets/images/topics/topic_culture.jpg" alt="Cognitive Longevity &amp; The Augmented Workforce"
-                class="track-lumera-img" loading="lazy">
-            </div>
-            <span class="track-lumera-subtitle">Track 05 &bull; Future of Work</span>
-            <h3 class="track-lumera-title">Cognitive Longevity &amp; The Augmented Workforce</h3>
-            <p class="track-lumera-desc">
-              Neuroscience-backed cognitive endurance, organizational redesign for hybrid humans and AI coworkers, and
-              burnout eradication.
-            </p>
-            <div class="track-lumera-specs">
-              <div class="track-lumera-spec-item">
-                <span>Mainstage:</span>
-                <span class="track-lumera-spec-val">45m Neuroscience</span>
+            <!-- Track 04 Duplicate -->
+            <div class="home2-track-slide-item" aria-hidden="true">
+              <div class="home2-track-lumera-card">
+                <div class="track-lumera-media">
+                  <img src="assets/images/topics/topic_innovation.jpg"
+                    alt="The Regenerative Future &amp; Decarbonized Capital" class="track-lumera-img" loading="lazy">
+                </div>
+                <span class="track-lumera-subtitle">Track 04 &bull; ESG &amp; Clean Tech</span>
+                <h3 class="track-lumera-title">The Regenerative Future &amp; Decarbonized Capital</h3>
+                <p class="track-lumera-desc">
+                  Re-engineering industrial assets, the trillion-dollar energy transition, carbon accounting integrity,
+                  and
+                  green hydrogen scaling.
+                </p>
+                <div class="track-lumera-specs">
+                  <div class="track-lumera-spec-item">
+                    <span>Opening:</span>
+                    <span class="track-lumera-spec-val">45m Future Macro</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Roundtable:</span>
+                    <span class="track-lumera-spec-val">45m ESG Allocation</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Luminary:</span>
+                    <span class="track-lumera-spec-val">David O'Connor</span>
+                  </div>
+                </div>
+                <div class="track-lumera-pills-wrap">
+                  <span class="track-lumera-pill">CLEAN CAPITAL</span>
+                </div>
+                <button class="track-lumera-btn" onclick="openTrackModal('Track 04: Regenerative Future')">
+                  <span>View Complete Track Syllabus</span>
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                  </svg>
+                </button>
               </div>
-              <div class="track-lumera-spec-item">
-                <span>Clinic:</span>
-                <span class="track-lumera-spec-val">40m Leaders Q&amp;A</span>
-              </div>
-              <div class="track-lumera-spec-item">
-                <span>Luminary:</span>
-                <span class="track-lumera-spec-val">Maya Chen</span>
-              </div>
             </div>
-            <div class="track-lumera-pills-wrap">
-              <span class="track-lumera-pill">AUGMENTED WORKFORCE</span>
-            </div>
-            <button class="track-lumera-btn" onclick="openTrackModal('Track 05: Cognitive Longevity')">
-              <span>View Complete Track Syllabus</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-              </svg>
-            </button>
-          </div>
-        </div>
 
-        <!-- Track 06 -->
-        <div class="col-12 col-lg-6 fade-up delay-100">
-          <div class="home2-track-lumera-card">
-            <div class="track-lumera-media">
-              <img src="assets/images/topics/topic_cyber_defense.jpg"
-                alt="Cyber Sovereignty &amp; Information Warfare Defense" class="track-lumera-img" loading="lazy">
-            </div>
-            <span class="track-lumera-subtitle">Track 06 &bull; Cyber Defense</span>
-            <h3 class="track-lumera-title">Cyber Sovereignty &amp; Information Warfare Defense</h3>
-            <p class="track-lumera-desc">
-              Nation-state cyber campaigns, deepfake corporate manipulation, quantum cryptography defense, and proactive
-              board governance.
-            </p>
-            <div class="track-lumera-specs">
-              <div class="track-lumera-spec-item">
-                <span>Crisis:</span>
-                <span class="track-lumera-spec-val">45m Threat Intel</span>
+            <!-- Track 05 Duplicate -->
+            <div class="home2-track-slide-item" aria-hidden="true">
+              <div class="home2-track-lumera-card">
+                <div class="track-lumera-media">
+                  <img src="assets/images/topics/topic_culture.jpg"
+                    alt="Cognitive Longevity &amp; The Augmented Workforce" class="track-lumera-img" loading="lazy">
+                </div>
+                <span class="track-lumera-subtitle">Track 05 &bull; Future of Work</span>
+                <h3 class="track-lumera-title">Cognitive Longevity &amp; The Augmented Workforce</h3>
+                <p class="track-lumera-desc">
+                  Neuroscience-backed cognitive endurance, organizational redesign for hybrid humans and AI coworkers,
+                  and
+                  burnout eradication.
+                </p>
+                <div class="track-lumera-specs">
+                  <div class="track-lumera-spec-item">
+                    <span>Mainstage:</span>
+                    <span class="track-lumera-spec-val">45m Neuroscience</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Clinic:</span>
+                    <span class="track-lumera-spec-val">40m Leaders Q&amp;A</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Luminary:</span>
+                    <span class="track-lumera-spec-val">Maya Chen</span>
+                  </div>
+                </div>
+                <div class="track-lumera-pills-wrap">
+                  <span class="track-lumera-pill">AUGMENTED WORKFORCE</span>
+                </div>
+                <button class="track-lumera-btn" onclick="openTrackModal('Track 05: Cognitive Longevity')">
+                  <span>View Complete Track Syllabus</span>
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                  </svg>
+                </button>
               </div>
-              <div class="track-lumera-spec-item">
-                <span>Briefing:</span>
-                <span class="track-lumera-spec-val">45m Red-Team</span>
-              </div>
-              <div class="track-lumera-spec-item">
-                <span>Luminary:</span>
-                <span class="track-lumera-spec-val">Amara Okafor</span>
+            </div>
+
+            <!-- Track 06 Duplicate -->
+            <div class="home2-track-slide-item" aria-hidden="true">
+              <div class="home2-track-lumera-card">
+                <div class="track-lumera-media">
+                  <img src="assets/images/topics/topic_cyber_defense.jpg"
+                    alt="Cyber Sovereignty &amp; Information Warfare Defense" class="track-lumera-img" loading="lazy">
+                </div>
+                <span class="track-lumera-subtitle">Track 06 &bull; Cyber Defense</span>
+                <h3 class="track-lumera-title">Cyber Sovereignty &amp; Information Warfare Defense</h3>
+                <p class="track-lumera-desc">
+                  Nation-state cyber campaigns, deepfake corporate manipulation, quantum cryptography defense, and
+                  proactive
+                  board governance.
+                </p>
+                <div class="track-lumera-specs">
+                  <div class="track-lumera-spec-item">
+                    <span>Crisis:</span>
+                    <span class="track-lumera-spec-val">45m Threat Intel</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Briefing:</span>
+                    <span class="track-lumera-spec-val">45m Red-Team</span>
+                  </div>
+                  <div class="track-lumera-spec-item">
+                    <span>Luminary:</span>
+                    <span class="track-lumera-spec-val">Amara Okafor</span>
+                  </div>
+                </div>
+                <div class="track-lumera-pills-wrap">
+                  <span class="track-lumera-pill">CYBER SOVEREIGNTY</span>
+                </div>
+                <button class="track-lumera-btn" onclick="openTrackModal('Track 06: Cyber Sovereignty')">
+                  <span>View Complete Track Syllabus</span>
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                  </svg>
+                </button>
               </div>
             </div>
-            <div class="track-lumera-pills-wrap">
-              <span class="track-lumera-pill">CYBER SOVEREIGNTY</span>
-            </div>
-            <button class="track-lumera-btn" onclick="openTrackModal('Track 06: Cyber Sovereignty')">
-              <span>View Complete Track Syllabus</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -795,7 +1065,8 @@
           <span class="matrix-live-beacon"></span>
           <span>Proprietary Stagecraft Intelligence</span>
         </div>
-        <h2 class="section-title">Speaker Match Matrix<span class="text-gold">™</span>: Real-Time Algorithmic Concierge</h2>
+        <h2 class="section-title">Speaker Match Matrix<span class="text-gold">™</span>: Real-Time Algorithmic Concierge
+        </h2>
         <p class="section-subtitle">
           Calibrate your audience DNA, required stage energy, and event stakes. Our intelligence engine analyzes over 40
           variables to generate an instant, calibrated speaker compatibility match.
@@ -806,15 +1077,18 @@
         <div class="col-xl-11 col-xxl-10">
           <div class="home2-matrix-box">
             <!-- Top Telemetry Status Bar -->
-            <div class="matrix-console-topbar d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 pb-3">
+            <div
+              class="matrix-console-topbar d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 pb-3">
               <div class="d-flex align-items-center gap-2">
                 <span class="matrix-radar-pulse"></span>
                 <span class="matrix-radar-text fw-bold text-uppercase">Interactive Stage Calibration Console</span>
               </div>
               <div class="d-none d-md-flex align-items-center gap-3 small text-muted">
-                <span class="d-flex align-items-center gap-1"><span class="matrix-tiny-dot bg-success"></span> 40+ Variables Active</span>
+                <span class="d-flex align-items-center gap-1"><span class="matrix-tiny-dot bg-success"></span> 40+
+                  Variables Active</span>
                 <span class="text-gold-subtle">•</span>
-                <span class="d-flex align-items-center gap-1"><span class="matrix-tiny-dot bg-warning"></span> Real-Time Weighting</span>
+                <span class="d-flex align-items-center gap-1"><span class="matrix-tiny-dot bg-warning"></span> Real-Time
+                  Weighting</span>
                 <span class="text-gold-subtle">•</span>
                 <span class="text-gold fw-semibold">Instant Output</span>
               </div>
@@ -883,8 +1157,8 @@
                             </svg>
                           </span>
                           <span class="matrix-btn-text-block">
-                            <span class="matrix-btn-main">Sales Kickoff</span>
-                            <span class="matrix-btn-sub">Revenue Summits</span>
+                            <span class="matrix-btn-main">Sales Kickoff Stage </span>
+                            <span class="matrix-btn-sub">Revenue Summits for Sales</span>
                           </span>
                         </button>
                       </div>
@@ -904,7 +1178,8 @@
                           onclick="setMatrixOption(2, 'provocative', this)">
                           <span class="matrix-btn-icon-wrap">
                             <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
-                              <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+                              <path
+                                d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z" />
                             </svg>
                           </span>
                           <span class="matrix-btn-text-block">
@@ -918,7 +1193,8 @@
                           onclick="setMatrixOption(2, 'strategic', this)">
                           <span class="matrix-btn-icon-wrap">
                             <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
-                              <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5h-2v12h2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM7 6a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H7zM2 10a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H2z"/>
+                              <path
+                                d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5h-2v12h2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM7 6a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H7zM2 10a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H2z" />
                             </svg>
                           </span>
                           <span class="matrix-btn-text-block">
@@ -932,7 +1208,8 @@
                           onclick="setMatrixOption(2, 'emotional', this)">
                           <span class="matrix-btn-icon-wrap">
                             <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
-                              <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.75 10 7 11 8 11c.5 0 1.25-.5 1.25-1.5 1 1 1.75 2.25 1.75 3.25C11 14 9.657 15 8 15Z"/>
+                              <path
+                                d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.75 10 7 11 8 11c.5 0 1.25-.5 1.25-1.5 1 1 1.75 2.25 1.75 3.25C11 14 9.657 15 8 15Z" />
                             </svg>
                           </span>
                           <span class="matrix-btn-text-block">
@@ -975,7 +1252,7 @@
                           onclick="setMatrixOption(3, 'tier3', this)">
                           <span class="matrix-btn-text-block text-center w-100">
                             <span class="matrix-btn-main">$90k – $150k+</span>
-                            <span class="matrix-btn-sub">Tier 3 • Global Titan</span>
+                            <span class="matrix-btn-sub">Tier 3 • Global</span>
                           </span>
                         </button>
                       </div>
@@ -1006,13 +1283,15 @@
                       </div>
                       <h4 class="h5 fw-bold mb-1" id="matrixSpeakerName">Dr. Marcus Vance</h4>
                       <div class="mb-2">
-                        <span class="matrix-topic-pill" id="matrixSpeakerTopic">The Autonomous Enterprise &amp; Frontier AI</span>
+                        <span class="matrix-topic-pill" id="matrixSpeakerTopic">The Autonomous Enterprise &amp; Frontier
+                          AI</span>
                       </div>
-                      
+
                       <!-- Executive Rationale -->
                       <div class="matrix-reason-card">
                         <p id="matrixSpeakerReason">
-                          Best match for C-Suite audiences requiring disruptive yet peer-reviewed technological forecasting.
+                          Best match for C-Suite audiences requiring disruptive yet peer-reviewed technological
+                          forecasting.
                         </p>
                       </div>
 
@@ -1204,7 +1483,7 @@
 
   <!-- ==========================================================================
        SECTION 6: THE SOVEREIGN BUREAU SLA (Trust & Risk Elimination)
-       Unique Design: Contractual insurance guarantees with direct comparison table
+       Unique Design: Contractual insurance guarantees with luxury visual comparison matrix
        ========================================================================== -->
   <section class="section-padding bg-secondary-theme" id="sovereign-sla">
     <div class="container-fluid px-3 px-xl-4 px-xxl-5">
@@ -1213,145 +1492,155 @@
         <h2 class="section-title">The Sovereign Bureau SLA & Risk Elimination Shield</h2>
         <p class="section-subtitle">
           Hosting an international conference carries millions in operational exposure. We eliminate every point of
-          failure through legally binding service level agreements.
+          failure through legally binding service level agreements and certified stage contingency protocols.
         </p>
       </div>
 
-      <!-- 4 SLA Pillars -->
+      <!-- 4 Visual SLA Architecture Pillars with Photography -->
       <div class="row g-4 mb-5">
-        <div class="col-md-6 col-lg-6">
-          <div class="home2-sla-card">
-            <div class="home2-sla-icon">
-              <svg width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
-              </svg>
+        <!-- Pillar 1 -->
+        <div class="col-12 col-md-6 col-xl-3 fade-up">
+          <div class="home2-sla-visual-card">
+            <div class="home2-sla-media">
+              <img src="assets/images/hero/hero_leadership_stage.jpg" alt="Emergency Understudy Protocol"
+                loading="lazy">
+              <span class="home2-sla-media-badge">2-Hour Understudy</span>
             </div>
-            <h4 class="h5 fw-bold mb-2">2-Hour Emergency Understudy</h4>
-            <p class="small text-muted mb-0">
-              Guaranteed standby replacement of equal standing pre-briefed and ready in case of catastrophic medical or
-              weather cancellation.
-            </p>
+            <div class="home2-sla-card-body">
+              <h4 class="home2-sla-card-title">Emergency Understudy Standby</h4>
+              <p class="home2-sla-card-desc">
+                Guaranteed standby replacement of equal international standing pre-briefed and ready in case of
+                catastrophic medical or flight disruption.
+              </p>
+              <div class="home2-sla-comparison-chip">
+                <div class="home2-sla-chip-row">
+                  <span class="home2-sla-chip-tag-risk">&times; Direct:</span>
+                  <span class="text-muted">Total event cancellation risk</span>
+                </div>
+                <div class="home2-sla-chip-row">
+                  <span class="home2-sla-chip-tag-safe">&#10003; SLA:</span>
+                  <span class="fw-bold text-main">Certified standby deployed</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="home2-sla-card">
-            <div class="home2-sla-icon">
-              <svg width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
-              </svg>
+        <!-- Pillar 2 -->
+        <div class="col-12 col-md-6 col-xl-3 fade-up delay-100">
+          <div class="home2-sla-visual-card">
+            <div class="home2-sla-media">
+              <img src="assets/images/events/leadership_summits.jpg" alt="Strict Corporate NDA Protocols"
+                loading="lazy">
+              <span class="home2-sla-media-badge">Legal Indemnity</span>
             </div>
-            <h4 class="h5 fw-bold mb-2">Strict Corporate NDA Protocols</h4>
-            <p class="small text-muted mb-0">
-              Comprehensive legal IP assignment protecting confidential strategic reveals, internal metrics, and
-              unpublished merger visions.
-            </p>
+            <div class="home2-sla-card-body">
+              <h4 class="home2-sla-card-title">Strict Corporate NDA Protocols</h4>
+              <p class="home2-sla-card-desc">
+                Comprehensive institutional legal IP assignment protecting confidential strategic reveals, internal
+                financial metrics, and board initiatives.
+              </p>
+              <div class="home2-sla-comparison-chip">
+                <div class="home2-sla-chip-row">
+                  <span class="home2-sla-chip-tag-risk">&times; Direct:</span>
+                  <span class="text-muted">Direct upfront wire to agent</span>
+                </div>
+                <div class="home2-sla-chip-row">
+                  <span class="home2-sla-chip-tag-safe">&#10003; SLA:</span>
+                  <span class="fw-bold text-main">Escrow held to stage walk</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="home2-sla-card">
-            <div class="home2-sla-icon">
-              <svg width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-                <path
-                  d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z" />
-              </svg>
+        <!-- Pillar 3 -->
+        <div class="col-12 col-md-6 col-xl-3 fade-up delay-200">
+          <div class="home2-sla-visual-card">
+            <div class="home2-sla-media">
+              <img src="assets/images/about/panel.jpg" alt="Pre-Event Executive Briefings" loading="lazy">
+              <span class="home2-sla-media-badge">CEO Discovery</span>
             </div>
-            <h4 class="h5 fw-bold mb-2">Pre-Event Executive Briefings</h4>
-            <p class="small text-muted mb-0">
-              Two mandatory discovery strategy calls between the speaker and the client's Chief Executive to align every
-              thesis and nuance.
-            </p>
+            <div class="home2-sla-card-body">
+              <h4 class="home2-sla-card-title">Executive Briefing & Custom Deck</h4>
+              <p class="home2-sla-card-desc">
+                Two mandatory discovery strategy sessions between the keynote speaker and the client's Chief Executive
+                to align every thesis and nuance.
+              </p>
+              <div class="home2-sla-comparison-chip">
+                <div class="home2-sla-chip-row">
+                  <span class="home2-sla-chip-tag-risk">&times; Direct:</span>
+                  <span class="text-muted">Stock recycled slide deck</span>
+                </div>
+                <div class="home2-sla-chip-row">
+                  <span class="home2-sla-chip-tag-safe">&#10003; SLA:</span>
+                  <span class="fw-bold text-main">100% Bespoke Alignment</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="home2-sla-card">
-            <div class="home2-sla-icon">
-              <svg width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z" />
-              </svg>
+        <!-- Pillar 4 -->
+        <div class="col-12 col-md-6 col-xl-3 fade-up delay-300">
+          <div class="home2-sla-visual-card">
+            <div class="home2-sla-media">
+              <img src="assets/images/insights/backstage.jpg" alt="White-Glove Flight & AV Concierge" loading="lazy">
+              <span class="home2-sla-media-badge">On-Site Director</span>
             </div>
-            <h4 class="h5 fw-bold mb-2">White-Glove Flight & AV Concierge</h4>
-            <p class="small text-muted mb-0">
-              End-to-end travel manifests, VIP airport tarmac escorts, teleprompter rehearsals, and backup audio
-              recording rights included.
-            </p>
+            <div class="home2-sla-card-body">
+              <h4 class="home2-sla-card-title">White-Glove Stagecraft Logistics</h4>
+              <p class="home2-sla-card-desc">
+                Dedicated bureau logistics director on-site managing tarmac escorts, teleprompter checks, greenroom
+                hospitality, and audio recording.
+              </p>
+              <div class="home2-sla-comparison-chip">
+                <div class="home2-sla-chip-row">
+                  <span class="home2-sla-chip-tag-risk">&times; Direct:</span>
+                  <span class="text-muted">Client planner handles all stress</span>
+                </div>
+                <div class="home2-sla-chip-row">
+                  <span class="home2-sla-chip-tag-safe">&#10003; SLA:</span>
+                  <span class="fw-bold text-main">Dedicated bureau team</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Comparison SLA Table -->
-      <div class="home2-sla-table shadow-sm">
-        <div class="table-responsive">
-          <table class="table mb-0">
-            <thead>
-              <tr>
-                <th style="width: 40%;">Bureau Deliverable / Protection</th>
-                <th style="width: 30%;">Direct Speaker / Unmanaged</th>
-                <th style="width: 30%;" class="text-gold">SummitSpeak Sovereign SLA</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Flight Delay / Medical Cancellation</strong></td>
-                <td class="text-muted">Total event cancellation risk, no replacement</td>
-                <td class="fw-bold">
-                  <span class="text-gold me-2">
-                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                      <path
-                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-                    </svg>
-                  </span>
-                  2-Hour Certified Understudy Standby
-                </td>
-              </tr>
-              <tr>
-                <td><strong>Contractual Escrow Protection</strong></td>
-                <td class="text-muted">Direct upfront wire to speaker agent</td>
-                <td class="fw-bold">
-                  <span class="text-gold me-2">
-                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                      <path
-                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-                    </svg>
-                  </span>
-                  Escrow hold until stage walk confirmation
-                </td>
-              </tr>
-              <tr>
-                <td><strong>Custom Slide & Content Tailoring</strong></td>
-                <td class="text-muted">Generic stock slide deck often delivered</td>
-                <td class="fw-bold">
-                  <span class="text-gold me-2">
-                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                      <path
-                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-                    </svg>
-                  </span>
-                  2 Mandatory pre-briefings with Client CEO
-                </td>
-              </tr>
-              <tr>
-                <td><strong>Green Room & AV Tech Coordination</strong></td>
-                <td class="text-muted">Client event planner handles all hassles</td>
-                <td class="fw-bold">
-                  <span class="text-gold me-2">
-                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                      <path
-                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-                    </svg>
-                  </span>
-                  Dedicated bureau logistics director on-site
-                </td>
-              </tr>
-            </tbody>
-          </table>
+
+
+      <!-- Executive Assurance Callout Banner -->
+      <div class="home2-sla-assurance-banner fade-up">
+        <img src="assets/images/events/annual_conferences.jpg" alt="Institutional Summit Guarantee"
+          class="home2-sla-banner-bg" loading="lazy">
+        <div class="home2-sla-banner-overlay"></div>
+        <div class="home2-sla-banner-content">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <div class="d-inline-flex align-items-center gap-2 mb-2">
+                <span class="badge badge-gold">Zero Failure Protocol</span>
+                <span class="text-white-50 small">&bull; Enterprise Underwritten SLA</span>
+              </div>
+              <h3 class="h3 fw-bold text-white mb-2">Guaranteed Stage Certainty for World-Class Assemblies</h3>
+              <p class="text-white-50 mb-0" style="max-width: 640px;">
+                Every SummitSpeak keynote engagement is backed by contractual escrow, guaranteed understudy deployment,
+                and direct senior partner oversight from brief to stage walk.
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <button class="btn btn-gold px-4 py-2" onclick="downloadAllTracksBrief()">
+                <span>Download SLA Specification</span>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16" class="ms-1">
+                  <path
+                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                  <path
+                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1388,9 +1677,9 @@
           <div class="ssb-footer-socials">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
               aria-label="Instagram">
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
                 <path
-                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a5.109 5.109 0 1 0 0 10.218 5.109 5.109 0 0 0 0-10.218zm0 1.442a3.667 3.667 0 1 1 0 7.334 3.667 3.667 0 0 1 0-7.334z" />
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
               </svg>
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
@@ -1893,6 +2182,196 @@
       const modal = new bootstrap.Modal(document.getElementById('infoNoticeModal'));
       modal.show();
     }
+
+    // 9. Continuous Auto-Moving Curated Tracks Carousel
+    (function initTracksScroller() {
+      const scroller = document.getElementById('home2TracksScroller');
+      const track = document.getElementById('home2TracksTrack');
+      const toggleBtn = document.getElementById('home2TracksPlayToggle');
+      const pauseIcon = document.getElementById('home2TracksPauseIcon');
+      const prevBtn = document.getElementById('home2TracksPrev');
+      const nextBtn = document.getElementById('home2TracksNext');
+      if (!scroller || !track) return;
+
+      let isPaused = false;
+      let isDown = false;
+      let isManualAnimating = false;
+      let resumeTimeout = null;
+      let startX = 0;
+      let scrollStart = 0;
+      const speed = 0.85; // smooth luxury continuous scroll speed (px/frame)
+      let animationId = null;
+
+      function getHalfWidth() {
+        return track.scrollWidth / 2;
+      }
+
+      function getStepSize() {
+        const item = track.querySelector('.home2-track-slide-item');
+        if (!item) return 560;
+        const style = window.getComputedStyle(track);
+        const gap = parseFloat(style.gap) || 28;
+        return item.offsetWidth + gap;
+      }
+
+      function wrapAround() {
+        const halfWidth = getHalfWidth();
+        if (halfWidth <= 0) return;
+        if (scroller.scrollLeft >= halfWidth) {
+          scroller.scrollLeft -= halfWidth;
+        } else if (scroller.scrollLeft <= 0) {
+          scroller.scrollLeft += halfWidth;
+        }
+      }
+
+      // Smooth programmatic scroll interpolation (works identically on mobile and desktop)
+      function smoothScrollBy(distance, duration = 420) {
+        if (isManualAnimating) return;
+        isManualAnimating = true;
+
+        if (resumeTimeout) clearTimeout(resumeTimeout);
+
+        const halfWidth = getHalfWidth();
+
+        // If scrolling backward and near left boundary, jump to clone set first
+        if (distance < 0 && scroller.scrollLeft < Math.abs(distance) + 10) {
+          scroller.scrollLeft += halfWidth;
+        } else if (distance > 0 && scroller.scrollLeft >= halfWidth) {
+          scroller.scrollLeft -= halfWidth;
+        }
+
+        const startPos = scroller.scrollLeft;
+        const targetPos = startPos + distance;
+        const startTime = performance.now();
+
+        function animateScroll(now) {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease-out cubic curve for luxury feel
+          const ease = 1 - Math.pow(1 - progress, 3);
+          scroller.scrollLeft = startPos + (distance * ease);
+
+          if (progress < 1) {
+            requestAnimationFrame(animateScroll);
+          } else {
+            wrapAround();
+            // Keep paused for 2.5s after clicking so the user can inspect the card
+            resumeTimeout = setTimeout(() => {
+              isManualAnimating = false;
+            }, 2500);
+          }
+        }
+
+        requestAnimationFrame(animateScroll);
+      }
+
+      // Continuous loop step
+      function step() {
+        if (!isPaused && !isDown && !isManualAnimating) {
+          scroller.scrollLeft += speed;
+          const halfWidth = getHalfWidth();
+          if (halfWidth > 0 && scroller.scrollLeft >= halfWidth) {
+            scroller.scrollLeft -= halfWidth;
+          }
+        }
+        animationId = requestAnimationFrame(step);
+      }
+
+      animationId = requestAnimationFrame(step);
+
+      // Pause when cursor hovers or when focused
+      scroller.addEventListener('mouseenter', () => { isPaused = true; });
+      scroller.addEventListener('mouseleave', () => {
+        if (!toggleBtn || toggleBtn.dataset.manualPaused !== 'true') {
+          isPaused = false;
+        }
+      });
+      scroller.addEventListener('focusin', () => { isPaused = true; });
+      scroller.addEventListener('focusout', () => {
+        if (!toggleBtn || toggleBtn.dataset.manualPaused !== 'true') {
+          isPaused = false;
+        }
+      });
+
+      // Mouse drag-to-scroll
+      scroller.addEventListener('mousedown', (e) => {
+        isDown = true;
+        isManualAnimating = false;
+        if (resumeTimeout) clearTimeout(resumeTimeout);
+        scroller.style.cursor = 'grabbing';
+        startX = e.pageX - scroller.offsetLeft;
+        scrollStart = scroller.scrollLeft;
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (isDown) {
+          isDown = false;
+          scroller.style.cursor = 'grab';
+        }
+      });
+
+      scroller.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - scroller.offsetLeft;
+        const walk = (x - startX) * 1.4;
+        scroller.scrollLeft = scrollStart - walk;
+        wrapAround();
+      });
+
+      // Touch scroll wrap-around
+      scroller.addEventListener('scroll', () => {
+        if (!isManualAnimating) wrapAround();
+      }, { passive: true });
+
+      // Prev / Next button actions
+      window.scrollTracksSlider = function (direction, e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        const stepSize = getStepSize();
+        smoothScrollBy(direction * stepSize, 420);
+      };
+
+      // Bind button events explicitly
+      if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => window.scrollTracksSlider(-1, e));
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => window.scrollTracksSlider(1, e));
+      }
+
+      // Play / Pause toggle
+      window.toggleTracksAutoScroll = function (e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        if (!toggleBtn) return;
+        if (toggleBtn.dataset.manualPaused === 'true') {
+          delete toggleBtn.dataset.manualPaused;
+          isPaused = false;
+          isManualAnimating = false;
+          if (pauseIcon) {
+            pauseIcon.innerHTML = '<path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>';
+          }
+          toggleBtn.setAttribute('aria-label', 'Pause auto scroll');
+        } else {
+          toggleBtn.dataset.manualPaused = 'true';
+          isPaused = true;
+          isManualAnimating = false;
+          if (pauseIcon) {
+            pauseIcon.innerHTML = '<path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>';
+          }
+          toggleBtn.setAttribute('aria-label', 'Resume auto scroll');
+        }
+      };
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', window.toggleTracksAutoScroll);
+      }
+    })();
   </script>
 </body>
 

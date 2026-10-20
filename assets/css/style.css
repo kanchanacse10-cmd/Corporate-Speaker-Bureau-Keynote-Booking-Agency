@@ -534,17 +534,18 @@ a {
 .badge.badge-gold,
 .badge.bg-gold,
 .bg-gold {
-  background-color: var(--ssb-secondary-subtle) !important;
-  color: var(--ssb-secondary) !important;
+  background-color: var(--ssb-secondary, #C89D4B) !important;
+  color: #0E2A47 !important;
   font-weight: 700 !important;
   font-size: 0.78rem !important;
-  padding: 0.35rem 0.75rem !important;
-  border-radius: 20px !important;
-  border: 1px solid rgba(200, 157, 75, 0.35) !important;
+  padding: 0.35rem 0.8rem !important;
+  border-radius: 50px !important;
+  border: 1px solid var(--ssb-secondary, #C89D4B) !important;
+  box-shadow: 0 3px 10px rgba(200, 157, 75, 0.28) !important;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   white-space: nowrap !important;
   flex-shrink: 0;
@@ -554,9 +555,10 @@ a {
 [data-bs-theme="dark"] .badge.badge-gold,
 [data-bs-theme="dark"] .badge.bg-gold,
 [data-bs-theme="dark"] .bg-gold {
-  background-color: rgba(212, 175, 55, 0.16) !important;
-  color: #E5C358 !important;
-  border-color: rgba(212, 175, 55, 0.45) !important;
+  background-color: var(--ssb-secondary, #D4AF37) !important;
+  color: #0B192C !important;
+  border-color: var(--ssb-secondary, #D4AF37) !important;
+  box-shadow: 0 3px 12px rgba(212, 175, 55, 0.35) !important;
 }
 
 .tag-pill {

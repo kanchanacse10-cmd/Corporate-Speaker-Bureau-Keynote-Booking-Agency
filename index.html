@@ -463,8 +463,8 @@
         </p>
       </div>
 
-      <!-- Interactive Topic Filter Pills (Live Instant Filtering) -->
-      <div class="speaker-luxury-filter-bar fade-up delay-100" id="speakerTopicFilters">
+      <!-- Interactive Topic Filter Pills (Desktop Only: d-none d-lg-flex) -->
+      <div class="speaker-luxury-filter-bar d-none d-lg-flex fade-up delay-100" id="speakerTopicFilters">
         <button type="button" class="speaker-luxury-filter-pill active" data-topic="all">All Keynotes</button>
         <button type="button" class="speaker-luxury-filter-pill" data-topic="Artificial Intelligence">AI &amp; Frontier
           Tech</button>
@@ -474,6 +474,32 @@
           Strategy</button>
         <button type="button" class="speaker-luxury-filter-pill" data-topic="Innovation">Innovation &amp;
           Disruption</button>
+      </div>
+
+      <!-- Mobile Single-Line Category Switcher with Previous / Next Arrows (Mobile Only: d-lg-none) -->
+      <div class="speaker-mobile-filter-bar d-lg-none fade-up delay-100" id="speakerMobileFilterBar">
+        <div class="speaker-mobile-cat-info" id="speakerMobileCurrentPill">
+          <span class="speaker-mobile-cat-dot"></span>
+          <span class="speaker-mobile-cat-name" id="speakerMobileCatName">All Keynotes</span>
+        </div>
+        <div class="speaker-mobile-nav-btns">
+          <button type="button" class="speaker-mobile-nav-btn speaker-mobile-prev-btn" id="speakerMobilePrevBtn"
+            onclick="navigateHome1SpeakerCategory('prev')" aria-label="Previous Category">
+            <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+            </svg>
+            <span></span>
+          </button>
+          <button type="button" class="speaker-mobile-nav-btn speaker-mobile-next-btn" id="speakerMobileNextBtn"
+            onclick="navigateHome1SpeakerCategory('next')" aria-label="Next Category">
+            <span></span>
+            <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+          </button>
+        </div>
       </div>
 
       <!-- Dynamic Luxury Speaker Cards Grid (4 Columns) -->
@@ -520,7 +546,7 @@
                       d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .86-.514L13.774 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.726L5.07 1.243z" />
                   </svg>
                 </div>
-                <h3 class="home1-lumera-topic-title">Leadership & Management</h3>
+                <h3 class="home1-lumera-topic-title">Leadership and Management</h3>
                 <p class="home1-lumera-topic-desc">
                   Executive leadership, organizational change, decision-making under ambiguity, and building high-trust
                   autonomous teams.
@@ -538,7 +564,7 @@
                       d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14A2.5 2.5 0 0 1 11.5 14v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zM3 4.5A1.5 1.5 0 0 0 4.5 3h7A1.5 1.5 0 0 0 13 4.5v7a1.5 1.5 0 0 0-1.5 1.5h-7A1.5 1.5 0 0 0 3 11.5v-7z" />
                   </svg>
                 </div>
-                <h3 class="home1-lumera-topic-title">Artificial Intelligence & Technology</h3>
+                <h3 class="home1-lumera-topic-title">Artificial Intelligence and Technology</h3>
                 <p class="home1-lumera-topic-desc">
                   Generative AI roadmaps, autonomous agents, tech governance, digital transformation, and human-AI
                   synergy.
@@ -555,7 +581,7 @@
                       d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6z" />
                   </svg>
                 </div>
-                <h3 class="home1-lumera-topic-title">Innovation & Future Trends</h3>
+                <h3 class="home1-lumera-topic-title">Innovation and Future Trends</h3>
                 <p class="home1-lumera-topic-desc">
                   Disruptive business architectures, future forecasting, frictionless customer experiences, and
                   engineering velocity.
@@ -572,7 +598,7 @@
                       d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
                   </svg>
                 </div>
-                <h3 class="home1-lumera-topic-title">Workplace Culture & Wellbeing</h3>
+                <h3 class="home1-lumera-topic-title">Workplace Culture and Wellbeing</h3>
                 <p class="home1-lumera-topic-desc">
                   Psychological safety, employee engagement, sustainable focus in digital burnout, and inclusive
                   leadership dynamics.
@@ -693,6 +719,28 @@
           </div>
         </div>
       </div>
+
+      <!-- Trust Strip: Enterprise Metrics -->
+      <div class="trust-banner-strip fade-up delay-150 mt-5">
+        <div class="row align-items-center g-4 text-center">
+          <div class="col-lg-3 col-6">
+            <div class="trust-stat-num text-gold fw-bold fs-3">500+</div>
+            <div class="trust-stat-label small text-muted">Enterprise Summits Supported</div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="trust-stat-num text-gold fw-bold fs-3">98.7%</div>
+            <div class="trust-stat-label small text-muted">Planner Re-Booking Rate</div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="trust-stat-num text-gold fw-bold fs-3">$0</div>
+            <div class="trust-stat-label small text-muted">Hidden Broker Margins</div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="trust-stat-num text-gold fw-bold fs-3">&lt; 24h</div>
+            <div class="trust-stat-label small text-muted">Curated Proposal Turnaround</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -728,8 +776,7 @@
                 <path
                   d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
               </svg>
-              <input type="text" name="q" class="form-control"
-                placeholder="e.g. Artificial Intelligence, Resilience, Leadership...">
+              <input type="text" name="q" class="form-control" placeholder="e.g. Artificial Intelligence, Resilience.">
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-3">
@@ -796,9 +843,9 @@
         <div class="col-lg-6 col-md-6 fade-up delay-0">
           <div class="home1-format-card">
             <div class="home1-format-media">
-              <img src="assets/images/hero/hero_leadership_stage.jpg" alt="Leadership Summits">
+              <img src="assets/images/events/leadership_summits.jpg" alt="Leadership Summits">
               <div class="home1-format-media-overlay"></div>
-              <span class="home1-format-badge">50 â€“ 300 C-Suite</span>
+              <span class="home1-format-badge">50 &ndash; 300 C-Suite</span>
             </div>
             <div class="home1-format-body">
               <h3 class="home1-format-title">Leadership Summits</h3>
@@ -819,9 +866,9 @@
         <div class="col-lg-6 col-md-6 fade-up delay-100">
           <div class="home1-format-card">
             <div class="home1-format-media">
-              <img src="assets/images/hero/hero_keynote_stage.jpg" alt="Annual Conferences">
+              <img src="assets/images/events/annual_conferences.jpg" alt="Annual Conferences">
               <div class="home1-format-media-overlay"></div>
-              <span class="home1-format-badge">500 â€“ 10,000+ Delegates</span>
+              <span class="home1-format-badge">500 &ndash; 10,000+ Delegates</span>
             </div>
             <div class="home1-format-body">
               <h3 class="home1-format-title">Annual Conferences</h3>
@@ -838,16 +885,13 @@
           </div>
         </div>
 
-
-
-
-        <!-- 5. Awards Ceremonies -->
+        <!-- 3. Awards Ceremonies -->
         <div class="col-lg-6 col-md-6 fade-up delay-250">
           <div class="home1-format-card">
             <div class="home1-format-media">
-              <img src="assets/images/events/summit.jpg" alt="Awards & Gala">
+              <img src="assets/images/events/gala_awards.jpg" alt="Awards & Gala">
               <div class="home1-format-media-overlay"></div>
-              <span class="home1-format-badge">200 â€“ 2,000 Guests</span>
+              <span class="home1-format-badge">200 &ndash; 2,000 Guests</span>
             </div>
             <div class="home1-format-body">
               <h3 class="home1-format-title">Awards & Gala Dinners</h3>
@@ -864,11 +908,11 @@
           </div>
         </div>
 
-        <!-- 6. Virtual Keynotes -->
+        <!-- 4. Virtual Keynotes -->
         <div class="col-lg-6 col-md-6 fade-up delay-300">
           <div class="home1-format-card">
             <div class="home1-format-media">
-              <img src="assets/images/insights/backstage.jpg" alt="Virtual Keynotes">
+              <img src="assets/images/events/virtual_hybrid.jpg" alt="Virtual Keynotes">
               <div class="home1-format-media-overlay"></div>
               <span class="home1-format-badge">Global Live Stream</span>
             </div>
@@ -1075,28 +1119,6 @@
                 <span class="badge home1-trust-pill">Guaranteed SLA</span>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Trust Strip: Enterprise Metrics -->
-      <div class="trust-banner-strip fade-up delay-150 mt-5">
-        <div class="row align-items-center g-4 text-center">
-          <div class="col-lg-3 col-6">
-            <div class="trust-stat-num text-gold fw-bold fs-3">500+</div>
-            <div class="trust-stat-label small text-muted">Enterprise Summits Supported</div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <div class="trust-stat-num text-gold fw-bold fs-3">98.7%</div>
-            <div class="trust-stat-label small text-muted">Planner Re-Booking Rate</div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <div class="trust-stat-num text-gold fw-bold fs-3">$0</div>
-            <div class="trust-stat-label small text-muted">Hidden Broker Margins</div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <div class="trust-stat-num text-gold fw-bold fs-3">&lt; 24h</div>
-            <div class="trust-stat-label small text-muted">Curated Proposal Turnaround</div>
           </div>
         </div>
       </div>
@@ -1493,9 +1515,9 @@
           <div class="ssb-footer-socials">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
               aria-label="Instagram">
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
                 <path
-                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a5.109 5.109 0 1 0 0 10.218 5.109 5.109 0 0 0 0-10.218zm0 1.442a3.667 3.667 0 1 1 0 7.334 3.667 3.667 0 0 1 0-7.334z" />
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
               </svg>
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"

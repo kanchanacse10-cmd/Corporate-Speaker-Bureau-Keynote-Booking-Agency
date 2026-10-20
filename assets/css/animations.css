@@ -2,23 +2,9 @@
    SummitSpeak Bureau — Premium Animation Engine (Inspired by Luméra Skin)
    ========================================================================== */
 
-/* ---- Top Scroll Progress Indicator ---- */
+/* ---- Top Scroll Progress Indicator (Disabled) ---- */
 #ssbScrollProgress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  width: 0%;
-  background: linear-gradient(90deg, var(--ssb-secondary) 0%, #F5D77F 50%, var(--ssb-secondary) 100%);
-  z-index: 9999;
-  pointer-events: none;
-  transition: width 0.1s ease-out;
-  box-shadow: 0 0 10px rgba(200, 157, 75, 0.6);
-}
-
-[dir="rtl"] #ssbScrollProgress {
-  left: auto;
-  right: 0;
+  display: none !important;
 }
 
 /* ==========================================================================

@@ -202,8 +202,35 @@ document.addEventListener("DOMContentLoaded", () => {
         pill.classList.add("active");
         const topic = pill.dataset.topic;
         renderFeatured(topic);
+        const mobileLabel = document.getElementById("speakerMobileCatName");
+        if (mobileLabel) {
+          mobileLabel.textContent = pill.textContent.trim();
+        }
+        const mobilePill = document.getElementById("speakerMobileCurrentPill");
+        if (mobilePill) {
+          mobilePill.classList.remove("pulse-highlight");
+          void mobilePill.offsetWidth;
+          mobilePill.classList.add("pulse-highlight");
+        }
       });
     });
+
+    // Mobile Single-Line Category Switcher for Home 1 Featured Speakers
+    window.navigateHome1SpeakerCategory = function(direction) {
+      const allPills = Array.from(document.querySelectorAll("#speakerTopicFilters .speaker-luxury-filter-pill"));
+      if (!allPills.length) return;
+      let currentIndex = allPills.findIndex(p => p.classList.contains("active"));
+      if (currentIndex === -1) currentIndex = 0;
+
+      let nextIndex;
+      if (direction === 'next') {
+        nextIndex = (currentIndex + 1) % allPills.length;
+      } else {
+        nextIndex = (currentIndex - 1 + allPills.length) % allPills.length;
+      }
+
+      allPills[nextIndex].click();
+    };
   }
 
   // 5. Active Nav Highlighting
@@ -653,22 +680,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 13. Scroll Progress Indicator Bar (Top of Viewport)
+  // 13. Scroll Progress Indicator Bar (Removed)
   function initScrollProgressBar() {
-    let bar = document.getElementById("ssbScrollProgress");
-    if (!bar) {
-      bar = document.createElement("div");
-      bar.id = "ssbScrollProgress";
-      document.body.prepend(bar);
-    }
-    const updateProgress = () => {
-      const scrollY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
-      bar.style.width = Math.min(100, Math.max(0, progress)) + "%";
-    };
-    window.addEventListener("scroll", updateProgress, { passive: true });
-    updateProgress();
+    const bar = document.getElementById("ssbScrollProgress");
+    if (bar) bar.remove();
   }
 
   // 14. Luméra-Style Scroll-Driven Reveal Animations (IntersectionObserver)

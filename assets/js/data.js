@@ -116,7 +116,7 @@ const SSB_DATA = {
     {
       id: "julian-thorne",
       name: "Julian Thorne",
-      title: "Organizational Psychologist & Culture Author",
+      title: "Organizational Psychologist",
       image: "assets/images/speakers/julian-thorne.jpg",
       primaryTopic: "Workplace Culture & Wellbeing",
       industry: "Healthcare",
@@ -197,7 +197,7 @@ const SSB_DATA = {
     {
       id: "sarah-jenkins",
       name: "Sarah Jenkins",
-      title: "Enterprise Transformation & Executive Coach",
+      title: "Enterprise Transformation",
       image: "assets/images/speakers/sarah-jenkins.jpg",
       primaryTopic: "Leadership & Management",
       industry: "Professional Services",
