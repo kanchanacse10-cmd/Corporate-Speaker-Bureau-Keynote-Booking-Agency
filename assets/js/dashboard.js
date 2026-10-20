@@ -20,11 +20,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const breadcrumbTargets = document.querySelectorAll(".dash-breadcrumb-target, #dash-breadcrumb-current, #dash-breadcrumb-current-mobile");
   const sidebarToggle = document.getElementById("dash-sidebar-toggle");
   const sidebar = document.querySelector(".dash-sidebar");
+  const sidebarClose = document.getElementById("sidebar-close");
+  const sidebarBackdrop = document.getElementById("sidebar-backdrop");
 
-  if (sidebarToggle && sidebar) {
+  function openSidebar() {
+    if (sidebar) sidebar.classList.add("show");
+    if (sidebarBackdrop) sidebarBackdrop.classList.add("show");
+    document.body.classList.add("sidebar-open");
+  }
+
+  function closeSidebar() {
+    if (sidebar) sidebar.classList.remove("show");
+    if (sidebarBackdrop) sidebarBackdrop.classList.remove("show");
+    document.body.classList.remove("sidebar-open");
+  }
+
+  if (sidebarToggle) {
     sidebarToggle.addEventListener("click", () => {
-      sidebar.classList.toggle("show");
+      if (sidebar && sidebar.classList.contains("show")) {
+        closeSidebar();
+      } else {
+        openSidebar();
+      }
     });
+  }
+
+  if (sidebarClose) {
+    sidebarClose.addEventListener("click", closeSidebar);
+  }
+
+  if (sidebarBackdrop) {
+    sidebarBackdrop.addEventListener("click", closeSidebar);
   }
 
   // Function to switch view
@@ -52,9 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshActiveView(viewName);
 
     // Close mobile sidebar if open
-    if (sidebar && sidebar.classList.contains("show")) {
-      sidebar.classList.remove("show");
-    }
+    closeSidebar();
 
     // Update URL hash/query without reload (safeguarded for file:// protocol)
     try {
@@ -85,6 +109,28 @@ document.addEventListener("DOMContentLoaded", () => {
       switchView(jumpLink.dataset.dashJump);
     }
   });
+
+  // Sign Out Modal Handling (Screenshots 3 & 4 match)
+  const signOutModalEl = document.getElementById("signOutModal");
+  const confirmSignOutBtn = document.getElementById("confirmSignOutBtn");
+
+  document.querySelectorAll("[data-logout-trigger]").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      closeSidebar();
+      if (signOutModalEl && window.bootstrap && window.bootstrap.Modal) {
+        const modal = bootstrap.Modal.getOrCreateInstance(signOutModalEl);
+        modal.show();
+      }
+    });
+  });
+
+  if (confirmSignOutBtn) {
+    confirmSignOutBtn.addEventListener("click", () => {
+      // Directs to portal login screen (Screenshot 4)
+      window.location.href = "../auth/login.html";
+    });
+  }
 
   // --- View Specific Refresh Logic ---
   function refreshActiveView(viewName) {
@@ -243,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div class="small text-gold">${s.primaryTopic}</div>
                 </div>
               </div>
-              <p class="small text-muted flex-grow-1">${s.bio.substring(0, 110)}...</p>
+              <p class="small text-muted flex-grow-1 mb-3">${s.teaser || s.bio}</p>
               <div class="d-flex gap-1 flex-wrap mb-3">
                 ${s.formats.map(f => `<span class="badge bg-secondary-subtle text-dark-emphasis" style="font-size:0.7rem;">${f}</span>`).join("")}
               </div>

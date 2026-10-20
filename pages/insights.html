@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,16 @@
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link rel="shortcut icon" href="../favicon.svg">
   <title>Insights & Editorial — SummitSpeak Bureau</title>
-  <meta name="description" content="Expert guides, event planning frameworks, and keynote speaker trends for corporate conference directors and meeting planners.">
-  
+  <meta name="description"
+    content="Expert guides, event planning frameworks, and keynote speaker trends for corporate conference directors and meeting planners.">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/rtl.css">
   <script src="../assets/js/theme.js"></script>
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -23,7 +26,11 @@
       <div class="container-fluid px-3 px-xl-4 px-xxl-5">
         <a class="ssb-brand" href="../index.html">
           <div class="ssb-brand-logo">
-            <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z"/></svg>
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+              <path
+                d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+            </svg>
           </div>
           <div class="ssb-brand-text">
             <span class="ssb-brand-name">SummitSpeak</span>
@@ -33,29 +40,33 @@
 
         <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard (Client Portal on mobile), 5. Login -->
         <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
-          <!-- 1. Wishlist Button (Desktop & Tablets >= 768px) -->
-          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-md-inline-flex" title="View Saved Wishlist" aria-label="View Saved Wishlist">
+          <!-- 1. Wishlist Button (Desktop >= 1200px) -->
+          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-xl-inline-flex"
+            title="View Saved Wishlist" aria-label="View Saved Wishlist">
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+              <path
+                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
             </svg>
             <span class="shortlist-count-badge">0</span>
           </a>
 
-          <!-- 2. RTL/LTR Toggle (Desktop & Tablets >= 768px) -->
-          <button type="button" class="toggle-btn rtl-toggle-btn d-none d-md-inline-flex" onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle direction">RTL</button>
+          <!-- 2. RTL/LTR Toggle (Desktop >= 1200px) -->
+          <button type="button" class="toggle-btn rtl-toggle-btn d-none d-xl-inline-flex"
+            onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle direction">RTL</button>
 
-          <!-- 3. Dark/Light Theme Converter (Desktop & Tablets >= 768px) -->
-          <button type="button" class="toggle-btn theme-toggle-btn d-none d-md-inline-flex" onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle theme"></button>
+          <!-- 3. Dark/Light Theme Converter (Desktop >= 1200px) -->
+          <button type="button" class="toggle-btn theme-toggle-btn d-none d-xl-inline-flex"
+            onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle theme"></button>
 
-          <!-- 4. Client Portal / Dashboard (Dashboard on Desktop & Tablets >= 768px | Client Portal on Mobile) -->
-          <a href="../dashboard/index.html" class="btn btn-gold btn-sm nav-portal-btn d-none d-md-inline-flex"
+          <!-- 4. Client Portal / Dashboard (Desktop >= 1200px) -->
+          <a href="../dashboard/index.html" class="btn btn-gold btn-sm nav-portal-btn d-none d-xl-inline-flex"
             title="Client Portal & Dashboard" aria-label="Dashboard">
-            <span class="d-none d-md-inline">Dashboard</span>
-            <span class="d-inline d-md-none">Client Portal</span>
+            Dashboard
           </a>
 
-          <!-- 5. Login Button (Desktop & Tablets >= 768px) -->
-          <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-md-inline-flex" title="Client & Speaker Login" aria-label="Login">
+          <!-- 5. Login Button (Desktop >= 1200px) -->
+          <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-xl-inline-flex"
+            title="Client & Speaker Login" aria-label="Login">
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
               <path
                 d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
@@ -64,7 +75,9 @@
           </a>
 
           <!-- Responsive Mobile Toggle (Visible on mobile & tablet < 1200px) -->
-          <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#ssbNavbarContent" aria-controls="ssbNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#ssbNavbarContent" aria-controls="ssbNavbarContent" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
@@ -73,8 +86,8 @@
         <div class="collapse navbar-collapse order-xl-2" id="ssbNavbarContent">
           <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
@@ -92,7 +105,7 @@
           </ul>
 
           <!-- Mobile Menu Drawer Actions (Luméra Skin Style: 1. Wishlist, 2. RTL, 3. Theme Switcher, 4. Login, 5. Dashboard) -->
-          <div class="mobile-nav-actions d-md-none">
+          <div class="mobile-nav-actions d-xl-none">
             <div class="mobile-nav-actions-row">
               <div class="mobile-nav-toggles">
                 <!-- 1. Wishlist Button -->
@@ -122,16 +135,18 @@
                 <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm mobile-menu-login"
                   title="Client & Speaker Login" aria-label="Login">
                   <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
-                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    <path
+                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                   </svg>
                   <span class="login-text">Login</span>
                 </a>
 
                 <!-- 5. Dashboard Button -->
-                <a href="../dashboard/index.html" class="btn btn-gold btn-sm mobile-menu-dash"
-                  title="Client Dashboard" aria-label="Dashboard">
+                <a href="../dashboard/index.html" class="btn btn-gold btn-sm mobile-menu-dash" title="Client Dashboard"
+                  aria-label="Dashboard">
                   <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16" class="me-1">
-                    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                    <path
+                      d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
                   </svg>
                   <span>Dashboard</span>
                 </a>
@@ -147,21 +162,20 @@
        CINEMATIC PAGE HERO BANNER
        ========================================================================== -->
   <section class="cinematic-page-hero">
-    <img src="../assets/images/insights/backstage.jpg" alt="Executive Green Room & Keynote Briefing" class="cinematic-page-hero-bg">
+    <img src="../assets/images/insights/backstage.jpg" alt="Executive Green Room & Keynote Briefing"
+      class="cinematic-page-hero-bg">
     <div class="cinematic-page-hero-overlay"></div>
     <div class="cinematic-page-hero-content">
-      <div class="cinematic-breadcrumb">
-        <a href="../index.html">Home</a>
-        <span class="cinematic-breadcrumb-sep">/</span>
-        <span class="cinematic-breadcrumb-current">Insights &amp; Editorial</span>
-      </div>
+
       <h1 class="cinematic-page-hero-title">Insights &amp; Conference Strategy</h1>
       <p class="cinematic-page-hero-desc">
-        "Actionable perspectives on keynote selection, event ROI, contractual riders, and high-impact audience programming."
+        "Actionable perspectives on keynote selection, event ROI, contractual riders, and high-impact audience
+        programming."
       </p>
       <div class="cinematic-page-hero-cta">
         <a href="#insights-grid" class="btn btn-gold btn-lg px-4 shadow-sm">Explore Curated Research &rarr;</a>
-        <a href="book-a-speaker.html" class="btn btn-outline-corporate text-white border-white btn-lg px-4">Plan Your Event Keynote</a>
+        <a href="book-a-speaker.html" class="btn btn-outline-corporate text-white border-white btn-lg px-4">Plan Your
+          Event Keynote</a>
       </div>
     </div>
   </section>
@@ -175,7 +189,239 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ==========================================================================
+       SECTION 2: 2026 KEYNOTE TREND INDEX & EXECUTIVE DEMAND
+       ========================================================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+          <span class="badge-gold mb-2 d-inline-block">EXECUTIVE INTELLIGENCE</span>
+          <h2 class="mb-3">The 2026 Keynote Trend Index: Where Enterprise Attention is Flowing</h2>
+          <p class="text-muted">Empirical demand indicators and thematic shifts synthesized from over 1,200 annual
+            keynote engagements across Fortune 500 summits and global board offsites.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Trend 1: Agentic AI -->
+        <div class="col-xl-6 col-md-6 col-12">
+          <div class="trend-card ssb-card h-100 p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="trend-icon-box">
+                <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14A2.5 2.5 0 0 1 11.5 14v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3z" />
+                </svg>
+              </span>
+              <span class="trend-stat-pill">+142% Board Demand</span>
+            </div>
+            <h4 class="trend-title mb-2 fs-5">Autonomous AI &amp; Human Synergy</h4>
+            <p class="small text-muted flex-grow-1">Enterprise focus has moved beyond generative chatbots to sovereign
+              agentic workflows, algorithmic team leadership, and regulatory safety boundaries.</p>
+            <div class="trend-meta-box mt-3 pt-3 border-top border-theme">
+              <div class="small fw-semibold text-gold mb-1">Target Audience:</div>
+              <div class="small text-muted mb-2">CIOs, Transformation Leads, Board Directors</div>
+              <div class="small fw-semibold text-gold mb-1">Recommended Format:</div>
+              <div class="small text-muted">45-min Keynote + 30-min Closed Q&amp;A</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trend 2: Geopolitics & Macro -->
+        <div class="col-xl-6 col-md-6 col-12">
+          <div class="trend-card ssb-card h-100 p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="trend-icon-box">
+                <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.26.56-.352.868h4.478c-.092-.309-.209-.601-.352-.869-.552-1.034-1.218-1.65-1.887-1.854zM4.09 4H1.895a6.994 6.994 0 0 0-1.077 2h2.822c.088-.71.244-1.385.45-2zm-.965 3h-2.28a7.02 7.02 0 0 0 0 2h2.28c-.03-.33-.048-.663-.048-1s.018-.67.048-1zm.965 3H1.895a6.994 6.994 0 0 0 1.077 2h2.215a7.487 7.487 0 0 1-.45-2zm1.255 2c.552 1.035 1.218 1.65 1.887 1.855.67-.204 1.335-.82 1.887-1.855.143-.268.26-.56.352-.868H5.698c.092.309.209.601.352.868zm3.87-2a7.487 7.487 0 0 1-.45 2h2.215a6.994 6.994 0 0 0 1.077-2H9.215zm.965-3c.03.337.048.67.048 1s-.018.663-.048 1h2.28a7.02 7.02 0 0 0 0-2h-2.28zm-.965-3c.206.615.362 1.29.45 2h2.215a6.994 6.994 0 0 0-1.077-2H9.215zM7.5 4c-.454 0-.895.14-1.282.416-.388.275-.688.685-.862 1.205A6.994 6.994 0 0 0 7.5 6V4zm0 3c-.454 0-.895.14-1.282.416-.388.275-.688.685-.862 1.205A6.994 6.994 0 0 0 7.5 9V7zm0 3c-.454 0-.895.14-1.282.416-.388.275-.688.685-.862 1.205A6.994 6.994 0 0 0 7.5 12v-2z" />
+                </svg>
+              </span>
+              <span class="trend-stat-pill">+88% Annual Inquiries</span>
+            </div>
+            <h4 class="trend-title mb-2 fs-5">Geopolitical Hedging &amp; Trade</h4>
+            <p class="small text-muted flex-grow-1">Senior executives demand candid, data-driven assessments of
+              cross-border supply chains, tariff risks, currency shifts, and regional manufacturing sovereignity.</p>
+            <div class="trend-meta-box mt-3 pt-3 border-top border-theme">
+              <div class="small fw-semibold text-gold mb-1">Target Audience:</div>
+              <div class="small text-muted mb-2">CFOs, Supply Chain Chiefs, Risk Officers</div>
+              <div class="small fw-semibold text-gold mb-1">Recommended Format:</div>
+              <div class="small text-muted">Morning Plenary Keynote &amp; Fireside Chat</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trend 3: High Accountability Leadership -->
+        <div class="col-xl-6 col-md-6 col-12">
+          <div class="trend-card ssb-card h-100 p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="trend-icon-box">
+                <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.77 62.77 0 0 1 5.072.56z" />
+                </svg>
+              </span>
+              <span class="trend-stat-pill">94% Rebooking Rate</span>
+            </div>
+            <h4 class="trend-title mb-2 fs-5">High-Accountability Culture</h4>
+            <p class="small text-muted flex-grow-1">Organizations face digital burnout and decision inertia. Proven
+              leaders from naval commands and elite institutions share frameworks for radical trust and speed.</p>
+            <div class="trend-meta-box mt-3 pt-3 border-top border-theme">
+              <div class="small fw-semibold text-gold mb-1">Target Audience:</div>
+              <div class="small text-muted mb-2">CEOs, Chief People Officers, BU Heads</div>
+              <div class="small fw-semibold text-gold mb-1">Recommended Format:</div>
+              <div class="small text-muted">Annual Leadership Summit &amp; Workshop</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trend 4: Sustainable Alpha & ESG -->
+        <div class="col-xl-6 col-md-6 col-12">
+          <div class="trend-card ssb-card h-100 p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="trend-icon-box">
+                <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5z" />
+                </svg>
+              </span>
+              <span class="trend-stat-pill">Top 5 Global Topic</span>
+            </div>
+            <h4 class="trend-title mb-2 fs-5">Capital Transition &amp; Clean Alpha</h4>
+            <p class="small text-muted flex-grow-1">Moving past corporate checkboxes toward profitable net-zero asset
+              allocations, clean technology infrastructure investments, and long-term economic resilience.</p>
+            <div class="trend-meta-box mt-3 pt-3 border-top border-theme">
+              <div class="small fw-semibold text-gold mb-1">Target Audience:</div>
+              <div class="small text-muted mb-2">Institutional Investors, Sustainability Boards</div>
+              <div class="small fw-semibold text-gold mb-1">Recommended Format:</div>
+              <div class="small text-muted">Global Investor Summit &amp; Keynote</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: CURATION FRAMEWORK & EXECUTIVE TOOLKIT
+       ========================================================================== -->
+  <section class="section-padding bg-soft border-top border-theme">
+    <div class="container">
+      <div class="row g-4 g-lg-5 align-items-center">
+        <!-- Left Column: The 4-Pillar Curation Framework -->
+        <div class="col-lg-7">
+          <span class="badge-gold mb-2 d-inline-block">METHODOLOGY PLAYBOOK</span>
+          <h2 class="mb-3">The Enterprise Keynote Selection Framework</h2>
+
+
+          <div class="framework-pillars-list d-flex flex-column gap-3">
+            <!-- Pillar 1 -->
+            <div class="framework-pillar-item ssb-card p-3 p-sm-4 d-flex gap-3 align-items-start">
+              <div class="framework-pillar-num flex-shrink-0">01</div>
+              <div>
+                <h5 class="mb-1">Strategic Intent &amp; Mindset Calibration</h5>
+                <p class="small text-muted mb-0">We work with your steering committee to define the exact psychological
+                  transition required—whether urgent strategic reinvention, executive alignment, or breakthrough morale.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="framework-pillar-item ssb-card p-3 p-sm-4 d-flex gap-3 align-items-start">
+              <div class="framework-pillar-num flex-shrink-0">02</div>
+              <div>
+                <h5 class="mb-1">Raw Footage &amp; Gravitas Verification</h5>
+                <p class="small text-muted mb-0">Every keynote candidate is evaluated using unedited stage footage,
+                  real-time Q&amp;A handling under tough questioning, and empirical post-event audience NPS benchmarks.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="framework-pillar-item ssb-card p-3 p-sm-4 d-flex gap-3 align-items-start">
+              <div class="framework-pillar-num flex-shrink-0">03</div>
+              <div>
+                <h5 class="mb-1">1-on-1 Discovery &amp; Message Tailoring</h5>
+                <p class="small text-muted mb-0">Two to four weeks before your summit, our bureau facilitates an
+                  executive briefing between your CEO and the speaker to weave internal strategy and milestones into the
+                  talk.</p>
+              </div>
+            </div>
+
+            <!-- Pillar 4 -->
+
+          </div>
+        </div>
+
+        <!-- Right Column: Strategic Whitepaper Download Card -->
+        <div class="col-lg-5">
+          <div class="ssb-card p-4 p-md-5 border-gold-subtle position-relative overflow-hidden"
+            style="background: linear-gradient(145deg, var(--ssb-bg-card) 0%, rgba(200, 157, 74, 0.05) 100%);">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <span
+                class="badge bg-gold-subtle text-gold p-2 rounded-circle d-inline-flex align-items-center justify-content-center"
+                style="width:36px; height:36px;">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
+                </svg>
+              </span>
+              <span class="badge-gold">Q4 2026 EDITION</span>
+            </div>
+
+            <h3 class="mb-2 fs-4">Enterprise Keynote Strategy Guide</h3>
+            <p class="text-muted small mb-4">A 28-page executive blueprint covering speaker fee benchmarks, contracting
+              contingencies, and sample C-suite briefing briefs.</p>
+
+            <div class="d-flex flex-column gap-2 mb-4">
+              <div class="d-flex align-items-center gap-2 small text-muted">
+                <svg width="16" height="16" fill="var(--ssb-secondary)" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                <span>2026 Keynote Fee Bands &amp; Global Travel Riders</span>
+              </div>
+              <div class="d-flex align-items-center gap-2 small text-muted">
+                <svg width="16" height="16" fill="var(--ssb-secondary)" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                <span>The 10-Point Technical AV Rider Audit</span>
+              </div>
+              <div class="d-flex align-items-center gap-2 small text-muted">
+                <svg width="16" height="16" fill="var(--ssb-secondary)" viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+                <span>C-Suite Discovery Questionnaire &amp; Alignment Matrix</span>
+              </div>
+            </div>
+
+            <form
+              onsubmit="event.preventDefault(); window.SSB_SHOW_TOAST ? window.SSB_SHOW_TOAST('Strategy Guide dispatched to your corporate inbox.', 'success') : alert('Strategy Guide sent!'); this.reset();">
+              <div class="mb-3">
+                <label class="form-label small text-muted" for="whitepaper-email">Corporate Work Email</label>
+                <input type="email" id="whitepaper-email" class="form-control" placeholder="name@company.com" required>
+              </div>
+              <button type="submit"
+                class="btn btn-gold w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                <span>Download Executive Whitepaper</span>
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+              </button>
+            </form>
+            <div class="mt-2 text-center">
+              <span class="text-muted" style="font-size:0.72rem;">Instant PDF access • Non-solicitation &amp;
+                confidentiality guaranteed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- ==========================================================================
        GLOBAL FOOTER (INSPIRATION: SEOULFIRE MINIMALIST SPLIT FOOTER)
        ========================================================================== -->
@@ -188,7 +434,8 @@
             <div class="ssb-footer-logo">
               <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
-                <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+                <path
+                  d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
               </svg>
             </div>
             <div class="ssb-footer-brand-text">
@@ -204,24 +451,43 @@
 
           <!-- Social Buttons -->
           <div class="ssb-footer-socials">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn" aria-label="Instagram">
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="Instagram">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn" aria-label="LinkedIn">
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="LinkedIn">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+              </svg>
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn" aria-label="YouTube">
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v5.582l4.8-2.79-4.8-2.792z"/></svg>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="YouTube">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v5.582l4.8-2.79-4.8-2.792z" />
+              </svg>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn" aria-label="X / Twitter">
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.147H2.865l8.875 11.631Z"/></svg>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="X / Twitter">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.147H2.865l8.875 11.631Z" />
+              </svg>
             </a>
           </div>
 
           <!-- Email Newsletter Input -->
-          <form class="ssb-footer-newsletter-form" onsubmit="event.preventDefault(); window.SSB_SHOW_TOAST ? window.SSB_SHOW_TOAST('Thank you for subscribing to Keynote Intelligence.', 'success') : alert('Subscribed!'); this.reset();">
-            <input type="email" class="ssb-footer-newsletter-input" placeholder="Email for keynote intelligence" required aria-label="Email for keynote intelligence">
-            <button type="submit" class="ssb-footer-newsletter-btn" aria-label="Subscribe to intelligence">&rarr;</button>
+          <form class="ssb-footer-newsletter-form"
+            onsubmit="event.preventDefault(); window.SSB_SHOW_TOAST ? window.SSB_SHOW_TOAST('Thank you for subscribing to Keynote Intelligence.', 'success') : alert('Subscribed!'); this.reset();">
+            <input type="email" class="ssb-footer-newsletter-input" placeholder="Email for keynote intelligence"
+              required aria-label="Email for keynote intelligence">
+            <button type="submit" class="ssb-footer-newsletter-btn"
+              aria-label="Subscribe to intelligence">&rarr;</button>
           </form>
         </div>
 
@@ -294,7 +560,8 @@
       <a href="../dashboard/index.html?view=shortlist" class="mobile-bottom-nav-item" aria-label="Wishlist">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            <path
+              d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
           </svg>
           <span class="shortlist-count-badge">0</span>
         </div>
@@ -305,8 +572,10 @@
       <a href="book-a-speaker.html" class="mobile-bottom-nav-item" aria-label="Book Enquiry">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+            <path
+              d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+            <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
           </svg>
         </div>
         <span class="mobile-bottom-nav-label">Book Enquiry</span>
@@ -316,8 +585,9 @@
       <a href="../auth/login.html" class="mobile-bottom-nav-item" aria-label="Account">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
           </svg>
         </div>
         <span class="mobile-bottom-nav-label">Account</span>
@@ -327,7 +597,8 @@
       <a href="../dashboard/index.html" class="mobile-bottom-nav-item" aria-label="Client Portal">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.15V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1 6.1v-.6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v.6L8.687 7.78a.5.5 0 0 1-.374 0L1 6.1z"/>
+            <path
+              d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.15V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1 6.1v-.6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v.6L8.687 7.78a.5.5 0 0 1-.374 0L1 6.1z" />
           </svg>
         </div>
         <span class="mobile-bottom-nav-label">Client Portal</span>
@@ -369,4 +640,5 @@
     });
   </script>
 </body>
+
 </html>

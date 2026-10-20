@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,16 @@
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link rel="shortcut icon" href="../favicon.svg">
   <title>Services — SummitSpeak Bureau</title>
-  <meta name="description" content="Discover our complete range of keynote speaker booking, corporate conference coordination, and executive consultation services.">
-  
+  <meta name="description"
+    content="Discover our complete range of keynote speaker booking, corporate conference coordination, and executive consultation services.">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/rtl.css">
   <script src="../assets/js/theme.js"></script>
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -23,7 +26,11 @@
       <div class="container-fluid px-3 px-xl-4 px-xxl-5">
         <a class="ssb-brand" href="../index.html">
           <div class="ssb-brand-logo">
-            <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z"/></svg>
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+              <path
+                d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+            </svg>
           </div>
           <div class="ssb-brand-text">
             <span class="ssb-brand-name">SummitSpeak</span>
@@ -33,29 +40,33 @@
 
         <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard (Client Portal on mobile), 5. Login -->
         <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
-          <!-- 1. Wishlist Button (Desktop & Tablets >= 768px) -->
-          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-md-inline-flex" title="View Saved Wishlist" aria-label="View Saved Wishlist">
+          <!-- 1. Wishlist Button (Desktop >= 1200px) -->
+          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-xl-inline-flex"
+            title="View Saved Wishlist" aria-label="View Saved Wishlist">
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+              <path
+                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
             </svg>
             <span class="shortlist-count-badge">0</span>
           </a>
 
-          <!-- 2. RTL/LTR Toggle (Desktop & Tablets >= 768px) -->
-          <button type="button" class="toggle-btn rtl-toggle-btn d-none d-md-inline-flex" onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle direction">RTL</button>
+          <!-- 2. RTL/LTR Toggle (Desktop >= 1200px) -->
+          <button type="button" class="toggle-btn rtl-toggle-btn d-none d-xl-inline-flex"
+            onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle direction">RTL</button>
 
-          <!-- 3. Dark/Light Theme Converter (Desktop & Tablets >= 768px) -->
-          <button type="button" class="toggle-btn theme-toggle-btn d-none d-md-inline-flex" onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle theme"></button>
+          <!-- 3. Dark/Light Theme Converter (Desktop >= 1200px) -->
+          <button type="button" class="toggle-btn theme-toggle-btn d-none d-xl-inline-flex"
+            onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle theme"></button>
 
-          <!-- 4. Client Portal / Dashboard (Dashboard on Desktop & Tablets >= 768px | Client Portal on Mobile) -->
-          <a href="../dashboard/index.html" class="btn btn-gold btn-sm nav-portal-btn d-none d-md-inline-flex"
+          <!-- 4. Client Portal / Dashboard (Desktop >= 1200px) -->
+          <a href="../dashboard/index.html" class="btn btn-gold btn-sm nav-portal-btn d-none d-xl-inline-flex"
             title="Client Portal & Dashboard" aria-label="Dashboard">
-            <span class="d-none d-md-inline">Dashboard</span>
-            <span class="d-inline d-md-none">Client Portal</span>
+            Dashboard
           </a>
 
-          <!-- 5. Login Button (Desktop & Tablets >= 768px) -->
-          <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-md-inline-flex" title="Client & Speaker Login" aria-label="Login">
+          <!-- 5. Login Button (Desktop >= 1200px) -->
+          <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-xl-inline-flex"
+            title="Client & Speaker Login" aria-label="Login">
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
               <path
                 d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
@@ -64,7 +75,9 @@
           </a>
 
           <!-- Responsive Mobile Toggle (Visible on mobile & tablet < 1200px) -->
-          <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#ssbNavbarContent" aria-controls="ssbNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#ssbNavbarContent" aria-controls="ssbNavbarContent" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
@@ -73,8 +86,8 @@
         <div class="collapse navbar-collapse order-xl-2" id="ssbNavbarContent">
           <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
@@ -92,7 +105,7 @@
           </ul>
 
           <!-- Mobile Menu Drawer Actions (Luméra Skin Style: 1. Wishlist, 2. RTL, 3. Theme Switcher, 4. Login, 5. Dashboard) -->
-          <div class="mobile-nav-actions d-md-none">
+          <div class="mobile-nav-actions d-xl-none">
             <div class="mobile-nav-actions-row">
               <div class="mobile-nav-toggles">
                 <!-- 1. Wishlist Button -->
@@ -122,16 +135,18 @@
                 <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm mobile-menu-login"
                   title="Client & Speaker Login" aria-label="Login">
                   <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
-                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    <path
+                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                   </svg>
                   <span class="login-text">Login</span>
                 </a>
 
                 <!-- 5. Dashboard Button -->
-                <a href="../dashboard/index.html" class="btn btn-gold btn-sm mobile-menu-dash"
-                  title="Client Dashboard" aria-label="Dashboard">
+                <a href="../dashboard/index.html" class="btn btn-gold btn-sm mobile-menu-dash" title="Client Dashboard"
+                  aria-label="Dashboard">
                   <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16" class="me-1">
-                    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                    <path
+                      d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
                   </svg>
                   <span>Dashboard</span>
                 </a>
@@ -150,18 +165,16 @@
     <img src="../assets/images/events/summit.jpg" alt="Global Keynote Summit Arena" class="cinematic-page-hero-bg">
     <div class="cinematic-page-hero-overlay"></div>
     <div class="cinematic-page-hero-content">
-      <div class="cinematic-breadcrumb">
-        <a href="../index.html">Home</a>
-        <span class="cinematic-breadcrumb-sep">/</span>
-        <span class="cinematic-breadcrumb-current">Services &amp; Capabilities</span>
-      </div>
+
       <h1 class="cinematic-page-hero-title">End-to-End Keynote &amp; Bureau Services</h1>
       <p class="cinematic-page-hero-desc">
-        "From confidential board roundtables to 10,000-seat arena productions, we orchestrate talent contracts, stage riders, and sovereign escrow."
+        "From confidential board roundtables to 10,000-seat arena productions, we orchestrate talent contracts, stage
+        riders, and sovereign escrow."
       </p>
       <div class="cinematic-page-hero-cta">
         <a href="contact.html" class="btn btn-gold btn-lg px-4 shadow-sm">Speak with a Booking Advisor &rarr;</a>
-        <a href="book-a-speaker.html" class="btn btn-outline-corporate text-white border-white btn-lg px-4">Book a Keynote Speaker</a>
+        <a href="book-a-speaker.html" class="btn btn-outline-corporate text-white border-white btn-lg px-4">Book a
+          Keynote Speaker</a>
       </div>
     </div>
   </section>
@@ -169,7 +182,7 @@
   <!-- SERVICES LIST (COMPLETELY REDESIGNED LUXURY CARDS WITH IMAGES) -->
   <section class="services-section-wrapper section-padding">
     <div class="container">
-      
+
       <!-- Mobile Single-Line Category Switcher (Mobile Only) -->
       <div class="services-mobile-filter-bar d-lg-none" id="servicesMobileFilterBar">
         <div class="services-mobile-cat-info" id="servicesMobileCurrentPill">
@@ -177,16 +190,20 @@
           <span class="filter-count" id="servicesMobileCatCount">8</span>
         </div>
         <div class="services-mobile-nav-btns">
-          <button type="button" class="services-mobile-nav-btn services-mobile-prev-btn" id="servicesMobilePrevBtn" aria-label="Previous Category">
+          <button type="button" class="services-mobile-nav-btn services-mobile-prev-btn" id="servicesMobilePrevBtn"
+            aria-label="Previous Category">
             <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+              <path fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
             </svg>
             <span>Back</span>
           </button>
-          <button type="button" class="services-mobile-nav-btn services-mobile-next-btn" id="servicesMobileNextBtn" aria-label="Next Category">
+          <button type="button" class="services-mobile-nav-btn services-mobile-next-btn" id="servicesMobileNextBtn"
+            aria-label="Next Category">
             <span>Next</span>
             <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              <path fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
             </svg>
           </button>
         </div>
@@ -210,38 +227,54 @@
 
       <!-- Services Grid with Rich Photography -->
       <div class="row g-4" id="servicesGridContainer">
-        
+
         <!-- 1. Keynote Speaker Booking -->
         <div class="col-lg-6 service-card-item" data-category="arena">
           <div class="service-card-luxury">
             <div class="service-card-media">
-              <img src="../assets/images/hero/hero_keynote_stage.jpg" alt="Keynote Speaker Booking Stage" class="service-card-img" loading="lazy">
+              <img src="../assets/images/hero/hero_keynote_stage.jpg" alt="Keynote Speaker Booking Stage"
+                class="service-card-img" loading="lazy">
               <div class="service-card-overlay"></div>
               <div class="service-card-badges">
                 <span class="service-badge-pill">Service 01</span>
                 <span class="service-category-tag">Arena Spotlight</span>
               </div>
               <div class="service-media-label">
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z"/></svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+                  <path
+                    d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+                </svg>
                 <span>Full-Scale Keynote Delivery</span>
               </div>
             </div>
             <div class="service-card-body-luxury">
               <h3 class="service-card-title-luxury">Keynote Speaker Booking</h3>
               <p class="service-card-desc-luxury">
-                We help organizations discover, evaluate, and book exceptional keynote speakers. From establishing event parameters and checking calendar holds to negotiating commercial terms and coordinating stage riders, we ensure flawless booking execution.
+                We help organizations discover, evaluate, and book exceptional keynote speakers. From establishing event
+                parameters and checking calendar holds to negotiating commercial terms and coordinating stage riders, we
+                ensure flawless booking execution.
               </p>
               <div class="service-deliverables-list">
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Calendar Hold Audit
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Commercial Negotiation
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Stage Rider Audit
                 </span>
               </div>
@@ -249,10 +282,16 @@
             <div class="service-card-footer-luxury">
               <a href="book-a-speaker.html" class="service-card-btn">
                 <span>Book a Keynote Speaker</span>
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
               </a>
               <span class="service-quick-meta">
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                </svg>
                 24h Availability Check
               </span>
             </div>
@@ -263,33 +302,50 @@
         <div class="col-lg-6 service-card-item" data-category="arena">
           <div class="service-card-luxury">
             <div class="service-card-media">
-              <img src="../assets/images/events/summit.jpg" alt="Corporate Conference Summit" class="service-card-img" loading="lazy">
+              <img src="../assets/images/events/summit.jpg" alt="Corporate Conference Summit" class="service-card-img"
+                loading="lazy">
               <div class="service-card-overlay"></div>
               <div class="service-card-badges">
                 <span class="service-badge-pill">Service 02</span>
                 <span class="service-category-tag">Global Conventions</span>
               </div>
               <div class="service-media-label">
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/><path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/></svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                  <path
+                    d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                </svg>
                 <span>Multi-Track Summit Command</span>
               </div>
             </div>
             <div class="service-card-body-luxury">
               <h3 class="service-card-title-luxury">Corporate Conference Speakers</h3>
               <p class="service-card-desc-luxury">
-                Supporting annual conventions, global partner summits, customer user conferences, and sales kickoffs. We match keynote speakers who understand how to command arena stages and align with overarching corporate strategic goals.
+                Supporting annual conventions, global partner summits, customer user conferences, and sales kickoffs. We
+                match keynote speakers who understand how to command arena stages and align with overarching corporate
+                strategic goals.
               </p>
               <div class="service-deliverables-list">
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Arena Stage Command
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Global Partner Summits
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Sales Kickoffs (SKO)
                 </span>
               </div>
@@ -297,10 +353,17 @@
             <div class="service-card-footer-luxury">
               <a href="book-a-speaker.html?type=Corporate+Conference" class="service-card-btn">
                 <span>Plan Your Conference</span>
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
               </a>
               <span class="service-quick-meta">
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                  <path fill-rule="evenodd"
+                    d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                </svg>
                 100 to 10,000+ Attendees
               </span>
             </div>
@@ -311,33 +374,48 @@
         <div class="col-lg-6 service-card-item" data-category="executive">
           <div class="service-card-luxury">
             <div class="service-card-media">
-              <img src="../assets/images/hero/hero_leadership_stage.jpg" alt="Leadership & Executive Events" class="service-card-img" loading="lazy">
+              <img src="../assets/images/hero/hero_leadership_stage.jpg" alt="Leadership & Executive Events"
+                class="service-card-img" loading="lazy">
               <div class="service-card-overlay"></div>
               <div class="service-card-badges">
                 <span class="service-badge-pill">Service 03</span>
                 <span class="service-category-tag">C-Suite & Boardroom</span>
               </div>
               <div class="service-media-label">
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/></svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                </svg>
                 <span>Strategic Offsites & Retreats</span>
               </div>
             </div>
             <div class="service-card-body-luxury">
               <h3 class="service-card-title-luxury">Leadership & Executive Events</h3>
               <p class="service-card-desc-luxury">
-                Curating confidential, intimate thought leaders for board retreats, senior management conferences, and strategic offsites. Presenters who can engage in rigorous, peer-level dialogue with C-suite executives and board members.
+                Curating confidential, intimate thought leaders for board retreats, senior management conferences, and
+                strategic offsites. Presenters who can engage in rigorous, peer-level dialogue with C-suite executives
+                and board members.
               </p>
               <div class="service-deliverables-list">
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Boardroom Retreats
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Confidential Briefings
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Peer-Level C-Suite Dialogue
                 </span>
               </div>
@@ -345,10 +423,18 @@
             <div class="service-card-footer-luxury">
               <a href="speaker-roster.html?topic=Leadership+%26+Management" class="service-card-btn">
                 <span>Find a Leadership Speaker</span>
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
               </a>
               <span class="service-quick-meta">
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>
                 Strict NDA Compliance
               </span>
             </div>
@@ -359,33 +445,49 @@
         <div class="col-lg-6 service-card-item" data-category="arena">
           <div class="service-card-luxury">
             <div class="service-card-media">
-              <img src="../assets/images/hero/hero_ai_keynote.jpg" alt="Motivational & Inspirational Speaking" class="service-card-img" loading="lazy">
+              <img src="../assets/images/hero/hero_ai_keynote.jpg" alt="Motivational & Inspirational Speaking"
+                class="service-card-img" loading="lazy">
               <div class="service-card-overlay"></div>
               <div class="service-card-badges">
                 <span class="service-badge-pill">Service 04</span>
                 <span class="service-category-tag">Culture & Impact</span>
               </div>
               <div class="service-media-label">
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M8 4a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 8.293V4.5A.5.5 0 0 1 8 4z"/></svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 8.293V4.5A.5.5 0 0 1 8 4z" />
+                </svg>
                 <span>Resilience & Transformational Storytelling</span>
               </div>
             </div>
             <div class="service-card-body-luxury">
               <h3 class="service-card-title-luxury">Motivational & Inspirational Speaking</h3>
               <p class="service-card-desc-luxury">
-                Helping organizations ignite employee engagement, reinforce corporate resilience, and navigate major mergers or turnaround phases with authenticity, avoiding superficial cliches in favor of deep human truth.
+                Helping organizations ignite employee engagement, reinforce corporate resilience, and navigate major
+                mergers or turnaround phases with authenticity, avoiding superficial cliches in favor of deep human
+                truth.
               </p>
               <div class="service-deliverables-list">
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Organizational Resilience
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Authentic Human Truth
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Turnaround Motivation
                 </span>
               </div>
@@ -393,10 +495,16 @@
             <div class="service-card-footer-luxury">
               <a href="speaker-roster.html?topic=Motivation+%26+Performance" class="service-card-btn">
                 <span>Explore Motivational Speakers</span>
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
               </a>
               <span class="service-quick-meta">
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
                 Top-Rated Audience Feedback
               </span>
             </div>
@@ -407,33 +515,48 @@
         <div class="col-lg-6 service-card-item" data-category="logistics">
           <div class="service-card-luxury">
             <div class="service-card-media">
-              <img src="../assets/images/auth/login.jpg" alt="Virtual and Hybrid Events Studio" class="service-card-img" loading="lazy">
+              <img src="../assets/images/auth/login.jpg" alt="Virtual and Hybrid Events Studio" class="service-card-img"
+                loading="lazy">
               <div class="service-card-overlay"></div>
               <div class="service-card-badges">
                 <span class="service-badge-pill">Service 05</span>
                 <span class="service-category-tag">Studio Broadcast</span>
               </div>
               <div class="service-media-label">
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z"/></svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z" />
+                </svg>
                 <span>Dual-Audience Studio Production</span>
               </div>
             </div>
             <div class="service-card-body-luxury">
               <h3 class="service-card-title-luxury">Virtual & Hybrid Events</h3>
               <p class="service-card-desc-luxury">
-                Delivering studio-grade remote keynotes and dual-audience hybrid presentations. We verify broadcast-quality cameras, sound gear, high-bandwidth connections, and interactive live audience polling setups.
+                Delivering studio-grade remote keynotes and dual-audience hybrid presentations. We verify
+                broadcast-quality cameras, sound gear, high-bandwidth connections, and interactive live audience polling
+                setups.
               </p>
               <div class="service-deliverables-list">
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   4K Multi-Cam Broadcast
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Dual-Audience Live Q&A
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Pre-Event Bandwidth Test
                 </span>
               </div>
@@ -441,10 +564,17 @@
             <div class="service-card-footer-luxury">
               <a href="book-a-speaker.html?format=Virtual" class="service-card-btn">
                 <span>Plan a Virtual Event</span>
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
               </a>
               <span class="service-quick-meta">
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M0 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6zm14-1H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z"/><path d="M8 7.5a.5.5 0 0 1 .5.5v2.5a.5.5 0 0 1-1 0V8a.5.5 0 0 1 .5-.5z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M0 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6zm14-1H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z" />
+                  <path d="M8 7.5a.5.5 0 0 1 .5.5v2.5a.5.5 0 0 1-1 0V8a.5.5 0 0 1 .5-.5z" />
+                </svg>
                 Zoom / Teams / Webex Ready
               </span>
             </div>
@@ -455,33 +585,49 @@
         <div class="col-lg-6 service-card-item" data-category="executive">
           <div class="service-card-luxury">
             <div class="service-card-media">
-              <img src="../assets/images/about/panel.jpg" alt="Speaker Matching and Consultation Panel" class="service-card-img" loading="lazy">
+              <img src="../assets/images/about/panel.jpg" alt="Speaker Matching and Consultation Panel"
+                class="service-card-img" loading="lazy">
               <div class="service-card-overlay"></div>
               <div class="service-card-badges">
                 <span class="service-badge-pill">Service 06</span>
                 <span class="service-category-tag">Talent Curation</span>
               </div>
               <div class="service-media-label">
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/><path d="M4 4h8v2H4V4zm0 3h8v2H4V7zm0 3h5v2H4v-2z"/></svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                  <path d="M4 4h8v2H4V4zm0 3h8v2H4V7zm0 3h5v2H4v-2z" />
+                </svg>
                 <span>Curated Talent Dossiers</span>
               </div>
             </div>
             <div class="service-card-body-luxury">
               <h3 class="service-card-title-luxury">Speaker Matching & Consultation</h3>
               <p class="service-card-desc-luxury">
-                Not sure which speaker fits best? Share your meeting objectives, budget boundaries, and audience demographics. Our advisory team evaluates your brief and prepares a tailored candidate dossier within 24 hours.
+                Not sure which speaker fits best? Share your meeting objectives, budget boundaries, and audience
+                demographics. Our advisory team evaluates your brief and prepares a tailored candidate dossier within 24
+                hours.
               </p>
               <div class="service-deliverables-list">
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   24-Hour Dossier Delivery
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Budget & Topic Fit
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Verified Video Showreels
                 </span>
               </div>
@@ -489,10 +635,16 @@
             <div class="service-card-footer-luxury">
               <a href="contact.html" class="service-card-btn">
                 <span>Request Speaker Recommendations</span>
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
               </a>
               <span class="service-quick-meta">
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z" />
+                </svg>
                 Direct Senior Agent
               </span>
             </div>
@@ -503,33 +655,48 @@
         <div class="col-lg-6 service-card-item" data-category="logistics">
           <div class="service-card-luxury">
             <div class="service-card-media">
-              <img src="../assets/images/insights/backstage.jpg" alt="Booking Coordination and Stage Logistics" class="service-card-img" loading="lazy">
+              <img src="../assets/images/insights/backstage.jpg" alt="Booking Coordination and Stage Logistics"
+                class="service-card-img" loading="lazy">
               <div class="service-card-overlay"></div>
               <div class="service-card-badges">
                 <span class="service-badge-pill">Service 07</span>
                 <span class="service-category-tag">VIP Backstage Logistics</span>
               </div>
               <div class="service-media-label">
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/></svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                </svg>
                 <span>Zero-Friction Travel & AV Rider Run</span>
               </div>
             </div>
             <div class="service-card-body-luxury">
               <h3 class="service-card-title-luxury">Booking Coordination & Logistics</h3>
               <p class="service-card-desc-luxury">
-                Dedicated agency liaison handling briefing calls, audiovisual rider review, slide formatting, flight itineraries, executive hotel accommodations, and on-site contact alignment. Included in all confirmed bookings.
+                Dedicated agency liaison handling briefing calls, audiovisual rider review, slide formatting, flight
+                itineraries, executive hotel accommodations, and on-site contact alignment. Included in all confirmed
+                bookings.
               </p>
               <div class="service-deliverables-list">
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Dedicated Agency Liaison
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Flight & Hotel Management
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Pre-Event Tech Rehearsal
                 </span>
               </div>
@@ -537,10 +704,20 @@
             <div class="service-card-footer-luxury">
               <a href="contact.html" class="service-card-btn">
                 <span>Inquire Booking Coordination</span>
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
               </a>
               <span class="service-quick-meta">
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                  <path
+                    d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                  <path
+                    d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
                 Included with Bookings
               </span>
             </div>
@@ -551,33 +728,48 @@
         <div class="col-lg-6 service-card-item" data-category="logistics">
           <div class="service-card-luxury">
             <div class="service-card-media">
-              <img src="../assets/images/auth/signup.jpg" alt="Contract and Payment Portal" class="service-card-img" loading="lazy">
+              <img src="../assets/images/auth/signup.jpg" alt="Contract and Payment Portal" class="service-card-img"
+                loading="lazy">
               <div class="service-card-overlay"></div>
               <div class="service-card-badges">
                 <span class="service-badge-pill">Service 08</span>
                 <span class="service-category-tag">Client Portal</span>
               </div>
               <div class="service-media-label">
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/></svg>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
+                </svg>
                 <span>Automated Enterprise Compliance</span>
               </div>
             </div>
             <div class="service-card-body-luxury">
               <h3 class="service-card-title-luxury">Contract & Payment Coordination</h3>
               <p class="service-card-desc-luxury">
-                A centralized digital workflow for reviewing booking agreements, executing corporate electronic signatures, monitoring deposit schedules, and downloading official VAT / tax invoices directly in your client portal.
+                A centralized digital workflow for reviewing booking agreements, executing corporate electronic
+                signatures, monitoring deposit schedules, and downloading official VAT / tax invoices directly in your
+                client portal.
               </p>
               <div class="service-deliverables-list">
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Electronic E-Signatures
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Corporate Escrow Protection
                 </span>
                 <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
+                  </svg>
                   Direct VAT / Tax Invoicing
                 </span>
               </div>
@@ -585,10 +777,16 @@
             <div class="service-card-footer-luxury">
               <a href="../dashboard/index.html" class="service-card-btn">
                 <span>Preview Client Portal</span>
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
               </a>
               <span class="service-quick-meta">
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2zm3 4V3a3 3 0 1 0-6 0v2H3.5A1.5 1.5 0 0 0 2 6.5v7A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 12.5 5H11z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2zm3 4V3a3 3 0 1 0-6 0v2H3.5A1.5 1.5 0 0 0 2 6.5v7A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 12.5 5H11z" />
+                </svg>
                 SOC2 / 256-Bit SSL
               </span>
             </div>
@@ -603,33 +801,46 @@
           <div class="col-lg-4 col-md-6">
             <div class="services-assurance-item">
               <div class="services-assurance-icon">
-                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14z"/></svg>
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14z" />
+                </svg>
               </div>
               <div>
                 <h4 class="services-assurance-title">100% Rider Audit Guarantee</h4>
-                <p class="services-assurance-desc">Every audiovisual, travel, and rehearsal requirement pre-audited and confirmed before event day.</p>
+                <p class="services-assurance-desc">Every audiovisual, travel, and rehearsal requirement pre-audited and
+                  confirmed before event day.</p>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="services-assurance-item">
               <div class="services-assurance-icon">
-                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                </svg>
               </div>
               <div>
                 <h4 class="services-assurance-title">24-Hour Dossier Turnaround</h4>
-                <p class="services-assurance-desc">Custom candidate shortlist proposals with verified availability and commercial quotes within 1 business day.</p>
+                <p class="services-assurance-desc">Custom candidate shortlist proposals with verified availability and
+                  commercial quotes within 1 business day.</p>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-12">
             <div class="services-assurance-item">
               <div class="services-assurance-icon">
-                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/></svg>
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z" />
+                </svg>
               </div>
               <div>
                 <h4 class="services-assurance-title">Global Multi-Currency Billing</h4>
-                <p class="services-assurance-desc">Transparent corporate billing in USD, EUR, and GBP with complete corporate VAT tax compliance.</p>
+                <p class="services-assurance-desc">Transparent corporate billing in USD, EUR, and GBP with complete
+                  corporate VAT tax compliance.</p>
               </div>
             </div>
           </div>
@@ -664,7 +875,7 @@
       document.querySelectorAll('.services-filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       updateMobileServicesBar(btn);
-      
+
       const cards = document.querySelectorAll('.service-card-item');
       cards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
@@ -726,7 +937,8 @@
             <div class="ssb-footer-logo">
               <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
-                <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+                <path
+                  d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
               </svg>
             </div>
             <div class="ssb-footer-brand-text">
@@ -742,24 +954,43 @@
 
           <!-- Social Buttons -->
           <div class="ssb-footer-socials">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn" aria-label="Instagram">
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="Instagram">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn" aria-label="LinkedIn">
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="LinkedIn">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+              </svg>
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn" aria-label="YouTube">
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v5.582l4.8-2.79-4.8-2.792z"/></svg>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="YouTube">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v5.582l4.8-2.79-4.8-2.792z" />
+              </svg>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn" aria-label="X / Twitter">
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.147H2.865l8.875 11.631Z"/></svg>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="X / Twitter">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.147H2.865l8.875 11.631Z" />
+              </svg>
             </a>
           </div>
 
           <!-- Email Newsletter Input -->
-          <form class="ssb-footer-newsletter-form" onsubmit="event.preventDefault(); window.SSB_SHOW_TOAST ? window.SSB_SHOW_TOAST('Thank you for subscribing to Keynote Intelligence.', 'success') : alert('Subscribed!'); this.reset();">
-            <input type="email" class="ssb-footer-newsletter-input" placeholder="Email for keynote intelligence" required aria-label="Email for keynote intelligence">
-            <button type="submit" class="ssb-footer-newsletter-btn" aria-label="Subscribe to intelligence">&rarr;</button>
+          <form class="ssb-footer-newsletter-form"
+            onsubmit="event.preventDefault(); window.SSB_SHOW_TOAST ? window.SSB_SHOW_TOAST('Thank you for subscribing to Keynote Intelligence.', 'success') : alert('Subscribed!'); this.reset();">
+            <input type="email" class="ssb-footer-newsletter-input" placeholder="Email for keynote intelligence"
+              required aria-label="Email for keynote intelligence">
+            <button type="submit" class="ssb-footer-newsletter-btn"
+              aria-label="Subscribe to intelligence">&rarr;</button>
           </form>
         </div>
 
@@ -832,7 +1063,8 @@
       <a href="../dashboard/index.html?view=shortlist" class="mobile-bottom-nav-item" aria-label="Wishlist">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            <path
+              d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
           </svg>
           <span class="shortlist-count-badge">0</span>
         </div>
@@ -843,8 +1075,10 @@
       <a href="book-a-speaker.html" class="mobile-bottom-nav-item" aria-label="Book Enquiry">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+            <path
+              d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+            <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
           </svg>
         </div>
         <span class="mobile-bottom-nav-label">Book Enquiry</span>
@@ -854,8 +1088,9 @@
       <a href="../auth/login.html" class="mobile-bottom-nav-item" aria-label="Account">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
           </svg>
         </div>
         <span class="mobile-bottom-nav-label">Account</span>
@@ -865,7 +1100,8 @@
       <a href="../dashboard/index.html" class="mobile-bottom-nav-item" aria-label="Client Portal">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.15V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1 6.1v-.6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v.6L8.687 7.78a.5.5 0 0 1-.374 0L1 6.1z"/>
+            <path
+              d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.15V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1 6.1v-.6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v.6L8.687 7.78a.5.5 0 0 1-.374 0L1 6.1z" />
           </svg>
         </div>
         <span class="mobile-bottom-nav-label">Client Portal</span>
@@ -878,4 +1114,5 @@
   <script src="../assets/js/storage.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
+
 </html>

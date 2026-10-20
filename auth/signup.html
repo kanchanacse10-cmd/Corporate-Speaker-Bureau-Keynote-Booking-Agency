@@ -26,22 +26,42 @@
     .auth-split-wrapper {
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .auth-split-wrapper {
+        flex-direction: row;
+      }
     }
 
     /* Left Visual Hero Side */
     .auth-split-visual {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       position: relative;
       background-color: #111923;
       overflow: hidden;
+      width: 100%;
+      min-height: 190px;
+      padding: 1.25rem 1.5rem;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .auth-split-visual {
+        width: 40%;
+        min-height: 100vh;
+        position: sticky;
+        top: 0;
+        padding: 2.5rem 1.75rem;
+      }
     }
 
     @media (min-width: 992px) {
       .auth-split-visual {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         width: 46%;
         min-height: 100vh;
         position: sticky;
@@ -117,6 +137,42 @@
       min-height: 100vh;
       position: relative;
       padding: 1.5rem 1.5rem 2.5rem;
+    }
+
+    @media (max-width: 767.98px) {
+      .auth-quote-text {
+        font-size: 0.92rem;
+        line-height: 1.35;
+        margin-bottom: 0.35rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .auth-quote-author {
+        font-size: 0.72rem;
+      }
+
+      .auth-mobile-brand {
+        display: none !important;
+      }
+
+      .auth-split-form {
+        min-height: auto;
+        padding: 1.5rem 1.25rem 2rem;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .auth-split-form {
+        width: 60%;
+        padding: 2rem 2rem 2.5rem;
+      }
+
+      .auth-mobile-brand {
+        display: none !important;
+      }
     }
 
     @media (min-width: 992px) {

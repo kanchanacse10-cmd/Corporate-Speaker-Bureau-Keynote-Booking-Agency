@@ -50,7 +50,7 @@
         <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard, 5. Login -->
         <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
           <!-- 1. Wishlist Button -->
-          <a href="dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-md-inline-flex"
+          <a href="dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-xl-inline-flex"
             title="View Saved Wishlist" aria-label="View Saved Wishlist">
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
               <path
@@ -60,25 +60,24 @@
           </a>
 
           <!-- 2. RTL/LTR Toggle -->
-          <button type="button" class="toggle-btn rtl-toggle-btn d-none d-md-inline-flex"
+          <button type="button" class="toggle-btn rtl-toggle-btn d-none d-xl-inline-flex"
             onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle layout direction">
             RTL
           </button>
 
           <!-- 3. Dark/Light Theme Converter -->
-          <button type="button" class="toggle-btn theme-toggle-btn d-none d-md-inline-flex"
+          <button type="button" class="toggle-btn theme-toggle-btn d-none d-xl-inline-flex"
             onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle light or dark theme">
           </button>
 
           <!-- 4. Client Portal / Dashboard -->
-          <a href="dashboard/index.html" class="btn btn-gold btn-sm nav-portal-btn d-none d-md-inline-flex"
+          <a href="dashboard/index.html" class="btn btn-gold btn-sm nav-portal-btn d-none d-xl-inline-flex"
             title="Client Portal & Dashboard" aria-label="Dashboard">
-            <span class="d-none d-md-inline">Dashboard</span>
-            <span class="d-inline d-md-none">Client Portal</span>
+            Dashboard
           </a>
 
           <!-- 5. Login Button -->
-          <a href="auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-md-inline-flex"
+          <a href="auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-xl-inline-flex"
             title="Client & Speaker Login" aria-label="Login">
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
               <path
@@ -119,7 +118,7 @@
           </ul>
 
           <!-- Mobile Menu Drawer Actions -->
-          <div class="mobile-nav-actions d-md-none">
+          <div class="mobile-nav-actions d-xl-none">
             <div class="mobile-nav-actions-row">
               <div class="mobile-nav-toggles">
                 <a href="dashboard/index.html?view=shortlist" class="nav-wishlist-btn mobile-menu-wishlist"
@@ -164,151 +163,126 @@
   </header>
 
   <!-- ==========================================================================
-       SECTION 1: THE LUMINARY STAGE & C-SUITE SHOWREEL (Cinematic Editorial Hero)
-       Unique Design: Ambient editorial hero with audio waveform preview & live ticker
+       SECTION 1: THE LUMINARY STAGE & C-SUITE SHOWREEL (Editorial Split Hero Banner)
+       Bespoke Luméra-Inspired Mirrored Architecture with Stage Portal & Luxury Accents
        ========================================================================== -->
   <section class="home2-hero-section">
+    <!-- Ambient Executive Backdrop -->
     <div class="home2-hero-bg-layer">
-      <img src="assets/images/faq/faq_stage_showcase.jpg" alt="Global Keynote Summit Auditorium"
-        class="home2-hero-bg-img" loading="eager">
-      <div class="home2-hero-overlay"></div>
       <div class="home2-hero-ambient-glow"></div>
+      <div class="home2-hero-grid-pattern"></div>
     </div>
-    <div class="container-fluid px-3 px-xl-4 px-xxl-5 position-relative" style="z-index: 2;">
-      <div class="row align-items-center g-5">
-        <!-- Left Column: Editorial Headline & Value Narrative -->
-        <div class="col-lg-7">
-          <div class="home2-live-badge mb-3">
-            <span>2026–2027 World Summits Active • 48h Concierge Shortlist</span>
-          </div>
 
-          <h1 class="home2-hero-title">
-            Where Global Thought Leaders Meet <span class="text-gold">World-Shaping Stages</span>.
-          </h1>
-
-          <p class="home2-hero-subtitle">
-            Curating world-class keynote speakers, Nobel laureates, and industry titans for landmark global conferences
-            and executive summits.
-          </p>
-
-          <div class="d-flex flex-wrap gap-3 align-items-center mb-4">
-            <a href="#curated-tracks" class="btn btn-gold btn-lg px-4 shadow-sm">
-              Explore Curated Tracks
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16" class="ms-2">
-                <path fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-              </svg>
-            </a>
-            <a href="#speaker-matrix" class="btn home2-hero-btn-ghost btn-lg px-4">
-              Try Speaker Match Matrix
-            </a>
-          </div>
-
-          <!-- Quick Metrics Bar -->
-          <div class="row g-3 pt-3 border-top home2-metrics-row">
-            <div class="col-4">
-              <div class="fw-bold fs-4 text-gold" style="font-family: var(--font-heading);">99.4%</div>
-              <div class="text-muted small">Standing Ovations</div>
+    <div class="container position-relative" style="z-index: 2;">
+      <div class="row align-items-center g-4 g-lg-5">
+        <!-- Left Content Column (Mirrored from Luméra layout) -->
+        <div class="col-12 col-lg-6 col-xl-6">
+          <div class="home2-hero-content-wrap">
+            <!-- Eyebrow Pill Badge -->
+            <div class="home2-hero-eyebrow fade-up delay-0">
+              <span class="pulse-dot-gold me-2"></span>
+              <span>KEYNOTE CURATION INTELLIGENCE &bull; 2026–2027</span>
             </div>
-            <div class="col-4">
-              <div class="fw-bold fs-4 text-gold" style="font-family: var(--font-heading);">84+</div>
-              <div class="text-muted small">Countries Keynoted</div>
+
+            <!-- Main Editorial Title (Same font-size as Home 1 with italic accent) -->
+            <h1 class="home2-hero-title fade-up delay-100">
+              Where Global Thought Leaders<br>
+              Shape <span class="home2-hero-title-accent">World-Shaping Stages</span>.
+            </h1>
+
+            <!-- Editorial Lead Subtitle -->
+            <p class="home2-hero-subtitle fade-up delay-150">
+              Curating world-class keynote speakers, Nobel laureates, and industry titans for landmark global
+              conferences, annual conventions, and confidential executive retreats.
+            </p>
+
+            <!-- Executive Pill Actions (Mirrored from Luméra buttons) -->
+            <div class="home2-hero-actions fade-up delay-200">
+              <a href="#curated-tracks" class="btn home2-btn-pill-primary">
+                <span>Explore Curated Tracks</span>
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="ms-2">
+                  <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+              </a>
+              <a href="#speaker-matrix" class="btn home2-btn-pill-secondary">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16" class="me-2">
+                  <path
+                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+                </svg>
+                <span>Speaker Match Matrix</span>
+              </a>
             </div>
-            <div class="col-4">
-              <div class="fw-bold fs-4 text-gold" style="font-family: var(--font-heading);">100%</div>
-              <div class="text-muted small">Sovereign SLA</div>
+
+            <!-- Trust Metrics Strip -->
+            <div class="home2-hero-trust-strip fade-up delay-250">
+              <div class="home2-trust-item">
+                <span class="home2-trust-num">140+</span>
+                <span class="home2-trust-label">Keynote Luminaries</span>
+              </div>
+              <div class="home2-trust-divider"></div>
+              <div class="home2-trust-item">
+                <span class="home2-trust-num">48h</span>
+                <span class="home2-trust-label">Direct Concierge</span>
+              </div>
+              <div class="home2-trust-divider"></div>
+              <div class="home2-trust-item">
+                <span class="home2-trust-num">99.4%</span>
+                <span class="home2-trust-label">Standing Ovations</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Right Column: Interactive Keynote Showreel Card -->
-        <div class="col-lg-5">
-          <div class="home2-showreel-card">
-            <div class="home2-video-wrap">
-              <img src="assets/images/hero/hero_ai_keynote.jpg" alt="Keynote Stage Preview" class="img-fluid">
-              <button class="home2-play-trigger" onclick="openKeynoteReelModal()" title="Play Keynote Showreel"
-                aria-label="Play Keynote Showreel">
-                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+        <!-- Right Architectural Visual Column (Bespoke Luméra Arch Portal) -->
+        <div class="col-12 col-lg-6 col-xl-6">
+          <div class="home2-hero-visual-container fade-up delay-100">
+            <!-- Architectural Arch Stage Frame -->
+            <div class="home2-hero-arch-frame">
+              <img src="assets/images/hero/hero_leadership_stage.jpg"
+                alt="Keynote thought leader addressing global summit arena" class="home2-hero-arch-img" loading="eager">
+              <div class="home2-hero-arch-gradient"></div>
+
+              <!-- Interactive Keynote Reel Video Pill Button -->
+              <button type="button" class="home2-hero-reel-pill" onclick="openKeynoteReelModal()"
+                title="Play 60s Keynote Showreel" aria-label="Play 60s Keynote Showreel">
+                <span class="home2-reel-pulse"></span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
                   <path
                     d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
                 </svg>
+                <span>Watch 60s Showreel</span>
               </button>
-              <div class="position-absolute top-0 end-0 m-3">
-                <span class="badge bg-dark bg-opacity-75 text-gold border border-gold px-3 py-2 rounded-pill small">
-                  Davos 2026 Keynote Preview
-                </span>
-              </div>
-            </div>
 
-            <div class="p-4 bg-card">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge badge-gold px-2 py-1">Featured Preview Clip</span>
-                <!-- Soundwave Animation -->
-                <div class="d-flex align-items-center gap-2">
-
-                  <div class="home2-audio-wave">
-                    <span></span><span></span><span></span><span></span><span></span>
-                  </div>
+              <!-- Floating Glass Credential Card (Mirroring Luméra's "4 steps. Twice daily.") -->
+              <div class="home2-hero-floating-card">
+                <div class="home2-floating-card-icon">
+                  <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                      d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                  </svg>
+                </div>
+                <div class="home2-floating-card-body">
+                  <div class="home2-floating-card-title">Verified Mainstage Headliner</div>
+                  <div class="home2-floating-card-desc">Dr. Marcus Vance &bull; Davos 2026 Keynote</div>
                 </div>
               </div>
-
-              <h5 class="fw-bold mb-1" style="font-family: var(--font-heading); color: var(--ssb-text-main);">
-                "The Autonomous Enterprise & Moral Intelligence"
-              </h5>
-              <p class="small text-muted mb-3">
-                Keynote address by <strong>Dr. Marcus Vance</strong> — MIT Fellow & Former Singularity Director.
-              </p>
-
-              <div class="d-flex gap-2">
-                <button class="btn btn-gold btn-sm flex-grow-1" onclick="quickHoldSpeaker('Dr. Marcus Vance')">
-                  Hold Speaker Date
-                </button>
-
-              </div>
             </div>
+
+            <!-- Background Decorative Halo Rings -->
+            <div class="home2-hero-arch-halo" aria-hidden="true"></div>
           </div>
         </div>
       </div>
-
-      <!-- Quick Horizon Filter Bar -->
-      <div class="home2-search-bar mt-5">
-        <form class="row g-3 align-items-center" onsubmit="event.preventDefault(); applyHeroSearch();">
-          <div class="col-12 col-md-6 col-xl-3 home2-search-col">
-            <label class="form-label small fw-bold text-muted mb-1">Summit Horizon</label>
-            <select class="form-select border-0 bg-transparent fw-semibold" id="heroHorizonSelect">
-              <option value="q3">Q3 2026 Summits</option>
-              <option value="q4">Q4 2026 Annual Symposia</option>
-              <option value="2027">2027 Global World Tour</option>
-            </select>
-          </div>
-          <div class="col-12 col-md-6 col-xl-3 home2-search-col home2-search-col-divider-tablet">
-            <label class="form-label small fw-bold text-muted mb-1">Keynote Modality</label>
-            <select class="form-select border-0 bg-transparent fw-semibold" id="heroModalitySelect">
-              <option value="mainstage">Mainstage Arena Keynote</option>
-              <option value="fireside">C-Suite Chatham House Fireside</option>
-              <option value="debate">Provocateur Titan Debate</option>
-              <option value="retreat">Boardroom Strategy Retreat</option>
-            </select>
-          </div>
-          <div class="col-12 col-md-7 col-xl-4 home2-search-col home2-search-col-divider-desktop pt-md-2 pt-xl-0">
-            <label class="form-label small fw-bold text-muted mb-1">Strategic Theme Domain</label>
-            <select class="form-select border-0 bg-transparent fw-semibold" id="heroThemeSelect">
-              <option value="ai">Generative AI, Quantum & The Singularity</option>
-              <option value="geopolitics">Geopolitical Resilience & Global Macro</option>
-              <option value="leadership">Extreme Leadership & Special Ops Resilience</option>
-              <option value="esg">Regenerative Economy & Clean Tech Capital</option>
-            </select>
-          </div>
-          <div
-            class="col-12 col-md-5 col-xl-2 home2-search-col text-md-end pt-md-2 pt-xl-0 d-flex align-items-end justify-content-end">
-            <button type="submit" class="btn btn-gold w-100 py-2">
-              Filter Availability
-            </button>
-          </div>
-        </form>
-      </div>
     </div>
   </section>
+
+  <!-- ==========================================================================
+       SECTION 1B: THE LUMINARY STAGE DECK SHOWCASE (Dedicated Horizon Deck)
+       ========================================================================== -->
+
 
   <!-- ==========================================================================
        SECTION 2: SIGNATURE CURATED SUMMIT TRACKS (Complete Event Blueprints)
@@ -458,7 +432,7 @@
                 <h3 class="track-lumera-title">Radical Resilience &amp; Elite Command Leadership</h3>
                 <p class="track-lumera-desc">
                   Mental toughness under extreme volatility, asymmetric decision-making from Special Operations and
-                  high-altitude Everest expeditions.
+                  Everest expeditions.
                 </p>
                 <div class="track-lumera-specs">
                   <div class="track-lumera-spec-item">
@@ -1062,10 +1036,10 @@
     <div class="container-fluid px-3 px-xl-4 px-xxl-5">
       <div class="text-center max-w-700 mx-auto mb-5">
         <div class="matrix-eyebrow-badge d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill">
-          <span class="matrix-live-beacon"></span>
+
           <span>Proprietary Stagecraft Intelligence</span>
         </div>
-        <h2 class="section-title">Speaker Match Matrix<span class="text-gold">™</span>: Real-Time Algorithmic Concierge
+        <h2 class="section-title">Speaker Match Matrix: Real-Time Algorithmic Concierge
         </h2>
         <p class="section-subtitle">
           Calibrate your audience DNA, required stage energy, and event stakes. Our intelligence engine analyzes over 40
@@ -1084,12 +1058,10 @@
                 <span class="matrix-radar-text fw-bold text-uppercase">Interactive Stage Calibration Console</span>
               </div>
               <div class="d-none d-md-flex align-items-center gap-3 small text-muted">
-                <span class="d-flex align-items-center gap-1"><span class="matrix-tiny-dot bg-success"></span> 40+
+                <span class="d-flex align-items-center gap-1"><span class="matrix-tiny-dot bg-warning"></span> 40+
                   Variables Active</span>
-                <span class="text-gold-subtle">•</span>
                 <span class="d-flex align-items-center gap-1"><span class="matrix-tiny-dot bg-warning"></span> Real-Time
                   Weighting</span>
-                <span class="text-gold-subtle">•</span>
                 <span class="text-gold fw-semibold">Instant Output</span>
               </div>
             </div>
@@ -1308,7 +1280,7 @@
                         </div>
                         <div class="matrix-metric-divider"></div>
                         <div class="matrix-metric-item">
-                          <div class="matrix-metric-val text-gold">Tier-1</div>
+                          <div class="matrix-metric-val">Tier-1</div>
                           <div class="matrix-metric-lbl">Clearance</div>
                         </div>
                       </div>
@@ -1512,16 +1484,7 @@
                 Guaranteed standby replacement of equal international standing pre-briefed and ready in case of
                 catastrophic medical or flight disruption.
               </p>
-              <div class="home2-sla-comparison-chip">
-                <div class="home2-sla-chip-row">
-                  <span class="home2-sla-chip-tag-risk">&times; Direct:</span>
-                  <span class="text-muted">Total event cancellation risk</span>
-                </div>
-                <div class="home2-sla-chip-row">
-                  <span class="home2-sla-chip-tag-safe">&#10003; SLA:</span>
-                  <span class="fw-bold text-main">Certified standby deployed</span>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -1540,16 +1503,7 @@
                 Comprehensive institutional legal IP assignment protecting confidential strategic reveals, internal
                 financial metrics, and board initiatives.
               </p>
-              <div class="home2-sla-comparison-chip">
-                <div class="home2-sla-chip-row">
-                  <span class="home2-sla-chip-tag-risk">&times; Direct:</span>
-                  <span class="text-muted">Direct upfront wire to agent</span>
-                </div>
-                <div class="home2-sla-chip-row">
-                  <span class="home2-sla-chip-tag-safe">&#10003; SLA:</span>
-                  <span class="fw-bold text-main">Escrow held to stage walk</span>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -1567,16 +1521,7 @@
                 Two mandatory discovery strategy sessions between the keynote speaker and the client's Chief Executive
                 to align every thesis and nuance.
               </p>
-              <div class="home2-sla-comparison-chip">
-                <div class="home2-sla-chip-row">
-                  <span class="home2-sla-chip-tag-risk">&times; Direct:</span>
-                  <span class="text-muted">Stock recycled slide deck</span>
-                </div>
-                <div class="home2-sla-chip-row">
-                  <span class="home2-sla-chip-tag-safe">&#10003; SLA:</span>
-                  <span class="fw-bold text-main">100% Bespoke Alignment</span>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -1594,16 +1539,7 @@
                 Dedicated bureau logistics director on-site managing tarmac escorts, teleprompter checks, greenroom
                 hospitality, and audio recording.
               </p>
-              <div class="home2-sla-comparison-chip">
-                <div class="home2-sla-chip-row">
-                  <span class="home2-sla-chip-tag-risk">&times; Direct:</span>
-                  <span class="text-muted">Client planner handles all stress</span>
-                </div>
-                <div class="home2-sla-chip-row">
-                  <span class="home2-sla-chip-tag-safe">&#10003; SLA:</span>
-                  <span class="fw-bold text-main">Dedicated bureau team</span>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -1621,7 +1557,6 @@
             <div class="col-lg-8">
               <div class="d-inline-flex align-items-center gap-2 mb-2">
                 <span class="badge badge-gold">Zero Failure Protocol</span>
-                <span class="text-white-50 small">&bull; Enterprise Underwritten SLA</span>
               </div>
               <h3 class="h3 fw-bold text-white mb-2">Guaranteed Stage Certainty for World-Class Assemblies</h3>
               <p class="text-white-50 mb-0" style="max-width: 640px;">

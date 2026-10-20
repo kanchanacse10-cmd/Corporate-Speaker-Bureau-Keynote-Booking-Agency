@@ -40,8 +40,8 @@
 
         <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard (Client Portal on mobile), 5. Login -->
         <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
-          <!-- 1. Wishlist Button (Desktop & Tablets >= 768px) -->
-          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-md-inline-flex"
+          <!-- 1. Wishlist Button (Desktop >= 1200px) -->
+          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-xl-inline-flex"
             title="View Saved Wishlist" aria-label="View Saved Wishlist">
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
               <path
@@ -50,27 +50,26 @@
             <span class="shortlist-count-badge">0</span>
           </a>
 
-          <!-- 2. RTL/LTR Toggle (Desktop & Tablets >= 768px) -->
-          <button type="button" class="toggle-btn rtl-toggle-btn d-none d-md-inline-flex"
+          <!-- 2. RTL/LTR Toggle (Desktop >= 1200px) -->
+          <button type="button" class="toggle-btn rtl-toggle-btn d-none d-xl-inline-flex"
             onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle layout direction">
             RTL
           </button>
 
-          <!-- 3. Dark/Light Theme Converter (Desktop & Tablets >= 768px) -->
-          <button type="button" class="toggle-btn theme-toggle-btn d-none d-md-inline-flex"
+          <!-- 3. Dark/Light Theme Converter (Desktop >= 1200px) -->
+          <button type="button" class="toggle-btn theme-toggle-btn d-none d-xl-inline-flex"
             onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle light or dark theme">
             <!-- Injected by theme.js -->
           </button>
 
-          <!-- 4. Client Portal / Dashboard (Dashboard on Desktop & Tablets >= 768px | Client Portal on Mobile) -->
-          <a href="../dashboard/index.html" class="btn btn-gold btn-sm nav-portal-btn d-none d-md-inline-flex"
+          <!-- 4. Client Portal / Dashboard (Desktop >= 1200px) -->
+          <a href="../dashboard/index.html" class="btn btn-gold btn-sm nav-portal-btn d-none d-xl-inline-flex"
             title="Client Portal & Dashboard" aria-label="Dashboard">
-            <span class="d-none d-md-inline">Dashboard</span>
-            <span class="d-inline d-md-none">Client Portal</span>
+            Dashboard
           </a>
 
-          <!-- 5. Login Button (Desktop & Tablets >= 768px) -->
-          <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-md-inline-flex"
+          <!-- 5. Login Button (Desktop >= 1200px) -->
+          <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-xl-inline-flex"
             title="Client & Speaker Login" aria-label="Login">
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
               <path
@@ -110,7 +109,7 @@
           </ul>
 
           <!-- Mobile Menu Drawer Actions (Luméra Skin Style: 1. Wishlist, 2. RTL, 3. Theme Switcher, 4. Login, 5. Dashboard) -->
-          <div class="mobile-nav-actions d-md-none">
+          <div class="mobile-nav-actions d-xl-none">
             <div class="mobile-nav-actions-row">
               <div class="mobile-nav-toggles">
                 <!-- 1. Wishlist Button -->
@@ -171,11 +170,7 @@
       class="cinematic-page-hero-bg">
     <div class="cinematic-page-hero-overlay"></div>
     <div class="cinematic-page-hero-content">
-      <div class="cinematic-breadcrumb">
-        <a href="../index.html">Home</a>
-        <span class="cinematic-breadcrumb-sep">/</span>
-        <span class="cinematic-breadcrumb-current">Topics &amp; Industries</span>
-      </div>
+
       <h1 class="cinematic-page-hero-title">Topics &amp; Global Industry Horizons</h1>
       <p class="cinematic-page-hero-desc">
         "Empowering boards and summit organizers with authoritative voices across AI, Quantum Enterprise, Geopolitics,
@@ -204,12 +199,14 @@
         <div class="col-12 col-lg-6 fade-up">
           <div class="topic-lumera-card">
             <div class="topic-lumera-media">
-              <img src="../assets/images/topics/topic_leadership.jpg" alt="Leadership &amp; Management" class="topic-lumera-img" loading="lazy">
+              <img src="../assets/images/topics/topic_leadership.jpg" alt="Leadership &amp; Management"
+                class="topic-lumera-img" loading="lazy">
             </div>
             <h3 class="topic-lumera-title">Leadership &amp; Management</h3>
             <span class="topic-lumera-subtitle">Executive Track &bull; 14 Roster Keynotes</span>
             <p class="topic-lumera-desc">
-              Executive leadership, organizational change, team development, decision-making under uncertainty, and strategic governance in volatile environments.
+              Executive leadership, organizational change, team development, decision-making under uncertainty, and
+              strategic governance in volatile environments.
             </p>
             <div class="topic-lumera-takeaways">
               <div class="topic-lumera-takeaways-heading">Key Executive Takeaways</div>
@@ -239,12 +236,14 @@
         <div class="col-12 col-lg-6 fade-up delay-100">
           <div class="topic-lumera-card">
             <div class="topic-lumera-media">
-              <img src="../assets/images/topics/topic_ai_tech.jpg" alt="Artificial Intelligence &amp; Technology" class="topic-lumera-img" loading="lazy">
+              <img src="../assets/images/topics/topic_ai_tech.jpg" alt="Artificial Intelligence &amp; Technology"
+                class="topic-lumera-img" loading="lazy">
             </div>
             <h3 class="topic-lumera-title">Artificial Intelligence &amp; Technology</h3>
             <span class="topic-lumera-subtitle">Technology Track &bull; 18 Roster Keynotes</span>
             <p class="topic-lumera-desc">
-              Enterprise generative AI adoption, autonomous workflows, cybersecurity risk, technology governance, and human-machine collaboration.
+              Enterprise generative AI adoption, autonomous workflows, cybersecurity risk, technology governance, and
+              human-machine collaboration.
             </p>
             <div class="topic-lumera-takeaways">
               <div class="topic-lumera-takeaways-heading">Key Executive Takeaways</div>
@@ -274,12 +273,14 @@
         <div class="col-12 col-lg-6 fade-up">
           <div class="topic-lumera-card">
             <div class="topic-lumera-media">
-              <img src="../assets/images/topics/topic_innovation.jpg" alt="Innovation &amp; Future Trends" class="topic-lumera-img" loading="lazy">
+              <img src="../assets/images/topics/topic_innovation.jpg" alt="Innovation &amp; Future Trends"
+                class="topic-lumera-img" loading="lazy">
             </div>
             <h3 class="topic-lumera-title">Innovation &amp; Future Trends</h3>
             <span class="topic-lumera-subtitle">Strategy Track &bull; 12 Roster Keynotes</span>
             <p class="topic-lumera-desc">
-              Disruptive business models, design futurism, consumer psychology, speed as a moat, and breakthrough product development.
+              Disruptive business models, design futurism, consumer psychology, speed as a moat, and breakthrough
+              product development.
             </p>
             <div class="topic-lumera-takeaways">
               <div class="topic-lumera-takeaways-heading">Key Executive Takeaways</div>
@@ -309,12 +310,14 @@
         <div class="col-12 col-lg-6 fade-up delay-100">
           <div class="topic-lumera-card">
             <div class="topic-lumera-media">
-              <img src="../assets/images/topics/topic_motivation.jpg" alt="Motivation &amp; Human Performance" class="topic-lumera-img" loading="lazy">
+              <img src="../assets/images/topics/topic_motivation.jpg" alt="Motivation &amp; Human Performance"
+                class="topic-lumera-img" loading="lazy">
             </div>
             <h3 class="topic-lumera-title">Motivation &amp; Human Performance</h3>
             <span class="topic-lumera-subtitle">Performance Track &bull; 16 Roster Keynotes</span>
             <p class="topic-lumera-desc">
-              Resilience through adversity, mental fortitude under high stakes, sustaining energy across long operational cycles, and world-class execution standards.
+              Resilience through adversity, mental fortitude under high stakes, sustaining energy across long
+              operational cycles, and world-class execution standards.
             </p>
             <div class="topic-lumera-takeaways">
               <div class="topic-lumera-takeaways-heading">Key Executive Takeaways</div>
@@ -344,12 +347,14 @@
         <div class="col-12 col-lg-6 fade-up">
           <div class="topic-lumera-card">
             <div class="topic-lumera-media">
-              <img src="../assets/images/topics/topic_economics.jpg" alt="Economics &amp; Global Affairs" class="topic-lumera-img" loading="lazy">
+              <img src="../assets/images/topics/topic_economics.jpg" alt="Economics &amp; Global Affairs"
+                class="topic-lumera-img" loading="lazy">
             </div>
             <h3 class="topic-lumera-title">Economics &amp; Global Affairs</h3>
             <span class="topic-lumera-subtitle">Macro Track &bull; 10 Roster Keynotes</span>
             <p class="topic-lumera-desc">
-              Macroeconomic indicators, supply chain sovereignty, geopolitical fragmentation, multilateral trade agreements, and capital allocation.
+              Macroeconomic indicators, supply chain sovereignty, geopolitical fragmentation, multilateral trade
+              agreements, and capital allocation.
             </p>
             <div class="topic-lumera-takeaways">
               <div class="topic-lumera-takeaways-heading">Key Executive Takeaways</div>
@@ -379,12 +384,14 @@
         <div class="col-12 col-lg-6 fade-up delay-100">
           <div class="topic-lumera-card">
             <div class="topic-lumera-media">
-              <img src="../assets/images/topics/topic_culture.jpg" alt="Workplace Culture &amp; Wellbeing" class="topic-lumera-img" loading="lazy">
+              <img src="../assets/images/topics/topic_culture.jpg" alt="Workplace Culture &amp; Wellbeing"
+                class="topic-lumera-img" loading="lazy">
             </div>
             <h3 class="topic-lumera-title">Workplace Culture &amp; Wellbeing</h3>
             <span class="topic-lumera-subtitle">Culture Track &bull; 15 Roster Keynotes</span>
             <p class="topic-lumera-desc">
-              Psychological safety, employee retention, sustainable focus in digital distraction, hybrid team dynamics, and authentic communication.
+              Psychological safety, employee retention, sustainable focus in digital distraction, hybrid team dynamics,
+              and authentic communication.
             </p>
             <div class="topic-lumera-takeaways">
               <div class="topic-lumera-takeaways-heading">Key Executive Takeaways</div>
