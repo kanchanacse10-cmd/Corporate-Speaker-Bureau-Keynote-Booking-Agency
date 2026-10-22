@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 3. Render Speaker Card Template Helper (Minimalist Prestige Gallery Card Layout)
-  window.SSB_RENDER_SPEAKER_CARD = function (speaker, basePath = "", colClass = "col-xl-3 col-lg-3 col-md-6 col-12") {
+  window.SSB_RENDER_SPEAKER_CARD = function (speaker, basePath = "", colClass = "col-xl-3 col-lg-6 col-md-6 col-12") {
     const isSaved = SSB_STORAGE.isInShortlist(speaker.id);
     const profileUrl = `${basePath}pages/speaker-profile.html?id=${speaker.id}`;
     const bookUrl = `${basePath}pages/book-a-speaker.html?speaker=${encodeURIComponent(speaker.name)}&id=${speaker.id}`;
@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
           );
         }
       }
-      featuredContainer.innerHTML = filtered.slice(0, 8).map(s => window.SSB_RENDER_SPEAKER_CARD(s, "", "col-xl-3 col-lg-3 col-md-6 col-12")).join("");
+      featuredContainer.innerHTML = filtered.slice(0, 8).map(s => window.SSB_RENDER_SPEAKER_CARD(s, "", "col-xl-3 col-lg-6 col-md-6 col-12")).join("");
       initScrollAnimations(featuredContainer);
     };
 

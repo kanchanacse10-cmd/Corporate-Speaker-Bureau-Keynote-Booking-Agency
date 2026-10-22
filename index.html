@@ -47,17 +47,8 @@
           </div>
         </a>
 
-        <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard (Client Portal on mobile), 5. Login -->
+        <!-- Header Actions: 1. RTL, 2. Theme Converter, 3. Dashboard (Client Portal on mobile), 4. Login -->
         <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
-          <!-- 1. Wishlist Button (Desktop >= 1200px) -->
-          <a href="dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-xl-inline-flex"
-            title="View Saved Wishlist" aria-label="View Saved Wishlist">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-            </svg>
-            <span class="shortlist-count-badge">0</span>
-          </a>
 
           <!-- 2. RTL/LTR Toggle (Desktop >= 1200px) -->
           <button type="button" class="toggle-btn rtl-toggle-btn d-none d-xl-inline-flex"
@@ -109,7 +100,16 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/speaker-roster.html">Speaker Roster</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="speakerRosterDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Speaker Roster
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="speakerRosterDropdown">
+                <li><a class="dropdown-item" href="pages/speaker-profile.html">Single Speaker Roster page</a></li>
+                <li><a class="dropdown-item" href="pages/book-a-speaker.html">Book a Speaker Roster page</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="pages/topics-industries.html">Topics & Industries</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/how-it-works.html">How It Works</a></li>
@@ -117,19 +117,10 @@
             <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
           </ul>
 
-          <!-- Mobile Menu Drawer Actions (Luméra Skin Style: 1. Wishlist, 2. RTL, 3. Theme Switcher, 4. Login, 5. Dashboard) -->
+          <!-- Mobile Menu Drawer Actions (Luméra Skin Style: 1. RTL, 2. Theme Switcher, 3. Login, 4. Dashboard) -->
           <div class="mobile-nav-actions d-xl-none">
             <div class="mobile-nav-actions-row">
               <div class="mobile-nav-toggles">
-                <!-- 1. Wishlist Button -->
-                <a href="dashboard/index.html?view=shortlist" class="nav-wishlist-btn mobile-menu-wishlist"
-                  title="Saved Wishlist" aria-label="Saved Wishlist">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                  </svg>
-                  <span class="shortlist-count-badge">0</span>
-                </a>
 
                 <!-- 2. RTL Toggle -->
                 <button type="button" class="toggle-btn rtl-toggle-btn mobile-menu-rtl"
@@ -253,7 +244,7 @@
                 <a href="pages/topics-industries.html" class="hero-btn-secondary">
                   <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
                     <path
-                      d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3z" />
+                      d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
                   </svg>
                   <span>BROWSE TECH TOPICS</span>
                 </a>
@@ -321,8 +312,8 @@
                 </a>
                 <a href="pages/how-it-works.html" class="hero-btn-secondary">
                   <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v1.5a.5.5 0 0 1-1 0V8H2v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 1.5 7H7V6A1.5 1.5 0 0 1 5.5 4.5v-1z" />
+                    <path
+                      d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
                   </svg>
                   <span>HOW OUR BUREAU WORKS</span>
                 </a>
@@ -534,18 +525,18 @@
 
       <div class="row g-4 align-items-stretch pt-2">
         <!-- Left Column: 2x2 Grid of 4 Feature Cards -->
-        <div class="col-lg-6 col-xl-6 fade-up">
-          <div class="row g-3 g-md-4 h-100">
+        <div class="col-lg-12 col-xl-6 fade-up">
+          <div class="row g-3 g-md-4 h-100 align-items-stretch">
             <!-- 01: Leadership & Management -->
-            <div class="col-sm-6">
-              <a href="pages/speaker-roster.html?topic=Leadership+%26+Management" class="home1-lumera-topic-card">
+            <div class="col-sm-6 d-flex flex-column">
+              <a href="pages/speaker-roster.html?topic=Leadership+%26+Management" class="home1-lumera-topic-card w-100">
                 <div class="home1-lumera-topic-icon" title="Leadership & Management">
                   <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
                     <path
                       d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .86-.514L13.774 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.726L5.07 1.243z" />
                   </svg>
                 </div>
-                <h3 class="home1-lumera-topic-title">Leadership and Management</h3>
+                <h3 class="home1-lumera-topic-title">Leadership &amp; Strategy</h3>
                 <p class="home1-lumera-topic-desc">
                   Executive leadership, organizational change, decision-making under ambiguity, and building high-trust
                   autonomous teams.
@@ -554,53 +545,55 @@
             </div>
 
             <!-- 02: Artificial Intelligence & Technology -->
-            <div class="col-sm-6">
+            <div class="col-sm-6 d-flex flex-column">
               <a href="pages/speaker-roster.html?topic=Artificial+Intelligence+%26+Technology"
-                class="home1-lumera-topic-card">
+                class="home1-lumera-topic-card w-100">
                 <div class="home1-lumera-topic-icon" title="AI & Technology">
                   <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
                     <path
                       d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14A2.5 2.5 0 0 1 11.5 14v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zM3 4.5A1.5 1.5 0 0 0 4.5 3h7A1.5 1.5 0 0 0 13 4.5v7a1.5 1.5 0 0 0-1.5 1.5h-7A1.5 1.5 0 0 0 3 11.5v-7z" />
                   </svg>
                 </div>
-                <h3 class="home1-lumera-topic-title">Artificial Intelligence and Technology</h3>
+                <h3 class="home1-lumera-topic-title">AI &amp; Applied Technology</h3>
                 <p class="home1-lumera-topic-desc">
-                  Generative AI roadmaps, autonomous agents, tech governance, digital transformation, and human-AI
+                  Generative AI roadmaps, autonomous agents, tech governance, digital transformation, and human-machine
                   synergy.
                 </p>
               </a>
             </div>
 
             <!-- 03: Innovation & Future Trends -->
-            <div class="col-sm-6">
-              <a href="pages/speaker-roster.html?topic=Innovation+%26+Future+Trends" class="home1-lumera-topic-card">
+            <div class="col-sm-6 d-flex flex-column">
+              <a href="pages/speaker-roster.html?topic=Innovation+%26+Future+Trends"
+                class="home1-lumera-topic-card w-100">
                 <div class="home1-lumera-topic-icon" title="Innovation">
                   <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
                     <path
                       d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6z" />
                   </svg>
                 </div>
-                <h3 class="home1-lumera-topic-title">Innovation and Future Trends</h3>
+                <h3 class="home1-lumera-topic-title">Innovation &amp; Future Growth</h3>
                 <p class="home1-lumera-topic-desc">
-                  Disruptive business architectures, future forecasting, frictionless customer experiences, and
+                  Disruptive business architectures, strategic forecasting, frictionless customer journeys, and
                   engineering velocity.
                 </p>
               </a>
             </div>
 
             <!-- 04: Workplace Culture & Wellbeing -->
-            <div class="col-sm-6">
-              <a href="pages/speaker-roster.html?topic=Workplace+Culture+%26+Wellbeing" class="home1-lumera-topic-card">
+            <div class="col-sm-6 d-flex flex-column">
+              <a href="pages/speaker-roster.html?topic=Workplace+Culture+%26+Wellbeing"
+                class="home1-lumera-topic-card w-100">
                 <div class="home1-lumera-topic-icon" title="Workplace Culture">
                   <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
                     <path
                       d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
                   </svg>
                 </div>
-                <h3 class="home1-lumera-topic-title">Workplace Culture and Wellbeing</h3>
+                <h3 class="home1-lumera-topic-title">Workplace and Team Culture</h3>
                 <p class="home1-lumera-topic-desc">
-                  Psychological safety, employee engagement, sustainable focus in digital burnout, and inclusive
-                  leadership dynamics.
+                  Psychological safety, employee engagement, sustainable executive performance, and inclusive team
+                  dynamics.
                 </p>
               </a>
             </div>
@@ -608,7 +601,7 @@
         </div>
 
         <!-- Right Column: Featured Showcase Image Panel with Commitment Badge -->
-        <div class="col-lg-6 col-xl-6 fade-up delay-100">
+        <div class="col-lg-12 col-xl-6 fade-up delay-100">
           <div class="home1-lumera-showcase-panel">
             <img src="assets/images/topics/topics_keynote_showcase.jpg" alt="SummitSpeak Global Keynote Stage"
               class="home1-lumera-showcase-img" loading="lazy">
@@ -646,18 +639,18 @@
           industry-tailored best practices.</p>
       </div>
 
-      <div class="row g-4" id="home-industry-grid">
+      <div class="row g-4 align-items-stretch" id="home-industry-grid">
         <!-- 1. Technology -->
-        <div class="col-xl-3 col-lg-6 col-sm-6 fade-up delay-0">
-          <div class="home1-industry-card">
+        <div class="col-xl-3 col-lg-6 col-sm-6 fade-up delay-0 d-flex flex-column">
+          <div class="home1-industry-card w-100">
             <div class="home1-industry-media">
               <img src="assets/images/hero/hero_ai_keynote.jpg" alt="Technology Keynote">
               <div class="home1-industry-media-overlay"></div>
-              <span class="home1-industry-tag">Tech & Enterprise AI</span>
+              <span class="home1-industry-tag">Tech &amp; Enterprise AI</span>
             </div>
             <div class="home1-industry-body">
-              <h4 class="home1-industry-title">Technology</h4>
-              <p class="home1-industry-desc">Software, Cloud, Generative AI, Autonomous Systems, and Cybersecurity.</p>
+              <h4 class="home1-industry-title">Technology &amp; AI</h4>
+              <p class="home1-industry-desc">Software, Cloud, Generative AI, Autonomous Systems.</p>
               <a href="pages/speaker-roster.html?industry=Technology"
                 class="btn btn-outline-corporate btn-sm w-100 mt-auto">View Tech Speakers &rarr;</a>
             </div>
@@ -665,16 +658,16 @@
         </div>
 
         <!-- 2. Finance & Banking -->
-        <div class="col-xl-3 col-lg-6 col-sm-6 fade-up delay-100">
-          <div class="home1-industry-card">
+        <div class="col-xl-3 col-lg-6 col-sm-6 fade-up delay-100 d-flex flex-column">
+          <div class="home1-industry-card w-100">
             <div class="home1-industry-media">
               <img src="assets/images/events/summit.jpg" alt="Finance Summit">
               <div class="home1-industry-media-overlay"></div>
-              <span class="home1-industry-tag">Capital Markets & FinTech</span>
+              <span class="home1-industry-tag">Capital Markets &amp; FinTech</span>
             </div>
             <div class="home1-industry-body">
-              <h4 class="home1-industry-title">Finance & Banking</h4>
-              <p class="home1-industry-desc">Investment Banking, Fintech, Decentralized Assets, and Wealth Governance.
+              <h4 class="home1-industry-title">Finance &amp; Banking</h4>
+              <p class="home1-industry-desc">Investment Banking, Fintech, Decentralized Assets.
               </p>
               <a href="pages/speaker-roster.html?industry=Finance+%26+Banking"
                 class="btn btn-outline-corporate btn-sm w-100 mt-auto">View Finance Speakers &rarr;</a>
@@ -683,17 +676,16 @@
         </div>
 
         <!-- 3. Healthcare -->
-        <div class="col-xl-3 col-lg-6 col-sm-6 fade-up delay-200">
-          <div class="home1-industry-card">
+        <div class="col-xl-3 col-lg-6 col-sm-6 fade-up delay-200 d-flex flex-column">
+          <div class="home1-industry-card w-100">
             <div class="home1-industry-media">
               <img src="assets/images/about/panel.jpg" alt="Healthcare Leadership">
               <div class="home1-industry-media-overlay"></div>
-              <span class="home1-industry-tag">Life Sciences & Biotech</span>
+              <span class="home1-industry-tag">Life Sciences &amp; Biotech</span>
             </div>
             <div class="home1-industry-body">
-              <h4 class="home1-industry-title">Healthcare</h4>
-              <p class="home1-industry-desc">Pharma Innovation, Biotechnology, Digital Health,Modern Hospital System,
-                and Hospital Systems.</p>
+              <h4 class="home1-industry-title">Healthcare &amp; Biotech</h4>
+              <p class="home1-industry-desc">Pharma Innovation, Biotechnology, Digital Health, and Hospital Systems.</p>
               <a href="pages/speaker-roster.html?industry=Healthcare"
                 class="btn btn-outline-corporate btn-sm w-100 mt-auto">View Health Speakers &rarr;</a>
             </div>
@@ -701,16 +693,16 @@
         </div>
 
         <!-- 4. Retail & Consumer -->
-        <div class="col-xl-3 col-lg-6 col-sm-6 fade-up delay-300">
-          <div class="home1-industry-card">
+        <div class="col-xl-3 col-lg-6 col-sm-6 fade-up delay-300 d-flex flex-column">
+          <div class="home1-industry-card w-100">
             <div class="home1-industry-media">
               <img src="assets/images/insights/backstage.jpg" alt="Retail & Consumer">
               <div class="home1-industry-media-overlay"></div>
-              <span class="home1-industry-tag">Commerce & Omnichannel</span>
+              <span class="home1-industry-tag">Commerce &amp; Omnichannel</span>
             </div>
             <div class="home1-industry-body">
-              <h4 class="home1-industry-title">Retail & Consumer</h4>
-              <p class="home1-industry-desc">E-Commerce, Supply Chain Agility, Omnichannel, and Brand Loyalty Strategy.
+              <h4 class="home1-industry-title">Retail &amp; Consumer</h4>
+              <p class="home1-industry-desc">E-Commerce, Supply Chain Agility, Omnichannel Retail, and Brand Strategy.
               </p>
               <a href="pages/speaker-roster.html?industry=Retail+%26+Consumer+Brands"
                 class="btn btn-outline-corporate btn-sm w-100 mt-auto">View Retail Speakers &rarr;</a>
@@ -837,10 +829,10 @@
           speakers deliver tailored, unforgettable keynote moments.</p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 align-items-stretch">
         <!-- 1. Leadership Summits -->
-        <div class="col-lg-6 col-md-6 fade-up delay-0">
-          <div class="home1-format-card">
+        <div class="col-lg-6 col-md-6 fade-up delay-0 d-flex flex-column">
+          <div class="home1-format-card w-100">
             <div class="home1-format-media">
               <img src="assets/images/events/leadership_summits.jpg" alt="Leadership Summits">
               <div class="home1-format-media-overlay"></div>
@@ -862,8 +854,8 @@
         </div>
 
         <!-- 2. Annual Conferences -->
-        <div class="col-lg-6 col-md-6 fade-up delay-100">
-          <div class="home1-format-card">
+        <div class="col-lg-6 col-md-6 fade-up delay-100 d-flex flex-column">
+          <div class="home1-format-card w-100">
             <div class="home1-format-media">
               <img src="assets/images/events/annual_conferences.jpg" alt="Annual Conferences">
               <div class="home1-format-media-overlay"></div>
@@ -885,8 +877,8 @@
         </div>
 
         <!-- 3. Awards Ceremonies -->
-        <div class="col-lg-6 col-md-6 fade-up delay-250">
-          <div class="home1-format-card">
+        <div class="col-lg-6 col-md-6 fade-up delay-250 d-flex flex-column">
+          <div class="home1-format-card w-100">
             <div class="home1-format-media">
               <img src="assets/images/events/gala_awards.jpg" alt="Awards & Gala">
               <div class="home1-format-media-overlay"></div>
@@ -908,8 +900,8 @@
         </div>
 
         <!-- 4. Virtual Keynotes -->
-        <div class="col-lg-6 col-md-6 fade-up delay-300">
-          <div class="home1-format-card">
+        <div class="col-lg-6 col-md-6 fade-up delay-300 d-flex flex-column">
+          <div class="home1-format-card w-100">
             <div class="home1-format-media">
               <img src="assets/images/events/virtual_hybrid.jpg" alt="Virtual Keynotes">
               <div class="home1-format-media-overlay"></div>
@@ -1051,7 +1043,7 @@
           administrative friction.</p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 justify-content-center">
         <!-- Trust Card 1 -->
         <div class="col-lg-4 col-md-6 fade-up delay-0">
           <div class="home1-trust-card">
@@ -1318,7 +1310,7 @@
             </div>
             <div class="ssb-story-pill-card">
               <strong class="ssb-story-pill-title">100% SLA Guard</strong>
-              <span class="ssb-story-pill-sub">Fiduciary escrow protocol</span>
+              <span class="ssb-story-pill-sub">Fiduciary escrow </span>
             </div>
             <div class="ssb-story-pill-card">
               <strong class="ssb-story-pill-title">42+ Global Cities</strong>

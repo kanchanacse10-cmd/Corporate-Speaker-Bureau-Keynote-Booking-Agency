@@ -38,17 +38,8 @@
           </div>
         </a>
 
-        <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard (Client Portal on mobile), 5. Login -->
+        <!-- Header Actions: 1. RTL, 2. Theme Converter, 3. Dashboard (Client Portal on mobile), 4. Login -->
         <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
-          <!-- 1. Wishlist Button (Desktop >= 1200px) -->
-          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-xl-inline-flex"
-            title="View Saved Wishlist" aria-label="View Saved Wishlist">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-            </svg>
-            <span class="shortlist-count-badge">0</span>
-          </a>
 
           <!-- 2. RTL/LTR Toggle (Desktop >= 1200px) -->
           <button type="button" class="toggle-btn rtl-toggle-btn d-none d-xl-inline-flex"
@@ -100,7 +91,16 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="speaker-roster.html">Speaker Roster</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="speakerRosterDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Speaker Roster
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="speakerRosterDropdown">
+                <li><a class="dropdown-item" href="speaker-profile.html">Single Speaker Roster page</a></li>
+                <li><a class="dropdown-item" href="book-a-speaker.html">Book a Speaker Roster page</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link active" href="topics-industries.html">Topics & Industries</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
@@ -112,15 +112,6 @@
           <div class="mobile-nav-actions d-xl-none">
             <div class="mobile-nav-actions-row">
               <div class="mobile-nav-toggles">
-                <!-- 1. Wishlist Button -->
-                <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn mobile-menu-wishlist"
-                  title="Saved Wishlist" aria-label="Saved Wishlist">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                  </svg>
-                  <span class="shortlist-count-badge">0</span>
-                </a>
 
                 <!-- 2. RTL Toggle -->
                 <button type="button" class="toggle-btn rtl-toggle-btn mobile-menu-rtl"
@@ -213,11 +204,9 @@
               <ul>
                 <li>Frameworks for decentralized high-stakes decision making</li>
                 <li>Fostering cultures of radical accountability and team safety</li>
-                <li>Leading enterprise transformation without organizational burnout</li>
               </ul>
             </div>
             <div class="topic-lumera-pills-wrap">
-              <span class="topic-lumera-pill">EXECUTIVE TRACK</span>
               <span class="topic-lumera-pill">14 SPEAKERS</span>
               <span class="topic-lumera-pill">HIGH-STAKES</span>
               <span class="topic-lumera-pill">GOVERNANCE</span>
@@ -250,11 +239,9 @@
               <ul>
                 <li>Pragmatic AI roadmaps beyond pilot experimentation</li>
                 <li>Responsible tech governance, data integrity, and compliance</li>
-                <li>Upskilling workforces for autonomous agent ecosystems</li>
               </ul>
             </div>
             <div class="topic-lumera-pills-wrap">
-              <span class="topic-lumera-pill">TECHNOLOGY TRACK</span>
               <span class="topic-lumera-pill">18 SPEAKERS</span>
               <span class="topic-lumera-pill">AGENTIC AI</span>
               <span class="topic-lumera-pill">CYBER GOVERNANCE</span>
@@ -287,11 +274,9 @@
               <ul>
                 <li>Spotting weak signals before mainstream disruption</li>
                 <li>Human-centered design thinking and product velocity</li>
-                <li>Fostering rapid internal experimentation loops</li>
               </ul>
             </div>
             <div class="topic-lumera-pills-wrap">
-              <span class="topic-lumera-pill">STRATEGY TRACK</span>
               <span class="topic-lumera-pill">12 SPEAKERS</span>
               <span class="topic-lumera-pill">DISRUPTION</span>
               <span class="topic-lumera-pill">VELOCITY</span>
@@ -324,11 +309,9 @@
               <ul>
                 <li>Cognitive tools to maintain composure during crises</li>
                 <li>Reframing failure into tactical momentum and learning</li>
-                <li>Igniting collective passion during annual kickoffs and transitions</li>
               </ul>
             </div>
             <div class="topic-lumera-pills-wrap">
-              <span class="topic-lumera-pill">PERFORMANCE TRACK</span>
               <span class="topic-lumera-pill">16 SPEAKERS</span>
               <span class="topic-lumera-pill">RESILIENCE</span>
               <span class="topic-lumera-pill">PEAK MINDSET</span>
@@ -361,11 +344,9 @@
               <ul>
                 <li>Navigating interest rate shifts, inflation, and currency risks</li>
                 <li>Scenario modeling for geopolitical volatility</li>
-                <li>Decoupling and friend-shoring supply chain architectures</li>
               </ul>
             </div>
             <div class="topic-lumera-pills-wrap">
-              <span class="topic-lumera-pill">MACRO TRACK</span>
               <span class="topic-lumera-pill">10 SPEAKERS</span>
               <span class="topic-lumera-pill">GEOPOLITICS</span>
               <span class="topic-lumera-pill">TRADE RISK</span>
@@ -398,11 +379,9 @@
               <ul>
                 <li>Preventing burnout while preserving high-output standards</li>
                 <li>Designing communication rituals that connect hybrid teams</li>
-                <li>Retaining top performers in competitive talent markets</li>
               </ul>
             </div>
             <div class="topic-lumera-pills-wrap">
-              <span class="topic-lumera-pill">CULTURE TRACK</span>
               <span class="topic-lumera-pill">15 SPEAKERS</span>
               <span class="topic-lumera-pill">WELLBEING</span>
               <span class="topic-lumera-pill">HYBRID TEAMS</span>
@@ -430,10 +409,10 @@
           compliance environments.</p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 align-items-stretch">
         <!-- 1. Technology & SaaS -->
-        <div class="col-lg-3 col-md-6">
-          <div class="industry-sector-card tech-sector">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12 d-flex flex-column">
+          <div class="industry-sector-card tech-sector w-100">
             <div class="industry-card-top">
               <div class="industry-icon-box" title="Technology & SaaS">
                 <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
@@ -467,7 +446,7 @@
                   <path
                     d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                 </svg>
-                CIO &amp; CISO executive roundtables
+                CIO &amp; CISO roundtables
               </li>
             </ul>
             <div class="industry-card-footer">
@@ -479,8 +458,8 @@
         </div>
 
         <!-- 2. Finance & Banking -->
-        <div class="col-lg-3 col-md-6">
-          <div class="industry-sector-card finance-sector">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12 d-flex flex-column">
+          <div class="industry-sector-card finance-sector w-100">
             <div class="industry-card-top">
               <div class="industry-icon-box" title="Finance & Banking">
                 <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
@@ -492,8 +471,8 @@
             </div>
             <h4 class="industry-card-title">Finance &amp; Banking</h4>
             <span class="industry-card-subtitle">Capital Markets &amp; Risk</span>
-            <p class="industry-card-desc">Macroeconomists and monetary analysts decoding interest rate cycles,
-              multilateral trade shifts, algorithmic trading.</p>
+            <p class="industry-card-desc">Macroeconomists and monetary analysts decoding interest rate cycles, trade
+              shifts, and algorithmic trading.</p>
             <ul class="industry-objectives-list">
               <li>
                 <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
@@ -527,8 +506,8 @@
         </div>
 
         <!-- 3. Healthcare & Life Sciences -->
-        <div class="col-lg-3 col-md-6">
-          <div class="industry-sector-card health-sector">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12 d-flex flex-column">
+          <div class="industry-sector-card health-sector w-100">
             <div class="industry-card-top">
               <div class="industry-icon-box" title="Healthcare & Life Sciences">
                 <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
@@ -569,15 +548,15 @@
             </ul>
             <div class="industry-card-footer">
               <a href="speaker-roster.html?industry=Healthcare" class="btn btn-outline-corporate w-100 industry-btn">
-                Browse Healthcare Speakers <span class="arrow">&rarr;</span>
+                Browse Health Speakers <span class="arrow">&rarr;</span>
               </a>
             </div>
           </div>
         </div>
 
         <!-- 4. Energy & Sustainability -->
-        <div class="col-lg-3 col-md-6">
-          <div class="industry-sector-card energy-sector">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12 d-flex flex-column">
+          <div class="industry-sector-card energy-sector w-100">
             <div class="industry-card-top">
               <div class="industry-icon-box" title="Energy & Sustainability">
                 <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">

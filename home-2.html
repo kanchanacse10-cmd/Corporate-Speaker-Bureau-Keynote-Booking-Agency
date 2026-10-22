@@ -47,17 +47,8 @@
           </div>
         </a>
 
-        <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard, 5. Login -->
+        <!-- Header Actions: 1. RTL, 2. Theme Converter, 3. Dashboard, 4. Login -->
         <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
-          <!-- 1. Wishlist Button -->
-          <a href="dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-xl-inline-flex"
-            title="View Saved Wishlist" aria-label="View Saved Wishlist">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-            </svg>
-            <span class="shortlist-count-badge">0</span>
-          </a>
 
           <!-- 2. RTL/LTR Toggle -->
           <button type="button" class="toggle-btn rtl-toggle-btn d-none d-xl-inline-flex"
@@ -109,7 +100,16 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/speaker-roster.html">Speaker Roster</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="speakerRosterDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Speaker Roster
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="speakerRosterDropdown">
+                <li><a class="dropdown-item" href="pages/speaker-profile.html">Single Speaker Roster page</a></li>
+                <li><a class="dropdown-item" href="pages/book-a-speaker.html">Book a Speaker Roster page</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="pages/topics-industries.html">Topics & Industries</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/how-it-works.html">How It Works</a></li>
@@ -121,14 +121,6 @@
           <div class="mobile-nav-actions d-xl-none">
             <div class="mobile-nav-actions-row">
               <div class="mobile-nav-toggles">
-                <a href="dashboard/index.html?view=shortlist" class="nav-wishlist-btn mobile-menu-wishlist"
-                  title="Saved Wishlist" aria-label="Saved Wishlist">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                  </svg>
-                  <span class="shortlist-count-badge">0</span>
-                </a>
                 <button type="button" class="toggle-btn rtl-toggle-btn mobile-menu-rtl"
                   onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle layout direction">
                   RTL
@@ -349,7 +341,7 @@
                     class="track-lumera-img" loading="lazy">
                 </div>
                 <span class="track-lumera-subtitle">Track 01 &bull; Frontier Tech</span>
-                <h3 class="track-lumera-title">The Exponential AI &amp; Quantum Enterprise</h3>
+                <h3 class="track-lumera-title">The Exponential AI and Quantum Enterprise</h3>
                 <p class="track-lumera-desc">
                   Navigating agentic autonomous workflows, proprietary foundational models, and executive governance of
                   unaligned machine intelligence.
@@ -888,10 +880,10 @@
       </div>
 
       <!-- Titans Showcase Grid -->
-      <div class="row g-4" id="titansGrid">
+      <div class="row g-4 align-items-stretch" id="titansGrid">
         <!-- Titan 1 -->
-        <div class="col-md-6 col-lg-3 titan-item" data-category="tech">
-          <div class="home2-titan-card">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-3 titan-item d-flex flex-column" data-category="tech">
+          <div class="home2-titan-card w-100">
             <div class="home2-titan-media">
               <img src="assets/images/speakers/marcus-vance.jpg" alt="Dr. Marcus Vance">
               <div class="home2-titan-overlay">
@@ -909,9 +901,7 @@
                 Author: <em>The Autonomous Mind</em>
               </div>
               <p class="small text-muted mb-3">
-                Keynoted 3 World Economic Forum summits. Specializes in autonomous corporate architectures and alignment
-                ethics.
-              </p>
+                Keynoted 3 World Economic Forum summits. Specializes in autonomous enterprise architectures. </p>
               <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
                 <span class="small fw-bold text-gold">$50,000+ Tier</span>
                 <button class="btn btn-sm btn-outline-corporate"
@@ -924,14 +914,14 @@
         </div>
 
         <!-- Titan 2 -->
-        <div class="col-md-6 col-lg-3 titan-item" data-category="tech">
-          <div class="home2-titan-card">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-3 titan-item d-flex flex-column" data-category="tech">
+          <div class="home2-titan-card w-100">
             <div class="home2-titan-media">
               <img src="assets/images/speakers/maya-chen.jpg" alt="Maya Chen">
               <div class="home2-titan-overlay">
                 <span class="badge badge-gold mb-1">Global Ethicist</span>
                 <h4 class="h5 fw-bold mb-0 text-white">Maya Chen</h4>
-                <small class="text-white-50">Human-Centric Tech & Culture</small>
+                <small class="text-white-50">Human-Centric AI Ethics</small>
               </div>
             </div>
             <div class="home2-titan-body">
@@ -958,8 +948,8 @@
         </div>
 
         <!-- Titan 3 -->
-        <div class="col-md-6 col-lg-3 titan-item" data-category="geopolitics">
-          <div class="home2-titan-card">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-3 titan-item d-flex flex-column" data-category="geopolitics">
+          <div class="home2-titan-card w-100">
             <div class="home2-titan-media">
               <img src="assets/images/speakers/julian-thorne.jpg" alt="Sir Julian Thorne">
               <div class="home2-titan-overlay">
@@ -992,8 +982,8 @@
         </div>
 
         <!-- Titan 4 -->
-        <div class="col-md-6 col-lg-3 titan-item" data-category="resilience">
-          <div class="home2-titan-card">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-3 titan-item d-flex flex-column" data-category="resilience">
+          <div class="home2-titan-card w-100">
             <div class="home2-titan-media">
               <img src="assets/images/speakers/elena-rostova.jpg" alt="Dr. Elena Rostova">
               <div class="home2-titan-overlay">
@@ -1329,13 +1319,13 @@
         </p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 align-items-stretch">
         <!-- Format 1 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="home2-format-card">
+        <div class="col-md-6 col-lg-6 d-flex flex-column">
+          <div class="home2-format-card w-100">
             <span class="badge badge-gold mb-3 align-self-start">Format 01</span>
             <h4 class="h5 fw-bold mb-2" style="font-family: var(--font-heading);">The Catalyst Keynote</h4>
-            <p class="small text-muted mb-4">
+            <p class="small text-muted mb-4 home2-format-desc">
               High-octane opening address designed to shatter outdated assumptions and establish the overarching vision
               for a 3-day world summit.
             </p>
@@ -1361,12 +1351,13 @@
         </div>
 
         <!-- Format 2 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="home2-format-card">
+        <div class="col-md-6 col-lg-6 d-flex flex-column">
+          <div class="home2-format-card w-100">
             <span class="badge badge-gold mb-3 align-self-start">Format 02</span>
             <h4 class="h5 fw-bold mb-2" style="font-family: var(--font-heading);">Chatham House VIP Salon</h4>
-            <p class="small text-muted mb-4">
-              Strictly off-the-record, closed-door strategy session for your top 25 leaders, CEO, and board. Zero
+            <p class="small text-muted mb-4 home2-format-desc">
+              Strictly off-the-record, closed-door strategy session for your top 25 leaders, CEO, and board. Boardroom
+              Zero
               slides, candid unscripted truths.
             </p>
             <div class="mt-auto">
@@ -1391,11 +1382,11 @@
         </div>
 
         <!-- Format 3 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="home2-format-card">
+        <div class="col-md-6 col-lg-6 d-flex flex-column">
+          <div class="home2-format-card w-100">
             <span class="badge badge-gold mb-3 align-self-start">Format 03</span>
             <h4 class="h5 fw-bold mb-2" style="font-family: var(--font-heading);">The Provocateur Duel</h4>
-            <p class="small text-muted mb-4">
+            <p class="small text-muted mb-4 home2-format-desc">
               Two intellectual heavyweights with diametrically opposing viewpoints debating the future of AI, climate,
               or capitalism under elite moderation.
             </p>
@@ -1421,11 +1412,11 @@
         </div>
 
         <!-- Format 4 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="home2-format-card">
+        <div class="col-md-6 col-lg-6 d-flex flex-column">
+          <div class="home2-format-card w-100">
             <span class="badge badge-gold mb-3 align-self-start">Format 04</span>
             <h4 class="h5 fw-bold mb-2" style="font-family: var(--font-heading);">Global Tour Series</h4>
-            <p class="small text-muted mb-4">
+            <p class="small text-muted mb-4 home2-format-desc">
               A synchronized keynote roadshow deployed across New York, London, Dubai, and Singapore with unified
               narrative alignment and localized slides.
             </p>
@@ -1469,10 +1460,11 @@
       </div>
 
       <!-- 4 Visual SLA Architecture Pillars with Photography -->
-      <div class="row g-4 mb-5">
+      <!-- 4 Visual SLA Architecture Pillars with Photography -->
+      <div class="row g-4 mb-5 align-items-stretch">
         <!-- Pillar 1 -->
-        <div class="col-12 col-md-6 col-xl-3 fade-up">
-          <div class="home2-sla-visual-card">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-3 fade-up d-flex flex-column">
+          <div class="home2-sla-visual-card w-100">
             <div class="home2-sla-media">
               <img src="assets/images/hero/hero_leadership_stage.jpg" alt="Emergency Understudy Protocol"
                 loading="lazy">
@@ -1484,14 +1476,13 @@
                 Guaranteed standby replacement of equal international standing pre-briefed and ready in case of
                 catastrophic medical or flight disruption.
               </p>
-
             </div>
           </div>
         </div>
 
         <!-- Pillar 2 -->
-        <div class="col-12 col-md-6 col-xl-3 fade-up delay-100">
-          <div class="home2-sla-visual-card">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-3 fade-up delay-100 d-flex flex-column">
+          <div class="home2-sla-visual-card w-100">
             <div class="home2-sla-media">
               <img src="assets/images/events/leadership_summits.jpg" alt="Strict Corporate NDA Protocols"
                 loading="lazy">
@@ -1503,32 +1494,30 @@
                 Comprehensive institutional legal IP assignment protecting confidential strategic reveals, internal
                 financial metrics, and board initiatives.
               </p>
-
             </div>
           </div>
         </div>
 
         <!-- Pillar 3 -->
-        <div class="col-12 col-md-6 col-xl-3 fade-up delay-200">
-          <div class="home2-sla-visual-card">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-3 fade-up delay-200 d-flex flex-column">
+          <div class="home2-sla-visual-card w-100">
             <div class="home2-sla-media">
               <img src="assets/images/about/panel.jpg" alt="Pre-Event Executive Briefings" loading="lazy">
               <span class="home2-sla-media-badge">CEO Discovery</span>
             </div>
             <div class="home2-sla-card-body">
-              <h4 class="home2-sla-card-title">Executive Briefing & Custom Deck</h4>
+              <h4 class="home2-sla-card-title">Executive Briefing &amp; Custom Deck</h4>
               <p class="home2-sla-card-desc">
-                Two mandatory discovery strategy sessions between the keynote speaker and the client's Chief Executive
-                to align every thesis and nuance.
+                Two mandatory discovery strategy sessions between the keynote speaker & executive committee to
+                align all strategic key messaging.
               </p>
-
             </div>
           </div>
         </div>
 
         <!-- Pillar 4 -->
-        <div class="col-12 col-md-6 col-xl-3 fade-up delay-300">
-          <div class="home2-sla-visual-card">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-3 fade-up delay-300 d-flex flex-column">
+          <div class="home2-sla-visual-card w-100">
             <div class="home2-sla-media">
               <img src="assets/images/insights/backstage.jpg" alt="White-Glove Flight & AV Concierge" loading="lazy">
               <span class="home2-sla-media-badge">On-Site Director</span>
@@ -1539,7 +1528,6 @@
                 Dedicated bureau logistics director on-site managing tarmac escorts, teleprompter checks, greenroom
                 hospitality, and audio recording.
               </p>
-
             </div>
           </div>
         </div>

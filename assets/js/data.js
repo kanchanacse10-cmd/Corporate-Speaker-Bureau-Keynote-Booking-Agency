@@ -62,7 +62,7 @@ const SSB_DATA = {
     {
       id: "david-oconnor",
       name: "David O'Connor",
-      title: "High-Performance Leadership Strategist",
+      title: "High-Performance Leadership",
       image: "assets/images/speakers/david-oconnor.jpg",
       primaryTopic: "Leadership & Management",
       industry: "Professional Services",
@@ -322,12 +322,12 @@ const SSB_DATA = {
     },
     {
       id: "ai-keynote-trends",
-      title: "Navigating the AI Keynote Wave: Separating Substance from Hype",
+      title: "Navigating the AI Keynote Wave: How Planners Separate Substance from Hype",
       category: "Innovation and Technology",
       date: "September 2026",
       readTime: "8 min read",
       image: "assets/images/about/panel.jpg",
-      snippet: "Every conference wants an AI keynote, but what actually moves executive audiences? A breakdown of pragmatic tech leadership topics."
+      snippet: "Every conference wants an AI keynote, but what truly moves executive audiences? A pragmatic breakdown of high-impact tech leadership topics."
     },
     {
       id: "contract-and-rider-playbook",
@@ -336,7 +336,7 @@ const SSB_DATA = {
       date: "August 2026",
       readTime: "5 min read",
       image: "assets/images/events/summit.jpg",
-      snippet: "An operational overview of audiovisual requirements, recording rights agreements, travel coordination, and contingency clauses."
+      snippet: "An operational overview of audiovisual requirements, recording rights agreements, executive travel parameters, and contingency clauses."
     }
   ],
 

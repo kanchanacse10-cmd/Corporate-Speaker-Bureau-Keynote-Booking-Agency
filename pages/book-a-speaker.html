@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link rel="shortcut icon" href="../favicon.svg">
   <title>Book a Speaker — SummitSpeak Bureau</title>
-  <meta name="description" content="Dedicated multi-step corporate booking request engine for keynote speakers, conferences, and executive summits.">
-  
+  <meta name="description"
+    content="Dedicated multi-step corporate booking request engine for keynote speakers, conferences, and executive summits.">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/components.css">
@@ -16,6 +18,7 @@
   <script src="../assets/js/theme.js"></script>
 
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -24,7 +27,11 @@
       <div class="container-fluid px-3 px-xl-4 px-xxl-5">
         <a class="ssb-brand" href="../index.html">
           <div class="ssb-brand-logo">
-            <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z"/></svg>
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+              <path
+                d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+            </svg>
           </div>
           <div class="ssb-brand-text">
             <span class="ssb-brand-name">SummitSpeak</span>
@@ -32,21 +39,16 @@
           </div>
         </a>
 
-        <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard (Client Portal on mobile), 5. Login -->
+        <!-- Header Actions: 1. RTL, 2. Theme Converter, 3. Dashboard (Client Portal on mobile), 4. Login -->
         <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
-          <!-- 1. Wishlist Button (Desktop >= 1200px) -->
-          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-xl-inline-flex" title="View Saved Wishlist" aria-label="View Saved Wishlist">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-            </svg>
-            <span class="shortlist-count-badge">0</span>
-          </a>
 
           <!-- 2. RTL/LTR Toggle (Desktop >= 1200px) -->
-          <button type="button" class="toggle-btn rtl-toggle-btn d-none d-xl-inline-flex" onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle direction">RTL</button>
+          <button type="button" class="toggle-btn rtl-toggle-btn d-none d-xl-inline-flex"
+            onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle direction">RTL</button>
 
           <!-- 3. Dark/Light Theme Converter (Desktop >= 1200px) -->
-          <button type="button" class="toggle-btn theme-toggle-btn d-none d-xl-inline-flex" onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle theme"></button>
+          <button type="button" class="toggle-btn theme-toggle-btn d-none d-xl-inline-flex"
+            onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle theme"></button>
 
           <!-- 4. Client Portal / Dashboard (Desktop >= 1200px) -->
           <a href="../dashboard/index.html" class="btn btn-gold btn-sm nav-portal-btn d-none d-xl-inline-flex"
@@ -55,7 +57,8 @@
           </a>
 
           <!-- 5. Login Button (Desktop >= 1200px) -->
-          <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-xl-inline-flex" title="Client & Speaker Login" aria-label="Login">
+          <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm nav-login-btn d-none d-xl-inline-flex"
+            title="Client & Speaker Login" aria-label="Login">
             <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
               <path
                 d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
@@ -64,7 +67,9 @@
           </a>
 
           <!-- Responsive Mobile Toggle (Visible on mobile & tablet < 1200px) -->
-          <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#ssbNavbarContent" aria-controls="ssbNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#ssbNavbarContent" aria-controls="ssbNavbarContent" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
@@ -73,8 +78,8 @@
         <div class="collapse navbar-collapse order-xl-2" id="ssbNavbarContent">
           <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
@@ -83,7 +88,16 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="speaker-roster.html">Speaker Roster</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="speakerRosterDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Speaker Roster
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="speakerRosterDropdown">
+                <li><a class="dropdown-item" href="speaker-profile.html">Single Speaker Roster page</a></li>
+                <li><a class="dropdown-item active" href="book-a-speaker.html">Book a Speaker Roster page</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="topics-industries.html">Topics & Industries</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
@@ -95,15 +109,6 @@
           <div class="mobile-nav-actions d-xl-none">
             <div class="mobile-nav-actions-row">
               <div class="mobile-nav-toggles">
-                <!-- 1. Wishlist Button -->
-                <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn mobile-menu-wishlist"
-                  title="Saved Wishlist" aria-label="Saved Wishlist">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                  </svg>
-                  <span class="shortlist-count-badge">0</span>
-                </a>
 
                 <!-- 2. RTL Toggle -->
                 <button type="button" class="toggle-btn rtl-toggle-btn mobile-menu-rtl"
@@ -122,16 +127,18 @@
                 <a href="../auth/login.html" class="btn btn-outline-corporate btn-sm mobile-menu-login"
                   title="Client & Speaker Login" aria-label="Login">
                   <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="me-1">
-                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    <path
+                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                   </svg>
                   <span class="login-text">Login</span>
                 </a>
 
                 <!-- 5. Dashboard Button -->
-                <a href="../dashboard/index.html" class="btn btn-gold btn-sm mobile-menu-dash"
-                  title="Client Dashboard" aria-label="Dashboard">
+                <a href="../dashboard/index.html" class="btn btn-gold btn-sm mobile-menu-dash" title="Client Dashboard"
+                  aria-label="Dashboard">
                   <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16" class="me-1">
-                    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                    <path
+                      d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
                   </svg>
                   <span>Dashboard</span>
                 </a>
@@ -147,7 +154,8 @@
        CINEMATIC PAGE HERO BANNER
        ========================================================================== -->
   <section class="cinematic-page-hero">
-    <img src="../assets/images/hero/hero_keynote_stage.jpg" alt="Executive Summit Arena Keynote" class="cinematic-page-hero-bg">
+    <img src="../assets/images/hero/hero_keynote_stage.jpg" alt="Executive Summit Arena Keynote"
+      class="cinematic-page-hero-bg">
     <div class="cinematic-page-hero-overlay"></div>
     <div class="cinematic-page-hero-content">
       <div class="cinematic-breadcrumb">
@@ -157,11 +165,13 @@
       </div>
       <h1 class="cinematic-page-hero-title">Book an Exceptional Keynote Speaker</h1>
       <p class="cinematic-page-hero-desc">
-        "Provide your event parameters below. Our senior booking agents will verify calendar availability, evaluate travel logistics, and provide a tailored proposal within 24 business hours."
+        "Provide your event parameters below. Our senior booking agents will verify calendar availability, evaluate
+        travel logistics, and provide a tailored proposal within 24 business hours."
       </p>
       <div class="cinematic-page-hero-cta">
         <a href="#wizard-container" class="btn btn-gold btn-lg px-4 shadow-sm">Start 4-Step Booking RFP &darr;</a>
-        <a href="speaker-roster.html" class="btn btn-outline-corporate text-white border-white btn-lg px-4">Explore Speaker Roster</a>
+        <a href="speaker-roster.html" class="btn btn-outline-corporate text-white border-white btn-lg px-4">Explore
+          Speaker Roster</a>
       </div>
     </div>
   </section>
@@ -169,7 +179,7 @@
   <!-- MULTI-STEP BOOKING WIZARD -->
   <section class="section-padding bg-soft">
     <div class="container" id="wizard-container">
-      
+
       <!-- Wizard Stepper with Connected Progress Bar -->
       <div class="wizard-stepper-wrapper">
         <div class="wizard-steps-track">
@@ -179,7 +189,10 @@
           <div class="wizard-step-indicator active" data-step-indicator="1">
             <div class="indicator-badge">
               <span class="step-num">01</span>
-              <svg class="step-check" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <svg class="step-check" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+              </svg>
             </div>
             <div class="indicator-meta">
               <span class="indicator-step-tag">Step 01</span>
@@ -189,7 +202,10 @@
           <div class="wizard-step-indicator" data-step-indicator="2">
             <div class="indicator-badge">
               <span class="step-num">02</span>
-              <svg class="step-check" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <svg class="step-check" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+              </svg>
             </div>
             <div class="indicator-meta">
               <span class="indicator-step-tag">Step 02</span>
@@ -199,7 +215,10 @@
           <div class="wizard-step-indicator" data-step-indicator="3">
             <div class="indicator-badge">
               <span class="step-num">03</span>
-              <svg class="step-check" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <svg class="step-check" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+              </svg>
             </div>
             <div class="indicator-meta">
               <span class="indicator-step-tag">Step 03</span>
@@ -209,7 +228,10 @@
           <div class="wizard-step-indicator" data-step-indicator="4">
             <div class="indicator-badge">
               <span class="step-num">04</span>
-              <svg class="step-check" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <svg class="step-check" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+              </svg>
             </div>
             <div class="indicator-meta">
               <span class="indicator-step-tag">Step 04</span>
@@ -224,14 +246,15 @@
         <div class="col-lg-8">
           <div class="booking-form-card">
             <form id="ssb-booking-wizard-form" novalidate>
-              
+
               <!-- STEP 1: EVENT INFORMATION -->
               <div class="wizard-step-panel" data-step="1">
                 <div class="booking-step-header">
                   <div class="booking-step-header-left">
                     <span class="booking-step-pill">Phase 01 &bull; Event Parameters</span>
                     <h2 class="booking-step-title">Event Information</h2>
-                    <p class="booking-step-desc">Core gathering parameters, audience tier, venue logistics, and scheduled dates.</p>
+                    <p class="booking-step-desc">Core gathering parameters, audience tier, venue logistics, and
+                      scheduled dates.</p>
                   </div>
                 </div>
 
@@ -243,9 +266,15 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
+                          <path
+                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                        </svg>
                       </span>
-                      <input type="text" id="field-event-name" class="form-control" placeholder="e.g. Global Leadership Summit 2026" required>
+                      <input type="text" id="field-event-name" class="form-control"
+                        placeholder="e.g. Global Leadership Summit 2026" required>
                     </div>
                   </div>
 
@@ -256,9 +285,13 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h18v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h3V1.54L7 4.99v10.01z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h18v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h3V1.54L7 4.99v10.01z" />
+                        </svg>
                       </span>
-                      <input type="text" id="field-company-name" class="form-control" placeholder="e.g. Apex Global Enterprises" required>
+                      <input type="text" id="field-company-name" class="form-control"
+                        placeholder="e.g. Apex Global Enterprises" required>
                     </div>
                   </div>
 
@@ -269,20 +302,31 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L4 8.286v3.25a.5.5 0 0 0 .235.421l3.5 2a.5.5 0 0 0 .53 0l3.5-2A.5.5 0 0 0 12 11.536V8.286l3.735-1.845a.5.5 0 0 0 0-.882l-7.5-4zM11 8.786l-2.735 1.352a.5.5 0 0 1-.53 0L5 8.786v2.457l3 1.714 3-1.714V8.786z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L4 8.286v3.25a.5.5 0 0 0 .235.421l3.5 2a.5.5 0 0 0 .53 0l3.5-2A.5.5 0 0 0 12 11.536V8.286l3.735-1.845a.5.5 0 0 0 0-.882l-7.5-4zM11 8.786l-2.735 1.352a.5.5 0 0 1-.53 0L5 8.786v2.457l3 1.714 3-1.714V8.786z" />
+                        </svg>
                       </span>
                       <div class="dropdown custom-select-dropdown w-100">
-                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
                           <span class="custom-select-label">Leadership Summit</span>
                         </button>
                         <ul class="dropdown-menu custom-select-menu w-100">
-                          <li><button type="button" class="dropdown-item active" data-value="Leadership Summit">Leadership Summit</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Annual Conference">Annual Conference</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Sales Kickoff">Sales Kickoff (SKO)</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Executive Retreat">Executive Retreat</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Product Launch">Product Launch</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Awards Ceremony">Awards Ceremony</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Industry Convention">Industry Convention</button></li>
+                          <li><button type="button" class="dropdown-item active"
+                              data-value="Leadership Summit">Leadership Summit</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Annual Conference">Annual
+                              Conference</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Sales Kickoff">Sales Kickoff
+                              (SKO)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Executive Retreat">Executive
+                              Retreat</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Product Launch">Product
+                              Launch</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Awards Ceremony">Awards
+                              Ceremony</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Industry Convention">Industry
+                              Convention</button></li>
                         </ul>
                         <input type="hidden" id="field-event-type" value="Leadership Summit" required>
                       </div>
@@ -296,7 +340,10 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                        </svg>
                       </span>
                       <input type="date" id="field-event-date" class="form-control" required>
                     </div>
@@ -308,7 +355,10 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
+                        </svg>
                       </span>
                       <input type="date" id="field-alt-date" class="form-control">
                     </div>
@@ -320,19 +370,29 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8zm7.5-4a.5.5 0 0 0-1 0v4.5a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8.5 8.21V4z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8zm7.5-4a.5.5 0 0 0-1 0v4.5a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8.5 8.21V4z" />
+                        </svg>
                       </span>
                       <div class="dropdown custom-select-dropdown w-100">
-                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
                           <span class="custom-select-label">Eastern Time (US & Canada) UTC-05:00</span>
                         </button>
                         <ul class="dropdown-menu custom-select-menu w-100">
-                          <li><button type="button" class="dropdown-item active" data-value="EST">Eastern Time (US & Canada) UTC-05:00</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="CST">Central Time (US & Canada) UTC-06:00</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="PST">Pacific Time (US & Canada) UTC-08:00</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="GMT">Greenwich Mean Time (London) UTC+00:00</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="CET">Central European Time (Zurich/Paris) UTC+01:00</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="SGT">Singapore Standard Time UTC+08:00</button></li>
+                          <li><button type="button" class="dropdown-item active" data-value="EST">Eastern Time (US &
+                              Canada) UTC-05:00</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="CST">Central Time (US & Canada)
+                              UTC-06:00</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="PST">Pacific Time (US & Canada)
+                              UTC-08:00</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="GMT">Greenwich Mean Time (London)
+                              UTC+00:00</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="CET">Central European Time
+                              (Zurich/Paris) UTC+01:00</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="SGT">Singapore Standard Time
+                              UTC+08:00</button></li>
                         </ul>
                         <input type="hidden" id="field-timezone" value="EST">
                       </div>
@@ -346,16 +406,24 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z"/><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+                          <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+                        </svg>
                       </span>
                       <div class="dropdown custom-select-dropdown w-100">
-                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
                           <span class="custom-select-label">In-Person Stage Keynote</span>
                         </button>
                         <ul class="dropdown-menu custom-select-menu w-100">
-                          <li><button type="button" class="dropdown-item active" data-value="In-Person">In-Person Stage Keynote</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Virtual">Virtual Keynote (Live Studio Stream)</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Hybrid">Hybrid (Dual Audience)</button></li>
+                          <li><button type="button" class="dropdown-item active" data-value="In-Person">In-Person Stage
+                              Keynote</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Virtual">Virtual Keynote (Live
+                              Studio Stream)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Hybrid">Hybrid (Dual
+                              Audience)</button></li>
                         </ul>
                         <input type="hidden" id="field-event-format" value="In-Person" required>
                       </div>
@@ -368,9 +436,13 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>
                       </span>
-                      <input type="text" id="field-event-location" class="form-control" placeholder="e.g. Chicago, IL — McCormick Place">
+                      <input type="text" id="field-event-location" class="form-control"
+                        placeholder="e.g. Chicago, IL — McCormick Place">
                     </div>
                   </div>
 
@@ -380,18 +452,28 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                        </svg>
                       </span>
                       <div class="dropdown custom-select-dropdown w-100">
-                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
                           <span class="custom-select-label">Intimate Executive Circle (20 – 50 C-Suite leaders)</span>
                         </button>
                         <ul class="dropdown-menu custom-select-menu w-100">
-                          <li><button type="button" class="dropdown-item active" data-value="20 - 50 executives">Intimate Executive Circle (20 – 50 C-Suite leaders)</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="50 - 200 attendees">Mid-Size Leadership Summit (50 – 200 attendees)</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="200 - 500 attendees">Major Corporate Forum (200 – 500 attendees)</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="500 - 1,500 attendees">Enterprise Annual Convention (500 – 1,500 attendees)</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="1,500+ attendees">Global Arena / Industry Expo (1,500+ attendees)</button></li>
+                          <li><button type="button" class="dropdown-item active"
+                              data-value="20 - 50 executives">Intimate Executive Circle (20 – 50 C-Suite
+                              leaders)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="50 - 200 attendees">Mid-Size
+                              Leadership Summit (50 – 200 attendees)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="200 - 500 attendees">Major
+                              Corporate Forum (200 – 500 attendees)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="500 - 1,500 attendees">Enterprise
+                              Annual Convention (500 – 1,500 attendees)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="1,500+ attendees">Global Arena /
+                              Industry Expo (1,500+ attendees)</button></li>
                         </ul>
                         <input type="hidden" id="field-audience-size" value="20 - 50 executives">
                       </div>
@@ -406,7 +488,8 @@
                   <div class="booking-step-header-left">
                     <span class="booking-step-pill">Phase 02 &bull; Strategic Curation</span>
                     <h2 class="booking-step-title">Speaker Requirements</h2>
-                    <p class="booking-step-desc">Desired topics, presentation format, language, and core audience takeaways.</p>
+                    <p class="booking-step-desc">Desired topics, presentation format, language, and core audience
+                      takeaways.</p>
                   </div>
                 </div>
 
@@ -417,19 +500,26 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                          <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                        </svg>
                       </span>
                       <div class="dropdown custom-select-dropdown w-100" id="speaker-preference-dropdown">
-                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
                           <span class="custom-select-label">— Request Open Speaker Recommendations —</span>
                         </button>
                         <ul class="dropdown-menu custom-select-menu w-100" id="speaker-preference-menu">
-                          <li><button type="button" class="dropdown-item active" data-value="">— Request Open Speaker Recommendations —</button></li>
+                          <li><button type="button" class="dropdown-item active" data-value="">— Request Open Speaker
+                              Recommendations —</button></li>
                         </ul>
                         <input type="hidden" id="field-speaker-preference" value="">
                       </div>
                     </div>
-                    <div class="form-text small text-muted mt-1">Select an individual speaker from our verified roster or request open curated advisory options.</div>
+                    <div class="form-text small text-muted mt-1">Select an individual speaker from our verified roster
+                      or request open curated advisory options.</div>
                   </div>
 
                   <div class="col-md-6">
@@ -438,20 +528,38 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z" />
+                        </svg>
                       </span>
                       <div class="dropdown custom-select-dropdown w-100">
-                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
                           <span class="custom-select-label">Leadership & High-Performance Management</span>
                         </button>
                         <ul class="dropdown-menu custom-select-menu w-100">
-                          <li><button type="button" class="dropdown-item active" data-value="Leadership & Management">Leadership & High-Performance Management</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Artificial Intelligence & Technology">AI & Future Technology Transformation</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Motivation & Human Performance">Motivation & Peak Human Performance</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Innovation & Future Trends">Innovation & Business Model Disruption</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Economics & Global Affairs">Macroeconomics & Geopolitical Strategy</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Workplace Culture & Wellbeing">Workplace Culture, Retention & Resilience</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Sustainability & Social Impact">Sustainability & ESG Executive Strategy</button></li>
+                          <li><button type="button" class="dropdown-item active"
+                              data-value="Leadership & Management">Leadership & High-Performance Management</button>
+                          </li>
+                          <li><button type="button" class="dropdown-item"
+                              data-value="Artificial Intelligence & Technology">AI & Future Technology
+                              Transformation</button></li>
+                          <li><button type="button" class="dropdown-item"
+                              data-value="Motivation & Human Performance">Motivation & Peak Human Performance</button>
+                          </li>
+                          <li><button type="button" class="dropdown-item"
+                              data-value="Innovation & Future Trends">Innovation & Business Model Disruption</button>
+                          </li>
+                          <li><button type="button" class="dropdown-item"
+                              data-value="Economics & Global Affairs">Macroeconomics & Geopolitical Strategy</button>
+                          </li>
+                          <li><button type="button" class="dropdown-item"
+                              data-value="Workplace Culture & Wellbeing">Workplace Culture, Retention &
+                              Resilience</button></li>
+                          <li><button type="button" class="dropdown-item"
+                              data-value="Sustainability & Social Impact">Sustainability & ESG Executive
+                              Strategy</button></li>
                         </ul>
                         <input type="hidden" id="field-primary-topic" value="Leadership & Management">
                       </div>
@@ -464,17 +572,28 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                        </svg>
                       </span>
                       <div class="dropdown custom-select-dropdown w-100">
-                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
                           <span class="custom-select-label">45 min Keynote + 15 min Q&A (Standard)</span>
                         </button>
                         <ul class="dropdown-menu custom-select-menu w-100">
-                          <li><button type="button" class="dropdown-item active" data-value="45 min Keynote + 15 min Q&A">45 min Keynote + 15 min Q&A (Standard)</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="60 min Keynote Only">60 min Keynote Only</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="30 min Executive Address">30 min High-Impact Executive Address</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="90 min Keynote & Interactive Masterclass">90 min Keynote & Interactive Masterclass</button></li>
+                          <li><button type="button" class="dropdown-item active"
+                              data-value="45 min Keynote + 15 min Q&A">45 min Keynote + 15 min Q&A (Standard)</button>
+                          </li>
+                          <li><button type="button" class="dropdown-item" data-value="60 min Keynote Only">60 min
+                              Keynote Only</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="30 min Executive Address">30 min
+                              High-Impact Executive Address</button></li>
+                          <li><button type="button" class="dropdown-item"
+                              data-value="90 min Keynote & Interactive Masterclass">90 min Keynote & Interactive
+                              Masterclass</button></li>
                         </ul>
                         <input type="hidden" id="field-duration" value="45 min Keynote + 15 min Q&A">
                       </div>
@@ -487,9 +606,12 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                        </svg>
                       </span>
-                      <input type="text" id="field-audience-level" class="form-control" placeholder="e.g. C-Suite, Managing Directors, Sales Leaders">
+                      <input type="text" id="field-audience-level" class="form-control"
+                        placeholder="e.g. C-Suite, Managing Directors, Sales Leaders">
                     </div>
                   </div>
 
@@ -499,14 +621,19 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.67A6.958 6.958 0 0 0 1 7.5c0 .17.008.337.023.5H3.508zM8.5 1.077V4h2.355a7.97 7.97 0 0 0-.468-1.068c-.552-1.035-1.218-1.65-1.887-1.855zM11.91 4h1.835a7.025 7.025 0 0 0-3.072-2.472c.218.284.418.598.597.933.245.463.461.98.64 1.539z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.67A6.958 6.958 0 0 0 1 7.5c0 .17.008.337.023.5H3.508zM8.5 1.077V4h2.355a7.97 7.97 0 0 0-.468-1.068c-.552-1.035-1.218-1.65-1.887-1.855zM11.91 4h1.835a7.025 7.025 0 0 0-3.072-2.472c.218.284.418.598.597.933.245.463.461.98.64 1.539z" />
+                        </svg>
                       </span>
                       <div class="dropdown custom-select-dropdown w-100">
-                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
                           <span class="custom-select-label">English (Fluent Global Delivery)</span>
                         </button>
                         <ul class="dropdown-menu custom-select-menu w-100">
-                          <li><button type="button" class="dropdown-item active" data-value="English">English (Fluent Global Delivery)</button></li>
+                          <li><button type="button" class="dropdown-item active" data-value="English">English (Fluent
+                              Global Delivery)</button></li>
                           <li><button type="button" class="dropdown-item" data-value="French">French</button></li>
                           <li><button type="button" class="dropdown-item" data-value="German">German</button></li>
                           <li><button type="button" class="dropdown-item" data-value="Spanish">Spanish</button></li>
@@ -521,7 +648,8 @@
                     <label class="form-label-corporate" for="field-desired-takeaways">
                       <span>Desired Audience Mindset Shift & Core Objectives</span>
                     </label>
-                    <textarea id="field-desired-takeaways" class="form-control" rows="3" placeholder="What key insights, strategic actions, or cultural shifts do you want attendees to leave with?"></textarea>
+                    <textarea id="field-desired-takeaways" class="form-control" rows="3"
+                      placeholder="What key insights, strategic actions, or cultural shifts do you want attendees to leave with?"></textarea>
                   </div>
                 </div>
               </div>
@@ -532,7 +660,8 @@
                   <div class="booking-step-header-left">
                     <span class="booking-step-pill">Phase 03 &bull; Commercial Parameters</span>
                     <h2 class="booking-step-title">Budget & Logistics</h2>
-                    <p class="booking-step-desc">Indicative honorarium tier, currency, ground travel, and recording specifications.</p>
+                    <p class="booking-step-desc">Indicative honorarium tier, currency, ground travel, and recording
+                      specifications.</p>
                   </div>
                 </div>
 
@@ -544,17 +673,25 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v3.629c-1.148-.12-1.97-.73-2.196-1.652H4z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v3.629c-1.148-.12-1.97-.73-2.196-1.652H4z" />
+                        </svg>
                       </span>
                       <div class="dropdown custom-select-dropdown w-100">
-                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
                           <span class="custom-select-label">$25,000 – $40,000 USD (Established Keynotes)</span>
                         </button>
                         <ul class="dropdown-menu custom-select-menu w-100">
-                          <li><button type="button" class="dropdown-item" data-value="$15,000 – $25,000">$15,000 – $25,000 USD (Emerging Pioneers)</button></li>
-                          <li><button type="button" class="dropdown-item active" data-value="$25,000 – $40,000">$25,000 – $40,000 USD (Established Keynotes)</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="$40,000 – $65,000">$40,000 – $65,000 USD (Senior Authority)</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="$65,000 – $100,000+">$65,000 – $100,000+ USD (Premier Global Icon)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="$15,000 – $25,000">$15,000 –
+                              $25,000 USD (Emerging Pioneers)</button></li>
+                          <li><button type="button" class="dropdown-item active" data-value="$25,000 – $40,000">$25,000
+                              – $40,000 USD (Established Keynotes)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="$40,000 – $65,000">$40,000 –
+                              $65,000 USD (Senior Authority)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="$65,000 – $100,000+">$65,000 –
+                              $100,000+ USD (Premier Global Icon)</button></li>
                         </ul>
                         <input type="hidden" id="field-budget-range" value="$25,000 – $40,000" required>
                       </div>
@@ -567,17 +704,24 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z" />
+                        </svg>
                       </span>
                       <div class="dropdown custom-select-dropdown w-100">
-                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
                           <span class="custom-select-label">USD ($) — United States Dollar</span>
                         </button>
                         <ul class="dropdown-menu custom-select-menu w-100">
-                          <li><button type="button" class="dropdown-item active" data-value="USD">USD ($) — United States Dollar</button></li>
+                          <li><button type="button" class="dropdown-item active" data-value="USD">USD ($) — United
+                              States Dollar</button></li>
                           <li><button type="button" class="dropdown-item" data-value="EUR">EUR (€) — Euro</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="GBP">GBP (£) — British Pound</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="CHF">CHF (Fr) — Swiss Franc</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="GBP">GBP (£) — British
+                              Pound</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="CHF">CHF (Fr) — Swiss
+                              Franc</button></li>
                         </ul>
                         <input type="hidden" id="field-currency" value="USD">
                       </div>
@@ -590,16 +734,26 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M6.428 1.151C6.708.591 7.214 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.377 1.505 1.73 1.73a.5.5 0 0 1-.354.854H5.09a.5.5 0 0 1-.354-.854l1.73-1.73-.377-1.505-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M6.428 1.151C6.708.591 7.214 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.377 1.505 1.73 1.73a.5.5 0 0 1-.354.854H5.09a.5.5 0 0 1-.354-.854l1.73-1.73-.377-1.505-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849z" />
+                        </svg>
                       </span>
                       <div class="dropdown custom-select-dropdown w-100">
-                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <span class="custom-select-label">Client Arranges & Settles Directly (Per Corporate Policy)</span>
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          <span class="custom-select-label">Client Arranges & Settles Directly (Per Corporate
+                            Policy)</span>
                         </button>
                         <ul class="dropdown-menu custom-select-menu w-100">
-                          <li><button type="button" class="dropdown-item active" data-value="Client Books Air & Hotel">Client Arranges & Settles Directly (Per Corporate Policy)</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Bureau Fixed Travel Buyout">Bureau Fixed Travel Stipend / Buyout (All-Inclusive)</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Speaker Invoices Post-Event">Speaker Invoices Actual Receipts (Post-Event Reconciliation)</button></li>
+                          <li><button type="button" class="dropdown-item active"
+                              data-value="Client Books Air & Hotel">Client Arranges & Settles Directly (Per Corporate
+                              Policy)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Bureau Fixed Travel Buyout">Bureau
+                              Fixed Travel Stipend / Buyout (All-Inclusive)</button></li>
+                          <li><button type="button" class="dropdown-item"
+                              data-value="Speaker Invoices Post-Event">Speaker Invoices Actual Receipts (Post-Event
+                              Reconciliation)</button></li>
                         </ul>
                         <input type="hidden" id="field-travel-prov" value="Client Books Air & Hotel">
                       </div>
@@ -612,17 +766,28 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z" />
+                        </svg>
                       </span>
                       <div class="dropdown custom-select-dropdown w-100">
-                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
                           <span class="custom-select-label">Internal Archival Only (Standard License)</span>
                         </button>
                         <ul class="dropdown-menu custom-select-menu w-100">
-                          <li><button type="button" class="dropdown-item active" data-value="Internal Archival Only">Internal Archival Only (Standard License)</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Live Virtual Stream to Remote Staff">Live Virtual Stream to Remote Employees</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Public Video Marketing Excerpts">Public Video Marketing Excerpts (Requires Authorization)</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="No Recording">No Audio/Video Recording</button></li>
+                          <li><button type="button" class="dropdown-item active"
+                              data-value="Internal Archival Only">Internal Archival Only (Standard License)</button>
+                          </li>
+                          <li><button type="button" class="dropdown-item"
+                              data-value="Live Virtual Stream to Remote Staff">Live Virtual Stream to Remote
+                              Employees</button></li>
+                          <li><button type="button" class="dropdown-item"
+                              data-value="Public Video Marketing Excerpts">Public Video Marketing Excerpts (Requires
+                              Authorization)</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="No Recording">No Audio/Video
+                              Recording</button></li>
                         </ul>
                         <input type="hidden" id="field-recording-rights" value="Internal Archival Only">
                       </div>
@@ -633,7 +798,8 @@
                     <label class="form-label-corporate" for="field-special-inst">
                       <span>Audiovisual, Security or VIP Hospitality Instructions</span>
                     </label>
-                    <textarea id="field-special-inst" class="form-control" rows="2" placeholder="e.g. Corporate confidentiality NDA required, VIP holding room needed, wireless lavalier mic, teleprompter..."></textarea>
+                    <textarea id="field-special-inst" class="form-control" rows="2"
+                      placeholder="e.g. Corporate confidentiality NDA required, VIP holding room needed, wireless lavalier mic, teleprompter..."></textarea>
                   </div>
                 </div>
               </div>
@@ -644,7 +810,8 @@
                   <div class="booking-step-header-left">
                     <span class="booking-step-pill">Phase 04 &bull; Procurement & Verification</span>
                     <h2 class="booking-step-title">Contact & Authorized Representative</h2>
-                    <p class="booking-step-desc">Official contact details for calendar holds, SLA coordination, and contract routing.</p>
+                    <p class="booking-step-desc">Official contact details for calendar holds, SLA coordination, and
+                      contract routing.</p>
                   </div>
                 </div>
 
@@ -656,9 +823,13 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                        </svg>
                       </span>
-                      <input type="text" id="field-contact-name" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+                      <input type="text" id="field-contact-name" class="form-control" placeholder="e.g. Sarah Jenkins"
+                        required>
                     </div>
                   </div>
 
@@ -669,9 +840,13 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                        </svg>
                       </span>
-                      <input type="text" id="field-contact-title" class="form-control" placeholder="e.g. Director of Global Events" required>
+                      <input type="text" id="field-contact-title" class="form-control"
+                        placeholder="e.g. Director of Global Events" required>
                     </div>
                   </div>
 
@@ -682,9 +857,13 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.026L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.026L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+                        </svg>
                       </span>
-                      <input type="email" id="field-contact-email" class="form-control" placeholder="sarah.jenkins@apexglobal.com" required>
+                      <input type="email" id="field-contact-email" class="form-control"
+                        placeholder="sarah.jenkins@apexglobal.com" required>
                     </div>
                   </div>
 
@@ -695,9 +874,13 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z" />
+                        </svg>
                       </span>
-                      <input type="tel" id="field-contact-phone" class="form-control" placeholder="+1 (555) 392-8104" required>
+                      <input type="tel" id="field-contact-phone" class="form-control" placeholder="+1 (555) 392-8104"
+                        required>
                     </div>
                   </div>
 
@@ -707,16 +890,22 @@
                     </label>
                     <div class="corporate-input-group">
                       <span class="corporate-input-icon">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z"/></svg>
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+                        </svg>
                       </span>
                       <div class="dropdown custom-select-dropdown w-100">
-                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="form-select custom-select-toggle w-100" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
                           <span class="custom-select-label">Secure Corporate Email</span>
                         </button>
                         <ul class="dropdown-menu custom-select-menu w-100">
-                          <li><button type="button" class="dropdown-item active" data-value="Email">Secure Corporate Email</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Phone Call">Executive Direct Phone Call</button></li>
-                          <li><button type="button" class="dropdown-item" data-value="Video Conference">Virtual Video Briefing (Zoom / Teams)</button></li>
+                          <li><button type="button" class="dropdown-item active" data-value="Email">Secure Corporate
+                              Email</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Phone Call">Executive Direct Phone
+                              Call</button></li>
+                          <li><button type="button" class="dropdown-item" data-value="Video Conference">Virtual Video
+                              Briefing (Zoom / Teams)</button></li>
                         </ul>
                         <input type="hidden" id="field-contact-channel" value="Email">
                       </div>
@@ -728,7 +917,8 @@
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="field-privacy-consent" required checked>
                         <label class="form-check-label small text-muted" for="field-privacy-consent">
-                          I understand that submitting this enquiry initiates formal availability holds. A keynote date is legally confirmed only upon tripartite agreement execution and escrow deposit settlement.
+                          I understand that submitting this enquiry initiates formal availability holds. A keynote date
+                          is legally confirmed only upon tripartite agreement execution and escrow deposit settlement.
                         </label>
                       </div>
                     </div>
@@ -745,18 +935,14 @@
                   <button type="button" id="wizard-next-btn" class="btn btn-gold btn-lg px-4">
                     Next Step &rarr;
                   </button>
-                  <button type="submit" id="wizard-submit-btn" class="btn btn-gold btn-lg px-4 shadow-sm" style="display:none;">
+                  <button type="submit" id="wizard-submit-btn" class="btn btn-gold btn-lg px-4 shadow-sm"
+                    style="display:none;">
                     Submit Booking Request &rarr;
                   </button>
                 </div>
               </div>
 
-              <div class="text-center mt-3">
-                <span class="text-muted small d-inline-flex align-items-center gap-1">
-                  <svg width="13" height="13" fill="currentColor" class="text-gold" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 0-2 2v2H5a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-1V3a2 2 0 0 0-2-2zm1 4H7V3a1 1 0 0 1 2 0v2z"/></svg>
-                  <span>256-Bit TLS Encrypted Procurement &bull; Strict Non-Disclosure Protected</span>
-                </span>
-              </div>
+
 
             </form>
           </div>
@@ -774,48 +960,69 @@
             <ul class="booking-sidebar-trust-list">
               <li class="booking-sidebar-trust-item">
                 <div class="booking-sidebar-trust-icon">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                  </svg>
                 </div>
                 <div>
                   <h4 class="booking-sidebar-trust-title">24h Guaranteed Holds</h4>
-                  <p class="booking-sidebar-desc mb-0">Direct priority calendar holds locked with talent personal management.</p>
+                  <p class="booking-sidebar-desc mb-0">Direct priority calendar holds locked with talent personal
+                    management.</p>
                 </div>
               </li>
 
               <li class="booking-sidebar-trust-item">
                 <div class="booking-sidebar-trust-icon">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.464 9.99a11.777 11.777 0 0 0 3.732 3.037.5.5 0 0 0 .663 0 11.777 11.777 0 0 0 3.732-3.037c1.677-2.195 3.06-5.513 2.464-9.99a1.54 1.54 0 0 0-1.044-1.262c-.658-.215-1.777-.57-2.887-.87C9.843.265 8.69 0 8 0z"/></svg>
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.464 9.99a11.777 11.777 0 0 0 3.732 3.037.5.5 0 0 0 .663 0 11.777 11.777 0 0 0 3.732-3.037c1.677-2.195 3.06-5.513 2.464-9.99a1.54 1.54 0 0 0-1.044-1.262c-.658-.215-1.777-.57-2.887-.87C9.843.265 8.69 0 8 0z" />
+                  </svg>
                 </div>
                 <div>
                   <h4 class="booking-sidebar-trust-title">100% Escrow Protection</h4>
-                  <p class="booking-sidebar-desc mb-0">Deposits held in segregated, audited escrow accounts until stage execution.</p>
+                  <p class="booking-sidebar-desc mb-0">Deposits held in segregated, audited escrow accounts until stage
+                    execution.</p>
                 </div>
               </li>
 
               <li class="booking-sidebar-trust-item">
                 <div class="booking-sidebar-trust-icon">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/><path d="M10.97 6.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 10.384a.757.757 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/></svg>
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z" />
+                    <path
+                      d="M10.97 6.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 10.384a.757.757 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z" />
+                  </svg>
                 </div>
                 <div>
                   <h4 class="booking-sidebar-trust-title">Zero Hidden Surcharges</h4>
-                  <p class="booking-sidebar-desc mb-0">Itemized gross honorariums with full corporate fee transparency.</p>
+                  <p class="booking-sidebar-desc mb-0">Itemized gross honorariums with full corporate fee transparency.
+                  </p>
                 </div>
               </li>
 
               <li class="booking-sidebar-trust-item">
                 <div class="booking-sidebar-trust-icon">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/></svg>
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                  </svg>
                 </div>
                 <div>
                   <h4 class="booking-sidebar-trust-title">Dedicated Staging Producer</h4>
-                  <p class="booking-sidebar-desc mb-0">Technical soundcheck, slide decks, and contingency standby included.</p>
+                  <p class="booking-sidebar-desc mb-0">Technical soundcheck, slide decks, and contingency standby
+                    included.</p>
                 </div>
               </li>
             </ul>
 
             <div class="booking-sidebar-concierge">
               <div class="booking-sidebar-concierge-title">
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z" />
+                </svg>
                 <span>Direct Booking Concierge</span>
               </div>
               <a href="tel:+18005843920" class="booking-sidebar-concierge-phone">+1 (800) 584-3920</a>
@@ -841,7 +1048,8 @@
             <div class="ssb-footer-logo">
               <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
-                <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
+                <path
+                  d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3.5 8V7a.5.5 0 0 1 .5-.5z" />
               </svg>
             </div>
             <div class="ssb-footer-brand-text">
@@ -857,24 +1065,43 @@
 
           <!-- Social Buttons -->
           <div class="ssb-footer-socials">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn" aria-label="Instagram">
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="Instagram">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn" aria-label="LinkedIn">
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="LinkedIn">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+              </svg>
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn" aria-label="YouTube">
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v5.582l4.8-2.79-4.8-2.792z"/></svg>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="YouTube">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v5.582l4.8-2.79-4.8-2.792z" />
+              </svg>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn" aria-label="X / Twitter">
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.147H2.865l8.875 11.631Z"/></svg>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="ssb-footer-social-btn"
+              aria-label="X / Twitter">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.147H2.865l8.875 11.631Z" />
+              </svg>
             </a>
           </div>
 
           <!-- Email Newsletter Input -->
-          <form class="ssb-footer-newsletter-form" onsubmit="event.preventDefault(); window.SSB_SHOW_TOAST ? window.SSB_SHOW_TOAST('Thank you for subscribing to Keynote Intelligence.', 'success') : alert('Subscribed!'); this.reset();">
-            <input type="email" class="ssb-footer-newsletter-input" placeholder="Email for keynote intelligence" required aria-label="Email for keynote intelligence">
-            <button type="submit" class="ssb-footer-newsletter-btn" aria-label="Subscribe to intelligence">&rarr;</button>
+          <form class="ssb-footer-newsletter-form"
+            onsubmit="event.preventDefault(); window.SSB_SHOW_TOAST ? window.SSB_SHOW_TOAST('Thank you for subscribing to Keynote Intelligence.', 'success') : alert('Subscribed!'); this.reset();">
+            <input type="email" class="ssb-footer-newsletter-input" placeholder="Email for keynote intelligence"
+              required aria-label="Email for keynote intelligence">
+            <button type="submit" class="ssb-footer-newsletter-btn"
+              aria-label="Subscribe to intelligence">&rarr;</button>
           </form>
         </div>
 
@@ -947,7 +1174,8 @@
       <a href="../dashboard/index.html?view=shortlist" class="mobile-bottom-nav-item" aria-label="Wishlist">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            <path
+              d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
           </svg>
           <span class="shortlist-count-badge">0</span>
         </div>
@@ -958,8 +1186,10 @@
       <a href="book-a-speaker.html" class="mobile-bottom-nav-item active" aria-label="Book Enquiry">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+            <path
+              d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+            <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
           </svg>
         </div>
         <span class="mobile-bottom-nav-label">Book Enquiry</span>
@@ -969,8 +1199,9 @@
       <a href="../auth/login.html" class="mobile-bottom-nav-item" aria-label="Account">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
           </svg>
         </div>
         <span class="mobile-bottom-nav-label">Account</span>
@@ -980,7 +1211,8 @@
       <a href="../dashboard/index.html" class="mobile-bottom-nav-item" aria-label="Client Portal">
         <div class="mobile-bottom-nav-icon">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.15V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1 6.1v-.6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v.6L8.687 7.78a.5.5 0 0 1-.374 0L1 6.1z"/>
+            <path
+              d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.15V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1 6.1v-.6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v.6L8.687 7.78a.5.5 0 0 1-.374 0L1 6.1z" />
           </svg>
         </div>
         <span class="mobile-bottom-nav-label">Client Portal</span>
@@ -994,4 +1226,5 @@
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/booking.js"></script>
 </body>
+
 </html>

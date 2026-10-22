@@ -156,6 +156,19 @@
         window.SSB_THEME.toggleDir();
         return;
       }
+
+      // Close floating mobile navbar drawer when clicking outside
+      if (window.innerWidth < 1200) {
+        const openCollapse = document.querySelector(".ssb-navbar .navbar-collapse.show");
+        if (openCollapse) {
+          const clickedInsideNav = e.target && typeof e.target.closest === "function" && e.target.closest(".ssb-navbar");
+          if (!clickedInsideNav) {
+            const toggler = document.querySelector(".navbar-toggler");
+            if (toggler) toggler.click();
+            else openCollapse.classList.remove("show");
+          }
+        }
+      }
     });
   }
 

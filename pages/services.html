@@ -38,17 +38,8 @@
           </div>
         </a>
 
-        <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard (Client Portal on mobile), 5. Login -->
+        <!-- Header Actions: 1. RTL, 2. Theme Converter, 3. Dashboard (Client Portal on mobile), 4. Login -->
         <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
-          <!-- 1. Wishlist Button (Desktop >= 1200px) -->
-          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-xl-inline-flex"
-            title="View Saved Wishlist" aria-label="View Saved Wishlist">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-            </svg>
-            <span class="shortlist-count-badge">0</span>
-          </a>
 
           <!-- 2. RTL/LTR Toggle (Desktop >= 1200px) -->
           <button type="button" class="toggle-btn rtl-toggle-btn d-none d-xl-inline-flex"
@@ -96,7 +87,16 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="speaker-roster.html">Speaker Roster</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="speakerRosterDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Speaker Roster
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="speakerRosterDropdown">
+                <li><a class="dropdown-item" href="speaker-profile.html">Single Speaker Roster page</a></li>
+                <li><a class="dropdown-item" href="book-a-speaker.html">Book a Speaker Roster page</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="topics-industries.html">Topics & Industries</a></li>
             <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
@@ -108,15 +108,6 @@
           <div class="mobile-nav-actions d-xl-none">
             <div class="mobile-nav-actions-row">
               <div class="mobile-nav-toggles">
-                <!-- 1. Wishlist Button -->
-                <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn mobile-menu-wishlist"
-                  title="Saved Wishlist" aria-label="Saved Wishlist">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                  </svg>
-                  <span class="shortlist-count-badge">0</span>
-                </a>
 
                 <!-- 2. RTL Toggle -->
                 <button type="button" class="toggle-btn rtl-toggle-btn mobile-menu-rtl"
@@ -256,13 +247,7 @@
                 ensure flawless booking execution.
               </p>
               <div class="service-deliverables-list">
-                <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
-                  </svg>
-                  Calendar Hold Audit
-                </span>
+
                 <span class="service-deliverable-chip">
                   <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
                     <path
@@ -327,13 +312,7 @@
                 strategic goals.
               </p>
               <div class="service-deliverables-list">
-                <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
-                  </svg>
-                  Arena Stage Command
-                </span>
+
                 <span class="service-deliverable-chip">
                   <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
                     <path
@@ -411,13 +390,7 @@
                   </svg>
                   Confidential Briefings
                 </span>
-                <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
-                  </svg>
-                  Peer-Level C-Suite Dialogue
-                </span>
+
               </div>
             </div>
             <div class="service-card-footer-luxury">
@@ -469,13 +442,7 @@
                 truth.
               </p>
               <div class="service-deliverables-list">
-                <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
-                  </svg>
-                  Organizational Resilience
-                </span>
+
                 <span class="service-deliverable-chip">
                   <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
                     <path
@@ -552,13 +519,7 @@
                   </svg>
                   Dual-Audience Live Q&A
                 </span>
-                <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
-                  </svg>
-                  Pre-Event Bandwidth Test
-                </span>
+
               </div>
             </div>
             <div class="service-card-footer-luxury">
@@ -609,13 +570,7 @@
                 hours.
               </p>
               <div class="service-deliverables-list">
-                <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
-                  </svg>
-                  24-Hour Dossier Delivery
-                </span>
+
                 <span class="service-deliverable-chip">
                   <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
                     <path
@@ -634,7 +589,7 @@
             </div>
             <div class="service-card-footer-luxury">
               <a href="contact.html" class="service-card-btn">
-                <span>Request Speaker Recommendations</span>
+                <span>Request Speaker </span>
                 <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
                   <path fill-rule="evenodd"
                     d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
@@ -692,18 +647,12 @@
                   </svg>
                   Flight & Hotel Management
                 </span>
-                <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
-                  </svg>
-                  Pre-Event Tech Rehearsal
-                </span>
+
               </div>
             </div>
             <div class="service-card-footer-luxury">
               <a href="contact.html" class="service-card-btn">
-                <span>Inquire Booking Coordination</span>
+                <span>Inquire Booking </span>
                 <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
                   <path fill-rule="evenodd"
                     d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
@@ -751,13 +700,7 @@
                 client portal.
               </p>
               <div class="service-deliverables-list">
-                <span class="service-deliverable-chip">
-                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z" />
-                  </svg>
-                  Electronic E-Signatures
-                </span>
+
                 <span class="service-deliverable-chip">
                   <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
                     <path
@@ -798,7 +741,7 @@
       <!-- Capability Assurance & Guarantee Strip -->
       <div class="services-assurance-strip">
         <div class="row g-4 align-items-center">
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-6 col-md-6 col-xl-4">
             <div class="services-assurance-item">
               <div class="services-assurance-icon">
                 <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
@@ -824,8 +767,8 @@
               </div>
               <div>
                 <h4 class="services-assurance-title">24-Hour Dossier Turnaround</h4>
-                <p class="services-assurance-desc">Custom candidate shortlist proposals with verified availability and
-                  commercial quotes within 1 business day.</p>
+                <p class="services-assurance-desc">Custom candidate shortlist proposals with verified availability &
+                  quotes within 1 business day.</p>
               </div>
             </div>
           </div>

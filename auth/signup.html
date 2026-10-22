@@ -258,6 +258,33 @@
       box-shadow: 0 8px 20px rgba(11, 25, 44, 0.16);
     }
 
+    .auth-password-toggle {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--ssb-text-muted);
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      transition: color var(--transition-fast);
+      z-index: 2;
+    }
+
+    .auth-password-toggle:hover {
+      color: var(--ssb-text-main);
+    }
+
+    [dir="rtl"] .auth-password-toggle {
+      right: auto;
+      left: 12px;
+    }
+
     [data-bs-theme="dark"] .btn-auth-primary {
       background-color: var(--ssb-secondary);
       color: #111D2D;
@@ -387,16 +414,13 @@
     <!-- RIGHT FORM PANEL -->
     <div class="auth-split-form">
 
-      <!-- Top Utility Header with Tagline & Close Controls -->
+      <!-- Top Utility Header with Tagline & Theme/RTL Controls -->
       <div class="auth-form-topbar">
         <span class="auth-tagline">Secure Today. Accessible Tomorrow.</span>
 
         <div class="auth-form-top-actions">
           <button type="button" class="toggle-btn theme-toggle-btn" onclick="window.SSB_THEME && window.SSB_THEME.toggleTheme()" aria-label="Toggle theme"></button>
           <button type="button" class="toggle-btn rtl-toggle-btn" onclick="window.SSB_THEME && window.SSB_THEME.toggleDir()" aria-label="Toggle direction">RTL</button>
-          <a href="../index.html" class="toggle-btn" onclick="if(window.history.length>1&&document.referrer){window.history.back();return false;}" title="Close and return to website" aria-label="Close and return to website">
-            <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/></svg>
-          </a>
         </div>
       </div>
 
@@ -445,11 +469,27 @@
             </div>
             <div class="col-md-6 mb-2">
               <label class="form-label" for="reg-pwd">Password <span class="text-danger">*</span></label>
-              <input type="password" id="reg-pwd" class="form-control" placeholder="••••••••••••" required>
+              <div class="position-relative">
+                <input type="password" id="reg-pwd" class="form-control pe-5" placeholder="••••••••••••" required>
+                <button type="button" class="auth-password-toggle" id="toggle-reg-pwd" aria-label="Toggle password visibility">
+                  <svg width="17" height="17" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                  </svg>
+                </button>
+              </div>
             </div>
             <div class="col-md-6 mb-2">
               <label class="form-label" for="reg-confirm">Confirm Password <span class="text-danger">*</span></label>
-              <input type="password" id="reg-confirm" class="form-control" placeholder="••••••••••••" required>
+              <div class="position-relative">
+                <input type="password" id="reg-confirm" class="form-control pe-5" placeholder="••••••••••••" required>
+                <button type="button" class="auth-password-toggle" id="toggle-reg-confirm" aria-label="Toggle password visibility">
+                  <svg width="17" height="17" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                  </svg>
+                </button>
+              </div>
             </div>
             <div class="col-12 mb-3">
               <div class="form-check mt-1">
@@ -511,6 +551,26 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // Password visibility toggles
+      function setupPasswordToggle(inputId, toggleBtnId) {
+        const input = document.getElementById(inputId);
+        const btn = document.getElementById(toggleBtnId);
+        if (!input || !btn) return;
+
+        const eyeIcon = `<svg width="17" height="17" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/><path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/></svg>`;
+        const eyeSlashIcon = `<svg width="17" height="17" fill="currentColor" viewBox="0 0 16 16"><path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/><path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6L1.353 1.003l.708-.708L14.354 13.646l-.708.708z"/></svg>`;
+
+        btn.addEventListener("click", () => {
+          const isPassword = input.type === "password";
+          input.type = isPassword ? "text" : "password";
+          btn.innerHTML = isPassword ? eyeSlashIcon : eyeIcon;
+          btn.setAttribute("aria-label", isPassword ? "Hide password" : "Show password");
+        });
+      }
+
+      setupPasswordToggle("reg-pwd", "toggle-reg-pwd");
+      setupPasswordToggle("reg-confirm", "toggle-reg-confirm");
+
       const form = document.getElementById("signup-form");
       form.addEventListener("submit", (e) => {
         e.preventDefault();

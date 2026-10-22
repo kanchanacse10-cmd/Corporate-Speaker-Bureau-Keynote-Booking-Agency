@@ -38,17 +38,8 @@
           </div>
         </a>
 
-        <!-- Header Actions: 1. Wishlist, 2. RTL, 3. Theme Converter, 4. Dashboard (Client Portal on mobile), 5. Login -->
+        <!-- Header Actions: 1. RTL, 2. Theme Converter, 3. Dashboard (Client Portal on mobile), 4. Login -->
         <div class="header-nav-actions d-flex align-items-center gap-2 order-xl-3">
-          <!-- 1. Wishlist Button (Desktop >= 1200px) -->
-          <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn d-none d-xl-inline-flex"
-            title="View Saved Wishlist" aria-label="View Saved Wishlist">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-            </svg>
-            <span class="shortlist-count-badge">0</span>
-          </a>
 
           <!-- 2. RTL/LTR Toggle (Desktop >= 1200px) -->
           <button type="button" class="toggle-btn rtl-toggle-btn d-none d-xl-inline-flex"
@@ -96,7 +87,16 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="speaker-roster.html">Speaker Roster</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="speakerRosterDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Speaker Roster
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="speakerRosterDropdown">
+                <li><a class="dropdown-item" href="speaker-profile.html">Single Speaker Roster page</a></li>
+                <li><a class="dropdown-item" href="book-a-speaker.html">Book a Speaker Roster page</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="topics-industries.html">Topics & Industries</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
@@ -104,19 +104,10 @@
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
 
-          <!-- Mobile Menu Drawer Actions (Luméra Skin Style: 1. Wishlist, 2. RTL, 3. Theme Switcher, 4. Login, 5. Dashboard) -->
+          <!-- Mobile Menu Drawer Actions (Luméra Skin Style: 1. RTL, 2. Theme Switcher, 3. Login, 4. Dashboard) -->
           <div class="mobile-nav-actions d-xl-none">
             <div class="mobile-nav-actions-row">
               <div class="mobile-nav-toggles">
-                <!-- 1. Wishlist Button -->
-                <a href="../dashboard/index.html?view=shortlist" class="nav-wishlist-btn mobile-menu-wishlist"
-                  title="Saved Wishlist" aria-label="Saved Wishlist">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                  </svg>
-                  <span class="shortlist-count-badge">0</span>
-                </a>
 
                 <!-- 2. RTL Toggle -->
                 <button type="button" class="toggle-btn rtl-toggle-btn mobile-menu-rtl"
@@ -183,7 +174,7 @@
   <!-- EDITORIAL ARTICLES GRID -->
   <section class="section-padding bg-soft">
     <div class="container">
-      <div class="row g-4" id="insights-grid">
+      <div class="row g-4 justify-content-center align-items-stretch" id="insights-grid">
         <!-- Injected via JavaScript from SSB_DATA.insights -->
       </div>
     </div>
@@ -616,8 +607,8 @@
       const grid = document.getElementById("insights-grid");
       if (grid && SSB_DATA && SSB_DATA.insights) {
         grid.innerHTML = SSB_DATA.insights.map(art => `
-          <div class="col-lg-4 col-md-6">
-            <div class="ssb-card h-100 p-0 overflow-hidden d-flex flex-column">
+          <div class="col-lg-4 col-md-6 d-flex flex-column">
+            <div class="ssb-card h-100 p-0 overflow-hidden d-flex flex-column w-100">
               <div style="height: 220px; overflow:hidden;">
                 <img src="../${art.image}" alt="${art.title}" class="img-fluid w-100 h-100" style="object-fit: cover;">
               </div>
@@ -626,8 +617,8 @@
                   <span class="badge-gold">${art.category}</span>
                   <span class="small text-muted text-nowrap">${art.readTime}</span>
                 </div>
-                <h4 class="mb-2 fs-5"><a href="article-detail.html?id=${art.id}" class="text-reset">${art.title}</a></h4>
-                <p class="small text-muted flex-grow-1">${art.snippet}</p>
+                <h4 class="mb-2 fs-5 insight-card-title"><a href="article-detail.html?id=${art.id}" class="text-reset">${art.title}</a></h4>
+                <p class="small text-muted flex-grow-1 mb-3">${art.snippet}</p>
                 <div class="d-flex justify-content-between align-items-center pt-3 border-top border-theme mt-auto">
                   <span class="small text-muted text-nowrap">${art.date}</span>
                   <a href="article-detail.html?id=${art.id}" class="btn btn-outline-corporate btn-sm text-nowrap">Read Article &rarr;</a>
