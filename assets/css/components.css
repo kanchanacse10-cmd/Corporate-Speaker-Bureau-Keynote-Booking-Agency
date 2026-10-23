@@ -2129,6 +2129,14 @@ header.sticky-top {
 /* --- 1024 View (Tablet / Small Laptop) Grid Adjustments --- */
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
+  /* Featured & Roster Speaker Cards Grid: 2 Columns in 1024 view only */
+  #featured-speakers-grid>div,
+  #roster-grid-container>div {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
   #home-industry-grid>div {
     flex: 0 0 50% !important;
     max-width: 50% !important;
@@ -8682,6 +8690,22 @@ select.form-select,
   margin-bottom: 0;
 }
 
+/* --- 1024 View (Tablet / Small Laptop) & 768 View Assurance Strip Centering --- */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .services-assurance-col-center {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .services-assurance-col-center .services-assurance-item {
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
 /* Dark Mode Overrides */
 [data-bs-theme="dark"] .services-filter-btn {
   background: #152132;
@@ -13104,6 +13128,6 @@ select.form-select,
 
 @media (min-width: 992px) {
   .insight-card-title {
-    min-height: 5.1rem;
+    min-height: 0;
   }
 }
